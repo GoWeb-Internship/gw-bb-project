@@ -1,0 +1,22 @@
+{
+  "header": {
+    "nav": [
+      {
+        "name": "Главная",
+        "id": "page-nav-home"
+      },
+      {
+        "name": "Обо мне",
+        "id": "page-nav-about"
+      },
+      {
+        "name": "Преимущества",
+        "id": "page-nav-advantages"
+      },
+      {
+        "name": "Контакты",
+        "id": "page-nav-contacts"
+      }
+    ]
+  }
+}

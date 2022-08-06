@@ -1,0 +1,22 @@
+{
+  "header": {
+    "nav": [
+      {
+        "name": "Home",
+        "id": "page-nav-home"
+      },
+      {
+        "name": "About",
+        "id": "page-nav-about"
+      },
+      {
+        "name": "Advantages",
+        "id": "page-nav-advantages"
+      },
+      {
+        "name": "Contacts",
+        "id": "page-nav-contacts"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  repo: pavel-sheremet-dev/gw-bb-project
+  branch: main
+media_folder: static/assets
+public_folder: /assets
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+collections:
+  - label: "Page"
+    name: "page"
+    folder: "cmsdata/main"
+    slug: "{{groupId}}-{{language}}"
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - {
+          label: Group identifier,
+          name: groupId,
+          widget: "hidden",
+          default: "main",
+        }
+      - { label: "Language", name: "language", widget: "hidden", default: "uk" } # hidden прячет поле в СMS
+      - { label: "Update Date", name: "date", widget: "datetime" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown", required: false }
+      - { label: "Image", name: "imageUrl", widget: "image", required: false }
