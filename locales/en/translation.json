@@ -18,5 +18,20 @@
         "id": "page-nav-contacts"
       }
     ]
+  },
+  "form": {
+    "inputName": {
+      "name": "Name",
+      "placeholder": "Please enter your name"
+    },
+    "inputPhone": {
+      "name": "Phone",
+      "placeholder": "Please enter your phone"
+    },
+    "inputEmail": {
+      "name": "Email",
+      "placeholder": "Please enter your email"
+    },
+    "button": "Submit"
   }
 }
