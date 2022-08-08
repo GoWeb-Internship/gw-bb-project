@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import * as yup from 'yup';
+import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
 
 const schema = yup
   .object({
@@ -19,7 +20,7 @@ const encode = data => {
 };
 
 const TestForm = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -38,7 +39,14 @@ const TestForm = () => {
       body: encode({ 'form-name': 'contact', ...data }),
     })
       .then(() => {
-        alert('Success');
+        const messsage = getTelegramMessage({
+          title: 'Заявка на зворотній дзвінок',
+          hashTag: 'customtag',
+          data,
+          analysisData: 'якісь аналітичні дані',
+          sitelang: i18n.language,
+        });
+        sendMessage(messsage);
         reset({ name: '', phone: '', email: '' });
       })
       .catch(error => alert(error));
