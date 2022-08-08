@@ -42,7 +42,7 @@ const TestForm = () => {
         const messsage = getTelegramMessage({
           title: 'Заявка на зворотній дзвінок',
           hashTag: 'customtag',
-          dataMessage: data,
+          data,
           analysisData: 'якісь аналітичні дані',
           sitelang: i18n.language,
         });

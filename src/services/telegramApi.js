@@ -24,7 +24,7 @@ const getTelegramMessage = messageConfig => {
   const { title, hashTag, data, analysisData, sitelang } = messageConfig;
   const order = `<b>${title.toUpperCase()}</b>`;
   const tag = `%0A%23${hashTag}`;
-  const dataMessage = `%0A%0A<b>Ім'я</b>: ${data.name} %0A<b>Телефон:</b>: %2B${data.phone} %0A<b>Ел. пошта</b>: %2B${data.email}`;
+  const dataMessage = `%0A%0A<b>Ім'я</b>: ${data.name} %0A<b>Телефон:</b>: %2B${data.phone} %0A<b>Ел. пошта</b>: ${data.email}`;
   const info = `%0A%0A<b>Аналітика</b>: ${analysisData}`;
   const lang = `%0A<b>Мова сайту</b>: ${sitelang}`;
   return [order, tag, dataMessage, info, lang].join('');
