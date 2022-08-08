@@ -238,3 +238,110 @@ fetch(
 );
 return res.ok ? res.json() : Promise.reject(new Error());
 ```
+
+### Настройка формы:
+
+Форма сделана на React Hook Form отправляется на Netlify Form с настройкой
+отправки на почту.
+
+1. Установить в проект
+
+   ```powershell
+   npm install react-hook-form @hookform/resolvers yup
+   ```
+
+   2 последних необходимы для создания схемы валидации.
+
+2. В компоненте формы заиспортировать хук
+
+   ```js
+   import { useForm } from 'react-hook-form';
+   ```
+
+   Если будет схема валидации то еще :
+
+   ```js
+   import { yupResolver } from "@hookform/resolvers/yup";` `import * as yup from "yup";
+   ```
+
+3. Создаем схему по принципу :
+
+   ```js
+   const schema = yup
+     .object({
+       name: yup.string().required(),
+       phone: yup.number().positive().integer().required(),
+     })
+     .required();
+   ```
+
+4. В компонент с формой добавляем хук деструктуризируя с него необходимые опции.
+   Если будет схема то она вставляется как дефолтное свойство. Пример:
+
+   ```js
+   const {
+     register,
+     handleSubmit,
+     formState: { errors },
+   } = useForm({ resolver: yupResolver(schema) });
+   ```
+
+   Свойство register используется в инпутах в формате:
+
+   ```js
+   {...register('name')}
+   ```
+
+   А handleSubmit в теге form :
+
+```js
+onSubmit={handleSubmit(функция при отправке формы)}
+```
+
+5. Чтобы отправить форму на нетлифай в тег формы необходимо добавить:
+
+   ```js
+   method="post" data-netlify="true" data-netlify-honeypot="bot-field"
+   ```
+
+6. У формы должен быть атрибут name а также скрытый инпут:
+
+   ```js
+   <input type="hidden" name="form-name" value="Имя формы" />
+   ```
+
+7. Поскольку форма собирается с помощью
+   [react hook form](https://react-hook-form.com/get-started#Quickstart) то для
+   ее отправки необходимо использовать запрос :
+
+   ```js
+   fetch('/', {
+     method: 'POST',
+     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+     body: encode({ 'form-name': 'contact', ...data }),
+   })
+     .then(() => alert('Success'))
+     .catch(error => alert(error));
+   ```
+
+8. Дополнительно добавить :
+
+```js
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
+```
+
+9. На Netlify в **Site settings** необходимо выбрать **Forms** и включить
+   настройку принятия формы. Там же можно настроить отправку результата на
+   электронную почту.
+
+10. При необходимости сбросить форму есть свойство reset. Его деструктуризируют
+    из хука useForm. После отправки указать:
+    ```js
+    reset({ name: '', phone: '', email: '' });
+    ```
+
+---
