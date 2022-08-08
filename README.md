@@ -239,11 +239,7 @@ fetch(
 return res.ok ? res.json() : Promise.reject(new Error());
 ```
 
----
-
-## Настройка формы:
-
----
+### Настройка формы:
 
 Форма сделана на React Hook Form отправляется на Netlify Form с настройкой
 отправки на почту.
