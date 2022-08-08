@@ -344,4 +344,96 @@ const encode = data => {
     reset({ name: '', phone: '', email: '' });
     ```
 
+### Подключение Cloudinar
+
+**Освновные действия.**
+
+1. Установите исходный плагин, используя npm:
+
+```powershell
+npm install --save gatsby-source-cloudinary
+```
+
+2. Для начала вам понадобится учетная запись Cloudinary и Netlify CMS 2.3.0 или
+   выше. Вы можете
+   [зарегистрироваться в Cloudinary](https://cloudinary.com/users/register/free)
+   бесплатно. После того, как вы вошли в систему, вам нужно будет получить имя
+   вашего облака и ключ API в верхнем левом углу консоли Cloudinary.
+
+**Подключение Cloudinary к Netlify CMS**
+
+1. Чтобы использовать медиатеку Cloudinary в Netlify CMS, вам необходимо
+   обновить файл конфигурации Netlify CMS `config.yml` информацией из вашей
+   учетной записи Cloudinary:
+
+```yml
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: your_cloud_name
+    api_key: your_api_key
+```
+
+2. Установите пакеты npm, чтобы
+   [зарегистрировать медиатеки](https://www.netlifycms.org/blog/2019/07/netlify-cms-gatsby-plugin-4-0-0#using-media-libraries-with-netlify-cms-app):
+
+```powershell
+npm i netlify-cms-media-library-uploadcare
+```
+
+и
+
+```powershell
+npm i netlify-cms-media-library-cloudinary
+```
+
+В дополнение к registerMediaLibrary() обязательно укажите путь к точке входа для
+настройки CMS в Gatsby через `gatsby-config.js`
+
+```js
+module.exports = {
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+  ],
+};
+```
+
+3. В папке src, мы создаем следующую структуру:
+
+```
+|-- cms
+    |-- cms.js
+|-- cms
+```
+
+4. Базовые настройки `cms.js`
+
+```js
+import CMS from 'netlify-cms-app';
+
+import uploadcare from 'netlify-cms-media-library-uploadcare';
+import cloudinary from 'netlify-cms-media-library-cloudinary';
+
+CMS.registerMediaLibrary(uploadcare);
+CMS.registerMediaLibrary(cloudinary);
+```
+
+5. Преобразование изображений через медиатеку, добавляем код в `config.yml`
+
+```yml
+media_library:
+  name: cloudinary
+  output_filename_only: false
+  config:
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+          crop: scale
+```
+
 ---
