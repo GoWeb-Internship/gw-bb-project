@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
-import useFormPersist from 'react-hook-form-persist';
+import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
 import * as yup from 'yup';
 
@@ -41,8 +41,8 @@ const TestForm = () => {
   useFormPersist('form', {
     watch,
     setValue,
-    storage: window.localStorage,
-    exclude: ['isAgree'],
+    storage: window.localStorage, // по умолчанию используется window.sessionStorage
+    exclude: ['isAgree'], // не добавляет выбор чекбокса так как это запрещено)
   });
 
   const onSubmit = data => {
