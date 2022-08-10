@@ -3,15 +3,19 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Container from '../components/reusable/Container';
+import PolicyList from '../components/PolicyList';
 import Seo from '../components/Seo';
 
-const PolicyPage = () => {
+const PolicyPage = ({ data }) => {
+  const mdxContent = data.allMdx.nodes;
+
   return (
     <Layout>
       <section>
         <Container>
           <h1>Policy</h1>
           <Link to="/">Go back to the homepage</Link>
+          <PolicyList policyItems={mdxContent} />
         </Container>
       </section>
     </Layout>
@@ -30,6 +34,20 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    allMdx(
+      filter: { frontmatter: { policyId: { eq: "policy" } } }
+      sort: { fields: frontmatter___policyItemNumber, order: ASC }
+    ) {
+      nodes {
+        frontmatter {
+          policyItemNumber
+          uk
+          ru
+          en
+          date
         }
       }
     }
