@@ -1,6 +1,7 @@
 ---
 policyId: policy
 date: 2022-08-06T15:27:46.785Z
+fieldLabel: '1'
 policyItemNumber: 1
 uk: 'Опис пункту 1 політики'
 ru: 'Описание пункта 1 политики'
