@@ -41,7 +41,7 @@ const TestForm = ({ place }) => {
   useFormPersist('form', {
     watch,
     setValue,
-    storage: window.localStorage, // по умолчанию используется window.sessionStorage
+    storage: localStorage, // по умолчанию используется window.sessionStorage
     exclude: ['isAgree'], // не добавляет выбор чекбокса так как это запрещено)
   });
 
