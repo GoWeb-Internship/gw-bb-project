@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: pavel-sheremet-dev/gw-bb-project
-  branch: main
+  branch: dev
 media_folder: static/assets
 public_folder: /assets
 slug:
@@ -19,6 +19,7 @@ media_library:
           quality: auto
           crop: scale
 collections:
+  # Main page model
   - label: 'Page'
     name: 'page'
     folder: 'cmsdata/main'
@@ -27,36 +28,37 @@ collections:
     delete: false # ограничение на удаление документа
     fields:
       - {
-          label: Group identifier,
-          name: groupId,
+          label: 'Group identifier',
+          name: 'groupId',
           widget: 'hidden',
           default: 'main',
         }
       - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Main Page',
+        }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
+  # Policy list model
   - label: 'Policy'
     name: 'policy'
     folder: 'cmsdata/policy'
-    slug: '{{item}}-{{policyId}}'
+    slug: '{{policyId}}-{{title}}'
     create: true # ограничение на создание документа
     fields:
       - {
-          label: policy identifier,
-          name: policyId,
+          label: 'Policy identifier',
+          name: 'policyId',
           widget: 'hidden',
           default: 'policy',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Item number',
-          name: 'policyItemNumber',
-          widget: 'number',
-          value_type: 'float',
-        }
+      - { label: 'Title', name: 'title', widget: 'number', value_type: 'float' }
       - { label: 'Description [UK]', name: 'uk' }
       - { label: 'Description [RU]', name: 'ru' }
       - { label: 'Description [EN]', name: 'en' }

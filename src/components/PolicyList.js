@@ -8,8 +8,8 @@ const PolicyList = ({ policyItems = [] }) => {
   return (
     <ul>
       {policyItems.map(({ frontmatter }) => (
-        <li key={frontmatter.policyItemNumber}>
-          <span>{frontmatter.policyItemNumber}. </span>
+        <li key={frontmatter.title}>
+          <span>{frontmatter.title}. </span>
           {frontmatter[i18n.language]}
         </li>
       ))}
@@ -21,7 +21,7 @@ PolicyList.propTypes = {
   policyItems: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
-        policyItemNumber: PropTypes.number.isRequired,
+        title: PropTypes.number.isRequired,
         date: PropTypes.string.isRequired,
         uk: PropTypes.string.isRequired,
         ru: PropTypes.string.isRequired,
