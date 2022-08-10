@@ -38,3 +38,32 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
+  - label: 'Policy'
+    name: 'policy'
+    folder: 'cmsdata/policy'
+    slug: '{{item}}-{{policyId}}'
+    create: true # ограничение на создание документа
+    fields:
+      - {
+          label: policy identifier,
+          name: policyId,
+          widget: 'hidden',
+          default: 'policy',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Item number',
+          name: 'policyItemNumber',
+          widget: 'number',
+          value_type: 'float',
+        }
+      - { label: 'Description [UK]', name: 'uk' }
+      - { label: 'Description [RU]', name: 'ru' }
+      - { label: 'Description [EN]', name: 'en' }
+      - {
+          label: 'Notes',
+          name: 'body',
+          widget: 'markdown',
+          required: false,
+          default: 'These markings are not displayed on the site',
+        }
