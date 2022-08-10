@@ -2,9 +2,10 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import * as yup from 'yup';
 import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
+import useFormPersist from 'react-hook-form-persist';
 import InputPhone from './InputPhone';
+import * as yup from 'yup';
 
 const schema = yup
   .object({
@@ -23,17 +24,26 @@ const encode = data => {
 
 const TestForm = () => {
   const { t, i18n } = useTranslation();
+  const formData = t('form', { returnObjects: true });
+
   const {
     control,
     register,
     handleSubmit,
+    watch,
+    setValue,
     reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const formData = t('form', { returnObjects: true });
+  useFormPersist('form', {
+    watch,
+    setValue,
+    storage: window.localStorage,
+    exclude: ['isAgree'],
+  });
 
   const onSubmit = data => {
     fetch('/', {
@@ -42,15 +52,16 @@ const TestForm = () => {
       body: encode({ 'form-name': 'contact', ...data }),
     })
       .then(() => {
-        const messsage = getTelegramMessage({
+        const message = getTelegramMessage({
           title: 'Заявка на зворотній дзвінок',
           hashTag: 'customtag',
           data,
           analysisData: 'якісь аналітичні дані',
           sitelang: i18n.language,
         });
-        sendMessage(messsage);
+        sendMessage(message);
         reset({ name: '', phone: '', email: '' });
+        localStorage.removeItem('form');
       })
       .catch(error => alert(error));
   };
@@ -80,6 +91,7 @@ const TestForm = () => {
         control={control}
         errors={errors}
         label={formData.inputPhone.name}
+        language={i18n.language}
       />
       <div className="my-1">
         <label className="m-1 block" htmlFor="email">
@@ -91,6 +103,17 @@ const TestForm = () => {
           {...register('email')}
         />
         <p className="text-red-400 text-xs">{errors.email?.message}</p>
+      </div>
+      <div className="my-1 flex items-center text-gray-500">
+        <input
+          type="checkbox"
+          id="isAgree"
+          {...register('isAgree')}
+          className="mr-2"
+        />
+        <label className="text-sm" htmlFor="isAgree">
+          {formData.checkbox}
+        </label>
       </div>
       <button className="p-2 text-white bg-sky-500 rounded-md" type="submit">
         {formData.button}
