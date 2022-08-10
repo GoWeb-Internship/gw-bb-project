@@ -7,6 +7,8 @@ import useFormPersist from 'react-hook-form-persist'; // Библиотека д
 import InputPhone from './InputPhone';
 import * as yup from 'yup';
 
+const isBrowser = typeof window !== 'undefined';
+
 const schema = yup
   .object({
     name: yup.string().required(),
@@ -41,7 +43,7 @@ const TestForm = ({ place }) => {
   useFormPersist('form', {
     watch,
     setValue,
-    storage: localStorage, // по умолчанию используется window.sessionStorage
+    storage: isBrowser ? window.localStorage : null,
     exclude: ['isAgree'], // не добавляет выбор чекбокса так как это запрещено)
   });
 
