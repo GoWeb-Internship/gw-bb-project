@@ -57,7 +57,7 @@ export const query = graphql`
         frontmatter {
           date
           language
-          fieldLabel
+          title
           description
         }
       }

@@ -39,11 +39,11 @@ export const query = graphql`
     }
     allMdx(
       filter: { frontmatter: { policyId: { eq: "policy" } } }
-      sort: { fields: frontmatter___policyItemNumber, order: ASC }
+      sort: { fields: frontmatter___title, order: ASC }
     ) {
       nodes {
         frontmatter {
-          policyItemNumber
+          title
           uk
           ru
           en

@@ -35,8 +35,8 @@ collections:
         }
       - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
       - {
-          label: 'Filed Label',
-          name: 'fieldlabel',
+          label: 'Title',
+          name: 'title',
           widget: 'hidden',
           default: 'Main Page',
         }
@@ -58,18 +58,7 @@ collections:
           default: 'policy',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Field Label',
-          name: 'fieldLabel',
-          widget: 'hidden',
-          default: '{{policyItemNumber}}',
-        }
-      - {
-          label: 'Item number',
-          name: 'policyItemNumber',
-          widget: 'number',
-          value_type: 'float',
-        }
+      - { label: 'Title', name: 'title', widget: 'number', value_type: 'float' }
       - { label: 'Description [UK]', name: 'uk' }
       - { label: 'Description [RU]', name: 'ru' }
       - { label: 'Description [EN]', name: 'en' }
