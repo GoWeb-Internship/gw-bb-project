@@ -4,12 +4,14 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import * as yup from 'yup';
 import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
+import InputPhone from './InputPhone';
 
 const schema = yup
   .object({
     name: yup.string().required(),
     phone: yup.number().required(),
     email: yup.string().email().required(),
+    isAgree: yup.boolean().default(false).oneOf([true]),
   })
   .required();
 
@@ -22,6 +24,7 @@ const encode = data => {
 const TestForm = () => {
   const { t, i18n } = useTranslation();
   const {
+    control,
     register,
     handleSubmit,
     reset,
@@ -73,17 +76,11 @@ const TestForm = () => {
         />
         <p className="text-red-400 text-xs">{errors.name?.message}</p>
       </div>
-      <div className="my-1">
-        <label className="m-1 block" htmlFor="phone">
-          {formData.inputPhone.name}
-        </label>
-        <input
-          placeholder={formData.inputPhone.placeholder}
-          className="p-2 bg-slate-200 rounded-md text-xs w-72"
-          {...register('phone')}
-        />
-        <p className="text-red-400 text-xs">{errors.phone?.message}</p>
-      </div>
+      <InputPhone
+        control={control}
+        errors={errors}
+        label={formData.inputPhone.name}
+      />
       <div className="my-1">
         <label className="m-1 block" htmlFor="email">
           {formData.inputEmail.name}
