@@ -26,6 +26,7 @@ collections:
     slug: '{{groupId}}-{{language}}'
     create: false # ограничение на создание документа
     delete: false # ограничение на удаление документа
+    identifier_field: title
     fields:
       - {
           label: 'Group identifier',
@@ -49,6 +50,7 @@ collections:
     name: 'policy'
     folder: 'cmsdata/policy'
     slug: '{{policyId}}-{{title}}'
+    identifier_field: title
     create: true # ограничение на создание документа
     fields:
       - {
@@ -58,7 +60,12 @@ collections:
           default: 'policy',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Title', name: 'title', widget: 'number', value_type: 'float' }
+      - {
+          label: 'Item number',
+          name: 'title',
+          widget: 'number',
+          value_type: 'float',
+        }
       - { label: 'Description [UK]', name: 'uk' }
       - { label: 'Description [RU]', name: 'ru' }
       - { label: 'Description [EN]', name: 'en' }
