@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 
-const PolicyList = ({ policyItems }) => {
+const PolicyList = ({ policyItems = [] }) => {
   const { i18n } = useTranslation();
 
   return (
@@ -14,6 +15,20 @@ const PolicyList = ({ policyItems }) => {
       ))}
     </ul>
   );
+};
+
+PolicyList.propTypes = {
+  policyItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        policyItemNumber: PropTypes.number.isRequired,
+        date: PropTypes.string.isRequired,
+        uk: PropTypes.string.isRequired,
+        ru: PropTypes.string.isRequired,
+        en: PropTypes.string.isRequired,
+      }),
+    }),
+  ),
 };
 
 export default PolicyList;
