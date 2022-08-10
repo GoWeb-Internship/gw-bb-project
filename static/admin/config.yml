@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: pavel-sheremet-dev/gw-bb-project
+  repo: GoWeb-Internship/gw-bb-project
   branch: dev
 media_folder: static/assets
 public_folder: /assets
