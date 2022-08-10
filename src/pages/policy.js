@@ -7,7 +7,7 @@ import PolicyList from '../components/PolicyList';
 import Seo from '../components/Seo';
 
 const PolicyPage = ({ data }) => {
-  const mdxContent = data.allMdx.nodes;
+  const policyItems = data.allMdx.nodes;
 
   return (
     <Layout>
@@ -15,7 +15,7 @@ const PolicyPage = ({ data }) => {
         <Container>
           <h1>Policy</h1>
           <Link to="/">Go back to the homepage</Link>
-          <PolicyList policyItems={mdxContent} />
+          {!!policyItems.length && <PolicyList policyItems={policyItems} />}
         </Container>
       </section>
     </Layout>
