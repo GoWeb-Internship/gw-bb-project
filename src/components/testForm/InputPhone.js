@@ -1,7 +1,6 @@
 import React from 'react';
 import { Controller } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/bootstrap.css'; // согласно макета нам этот стиль подходит больше всего, но есть сложность со стилизацией с помощью tailwind
 import ru from 'react-phone-input-2/lang/ru.json';
 import ua from '../../assets/land/ua.json'; // файлик нужно исправлять, сделала только пару стран чтобы посмотреть. Шаблон из либы в файлике example.json
 
