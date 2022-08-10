@@ -8,12 +8,12 @@ import ua from '../../assets/land/ua.json'; // файлик нужно испр�
 const InputPhone = ({ control, errors, label, language }) => {
   let country;
   let location;
+
   switch (language) {
     case 'uk':
       country = 'ua';
       location = ua;
       break;
-
     case 'ru':
       country = 'ru';
       location = ru;
@@ -22,11 +22,11 @@ const InputPhone = ({ control, errors, label, language }) => {
       country = 'gb';
       location = undefined;
       break;
-
     default:
       country = 'ua';
       location = ua;
   }
+
   return (
     <label htmlFor="phone">
       {label}

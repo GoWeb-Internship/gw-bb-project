@@ -22,7 +22,7 @@ const encode = data => {
     .join('&');
 };
 
-const TestForm = () => {
+const TestForm = ({ place }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
 
@@ -46,6 +46,7 @@ const TestForm = () => {
   });
 
   const onSubmit = data => {
+    console.log(data);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -60,7 +61,7 @@ const TestForm = () => {
           sitelang: i18n.language,
         });
         sendMessage(message);
-        reset({ name: '', phone: '', email: '' });
+        reset({ name: '', phone: '', email: '', isAgree: false });
         localStorage.removeItem('form');
       })
       .catch(error => alert(error));
@@ -76,6 +77,7 @@ const TestForm = () => {
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" {...register('place')} value={place} />
       <div className="my-1">
         <label className="m-1 block" htmlFor="name">
           {formData.inputName.name}
