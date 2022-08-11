@@ -4,27 +4,10 @@ import PhoneInput from 'react-phone-input-2';
 import ru from 'react-phone-input-2/lang/ru.json';
 import ua from '../../assets/land/ua.json'; // файлик нужно исправлять, сделала только пару стран чтобы посмотреть. Шаблон из либы в файлике example.json
 
-const InputPhone = ({ control, errors, label, language }) => {
-  let country;
-  let location;
+const loc = { ru, uk: ua };
 
-  switch (language) {
-    case 'uk':
-      country = 'ua';
-      location = ua;
-      break;
-    case 'ru':
-      country = 'ru';
-      location = ru;
-      break;
-    case 'en':
-      country = 'gb';
-      location = undefined;
-      break;
-    default:
-      country = 'ua';
-      location = ua;
-  }
+const InputPhone = ({ control, errors, label, language, country = 'ua' }) => {
+  const location = loc[language];
 
   return (
     <label htmlFor="phone">
