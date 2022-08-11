@@ -156,6 +156,26 @@ Gateway**, and click **Enable Git Gateway**
 5. Нужно будет выполнить регистрацию по адресу ел. почты, на которую придёт
    ссылка для верификации. После этого есть доступ на админ-панель.
 
+---
+
+!!! ВАЖНО : Чтобы стили библиотек применялись нужно добавить в файле
+`gatsby-config.js` в плагине gatsby-plugin-purgecss настройку этого файла в
+ignore. Пример:
+
+```js
+ {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: true,
+        tailwind: true,
+        ignore: ['react-phone-input-2/lib/bootstrap.css'],
+      },
+    },
+```
+
+---
+
 ### Локализация
 
 Для локализации используется плагин `gatsby-plugin-react-i18next` Для сборки
@@ -356,13 +376,15 @@ onSubmit={handleSubmit(функция при отправке формы)}
 
 8. Дополнительно добавить :
 
-```js
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-```
+   ```js
+   const encode = data => {
+     return Object.keys(data)
+       .map(
+         key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]),
+       )
+       .join('&');
+   };
+   ```
 
 9. На Netlify в **Site settings** необходимо выбрать **Forms** и включить
    настройку принятия формы. Там же можно настроить отправку результата на
@@ -373,6 +395,95 @@ const encode = data => {
     ```js
     reset({ name: '', phone: '', email: '' });
     ```
+11. Запись данных в локал сторадж реализовала через библиотеку
+    `react-hook-form-persist` Для использования достаточно заимпортировать
+
+    ```js
+    import useFormPersist from 'react-hook-form-persist';
+    ```
+
+    после чего использовать его в компоненте с настройками :
+
+    ```js
+     useFormPersist('form',{ watch, setValue, storage: localStorage,
+     exclude: ['isAgree'], )});
+    ```
+
+    Значения `watch` и `setValue`, деструктуризируются из useForm. Gatsby не
+    работает с LocalStorage и window поэтому нужно добавить проверку
+
+    ```js
+    const isBrowser = typeof window !== 'undefined';
+    ```
+
+    После чего указать в
+
+    ```js
+      storage: isBrowser ? window.localStorage : null,
+    ```
+
+ВАЖНО: !! Tailwind и чекбокс. Чтобы чекбокс сработал при нажатии на лейбл ему
+неообходимо добавить id
+
+#### Добавление инпута с телефоном с помощью библиотеки React-Phone-Input-2:
+
+1. Установить пакет:
+
+   ```powershell
+   npm i react-phone-input-2
+   ```
+
+2. Импортировать нужные стили в корень проекта или в компонент, к примеру:
+
+   ```js
+   import 'react-phone-input-2/lib/style.css';
+   ```
+
+3. Импортировать сам компонент из библиотеки:
+
+   ```js
+   import PhoneInput from 'react-phone-input-2';
+   ```
+
+4. Поскольку у нас присутствует локализация то добавить импорт пакета для
+   соответствующего языка (по умолчанию английский, для украинского делали
+   кастомный) :
+
+```js
+import ru from 'react-phone-input-2/lang/ru.json';
+```
+
+В зависимости от задачи PhoneInput можно передавать разные пропсы (подробнее в
+библиотеке) например:
+
+```js
+  inputClass="h-5" country="ua" preferredCountries={["ua", "ru", "gb"]}
+  onChangeText={onChange} value={value} localization={ru}
+```
+
+Чтобы использовать данный компонент в React hook form необходимо импортировать
+
+```js
+import { Controller } from 'react-hook-form';
+```
+
+Деструктуризировать из useForm свойство control Использовать компонент
+Controller по примеру:
+
+```js
+<Controller
+  control={control}
+  rules={{ maxLength: 15 }}
+  render={({ field: { onChange, value } }) => (
+    <PhoneInput
+      inputClass="h-5"
+      country="ua"
+      preferredCountries={['ua', 'ru', 'gb']}
+    />
+  )}
+  name="phone"
+/>
+```
 
 ### Подключение Cloudinar
 
