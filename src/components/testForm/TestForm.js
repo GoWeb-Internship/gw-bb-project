@@ -5,6 +5,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
+import useClientLocation from '../../hooks/useClientLocation';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -27,6 +28,7 @@ const encode = data => {
 const TestForm = ({ place }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
+  const clientLocation = useClientLocation();
 
   const {
     control,
@@ -96,6 +98,7 @@ const TestForm = ({ place }) => {
         errors={errors}
         label={formData.inputPhone.name}
         language={i18n.language}
+        country={clientLocation}
       />
       <div className="my-1">
         <label className="m-1 block" htmlFor="email">
