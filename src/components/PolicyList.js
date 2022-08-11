@@ -21,7 +21,7 @@ PolicyList.propTypes = {
   policyItems: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
-        title: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         uk: PropTypes.string.isRequired,
         ru: PropTypes.string.isRequired,
