@@ -23,7 +23,7 @@ const InputPhone = ({ control, errors, label, language, country = 'ua' }) => {
             onChange={onChange}
             value={value}
             country={country}
-            preferredCountries={['gb', 'ua', 'ru']}
+            preferredCountries={['gb', 'ua']}
             localization={location}
           />
         )}
