@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import Container from '../components/reusable/Container';
-import Seo from '../components/Seo';
+import Layout from 'components/Layout';
+import Container from 'components/reusable/Container';
+import Seo from 'components/Seo';
 
 const NotFoundPage = () => (
   <Layout>

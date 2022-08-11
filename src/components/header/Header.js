@@ -6,9 +6,9 @@ import { Link } from 'gatsby';
 import { useMedia } from 'react-use';
 
 import LangSwitcher from './LangSwitcher';
-import Container from '../reusable/Container';
+import Container from 'components/reusable/Container';
 
-import { getMediaVars } from '../../styles/vars';
+import { getMediaVars } from 'styles/vars';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -28,9 +28,5 @@ const Header = () => {
     </header>
   );
 };
-
-// Header.propTypes = {
-//   someProp: PropTypes.string,
-// };
 
 export default Header;

@@ -87,19 +87,34 @@ git commit -m "fix!: fix trouble with form validation. Value - name"
 
 ### 4. Работа с проектом
 
-1. Клонируем себе репозиторий
+1. **Клонируем себе репозиторий**
 
 ```powershell
 git clone https://github.com/pavel-sheremet-dev/gw-bb-project.git
 ```
 
-2. Выполняем установку пакетов
+2. **Выполняем установку пакетов**
 
 ```powershell
 npm i
 ```
 
-3. Запускаем сервер, проверяем работу.
+3. **Настраиваем переменные окружения (environment)**
+
+Необходимо обратиться к ТЛ за получением ключей переменных окружения (env).
+
+Создаём в корневой папке (на уровне с `.env.template`) 2 файла:
+
+```
+.env.development
+.env.production
+```
+
+- В файле `.env.template` указаны названия ключей.
+- Копируем в созданные файлы и вставляем информацию, полученную у ТЛ.
+- Оба файла должны быть идентичны.
+
+4. **Запускаем локальный сервер, проверяем работу.**
 
 ```powershell
 npm start
@@ -111,8 +126,8 @@ npm start
 gatsby develop
 ```
 
-4. Работаем с проектом по алгоритму, описанному в
-   [инструкции по работе с Git в терминале](https://docs.google.com/document/d/1CFrp2cKnu9g94Oouw6-vY26ChWK6T_sUixHytXXJYLw/edit?usp=sharing).
+5. **Работаем с проектом по алгоритму, описанному в
+   [инструкции по работе с Git в терминале](https://docs.google.com/document/d/1CFrp2cKnu9g94Oouw6-vY26ChWK6T_sUixHytXXJYLw/edit?usp=sharing).**
    Даже если вы по какой-то причине ещё не используете терминал, то алгоритм
    чётко описан.
 

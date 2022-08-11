@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
-import Container from '../components/reusable/Container';
-import Seo from '../components/Seo';
-import TestForm from '../components/testForm/TestForm';
+import Layout from 'components/Layout';
+import Container from 'components/reusable/Container';
+import Seo from 'components/Seo';
+import TestForm from 'components/testForm/TestForm';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
