@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-import Layout from '../components/Layout';
-import Container from '../components/reusable/Container';
-import PolicyList from '../components/PolicyList';
-import Seo from '../components/Seo';
+import Layout from 'components/Layout';
+import Container from 'components/reusable/Container';
+import PolicyList from 'components/PolicyList';
+import Seo from 'components/Seo';
 
 const PolicyPage = ({ data }) => {
   const policyItems = data.allMdx.nodes;

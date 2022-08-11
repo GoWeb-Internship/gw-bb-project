@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import Layout from '../components/Layout';
-import Container from '../components/reusable/Container';
-import Seo from '../components/Seo';
-import useClientLocation from '../hooks/useClientLocation';
+import Layout from 'components/Layout';
+import Container from 'components/reusable/Container';
+import Seo from 'components/Seo';
+import useClientLocation from 'hooks/useClientLocation';
 
 const ExamplePage = ({ data }) => {
   const mdxContent = data.allMdx.nodes;

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Container from '../reusable/Container';
+import Container from 'components/reusable/Container';
 
 const Footer = () => {
   return (

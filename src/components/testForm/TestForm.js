@@ -2,10 +2,9 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
+import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
-import useClientLocation from '../../hooks/useClientLocation';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -25,10 +24,9 @@ const encode = data => {
     .join('&');
 };
 
-const TestForm = ({ place }) => {
+const TestForm = ({ place, country = 'ua' }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
-  const clientLocation = useClientLocation();
 
   const {
     control,
@@ -61,7 +59,7 @@ const TestForm = ({ place }) => {
           title: 'Заявка на зворотній дзвінок',
           hashTag: 'customtag',
           data,
-          analysisData: 'якісь аналітичні дані',
+          analysisData: place,
           sitelang: i18n.language,
         });
         sendMessage(message);
@@ -98,7 +96,7 @@ const TestForm = ({ place }) => {
         errors={errors}
         label={formData.inputPhone.name}
         language={i18n.language}
-        country={clientLocation}
+        country={country}
       />
       <div className="my-1">
         <label className="m-1 block" htmlFor="email">

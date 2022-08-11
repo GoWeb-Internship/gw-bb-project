@@ -78,8 +78,8 @@ git commit -m "fix!: fix trouble with form validation. Value - name"
 умолчанию, поэтому с этим не должно быть проблем.
 
 Описание пулл реквеста делаете немного более детальными чем коммиты. Если
-считаете нужным обратить внимание на какой-то момент, укажите на это. Язык -
-удобный для нас.
+считаете нужным обратить внимание на какой-то момент, укажите на это. Язык
+используете удобный для вас.
 
 ### 3. Работа с Git в терминале
 
@@ -87,19 +87,34 @@ git commit -m "fix!: fix trouble with form validation. Value - name"
 
 ### 4. Работа с проектом
 
-1. Клонируем себе репозиторий
+1. **Клонируем себе репозиторий**
 
 ```powershell
 git clone https://github.com/pavel-sheremet-dev/gw-bb-project.git
 ```
 
-2. Выполняем установку пакетов
+2. **Выполняем установку пакетов**
 
 ```powershell
 npm i
 ```
 
-3. Запускаем сервер, проверяем работу.
+3. **Настраиваем переменные окружения (environment)**
+
+Необходимо обратиться к ТЛ за получением ключей переменных окружения (env).
+
+Создаём в корневой папке (на уровне с `.env.template`) 2 файла:
+
+```
+.env.development
+.env.production
+```
+
+- В файле `.env.template` указаны названия ключей.
+- Копируем в созданные файлы и вставляем информацию, полученную у ТЛ.
+- Оба файла должны быть идентичны.
+
+4. **Запускаем локальный сервер, проверяем работу.**
 
 ```powershell
 npm start
@@ -111,10 +126,43 @@ npm start
 gatsby develop
 ```
 
-4. Работаем с проектом по алгоритму, описанному в
-   [инструкции по работе с Git в терминале](https://docs.google.com/document/d/1CFrp2cKnu9g94Oouw6-vY26ChWK6T_sUixHytXXJYLw/edit?usp=sharing).
+5. **Работаем с проектом по алгоритму, описанному в
+   [инструкции по работе с Git в терминале](https://docs.google.com/document/d/1CFrp2cKnu9g94Oouw6-vY26ChWK6T_sUixHytXXJYLw/edit?usp=sharing).**
    Даже если вы по какой-то причине ещё не используете терминал, то алгоритм
    чётко описан.
+
+### Конфигурация Gatsby
+
+Для конфигурации в Gatsby используется файлы конфигурации `gatsby-config.js`,
+`gatsby-browser.js`, и др. (находяться в корневом каталоге проекта). Туда
+добавляются плагины, импортируются стили, выполняются различные манипуляции
+связанные с настройкой проекта.
+[Ссылка на документацию](https://www.gatsbyjs.com/docs/reference/config-files/)
+
+В этом **README** описаны некоторые ньюансы, которые возникли во время работы
+над этим проектом.
+
+**1. gatsby-plugin-purgecss**
+
+---
+
+!!! ВАЖНО: Чтобы стили библиотек применялись нужно добавить в файле
+`gatsby-config.js` в плагине gatsby-plugin-purgecss настройку этого файла в
+ignore. Пример:
+
+```js
+ {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: true,
+        tailwind: true,
+        ignore: ['react-phone-input-2/lib/bootstrap.css'],
+      },
+    },
+```
+
+---
 
 ### Подключение Gatsby и СMS Netlify
 
@@ -155,26 +203,6 @@ Gateway**, and click **Enable Git Gateway**
 
 5. Нужно будет выполнить регистрацию по адресу ел. почты, на которую придёт
    ссылка для верификации. После этого есть доступ на админ-панель.
-
----
-
-!!! ВАЖНО : Чтобы стили библиотек применялись нужно добавить в файле
-`gatsby-config.js` в плагине gatsby-plugin-purgecss настройку этого файла в
-ignore. Пример:
-
-```js
- {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false,
-        develop: true,
-        tailwind: true,
-        ignore: ['react-phone-input-2/lib/bootstrap.css'],
-      },
-    },
-```
-
----
 
 ### Локализация
 
@@ -422,7 +450,7 @@ onSubmit={handleSubmit(функция при отправке формы)}
       storage: isBrowser ? window.localStorage : null,
     ```
 
-ВАЖНО: !! Tailwind и чекбокс. Чтобы чекбокс сработал при нажатии на лейбл ему
+!!! ВАЖНО: Tailwind и чекбокс. Чтобы чекбокс сработал при нажатии на лейбл ему
 неообходимо добавить id
 
 #### Добавление инпута с телефоном с помощью библиотеки React-Phone-Input-2:
@@ -485,7 +513,7 @@ Controller по примеру:
 />
 ```
 
-### Подключение Cloudinar
+### Подключение Cloudinary
 
 **Освновные действия.**
 

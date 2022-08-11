@@ -21,7 +21,7 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    // `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-source-cloudinary`,
       options: {
