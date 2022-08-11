@@ -156,6 +156,26 @@ Gateway**, and click **Enable Git Gateway**
 5. Нужно будет выполнить регистрацию по адресу ел. почты, на которую придёт
    ссылка для верификации. После этого есть доступ на админ-панель.
 
+---
+
+!!! ВАЖНО : Чтобы стили библиотек применялись нужно добавить в файле
+`gatsby-config.js` в плагине gatsby-plugin-purgecss настройку этого файла в
+ignore. Пример:
+
+```js
+ {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: true,
+        tailwind: true,
+        ignore: ['react-phone-input-2/lib/bootstrap.css'],
+      },
+    },
+```
+
+---
+
 ### Локализация
 
 Для локализации используется плагин `gatsby-plugin-react-i18next` Для сборки
