@@ -14,7 +14,8 @@ const IndexPage = () => (
   <Layout>
     <Container>
       <section>
-        <TestForm />
+        {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
+        <TestForm place="Home page" />
         <p className={'mt-10'}>
           <Link to={'example-page'}>Example Page</Link>
           <Link to={'policy'}>Policy Page</Link>

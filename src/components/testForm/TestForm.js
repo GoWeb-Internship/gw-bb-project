@@ -2,14 +2,20 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import * as yup from 'yup';
 import { getTelegramMessage, sendMessage } from '../../services/telegramApi';
+import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
+import InputPhone from './InputPhone';
+import useClientLocation from '../../hooks/useClientLocation';
+import * as yup from 'yup';
+
+const isBrowser = typeof window !== 'undefined';
 
 const schema = yup
   .object({
     name: yup.string().required(),
     phone: yup.number().required(),
     email: yup.string().email().required(),
+    isAgree: yup.boolean().default(false).oneOf([true]),
   })
   .required();
 
@@ -19,35 +25,48 @@ const encode = data => {
     .join('&');
 };
 
-const TestForm = () => {
+const TestForm = ({ place }) => {
   const { t, i18n } = useTranslation();
+  const formData = t('form', { returnObjects: true });
+  const clientLocation = useClientLocation();
+
   const {
+    control,
     register,
     handleSubmit,
+    watch,
+    setValue,
     reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const formData = t('form', { returnObjects: true });
+  useFormPersist('form', {
+    watch,
+    setValue,
+    storage: isBrowser ? window.localStorage : null,
+    exclude: ['isAgree'], // не добавляет выбор чекбокса так как это запрещено)
+  });
 
   const onSubmit = data => {
+    console.log(data);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...data }),
     })
       .then(() => {
-        const messsage = getTelegramMessage({
+        const message = getTelegramMessage({
           title: 'Заявка на зворотній дзвінок',
           hashTag: 'customtag',
           data,
           analysisData: 'якісь аналітичні дані',
           sitelang: i18n.language,
         });
-        sendMessage(messsage);
-        reset({ name: '', phone: '', email: '' });
+        sendMessage(message);
+        reset({ name: '', phone: '', email: '', isAgree: false });
+        localStorage.removeItem('form');
       })
       .catch(error => alert(error));
   };
@@ -62,6 +81,7 @@ const TestForm = () => {
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" {...register('place')} value={place} />
       <div className="my-1">
         <label className="m-1 block" htmlFor="name">
           {formData.inputName.name}
@@ -73,17 +93,13 @@ const TestForm = () => {
         />
         <p className="text-red-400 text-xs">{errors.name?.message}</p>
       </div>
-      <div className="my-1">
-        <label className="m-1 block" htmlFor="phone">
-          {formData.inputPhone.name}
-        </label>
-        <input
-          placeholder={formData.inputPhone.placeholder}
-          className="p-2 bg-slate-200 rounded-md text-xs w-72"
-          {...register('phone')}
-        />
-        <p className="text-red-400 text-xs">{errors.phone?.message}</p>
-      </div>
+      <InputPhone
+        control={control}
+        errors={errors}
+        label={formData.inputPhone.name}
+        language={i18n.language}
+        country={clientLocation}
+      />
       <div className="my-1">
         <label className="m-1 block" htmlFor="email">
           {formData.inputEmail.name}
@@ -94,6 +110,17 @@ const TestForm = () => {
           {...register('email')}
         />
         <p className="text-red-400 text-xs">{errors.email?.message}</p>
+      </div>
+      <div className="my-1 flex items-center text-gray-500">
+        <input
+          type="checkbox"
+          id="isAgree"
+          {...register('isAgree')}
+          className="mr-2"
+        />
+        <label className="text-sm" htmlFor="isAgree">
+          {formData.checkbox}
+        </label>
       </div>
       <button className="p-2 text-white bg-sky-500 rounded-md" type="submit">
         {formData.button}
