@@ -4,12 +4,14 @@ import axios from 'axios';
 const STORAGE_KEY = 'ucl-reg-yHjb';
 
 const useClientLocation = () => {
-  const [location, setLocation] = useState(
-    () => sessionStorage.getItem(STORAGE_KEY) ?? '',
-  );
+  const [location, setLocation] = useState('');
 
   useEffect(() => {
-    if (location) return;
+    const storageLocation = window.sessionStorage.getItem(STORAGE_KEY) ?? '';
+    if (storageLocation) {
+      setLocation(storageLocation);
+      return;
+    }
     const getLocation = async () => {
       const { data } = await axios.get('https://ipapi.co/json/');
       const code = data.country_code?.toLowerCase();
