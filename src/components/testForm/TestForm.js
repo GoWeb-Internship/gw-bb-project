@@ -9,15 +9,6 @@ import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
 
-const schema = yup
-  .object({
-    name: yup.string().required(),
-    phone: yup.number().required(),
-    email: yup.string().email().required(),
-    isAgree: yup.boolean().default(false).oneOf([true]),
-  })
-  .required();
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -27,7 +18,14 @@ const encode = data => {
 const TestForm = ({ place, country = 'ua' }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
+  const valid = t('validation', { returnObjects: true });
 
+  const schema = yup.object({
+    name: yup.string().min(1, valid.name).required(valid.required),
+    phone: yup.number().required(valid.required),
+    email: yup.string().email(valid.email).required(valid.required),
+    isAgree: yup.boolean().default(false).oneOf([true]),
+  });
   const {
     control,
     register,
