@@ -34,5 +34,10 @@
     },
     "checkbox": "I agree to the processing of my personal data",
     "button": "Submit"
+  },
+  "validation": {
+    "required": "This is a required field",
+    "email": "Enter your email in the format your@email.com",
+    "name": "Name must be at least 1 characters"
   }
 }
