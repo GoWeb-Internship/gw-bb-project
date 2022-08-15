@@ -7,6 +7,9 @@ import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import useClientLocation from 'hooks/useClientLocation';
+import SocialGroup from 'components/reusable/SocialGroup';
+
+import { fullSocial, social } from 'assets/social/social';
 
 const ExamplePage = ({ data, pageContext }) => {
   const mdxContent = data.example.nodes;
@@ -57,6 +60,8 @@ const ExamplePage = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
+
+          <SocialGroup data={fullSocial} />
         </Container>
       </section>
     </Layout>
