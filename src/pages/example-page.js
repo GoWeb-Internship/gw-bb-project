@@ -15,7 +15,8 @@ const ExamplePage = ({ data, pageContext }) => {
 
   const images = data.images.nodes;
 
-  // console.log('data', pageContext.language);
+  // const languageData = pageContext.language;
+  // console.log('languageData', languageData);
 
   console.log(clientLocation);
 
@@ -58,7 +59,7 @@ const ExamplePage = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
-          <Slider />
+          <Slider images={images} />
         </Container>
       </section>
     </Layout>
