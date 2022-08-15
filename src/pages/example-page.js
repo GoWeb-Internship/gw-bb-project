@@ -62,6 +62,8 @@ const ExamplePage = ({ data, pageContext }) => {
           </ul>
 
           <SocialGroup data={fullSocial} />
+          <p>Example for form</p>
+          <SocialGroup data={social} />
         </Container>
       </section>
     </Layout>
