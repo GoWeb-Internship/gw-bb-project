@@ -7,6 +7,7 @@ import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import useClientLocation from 'hooks/useClientLocation';
+import Slider from 'components/slider/Slider';
 
 const ExamplePage = ({ data, pageContext }) => {
   const mdxContent = data.example.nodes;
@@ -14,7 +15,7 @@ const ExamplePage = ({ data, pageContext }) => {
 
   const images = data.images.nodes;
 
-  console.log('data', pageContext.language);
+  // console.log('data', pageContext.language);
 
   console.log(clientLocation);
 
@@ -57,6 +58,7 @@ const ExamplePage = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
+          <Slider />
         </Container>
       </section>
     </Layout>
