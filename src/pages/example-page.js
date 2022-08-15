@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 
 import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import useClientLocation from 'hooks/useClientLocation';
 
-const ExamplePage = ({ data }) => {
-  const mdxContent = data.allMdx.nodes;
+const ExamplePage = ({ data, pageContext }) => {
+  const mdxContent = data.example.nodes;
   const clientLocation = useClientLocation();
+
+  const images = data.images.nodes;
+
+  console.log('data', pageContext.language);
 
   console.log(clientLocation);
 
@@ -30,6 +34,18 @@ const ExamplePage = ({ data }) => {
             formats={['auto', 'webp', 'avif']}
             alt=""
           />
+          <ul>
+            {images.map(item => {
+              const imageData =
+                item.cloudinaryImg.childImageSharp.gatsbyImageData;
+              const imageAlt = item.frontmatter[pageContext.language];
+              return (
+                <li key={item.id}>
+                  <GatsbyImage image={imageData} alt={imageAlt} />
+                </li>
+              );
+            })}
+          </ul>
 
           <ul>
             {mdxContent.map(item => (
@@ -51,7 +67,7 @@ export const Head = () => <Seo title="Page two" />;
 
 export const query = graphql`
   query ($language: String!) {
-    allMdx(
+    example: allMdx(
       filter: {
         frontmatter: {
           fieldIdName: { eq: "main" }
@@ -67,6 +83,23 @@ export const query = graphql`
           title
           description
         }
+      }
+    }
+    images: allMdx(
+      filter: { frontmatter: { fieldIdName: { eq: "content-image" } } }
+    ) {
+      nodes {
+        cloudinaryImg {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED, width: 200)
+          }
+        }
+        frontmatter {
+          en
+          ru
+          uk
+        }
+        id
       }
     }
     locales: allLocale(filter: { language: { eq: $language } }) {
