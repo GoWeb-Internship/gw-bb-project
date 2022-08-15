@@ -24,7 +24,7 @@ exports.onCreateNode = async ({
   getCache,
 }) => {
   // For all Mdx nodes that have a featured image url, call createRemoteFileNode
-  if (node.internal.type === 'Mdx' && node.frontmatter.imageUrl !== null) {
+  if (node.internal.type === 'Mdx' && node.frontmatter.imageUrl) {
     const fileNode = await createRemoteFileNode({
       url: node.frontmatter.imageUrl, // string that points to the URL of the image
       parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
