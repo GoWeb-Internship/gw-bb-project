@@ -23,14 +23,14 @@ collections:
   - label: 'Page'
     name: 'page'
     folder: 'cmsdata/main'
-    slug: '{{groupId}}-{{language}}'
+    slug: '{{fieldIdName}}-{{language}}'
     create: false # ограничение на создание документа
     delete: false # ограничение на удаление документа
     identifier_field: title
     fields:
       - {
           label: 'Group identifier',
-          name: 'groupId',
+          name: 'fieldIdName',
           widget: 'hidden',
           default: 'main',
         }
@@ -49,13 +49,13 @@ collections:
   - label: 'Policy'
     name: 'policy'
     folder: 'cmsdata/policy'
-    slug: '{{policyId}}-{{title}}'
+    slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
     create: true # ограничение на создание документа
     fields:
       - {
           label: 'Policy identifier',
-          name: 'policyId',
+          name: 'fieldIdName',
           widget: 'hidden',
           default: 'policy',
         }
@@ -75,4 +75,39 @@ collections:
           widget: 'markdown',
           required: false,
           default: 'These markings are not displayed on the site',
+        }
+  # Content Images
+  - label: 'Content images'
+    name: 'contentImages'
+    folder: 'cmsdata/images'
+    slug: '{{fieldIdName}}-{{title}}'
+    identifier_field: title
+    create: false
+    delete: false
+    fields:
+      - {
+          label: 'Images identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'content-image',
+        }
+      - {
+          label: 'Item number',
+          name: 'title',
+          widget: 'number',
+          value_type: 'int',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Image', name: 'imageUrl', widget: 'image' }
+      - { label: 'Description [UK]', name: 'uk' }
+      - { label: 'Description [RU]', name: 'ru' }
+      - { label: 'Description [EN]', name: 'en' }
+      - {
+          label: 'Notes',
+          name: 'body',
+          widget: 'markdown',
+          required: false,
+          default:
+            'These markings are not displayed on the site. Description must
+            answer question: What is shown in the picture?',
         }

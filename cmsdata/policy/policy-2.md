@@ -1,5 +1,5 @@
 ---
-policyId: policy
+fieldIdName: policy
 date: 2022-08-06T15:27:46.785Z
 title: 2
 uk: 'Опис пункту 2 політики'

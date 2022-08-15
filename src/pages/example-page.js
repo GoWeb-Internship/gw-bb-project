@@ -53,7 +53,10 @@ export const query = graphql`
   query ($language: String!) {
     allMdx(
       filter: {
-        frontmatter: { groupId: { eq: "main" }, language: { eq: $language } }
+        frontmatter: {
+          fieldIdName: { eq: "main" }
+          language: { eq: $language }
+        }
       }
     ) {
       nodes {

@@ -38,7 +38,7 @@ export const query = graphql`
       }
     }
     allMdx(
-      filter: { frontmatter: { policyId: { eq: "policy" } } }
+      filter: { frontmatter: { fieldIdName: { eq: "policy" } } }
       sort: { fields: frontmatter___title, order: ASC }
     ) {
       nodes {
