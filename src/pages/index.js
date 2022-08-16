@@ -6,6 +6,7 @@ import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
+import About from 'components/sectionAbout/About';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -25,6 +26,7 @@ const IndexPage = () => {
             <Link to={'policy'}>Policy Page</Link>
           </p>
         </section>
+        <About />
       </Container>
     </Layout>
   );

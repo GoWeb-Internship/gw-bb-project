@@ -39,5 +39,22 @@
     "required": "This is a required field",
     "email": "Enter your email in the format your@email.com",
     "name": "Name must be at least 1 characters"
+  },
+  "about": {
+    "title": "Let's get acquainted",
+    "caption": "I know how you feel when:",
+    "text": [
+      "Hi, I'm Yulia and my motto in life is to live a high life! I am always doing something that brings me pleasure, I love to discover new cities, countries, continents and I never stop doing it. For over 7 years I've been helping start-up companies develop and optimize their business.",
+      "My goal is to make this world a little better and increase the number of conscious happy people. That's why in 2021 I decided to dedicate myself to coaching and use all my experience to help those who are lost, do not see any prospects or do not know where to start.",
+      "Together we'll unlock your potential, take apart your desires and identify what's holding you back on the path to your goals. And you'll definitely find out what it's like to live high!"
+    ],
+    "items": [
+      "Everyone around seems to be more successful and happier",
+      "Forced to do things I don't like",
+      "You don't live your life",
+      "Life goes by without pleasure",
+      "Time flies, but nothing changes",
+      "The environment drags you down"
+    ]
   }
 }
