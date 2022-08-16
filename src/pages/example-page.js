@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { graphql } from 'gatsby';
 import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
-
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import useClientLocation from 'hooks/useClientLocation';
 import SocialGroup from 'components/reusable/SocialGroup';
 
-import { fullSocial, social } from 'assets/social/social';
+import { fullSocial, social } from 'data/social/social';
 
 const ExamplePage = ({ data, pageContext }) => {
+  const { t, i18n } = useTranslation();
   const mdxContent = data.example.nodes;
   const clientLocation = useClientLocation();
 
@@ -61,7 +62,7 @@ const ExamplePage = ({ data, pageContext }) => {
             ))}
           </ul>
 
-          <SocialGroup data={fullSocial} />
+          <SocialGroup data={fullSocial} language={i18n.language} />
           <p>Example for form</p>
           <SocialGroup data={social} />
         </Container>
