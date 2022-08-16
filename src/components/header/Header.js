@@ -14,15 +14,15 @@ const Header = () => {
   const { t } = useTranslation();
   const isWide = useMedia(getMediaVars().tablet_desktop);
 
-  const data = t('header', { returnObjects: true });
+  const { nav } = t('header', { returnObjects: true });
 
   return (
-    <header>
+    <header className="fixed top-0 z-10">
       <Container className={'flex justify-between align-middle'}>
         <Link to="/" className="p-4 hover:bg-blue-400 font-bold">
           ЛОГО
         </Link>
-        {isWide && <HeaderNavigation navConfig={data.nav} />}
+        {isWide && <HeaderNavigation navConfig={nav} />}
         <LangSwitcher />
       </Container>
     </header>

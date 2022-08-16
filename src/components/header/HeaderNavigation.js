@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const HeaderNavigation = ({ navConfig }) => {
   return (
@@ -6,9 +7,17 @@ const HeaderNavigation = ({ navConfig }) => {
       <ul className="flex">
         {navConfig.map(({ id, name }) => (
           <li key={id} className="shrink-0">
-            <a href={`#${id}`} className={'p-4 hover:bg-blue-400'}>
+            <Link
+              to={`${id}`}
+              activeClass="bg-blue-400"
+              className={`p-4 hover:bg-blue-400`}
+              smooth
+              spy
+              // hashSpy
+              offset={-100}
+            >
               {name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
