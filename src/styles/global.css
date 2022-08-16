@@ -56,3 +56,17 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* Swiper style */
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+.swiper-button-next {
+  right: 0px !important;
+}
+
+.swiper-button-prev {
+  left: 0px !important;
+}
