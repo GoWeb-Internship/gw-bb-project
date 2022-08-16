@@ -7,9 +7,11 @@ import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import useClientLocation from 'hooks/useClientLocation';
-import SocialGroup from 'components/reusable/SocialGroup';
 
+import Slider from 'components/slider/Slider';
+import SocialGroup from 'components/reusable/SocialGroup';
 import { fullSocial, social } from 'data/social/social';
+
 
 const ExamplePage = ({ data, pageContext }) => {
   const { t, i18n } = useTranslation();
@@ -18,7 +20,8 @@ const ExamplePage = ({ data, pageContext }) => {
 
   const images = data.images.nodes;
 
-  console.log('data', pageContext.language);
+  // const languageData = pageContext.language;
+  // console.log('languageData', languageData);
 
   console.log(clientLocation);
 
@@ -61,6 +64,8 @@ const ExamplePage = ({ data, pageContext }) => {
               </li>
             ))}
           </ul>
+
+          <Slider images={images} />
 
           <SocialGroup data={fullSocial} language={i18n.language} />
           <p>Example for form</p>
