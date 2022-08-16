@@ -17,17 +17,17 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Container>
-        <section>
-          {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
-          <TestForm place="Home page" country={clientLocation} />
-          <p className={'mt-10'}>
-            <Link to={'example-page'}>Example Page</Link>
-            <Link to={'policy'}>Policy Page</Link>
-          </p>
-        </section>
-        <About />
-      </Container>
+      {/* <Container> */}
+      <section>
+        {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
+        <TestForm place="Home page" country={clientLocation} />
+        <p className={'mt-10'}>
+          <Link to={'example-page'}>Example Page</Link>
+          <Link to={'policy'}>Policy Page</Link>
+        </p>
+      </section>
+      <About />
+      {/* </Container> */}
     </Layout>
   );
 };

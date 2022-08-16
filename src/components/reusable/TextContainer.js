@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TextContainer = ({ title, text = [] }) => {
   return (
-    <div>
+    <div className="lg:max-w-xl">
       <h2 className="mb-5 lg:mb-12">{title}</h2>
       {!!text.length &&
         text.map(item => {

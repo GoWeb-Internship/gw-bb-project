@@ -11,7 +11,7 @@ const ImageWrapper = ({ imageData, imageAlt }) => {
 };
 
 ImageWrapper.propTypes = {
-  imageData: PropTypes.string,
+  imageData: PropTypes.object,
   imageAlt: PropTypes.string,
 };
 
