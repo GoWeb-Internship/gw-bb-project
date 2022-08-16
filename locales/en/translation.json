@@ -2,20 +2,20 @@
   "header": {
     "nav": [
       {
-        "name": "Home",
-        "id": "page-nav-home"
+        "name": "About me",
+        "id": "about"
       },
       {
-        "name": "About",
-        "id": "page-nav-about"
+        "name": "Price",
+        "id": "price"
       },
       {
-        "name": "Advantages",
-        "id": "page-nav-advantages"
+        "name": "Reviews",
+        "id": "reviews"
       },
       {
         "name": "Contacts",
-        "id": "page-nav-contacts"
+        "id": "contacts"
       }
     ]
   },

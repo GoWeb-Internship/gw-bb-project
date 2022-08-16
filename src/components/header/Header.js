@@ -1,14 +1,13 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import HeaderNavigation from './HeaderNavigation';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Link } from 'gatsby';
 import { useMedia } from 'react-use';
 
 import LangSwitcher from './LangSwitcher';
 import Container from 'components/reusable/Container';
 
 import { getMediaVars } from 'styles/vars';
+import Logo from './Logo';
 
 const Header = () => {
   const { t } = useTranslation();
@@ -17,13 +16,16 @@ const Header = () => {
   const { nav } = t('header', { returnObjects: true });
 
   return (
-    <header className="fixed top-0 z-10">
-      <Container className={'flex justify-between align-middle'}>
-        <Link to="/" className="p-4 hover:bg-blue-400 font-bold">
-          ЛОГО
-        </Link>
-        {isWide && <HeaderNavigation navConfig={nav} />}
-        <LangSwitcher />
+    <header className="fixed top-0 z-10 w-full py-3 bg-[#0891b2cc] shadow-bb1">
+      <Container className={'flex items-center'}>
+        <Logo />
+        {isWide && (
+          <HeaderNavigation
+            navConfig={nav}
+            className="ml-auto md:mr-7 lg:mr-[53px] "
+          />
+        )}
+        <LangSwitcher className="ml-auto md:ml-0" />
       </Container>
     </header>
   );
