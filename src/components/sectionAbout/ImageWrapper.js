@@ -4,7 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 const ImageWrapper = ({ imageData, imageAlt }) => {
   return (
-    <div>
+    <div className="">
       <GatsbyImage image={imageData} alt={imageAlt} />
     </div>
   );

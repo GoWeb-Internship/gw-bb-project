@@ -5,11 +5,16 @@ const List = ({ items = [] }) => {
   return (
     <div>
       {!!items.length && (
-        <ul className=" list-disc list-outside">
+        <ul className="">
           {items.map(item => {
             return (
               <li key={item} className="">
-                <p className=" text-neutral-700">{item}</p>
+                <p className="text-neutral-700 text-base md:text-xl mt-4">
+                  <span className="text-orange-400 mr-4 " aria-hidden="true">
+                    ●
+                  </span>
+                  {item}
+                </p>
               </li>
             );
           })}

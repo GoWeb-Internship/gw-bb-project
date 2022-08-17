@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 const TextContainer = ({ title, text = [] }) => {
   return (
-    <div className="lg:max-w-xl">
-      <h2 className="mb-5 lg:mb-12">{title}</h2>
+    <div className="">
+      <h2 className="mb-5 lg:mb-12 text-2xl lg:text-4xl font-bold text-orange-400">
+        {title}
+      </h2>
       {!!text.length &&
         text.map(item => {
           return (
-            <p key={item} className="mt-6">
+            <p key={item} className="mt-6 text-base md:text-xl">
               {item}
             </p>
           );

@@ -17,7 +17,8 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/* <Container> */}
+      {/* Пока закоментировала контейнер потому что хотела посмотреть как будут смотреться фотки они в плотную к краю */}
+      {/* <Container>  */}
       <section>
         {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
         <TestForm place="Home page" country={clientLocation} />
