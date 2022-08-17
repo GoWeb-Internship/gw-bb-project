@@ -6,7 +6,7 @@ import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
-import RoadMapSection from 'components/RoadMapSection';
+import RoadMapSection from 'components/roadMapSection/RoadMapSection';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
