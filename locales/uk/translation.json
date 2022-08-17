@@ -2,20 +2,20 @@
   "header": {
     "nav": [
       {
-        "name": "Домашня",
-        "id": "page-nav-home"
-      },
-      {
         "name": "Про мене",
-        "id": "page-nav-about"
+        "id": "about"
       },
       {
-        "name": "Мої переваги",
-        "id": "page-nav-advantages"
+        "name": "Вартість",
+        "id": "price"
+      },
+      {
+        "name": "Відгуки",
+        "id": "reviews"
       },
       {
         "name": "Контакти",
-        "id": "page-nav-contacts"
+        "id": "contacts"
       }
     ]
   },
