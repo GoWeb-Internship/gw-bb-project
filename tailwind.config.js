@@ -8,11 +8,18 @@ module.exports = {
     screens: {
       sm: '480px',
       md: '768px',
-      lg: '1280px',
-      xl: '1600px',
-      '2xl': '1920px',
+      lg: '1440px',
+      xl: '1920px',
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        bb1: '0px 4px 10px rgba(106, 161, 193, 0.25)',
+      },
+      fontSize: {
+        bbBase: ['18px', '24px'],
+        bbTitle1: ['40px', '36px'],
+      },
+    },
   },
   plugins: [],
 };

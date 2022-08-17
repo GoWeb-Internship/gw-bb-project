@@ -77,7 +77,24 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, 'avif'],
+          placeholder: `dominantColor`,
+          quality: 80,
+          breakpoints: [768, 1440],
+          backgroundColor: `transparent`,
+          tracedSVGOptions: {},
+          blurredOptions: {},
+          jpgOptions: {},
+          pngOptions: {},
+          webpOptions: {},
+          avifOptions: {},
+        },
+      },
+    },
     {
       // import SomeIcon from 'images/svg/some-icon.inline.svg' and use as Component <SomeIcon/>, inline svg
       resolve: 'gatsby-plugin-react-svg',
