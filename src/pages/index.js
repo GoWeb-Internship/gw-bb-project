@@ -6,6 +6,7 @@ import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
+import RoadMapSection from 'components/RoadMapSection';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -16,16 +17,17 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Container>
-        <section>
+      <section>
+        <Container>
           {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
           <TestForm place="Home page" country={clientLocation} />
           <p className={'mt-10'}>
             <Link to={'example-page'}>Example Page</Link>
             <Link to={'policy'}>Policy Page</Link>
           </p>
-        </section>
-      </Container>
+        </Container>
+      </section>
+      <RoadMapSection />
     </Layout>
   );
 };

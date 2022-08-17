@@ -19,6 +19,17 @@
       }
     ]
   },
+  "roadMapSection": {
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "list": [
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg",
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg",
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg",
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg",
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg",
+      "fgjdlfkjg ldkfgjldfkjg ldkfgldkfjg dlfkjg"
+    ]
+  },
   "form": {
     "inputName": {
       "name": "Name",
