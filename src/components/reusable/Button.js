@@ -14,10 +14,4 @@ Button.protoTypes = {
   type: PropTypes.string,
 };
 
-// import React from 'react';
-
-// const Button = () => {
-//   return null;
-// };
-
 export default Button;

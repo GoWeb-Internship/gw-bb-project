@@ -7,6 +7,7 @@ import Seo from 'components/Seo';
 import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
+import Hero from 'components/hero/Hero';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -17,6 +18,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Hero />
       <section>
         <Container>
           {/* пропс place используется в скрытом инпуте для того чтобы указать откуда пришла форма.*/}
@@ -27,6 +29,7 @@ const IndexPage = () => {
           </p>
         </Container>
       </section>
+
       <RoadMapSection />
     </Layout>
   );

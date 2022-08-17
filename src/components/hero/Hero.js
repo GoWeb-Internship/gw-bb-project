@@ -1,77 +1,62 @@
 import * as React from 'react';
-import Button from 'components/reusable/Button';
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
-const Hero = ({
-  data = [],
-  heroDataTitle = [],
-  heroDataList = [],
-  language,
-  children,
-}) => {
-  console.log('dataHero', data);
+import Button from 'components/reusable/Button';
+import SocialGroup from 'components/reusable/SocialGroup';
+import { fullSocial } from 'data/social/social';
+
+import Section from '../reusable/Section';
+import Background from '../reusable/Background';
+import Container from '../reusable/Container';
+
+import HeroDataTitle from './HeroDataTitle';
+import HeroListExperiences from './HeroListExperiences';
+import HeroDataList from './HeroDataList';
+
+const Hero = ({ data = [] }) => {
+  const { t, i18n } = useTranslation();
+
+  const imageData = useStaticQuery(graphql`
+    query MyQueryHero {
+      file(name: { eq: "hero" }) {
+        id
+        publicURL
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
+      }
+    }
+  `);
+
+  const button = t('button', { returnObjects: true });
+  const experience = t('heroExpirience', { returnObjects: true });
+  const heroList = t('heroListBlock', { returnObjects: true });
+  const heroTitle = t('heroTitle', { returnObjects: true });
+
   return (
-    <section
-    // className="bg-gray-400 pt-48 pb-20"
-    >
-      <div className="grid">
-        <StaticImage
-          style={{
-            gridArea: '1/1',
-            maxHeight: 1170,
-          }}
-          layout="fullWidth"
-          alt=""
-          src={'../../images/jcob-nasyr-rK2HPIseisA-unsplash.jpg'}
-          formats={['auto', 'webp', 'avif']}
-        />
-        <div
-          style={{
-            gridArea: '1/1',
-            position: 'relative',
-            // placeItems: 'center',
-            display: 'grid',
-          }}
-        >
-          <div className="pt-48 pb-20 px-20">
-            <div className="flex justify-between items-center">
-              <div>
-                {data.map(({ supTitle, title, subTitle }) => {
-                  return (
-                    <>
-                      <h3 className="mb-8">{supTitle[language]}</h3>
-                      <h1>{title[language]}</h1>
-                      <p className="mb-12">{subTitle[language]}</p>
-                    </>
-                  );
-                })}
-                <Button
-                  type="button"
-                  className="bg-orange-400 rounded-xl py-4 px-14"
-                >
-                  Сделать первый шаг
-                </Button>
-              </div>
-              {children}
+    <Section>
+      <Background imageData={imageData} />
+      <Container>
+        <div className="pt-[174px] pb-10">
+          <div className="flex justify-between items-start">
+            <div className="">
+              <HeroDataTitle heroTitle={heroTitle} />
+              <Button
+                type="button"
+                className="bg-orange-400 rounded-xl py-4 px-[100px] text-xl leading-6"
+              >
+                {button.textBigButton}
+              </Button>
             </div>
-            {heroDataTitle.map(({ title }) => (
-              <h2 className="mb-14">{title[language]}:</h2>
-            ))}
-            <ul className="grid grid-cols-3 gap-x-9 gap-y-9 relative">
-              {heroDataList.map(({ id, text }) => (
-                <li
-                  key={id}
-                  className="border-t-2 border-slate-50 py-6"
-                  // className="before:content-[``] before:w-full before:-mt-6 before:absolute before:border-1 before:h-px before:bg-orange-400"
-                >
-                  {text[language]}
-                </li>
-              ))}
-            </ul>
+            <SocialGroup data={fullSocial} language={i18n.language} />
           </div>
+          <HeroDataList heroDataList={heroList} />
+          <HeroListExperiences experience={experience} />
         </div>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };
 export default Hero;
