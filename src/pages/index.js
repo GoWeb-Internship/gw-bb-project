@@ -28,8 +28,8 @@ const IndexPage = () => {
           </p>
         </Container>
       </section>
-      <RoadMapSection />
       <About />
+      <RoadMapSection />
     </Layout>
   );
 };

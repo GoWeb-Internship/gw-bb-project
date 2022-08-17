@@ -1,6 +1,6 @@
 ---
 fieldIdName: content-image
-title: 1
+title: 'about1'
 date: 2022-08-06T15:27:46.785Z
 imageUrl: https://res.cloudinary.com/gw-bb-project/image/upload/c_scale,f_auto,q_auto/v1660662386/content-photo/about-1_j2xxgo.jpg
 uk: Фото Юлії на березі моря в білому платті

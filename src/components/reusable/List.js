@@ -9,7 +9,7 @@ const List = ({ items = [] }) => {
           {items.map(item => {
             return (
               <li key={item} className="">
-                <p className="text-neutral-700 text-base md:text-xl mt-4">
+                <p className="text-neutral-700 text-base md:text-bbBase mt-4">
                   <span className="text-orange-400 mr-4 " aria-hidden="true">
                     ●
                   </span>
