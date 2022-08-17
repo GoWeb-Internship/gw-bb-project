@@ -51,7 +51,7 @@ const About = () => {
   return (
     <Section id="about">
       <Background imageData={data} />
-      <div className="py-10 md:py-20 lg:py-32">
+      <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <div className="flex justify-end lg:block">
             <ImageWrapper
