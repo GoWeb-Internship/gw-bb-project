@@ -12,6 +12,7 @@ const Background = ({ imageData = {}, className = '' }) => {
       layout="fullWidth"
       formats={['auto', 'webp', 'avif']}
       className={`absolute top-0 left-1/2 -translate-x-1/2 max-h-full mx-auto md:w-[768px] lg:w-[1440px] ${className}`}
+      style={{ position: 'absolute' }}
     />
   );
 };
