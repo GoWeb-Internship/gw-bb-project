@@ -6,7 +6,7 @@ const SocialGroup = ({ data = [], language }) => {
   return (
     !!data.length && (
       <IconContext.Provider value={{ className: 'w-6 h-6' }}>
-        <ul className="bg-blue-400 text-slate-50 w-9">
+        <ul className=" text-slate-50 w-9">
           {data.map(item => {
             return (
               <li
