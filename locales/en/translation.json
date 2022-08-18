@@ -141,5 +141,18 @@
       "posing on a couch and looking stoically at the camerar",
       "posing on a couch and looking stoically at the camerad"
     ]
+  },
+  "beBetterToday": {
+    "title": "Lorem ipsum dolor sit amet consectetur!",
+    "subTitle": "Lorem ipsum dolor sit amet!",
+    "textSupItems": "Lorem ipsum dolo",
+    "items": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "Lorem ipsum dolor sit amet consectetur adipisicing eli",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur adipisicing el",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elity"
+    ],
+    "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   }
 }
