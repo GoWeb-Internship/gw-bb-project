@@ -17,6 +17,14 @@ li {
   margin-bottom: 0;
 }
 
+h2 {
+  @apply text-bbTitle1 font-heads font-bold;
+}
+
+p {
+  @apply font-main font-medium text-bb2030 tracking-[0.02em];
+}
+
 ul {
   padding-left: 0;
 }
@@ -58,7 +66,7 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* кастомные стили */
+/* Custom styles */
 @layer utilities {
   .line-hidden:last-child > .peer {
     display: none;
