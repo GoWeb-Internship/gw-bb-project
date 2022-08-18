@@ -11,11 +11,12 @@ import useClientLocation from 'hooks/useClientLocation';
 import Slider from 'components/slider/Slider';
 import SocialGroup from 'components/reusable/SocialGroup';
 import { fullSocial, social } from 'data/social/social';
+
 import Hero from 'components/hero/Hero';
 // import { heroTitle, heroDataTitle, heroDataList } from 'data/hero/hero';
 
 const ExamplePage = ({ data, pageContext }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const mdxContent = data.example.nodes;
   const clientLocation = useClientLocation();
 
@@ -61,7 +62,7 @@ const ExamplePage = ({ data, pageContext }) => {
                 <p>{item.frontmatter.date}</p>
                 <p>{item.frontmatter.language}</p>
                 <p>{item.frontmatter.name}</p>
-                <p>{item.frontmatter.description}</p>
+                <p>{item.frontmatter.charity}</p>
               </li>
             ))}
           </ul>
@@ -102,7 +103,7 @@ export const query = graphql`
           date
           language
           title
-          description
+          charity
         }
       }
     }

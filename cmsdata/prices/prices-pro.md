@@ -1,14 +1,18 @@
 ---
 fieldIdName: prices
 title: 'Pro'
+id: '3'
 date: 2022-08-06T15:27:46.785Z
+recommended: false
+price: 850
 uk: Професіональний
+ukMonth: 3 місяця роботи
+ukSessions: 12 часових сесій
 ru: Профессиональный
+ruMonth: 3 месяца работы
+ruSessions: 12 часовых сессий
 en: Professional
-sessionPrice: 80
-sessionsAmount: 12
-monthAmount: 3
+enMonth: 3 work month
+enSessions: 12 1-hour sessions
 discount: 110
 ---
-
-80 \* 12 - 110

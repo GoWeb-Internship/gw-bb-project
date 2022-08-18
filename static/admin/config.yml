@@ -42,7 +42,13 @@ collections:
           default: 'Main Page',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Road Map Section Title',
+          name: 'roadMapTitle',
+          widget: 'string',
+        }
+      - { label: 'Prices Section Title', name: 'pricesTitle', widget: 'string' }
+      - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
   # Policy list model
@@ -106,9 +112,9 @@ collections:
             'These markings are not displayed on the site. Description must
             answer question: What is shown in the picture?',
         }
-  # Price model
-  - label: 'Prices'
-    name: 'prices'
+  # Price cards model
+  - label: 'Prices Cards'
+    name: 'pricesCards'
     folder: 'cmsdata/prices'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
@@ -122,53 +128,30 @@ collections:
           default: 'prices',
         }
       - { label: 'Title', name: 'title', widget: 'hidden' }
+      - { label: 'ID', name: 'id', widget: 'hidden' }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-
-      - { label: 'Name [UK]', name: 'uk', widget: string }
-      - { label: 'Name [RU]', name: 'ru', widget: string }
-      - { label: 'Name [EN]', name: 'en', widget: string }
-      - { label: 'Base session price', name: 'sessionPrice', widget: 'number' }
       - {
-          label: 'Amount of sessions',
-          name: 'sessionsAmount',
-          widget: 'number',
+          label: 'Most recommended',
+          name: 'recommended',
+          widget: boolean,
+          default: false,
         }
-      - { label: 'Amount of month', name: 'monthAmount', widget: 'number' }
+      - { label: 'Price, $', name: 'price', widget: 'number' }
       - { label: 'Discount, $', name: 'discount', widget: 'number' }
-      - {
-          label: 'Notes',
-          name: 'body',
-          widget: 'markdown',
-          required: false,
-          default:
-            'Формула подсчёта финальной цены - Цена за одну сессиюю (одинаковая
-            для всех тарифов) * кол-во сессий - скидка',
-        }
-  # Road map Section
-  - label: 'Road Map'
-    name: 'roadMap'
-    folder: 'cmsdata/roadMap'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: false
-    delete: false
-    fields:
-      - {
-          label: 'Road map section identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'road-map',
-        }
-      - { label: 'Title', name: 'title', widget: 'hidden' }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Section Title [UK]', name: 'uk', widget: string }
-      - { label: 'Section Title [RU]', name: 'ru', widget: string }
-      - { label: 'Section Title [EN]', name: 'en', widget: string }
+      - { label: 'Name [UK]', name: 'uk', widget: string }
+      - { label: 'Amount of month [UK]', name: 'ukMonth', widget: string }
+      - { label: 'Amount of sessions [UK]', name: 'ukSessions', widget: string }
+      - { label: 'Name [RU]', name: 'ru', widget: string }
+      - { label: 'Amount of month [RU]', name: 'ruMonth', widget: string }
+      - { label: 'Amount of sessions [RU]', name: 'ruSessions', widget: string }
+      - { label: 'Name [EN]', name: 'en', widget: string }
+      - { label: 'Amount of month [EN]', name: 'enMonth', widget: string }
+      - { label: 'Amount of sessions [EN]', name: 'enSessions', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Road map Steps
   - label: 'Road Map Steps'
     name: 'roadMapSteps'
-    folder: 'cmsdata/roadMap/list'
+    folder: 'cmsdata/roadMap'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
     create: true
