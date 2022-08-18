@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LampIcon from 'images/lamp.inline.svg';
 import LampInHandIcon from 'images/lampInHand.inline.svg';
 import LampWithArrowIcon from 'images/lampWithArrow.inline.svg';
@@ -20,6 +21,10 @@ const MyFormulaList = ({ data }) => {
       </li>
     </ul>
   );
+};
+
+MyFormulaList.protoTypes = {
+  data: PropTypes.object,
 };
 
 export default MyFormulaList;

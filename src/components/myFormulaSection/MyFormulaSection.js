@@ -8,10 +8,9 @@ const MyFormulaSection = () => {
     returnObjects: true,
   });
 
-  console.log('myFormula.items', myFormula.items);
   return (
     <>
-      <div className="bg-[#FFBD87] w-full h-full pt-[124px] pb-[64px] px-[190px] text-slate-50">
+      <div className="bg-orange-300 w-full h-full pt-[124px] pb-[64px] px-[190px] text-slate-50">
         <h2 className="mb-14 text-center">{myFormula.title}</h2>
         <MyFormulaList data={myFormula} />
       </div>
