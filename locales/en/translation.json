@@ -67,5 +67,14 @@
       "Time flies, but nothing changes",
       "The environment drags you down"
     ]
+  },
+  "withCoach": {
+    "title": "Why it's better with a coach",
+    "text": [
+      "'Myself' is a common mistake of people who push themselves and constantly face burnout...",
+      "Of course, you can do it yourself if you find the time and strength to study all the necessary information, understand what you need, what the problems are, and begin to act.",
+      "But time is short, and your current knowledge has led to your current situation.",
+      "Why 'reinvent the wheel', spend time, money and effort to go all the way on your own and not necessarily successfully? When you can ask for professional help and get a result faster and easier. That's what all successful people do!"
+    ]
   }
 }

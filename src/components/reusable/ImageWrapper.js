@@ -2,10 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-const ImageWrapper = ({ imageData, imageAlt, rounded }) => {
+const ImageWrapper = ({ imageData, imageAlt, rounded, width, height }) => {
   return (
-    <div className={`${rounded} overflow-hidden `}>
-      <GatsbyImage image={imageData} alt={imageAlt} />
+    <div className={`${rounded} overflow-hidden h-full `}>
+      <GatsbyImage
+        image={imageData}
+        alt={imageAlt}
+        className={`${width} ${height}`}
+      />
     </div>
   );
 };
