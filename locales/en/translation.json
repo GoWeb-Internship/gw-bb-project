@@ -154,5 +154,11 @@
       "Lorem ipsum dolor sit amet consectetur adipisicing elity"
     ],
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
+  },
+  "myFormula": {
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "textUnderstand": "Understand what you want",
+    "textHowGet": "Understand how to get it",
+    "textStartDoing": "Start doing!"
   }
 }
