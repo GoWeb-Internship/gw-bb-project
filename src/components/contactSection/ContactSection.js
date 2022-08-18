@@ -26,7 +26,7 @@ const ContactSection = ({ saleText = '' }) => {
         <h2 className="visually-hidden">Contacts</h2>
         <div className="bg-slate-50 opacity-30 rounded-[20px] lg:w-[602px] lg:h-[707px] lg:px-[96px] lg:py-[109px]">
           <p className="text-bb1625 text-bold lg:mb-[46px]">{saleText}</p>
-          <Form place="Home page" country={clientLocation} />
+          <Form place="Home page" country={clientLocation} buttonText="" />
         </div>
       </Container>
     </Section>

@@ -16,7 +16,12 @@ const encode = data => {
     .join('&');
 };
 
-const Form = ({ place, country = 'ua', buttonClassName = '' }) => {
+const Form = ({
+  place,
+  country = 'ua',
+  buttonClassName = '',
+  buttonText = '',
+}) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
@@ -116,7 +121,7 @@ const Form = ({ place, country = 'ua', buttonClassName = '' }) => {
         className={`p-2 text-white bg-sky-500 rounded-md ${buttonClassName}`}
         type="submit"
       >
-        {formData.button}
+        {buttonText}
       </button>
     </form>
   );
@@ -126,6 +131,7 @@ Form.propTypes = {
   place: PropTypes.string.isRequired,
   country: PropTypes.string,
   buttonClassName: PropTypes.string,
+  buttonText: PropTypes.string,
 };
 
 export default Form;
