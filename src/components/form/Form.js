@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
@@ -15,7 +16,7 @@ const encode = data => {
     .join('&');
 };
 
-const TestForm = ({ place, country = 'ua' }) => {
+const Form = ({ place, country = 'ua', buttonClassName = '' }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
@@ -79,11 +80,8 @@ const TestForm = ({ place, country = 'ua' }) => {
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" {...register('place')} value={place} />
       <div className="my-1">
-        <label className="m-1 block" htmlFor="name">
-          {formData.inputName.name}
-        </label>
         <input
-          placeholder={formData.inputName.placeholder}
+          placeholder={formData.inputName.name}
           className="p-2 bg-slate-200 rounded-md text-xs w-72"
           {...register('name')}
         />
@@ -92,16 +90,12 @@ const TestForm = ({ place, country = 'ua' }) => {
       <InputPhone
         control={control}
         errors={errors}
-        label={formData.inputPhone.name}
         language={i18n.language}
         country={country}
       />
       <div className="my-1">
-        <label className="m-1 block" htmlFor="email">
-          {formData.inputEmail.name}
-        </label>
         <input
-          placeholder={formData.inputEmail.placeholder}
+          placeholder={formData.inputEmail.name}
           className="p-2 bg-slate-200 rounded-md text-xs w-72"
           {...register('email')}
         />
@@ -118,11 +112,20 @@ const TestForm = ({ place, country = 'ua' }) => {
           {formData.checkbox}
         </label>
       </div>
-      <button className="p-2 text-white bg-sky-500 rounded-md" type="submit">
+      <button
+        className={`p-2 text-white bg-sky-500 rounded-md ${buttonClassName}`}
+        type="submit"
+      >
         {formData.button}
       </button>
     </form>
   );
 };
 
-export default TestForm;
+Form.propTypes = {
+  place: PropTypes.string.isRequired,
+  country: PropTypes.string,
+  buttonClassName: PropTypes.string,
+};
+
+export default Form;
