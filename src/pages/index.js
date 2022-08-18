@@ -8,6 +8,7 @@ import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
+import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -30,6 +31,7 @@ const IndexPage = () => {
       </section>
       <AboutSection />
       <RoadMapSection />
+      <WithCoachSection />
     </Layout>
   );
 };

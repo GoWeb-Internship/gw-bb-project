@@ -14,7 +14,7 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'Ubuntu', 'Helvetica', 'Arial', 'sans-serif'],
       heads: ['Ubuntu', 'sans-serif'],
-      main: ['Inter', 'sans-serif'],
+      main: ['Inter', 'serif'],
     },
 
     extend: {
@@ -25,6 +25,7 @@ module.exports = {
         bbBase: ['18px', '24px'],
         bb1625: ['16px', '25px'],
         bb2030: ['20px', '30px'],
+        bb3237: ['32px', '37px'],
         bbTitle1: ['40px', '47px'],
       },
     },

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TextContainer = ({ title, text = [] }) => {
   return (
     <div className="">
-      <h2 className="mb-5 lg:mb-12 text-2xl lg:text-bbTitle1 font-bold text-orange-400">
+      <h2 className="mb-5 lg:mb-12 text-2xl font-heads lg:text-bbTitle1 font-bold text-orange-400">
         {title}
       </h2>
       {!!text.length &&
@@ -12,7 +12,7 @@ const TextContainer = ({ title, text = [] }) => {
           return (
             <p
               key={item}
-              className="mt-6 text-base md:text-bbBase text-neutral-700"
+              className="mt-6 font-main text-base font-medium md:text-bb2030 text-neutral-700"
             >
               {item}
             </p>

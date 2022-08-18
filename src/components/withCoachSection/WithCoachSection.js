@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
-import Section from '../reusable/Section';
-import Background from '../reusable/Background';
-import ImageWrapper from './ImageWrapper';
+import Section from 'components/reusable/Section';
+import Background from 'components/reusable/Background';
+import ImageWrapper from 'components/reusable/ImageWrapper';
 import TextContainer from 'components/reusable/TextContainer';
 
 const WithCoachSection = () => {
@@ -40,17 +40,19 @@ const WithCoachSection = () => {
   return (
     <Section>
       <Background imageData={data} />
-      <div className="relative w-screen mx-auto pl-5 md:w-[768px] md:pl-10 lg:w-[1440px] lg:pl-20 lg:pt-[124px] lg:pb-[98px]">
+      <div className="relative w-screen mx-auto md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
+          <div className=" mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]">
+            <TextContainer title={withCoach.title} text={withCoach.text} />
+          </div>
           <div className="flex justify-end lg:block">
             <ImageWrapper
               imageData={imageData}
               imageAlt={imageAlt}
-              rounded="rounded-l-[20px]"
+              rounded="lg:rounded-l-[20px]"
+              width="lg:w-[518px]"
+              height="lg:w-[520px]"
             />
-          </div>
-          <div className=" mt-5 lg:mt-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-10">
-            <TextContainer title={withCoach.title} text={withCoach.text} />
           </div>
         </div>
       </div>
