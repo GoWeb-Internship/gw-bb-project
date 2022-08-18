@@ -20,7 +20,6 @@ import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 // KEYS must be started with GATSBY_
 
 const IndexPage = ({ data }) => {
-  const mdxContent = data.main.nodes;
   const clientLocation = useClientLocation();
 
   return (
@@ -41,7 +40,7 @@ const IndexPage = ({ data }) => {
       <WithCoachSection />
       <ImportantResultsSection />
       <InLiveSection />
-      <SignUpSection saleText={mdxContent[0].frontmatter.sale} />
+      <SignUpSection saleText="" />
       <BeBetterToday />
     </Layout>
   );
@@ -59,25 +58,6 @@ export const query = graphql`
           ns
           data
           language
-        }
-      }
-    }
-    main: allMdx(
-      filter: {
-        frontmatter: {
-          fieldIdName: { eq: "main" }
-          language: { eq: $language }
-        }
-      }
-    ) {
-      nodes {
-        id
-        frontmatter {
-          date
-          language
-          title
-          description
-          sale
         }
       }
     }

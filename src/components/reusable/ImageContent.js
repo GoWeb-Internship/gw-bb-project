@@ -14,7 +14,7 @@ const ImageContext = ({
       <GatsbyImage
         image={imageData}
         alt={imageAlt}
-        className={`${width} ${height} object-contain`}
+        className={`${width} ${height}`}
       />
     </div>
   );
