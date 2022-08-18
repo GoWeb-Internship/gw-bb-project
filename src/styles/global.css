@@ -58,6 +58,12 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+/* кастомные стили */
+@layer utilities {
+  .line-hidden:last-child > .peer {
+    display: none;
+  }
+}
 
 /* Swiper style */
 

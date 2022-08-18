@@ -91,12 +91,7 @@ collections:
           widget: 'hidden',
           default: 'content-image',
         }
-      - {
-          label: 'Item number',
-          name: 'title',
-          widget: 'number',
-          value_type: 'int',
-        }
+      - { label: 'Item', name: 'title', widget: 'string' }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - { label: 'Image', name: 'imageUrl', widget: 'image' }
       - { label: 'Description [UK]', name: 'uk' }
