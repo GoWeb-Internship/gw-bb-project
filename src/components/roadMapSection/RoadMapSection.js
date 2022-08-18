@@ -8,10 +8,10 @@ import Container from '../reusable/Container';
 import RoadMapList from './RoadMapList';
 
 const RoadMapSection = () => {
-  const { t } = useTranslation();
-  const imageData = useStaticQuery(graphql`
-    query MyQuery {
-      file(name: { eq: "road-map" }) {
+  const { i18n } = useTranslation();
+  const { background, title, roadMapList } = useStaticQuery(graphql`
+    query RoadMapList {
+      background: file(name: { eq: "road-map" }) {
         id
         publicURL
         childImageSharp {
@@ -19,19 +19,37 @@ const RoadMapSection = () => {
           gatsbyImageData
         }
       }
+      title: mdx(frontmatter: { fieldIdName: { eq: "road-map" } }) {
+        frontmatter {
+          ru
+          uk
+          en
+        }
+      }
+      roadMapList: allMdx(
+        filter: { frontmatter: { fieldIdName: { eq: "road-map-step" } } }
+      ) {
+        nodes {
+          frontmatter {
+            ru
+            uk
+            en
+          }
+        }
+      }
     }
   `);
 
-  const data = t('roadMapSection', { returnObjects: true });
-
   return (
     <Section>
-      <Background imageData={imageData} />
+      <Background imageData={background} />
       <Container className="lg:pt-[124px] lg:pb-[133px]">
         <h2 className="text-center mx-auto lg:max-w-[920px] lg:mb-[48px]">
-          {data.title}
+          {title.frontmatter[i18n.language]}
         </h2>
-        {data.list.length ? <RoadMapList listData={data.list} /> : null}
+        {roadMapList.nodes.length ? (
+          <RoadMapList listData={roadMapList.nodes} />
+        ) : null}
       </Container>
     </Section>
   );

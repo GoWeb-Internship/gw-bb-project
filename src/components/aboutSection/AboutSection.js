@@ -37,7 +37,7 @@ const AboutSection = () => {
           uk
         }
       }
-      file(name: { eq: "fon-about" }) {
+      background: file(name: { eq: "fon-about" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -50,7 +50,7 @@ const AboutSection = () => {
   const imageAlt2 = data.photo2.frontmatter[i18n.language];
   return (
     <Section id="about">
-      <Background imageData={data} />
+      <Background imageData={data.background} />
       <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <div className=" mb-5 lg:mb-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-[90px]">

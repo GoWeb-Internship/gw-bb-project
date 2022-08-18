@@ -11,7 +11,7 @@ const WithCoachSection = () => {
   const withCoach = t('withCoach', { returnObjects: true });
   const data = useStaticQuery(graphql`
     query {
-      file(name: { eq: "fon-with-coach" }) {
+      background: file(name: { eq: "fon-with-coach" }) {
         id
         publicURL
         childImageSharp {
@@ -39,7 +39,7 @@ const WithCoachSection = () => {
 
   return (
     <Section>
-      <Background imageData={data} />
+      <Background imageData={data.background} />
       <div className="relative w-screen mx-auto md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <div className=" mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]">
