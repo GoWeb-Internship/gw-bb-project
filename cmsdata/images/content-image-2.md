@@ -1,6 +1,6 @@
 ---
 fieldIdName: content-image
-title: 'about2'
+title: about2
 date: 2022-08-06T15:27:46.785Z
 imageUrl: https://res.cloudinary.com/gw-bb-project/image/upload/c_scale,f_auto,q_auto/v1660805337/content-photo/avto1_d48090.jpg
 uk: Фото Юлії на березі моря біля помаранчевого авто

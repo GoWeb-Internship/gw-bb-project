@@ -1,11 +1,11 @@
 ---
 fieldIdName: content-image
-title: '4'
+title: onBeach
 date: 2022-08-06T15:27:46.785Z
 imageUrl: https://res.cloudinary.com/gw-bb-project/image/upload/c_scale,f_auto,q_auto/v1660805337/content-photo/in-white-dress_efjts3.jpg
-uk: Опис фотографії 3
-ru: Описание фотографии 3
-en: Alt description, photo 3
+uk: Юлія у білій прозорій сукні на березі океану
+ru: Юлия в белом прозрачном платье на берегу океана
+en: Julia in a transparent white dress on the oceanfront
 ---
 
 These markings are not displayed on the site. Description must answer question:
