@@ -37,7 +37,7 @@ const AboutSection = () => {
           uk
         }
       }
-      background: file(name: { eq: "fon-about" }) {
+      background: file(name: { eq: "about" }) {
         childImageSharp {
           gatsbyImageData
         }
