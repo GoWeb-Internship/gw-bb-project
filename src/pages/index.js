@@ -34,9 +34,9 @@ const IndexPage = ({ data }) => {
       <RoadMapSection title={roadMapTitle} />
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
+      <ImportantResultsSection />
       <InLiveSection />
       <SignUpSection saleText={sale} />
-      <ImportantResultsSection />
       <BeBetterToday />
       {/* <section>
         <Container>
@@ -73,6 +73,7 @@ export const query = graphql`
         pricesTitle
         roadMapTitle
         charity
+        sale
       }
     }
   }
