@@ -47,15 +47,13 @@ const WithCoachSection = () => {
             text={withCoach.text}
             className="mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]"
           />
-          <div className="">
-            <ImageContent
-              imageData={imageData}
-              imageAlt={imageAlt}
-              rounded="lg:rounded-l-[20px]"
-              width="lg:w-[518px]"
-              height="lg:w-[520px]"
-            />
-          </div>
+          <ImageContent
+            imageData={imageData}
+            imageAlt={imageAlt}
+            rounded="lg:rounded-l-[20px]"
+            width="lg:w-[520px]"
+            height="lg:w-[518px]"
+          />
         </div>
       </div>
     </Section>
