@@ -42,10 +42,12 @@ const WithCoachSection = () => {
       <Background imageData={data.background} />
       <div className="relative w-screen mx-auto md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
-          <div className=" mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]">
-            <TextContainer title={withCoach.title} text={withCoach.text} />
-          </div>
-          <div className="flex justify-end lg:block">
+          <TextContainer
+            title={withCoach.title}
+            text={withCoach.text}
+            className="mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]"
+          />
+          <div className="">
             <ImageWrapper
               imageData={imageData}
               imageAlt={imageAlt}
