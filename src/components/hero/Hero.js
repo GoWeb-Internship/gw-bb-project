@@ -45,7 +45,7 @@ const Hero = ({ data = [] }) => {
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
                 type="button"
-                className="bg-orange-400 rounded-xl py-4 px-[100px] text-xl leading-6"
+                className="bg-orange-400 rounded-xl py-4 px-[100px] text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
               >
                 {button.textBigButton}
               </Button>
