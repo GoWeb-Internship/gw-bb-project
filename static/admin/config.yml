@@ -51,6 +51,7 @@ collections:
       - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
+      - { label: 'Sale', name: 'sale', widget: 'string' }
   # Policy list model
   - label: 'Policy'
     name: 'policy'
