@@ -8,7 +8,7 @@ const HeroDataList = ({ heroDataList }) => {
       </h2>
       <ul className="grid grid-cols-3 gap-x-10 gap-y-10 relative mb-9">
         {heroDataList.list.map(item => (
-          <li key={item} className="border-t-2 border-slate-50 py-6">
+          <li key={item} className="border-t border-slate-50 py-6">
             <p className="text-lg leading-[25px]">{item}</p>
           </li>
         ))}

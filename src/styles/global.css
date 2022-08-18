@@ -72,3 +72,8 @@ body {
 .swiper-button-prev {
   left: 0px !important;
 }
+@layer utilities {
+  .hero-expirience-line:nth-child(-n + 3) {
+    padding-bottom: 28px;
+  }
+}
