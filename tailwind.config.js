@@ -14,7 +14,7 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'Ubuntu', 'Helvetica', 'Arial', 'sans-serif'],
       heads: ['Ubuntu', 'sans-serif'],
-      main: ['Inter', 'serif'],
+      main: ['Inter', 'sans-serif'],
     },
 
     extend: {
