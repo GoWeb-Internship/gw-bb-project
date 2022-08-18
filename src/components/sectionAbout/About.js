@@ -37,21 +37,21 @@ const About = () => {
           uk
         }
       }
-      file(name: { eq: "fon-about" }) {
+      background: file(name: { eq: "fon-about" }) {
         childImageSharp {
           gatsbyImageData
         }
       }
     }
   `);
-  const imageData1 = data.photo1.cloudinaryImg.childImageSharp.gatsbyImageData;
-  const imageAlt1 = data.photo1.frontmatter[i18n.language];
-  const imageData2 = data.photo2.cloudinaryImg.childImageSharp.gatsbyImageData;
-  const imageAlt2 = data.photo2.frontmatter[i18n.language];
+  // const imageData1 = data.photo1.cloudinaryImg.childImageSharp.gatsbyImageData;
+  // const imageAlt1 = data.photo1.frontmatter[i18n.language];
+  // const imageData2 = data.photo2.cloudinaryImg.childImageSharp.gatsbyImageData;
+  // const imageAlt2 = data.photo2.frontmatter[i18n.language];
   return (
     <Section id="about">
-      <Background imageData={data} />
-      <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
+      <Background imageData={data.background} />
+      {/* <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <div className="flex justify-end lg:block">
             <ImageWrapper
@@ -77,7 +77,7 @@ const About = () => {
             <List items={about.items} />
           </div>
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 };

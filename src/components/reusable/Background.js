@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Background = ({ imageData = {}, className = '' }) => {
-  const image = getImage(imageData.file.childImageSharp.gatsbyImageData);
+  const image = getImage(imageData.childImageSharp.gatsbyImageData);
 
   return (
     <GatsbyImage
