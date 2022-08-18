@@ -11,7 +11,8 @@ import useClientLocation from 'hooks/useClientLocation';
 import Slider from 'components/slider/Slider';
 import SocialGroup from 'components/reusable/SocialGroup';
 import { fullSocial, social } from 'data/social/social';
-
+import Hero from 'components/hero/Hero';
+// import { heroTitle, heroDataTitle, heroDataList } from 'data/hero/hero';
 
 const ExamplePage = ({ data, pageContext }) => {
   const { t, i18n } = useTranslation();
@@ -66,9 +67,16 @@ const ExamplePage = ({ data, pageContext }) => {
           </ul>
 
           <Slider images={images} />
-
-          <SocialGroup data={fullSocial} language={i18n.language} />
+          <Hero
+            // data={heroTitle}
+            // heroDataTitle={heroDataTitle}
+            // heroDataList={heroDataList}
+            language={i18n.language}
+          >
+            <SocialGroup data={fullSocial} language={i18n.language} />
+          </Hero>
           <p>Example for form</p>
+
           <SocialGroup data={social} />
         </Container>
       </section>

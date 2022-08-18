@@ -51,6 +51,60 @@
     "email": "Enter your email in the format your@email.com",
     "name": "Name must be at least 1 characters"
   },
+  "button": {
+    "textBigButton": "Take the first step",
+    "textSmallButton": "Sign up"
+  },
+  "heroExpirience": {
+    "items": [
+      {
+        "id": 1,
+        "title": "15 gaps",
+        "text": "You experience fear or anxiety"
+      },
+      {
+        "id": 2,
+        "title": "500",
+        "text": "You experience fear or anxiety"
+      },
+      {
+        "id": 3,
+        "title": "6 gaps",
+        "text": "You experience fear or anxiety"
+      },
+      {
+        "id": 4,
+        "title": "7 gaps",
+        "text": "You experience fear or anxiety"
+      },
+      {
+        "id": 5,
+        "title": "ICF",
+        "text": "You experience fear or anxiety"
+      },
+      {
+        "id": 6,
+        "title": "30+",
+        "text": "You experience fear or anxiety"
+      }
+    ]
+  },
+  "heroListBlock": {
+    "title": "We are right on the path if you",
+    "list": [
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "You experience fear or anxiety and there is only negativity around (you do not see gaps)"
+    ]
+  },
+  "heroTitle": {
+    "title": "I will teach you how to live and work in a high",
+    "subTitle": "I will teach you how to live and work in a high",
+    "supTitle": "If you are burnt out and live without pleasure"
+  },
   "about": {
     "title": "Let's get acquainted",
     "caption": "I know how you feel when:",
