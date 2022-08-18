@@ -22,7 +22,7 @@ const Header = () => {
         {isWide && (
           <HeaderNavigation
             navConfig={nav}
-            className="ml-auto md:mr-7 lg:mr-[53px] "
+            className="ml-auto md:mr-7 lg:mr-12 "
           />
         )}
         <LangSwitcher className="ml-auto md:ml-0" />
