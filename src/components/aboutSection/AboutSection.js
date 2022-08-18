@@ -52,16 +52,16 @@ const AboutSection = () => {
     <Section id="about">
       <Background imageData={data} />
       <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
-        <div className="lg:flex lg:flex-row-reverse lg:justify-between">
+        <div className="lg:flex lg:flex-row lg:justify-between">
+          <div className=" mt-5 lg:mt-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-10">
+            <TextContainer title={about.title} text={about.text} />
+          </div>
           <div className="flex justify-end lg:block">
             <ImageWrapper
               imageData={imageData1}
               imageAlt={imageAlt1}
               rounded="rounded-l-[20px]"
             />
-          </div>
-          <div className=" mt-5 lg:mt-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-10">
-            <TextContainer title={about.title} text={about.text} />
           </div>
         </div>
         <div className=" mt-5 md:inline-flex md:flex-row md:mt-10 lg:mt-20">
