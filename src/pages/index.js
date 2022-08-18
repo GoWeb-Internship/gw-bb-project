@@ -12,6 +12,7 @@ import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import Hero from 'components/hero/Hero';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
+import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -38,6 +39,7 @@ const IndexPage = () => {
       <WithCoachSection />
       <ImportantResultsSection />
       <InLiveSection />
+      <BeBetterToday />
     </Layout>
   );
 };

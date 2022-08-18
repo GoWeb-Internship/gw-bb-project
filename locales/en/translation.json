@@ -150,5 +150,18 @@
       "Think that in just a few months your life will play with bright colors and you will start to get incredible results.",
       "Don't put your life on hold! People who live for pleasure achieve the best results! Want to know how?"
     ]
+  },
+  "beBetterToday": {
+    "title": "Lorem ipsum dolor sit amet consectetur!",
+    "subTitle": "Lorem ipsum dolor sit amet!",
+    "textSupItems": "Lorem ipsum dolo",
+    "items": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "Lorem ipsum dolor sit amet consectetur adipisicing eli",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur adipisicing el",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elity"
+    ],
+    "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   }
 }
