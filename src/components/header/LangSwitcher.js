@@ -41,7 +41,10 @@ const LangSwitcher = ({ className = '' }) => {
       className={`relative cursor-pointer ${className}`}
       onClick={handleLabelClick}
     >
-      <button type="button" className="flex items-center px-2 py-1 font-medium">
+      <button
+        type="button"
+        className="flex items-center px-2 py-1 font-main text-bbBase font-medium"
+      >
         {getNormalizeData(language).label}
         <FiChevronDown
           className={`ml-1 ${rotate} ${fill} transition duration-200 relative z-10`}
@@ -59,7 +62,7 @@ const LangSwitcher = ({ className = '' }) => {
             <Link
               to={originalPath}
               language={value}
-              className="px-2 py-1 font-medium  text-cyan-600"
+              className="px-2 py-1 font-main text-bbBase font-medium text-cyan-600"
             >
               {label}
             </Link>
