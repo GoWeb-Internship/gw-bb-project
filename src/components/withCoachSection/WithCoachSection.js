@@ -11,7 +11,7 @@ const WithCoachSection = () => {
   const withCoach = t('withCoach', { returnObjects: true });
   const data = useStaticQuery(graphql`
     query {
-      background: file(name: { eq: "fon-with-coach" }) {
+      background: file(name: { eq: "fon-with-coach-1" }) {
         id
         publicURL
         childImageSharp {
