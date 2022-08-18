@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
-import ImageContext from 'components/reusable/ImageWrapper';
+import ImageContent from 'components/reusable/ImageContent';
 import List from 'components/reusable/List';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
@@ -60,7 +60,7 @@ const AboutSection = () => {
           />
 
           <div className="flex justify-end lg:block">
-            <ImageContext
+            <ImageContent
               imageData={imageData1}
               imageAlt={imageAlt1}
               rounded="lg:rounded-l-[20px]"
@@ -74,7 +74,7 @@ const AboutSection = () => {
             </h2>
             <List items={about.items} />
           </div>
-          <ImageContext
+          <ImageContent
             imageData={imageData2}
             imageAlt={imageAlt2}
             rounded="lg:rounded-r-[20px]"

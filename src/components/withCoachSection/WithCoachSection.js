@@ -3,7 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
-import ImageWrapper from 'components/reusable/ImageWrapper';
+import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 
 const WithCoachSection = () => {
@@ -48,7 +48,7 @@ const WithCoachSection = () => {
             className="mt-5 lg:mt-0 pl-5 lg:w-3/5 md:pl-10 md:mr-5 lg:pl-20 lg:mr-[149px]"
           />
           <div className="">
-            <ImageWrapper
+            <ImageContent
               imageData={imageData}
               imageAlt={imageAlt}
               rounded="lg:rounded-l-[20px]"
