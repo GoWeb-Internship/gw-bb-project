@@ -42,7 +42,13 @@ collections:
           default: 'Main Page',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - {
+          label: 'Road Map Section Title',
+          name: 'roadMapTitle',
+          widget: 'string',
+        }
+      - { label: 'Prices Section Title', name: 'pricesTitle', widget: 'string' }
+      - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
   # Policy list model
@@ -106,9 +112,9 @@ collections:
             'These markings are not displayed on the site. Description must
             answer question: What is shown in the picture?',
         }
-  # Price model
-  - label: 'Prices'
-    name: 'prices'
+  # Price cards model
+  - label: 'Prices Cards'
+    name: 'pricesCards'
     folder: 'cmsdata/prices'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
@@ -144,31 +150,10 @@ collections:
             'Формула подсчёта финальной цены - Цена за одну сессиюю (одинаковая
             для всех тарифов) * кол-во сессий - скидка',
         }
-  # Road map Section
-  - label: 'Road Map'
-    name: 'roadMap'
-    folder: 'cmsdata/roadMap'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: false
-    delete: false
-    fields:
-      - {
-          label: 'Road map section identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'road-map',
-        }
-      - { label: 'Title', name: 'title', widget: 'hidden' }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Section Title [UK]', name: 'uk', widget: string }
-      - { label: 'Section Title [RU]', name: 'ru', widget: string }
-      - { label: 'Section Title [EN]', name: 'en', widget: string }
-      - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Road map Steps
   - label: 'Road Map Steps'
     name: 'roadMapSteps'
-    folder: 'cmsdata/roadMap/list'
+    folder: 'cmsdata/roadMap'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
     create: true

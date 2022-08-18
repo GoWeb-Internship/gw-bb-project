@@ -7,9 +7,9 @@ import Background from '../reusable/Background';
 import Container from '../reusable/Container';
 import RoadMapList from './RoadMapList';
 
-const RoadMapSection = () => {
+const RoadMapSection = ({ title }) => {
   const { i18n } = useTranslation();
-  const { background, title, roadMapList } = useStaticQuery(graphql`
+  const { background, roadMapList } = useStaticQuery(graphql`
     query RoadMapList {
       background: file(name: { eq: "road-map" }) {
         id
@@ -17,13 +17,6 @@ const RoadMapSection = () => {
         childImageSharp {
           id
           gatsbyImageData
-        }
-      }
-      title: mdx(frontmatter: { fieldIdName: { eq: "road-map" } }) {
-        frontmatter {
-          ru
-          uk
-          en
         }
       }
       roadMapList: allMdx(
@@ -45,7 +38,7 @@ const RoadMapSection = () => {
       <Background imageData={background} />
       <Container className="lg:pt-[124px] lg:pb-[133px]">
         <h2 className="text-center mx-auto lg:max-w-[920px] lg:mb-[48px]">
-          {title.frontmatter[i18n.language]}
+          {'Что нибудь'}
         </h2>
         {roadMapList.nodes.length ? (
           <RoadMapList listData={roadMapList.nodes} />
