@@ -1,11 +1,11 @@
 ---
 fieldIdName: content-image
-title: '3'
+title: coach
 date: 2022-08-06T15:27:46.785Z
-imageUrl: https://res.cloudinary.com/gw-bb-project/image/upload/c_scale,f_auto,q_auto/v1659865406/cld-sample-3.jpg
-uk: Опис фотографії 3
-ru: Описание фотографии 3
-en: Alt description, photo 3
+imageUrl: https://res.cloudinary.com/gw-bb-project/image/upload/c_scale,f_auto,q_auto/v1660805338/content-photo/in-blue-dress_erhjql.jpg
+uk: Юлія в блакитній сукні на борту розкішної яхти
+ru: Юлия в голубом платье на борту роскошной яхты
+en: Julia in a blue dress on board a luxurious yacht
 ---
 
 These markings are not displayed on the site. Description must answer question:
