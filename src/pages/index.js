@@ -6,7 +6,7 @@ import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 import TestForm from 'components/testForm/TestForm';
 import useClientLocation from 'hooks/useClientLocation';
-import About from 'components/sectionAbout/About';
+import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
 
 // get API_KEYS
@@ -28,7 +28,7 @@ const IndexPage = () => {
           </p>
         </Container>
       </section>
-      <About />
+      <AboutSection />
       <RoadMapSection />
     </Layout>
   );

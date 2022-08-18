@@ -7,7 +7,7 @@ import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
 
-const About = () => {
+const AboutSection = () => {
   const { t, i18n } = useTranslation();
   const about = t('about', { returnObjects: true });
 
@@ -82,4 +82,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
