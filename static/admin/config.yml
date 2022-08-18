@@ -168,7 +168,7 @@ collections:
   # Road map Steps
   - label: 'Road Map Steps'
     name: 'roadMapSteps'
-    folder: 'cmsdata/roadMap'
+    folder: 'cmsdata/roadMap/list'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
     create: true

@@ -161,24 +161,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: {
-          google: [
-            {
-              family: 'Inter',
-              variants: ['300', '400', '500', '700'],
-              fontDisplay: 'swap',
-            },
-            {
-              family: 'Ubuntu',
-              variants: ['500', '700'],
-              fontDisplay: 'swap',
-            },
-          ],
-        },
-        useMinify: true,
-        usePreload: true,
+        fonts: [`inter\:300,400,500,700`, `ubuntu\:500,700`],
+        display: 'swap',
       },
     },
   ],
