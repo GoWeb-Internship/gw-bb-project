@@ -27,8 +27,8 @@ const RoadMapSection = () => {
   return (
     <Section>
       <Background imageData={imageData} />
-      <Container className="lg:pt-[124px] lg:pb-[142px]">
-        <h2 className="text-bbTitle1 max-w-[920px] text-center mx-auto lg:mb-[62px]">
+      <Container className="lg:pt-[124px] lg:pb-[133px]">
+        <h2 className="text-center mx-auto lg:max-w-[920px] lg:mb-[48px]">
           {data.title}
         </h2>
         {data.list.length ? <RoadMapList listData={data.list} /> : null}

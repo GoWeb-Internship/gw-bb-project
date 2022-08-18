@@ -3,19 +3,16 @@ import PropTypes from 'prop-types';
 
 const RoadMapList = ({ listData }) => {
   return (
-    <ul className="md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-[52px] lg:gap-y-[60px]">
+    <ul className="md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
       {listData.map((item, id) => (
-        <li
-          key={`road-${id}`}
-          className="flex lg:min-h-[124px] before:content-['HELLO'] before:block"
-        >
+        <li key={`road-${id}`} className="flex items-center lg:min-h-[124px]">
           <span
             aria-hidden="true"
-            className="mr-[42px] text-[80px] leading-none font-bold text-slate-50 opacity-20 pointer-events-none select-none"
+            className="mr-[38px] text-[80px] font-main leading-none font-bold text-slate-50 opacity-20 pointer-events-none select-none"
           >
             {id + 1}
           </span>
-          <span className="v text-base">{item}</span>
+          <span className="text-bb1625 font-bold font-main">{item}</span>
         </li>
       ))}
     </ul>
