@@ -15,7 +15,7 @@ import Hero from 'components/hero/Hero';
 // import { heroTitle, heroDataTitle, heroDataList } from 'data/hero/hero';
 
 const ExamplePage = ({ data, pageContext }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const mdxContent = data.example.nodes;
   const clientLocation = useClientLocation();
 
@@ -62,6 +62,7 @@ const ExamplePage = ({ data, pageContext }) => {
                 <p>{item.frontmatter.language}</p>
                 <p>{item.frontmatter.name}</p>
                 <p>{item.frontmatter.description}</p>
+                <p>{item.frontmatter.sale}</p>
               </li>
             ))}
           </ul>
@@ -103,6 +104,7 @@ export const query = graphql`
           language
           title
           description
+          sale
         }
       }
     }

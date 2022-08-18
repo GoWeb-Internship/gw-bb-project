@@ -48,7 +48,7 @@ const InLiveSection = () => {
             imageAlt={imageAlt}
             rounded="lg:rounded-r-[20px]"
             width="w-[700px]"
-            height="h-[790px]"
+            height="h-[755px]"
           />
         </div>
       </div>

@@ -45,6 +45,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
+      - { label: 'Sale', name: 'sale', widget: 'string', required: true }
   # Policy list model
   - label: 'Policy'
     name: 'policy'
@@ -181,27 +182,6 @@ collections:
           default: 'road-map-step',
         }
       - { label: 'Title', name: 'title', widget: 'number' }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Section Title [UK]', name: 'uk', widget: string }
-      - { label: 'Section Title [RU]', name: 'ru', widget: string }
-      - { label: 'Section Title [EN]', name: 'en', widget: string }
-      - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
-#sign up Sale 75%
-      - label: 'Sale'
-    name: 'sale'
-    folder: 'cmsdata/sale'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: false
-    delete: false
-    fields:
-      - {
-          label: 'Sale section identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'sale',
-        }
-      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - { label: 'Section Title [UK]', name: 'uk', widget: string }
       - { label: 'Section Title [RU]', name: 'ru', widget: string }

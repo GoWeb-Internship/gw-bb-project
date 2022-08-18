@@ -12,13 +12,15 @@ import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import Hero from 'components/hero/Hero';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
+import SignUpSection from 'components/signUpSection/SignUpSection';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
 // KEYS must be started with GATSBY_
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const mdxContent = data.main.nodes;
   const clientLocation = useClientLocation();
 
   return (
@@ -39,6 +41,7 @@ const IndexPage = () => {
       <WithCoachSection />
       <ImportantResultsSection />
       <InLiveSection />
+      <SignUpSection saleText={mdxContent[0].frontmatter.sale} />
       <BeBetterToday />
     </Layout>
   );
@@ -56,6 +59,25 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    main: allMdx(
+      filter: {
+        frontmatter: {
+          fieldIdName: { eq: "main" }
+          language: { eq: $language }
+        }
+      }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          date
+          language
+          title
+          description
+          sale
         }
       }
     }
