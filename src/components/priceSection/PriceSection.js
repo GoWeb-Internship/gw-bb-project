@@ -39,7 +39,7 @@ const PriceSection = ({ title, charity = '' }) => {
     }
   `);
   return (
-    <Section>
+    <Section id="price">
       <Background imageData={background} />
       <Container className="lg:pt-[124px] lg:pb-[79px]">
         <h2 className="lg:mb-[62px] text-center">{title}</h2>

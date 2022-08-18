@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
-import ImageWrapper from 'components/reusable/ImageWrapper';
+import ImageContent from 'components/reusable/ImageContent';
 import List from 'components/reusable/List';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
@@ -53,11 +53,14 @@ const AboutSection = () => {
       <Background imageData={data.background} />
       <div className="relative w-screen mx-auto py-10 md:py-20 lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
-          <div className=" mb-5 lg:mb-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-[90px]">
-            <TextContainer title={about.title} text={about.text} />
-          </div>
+          <TextContainer
+            title={about.title}
+            text={about.text}
+            className=" mb-5 lg:mb-0 ml-5 lg:w-2/4 md:ml-10 md:mr-5 lg:ml-20 lg:mr-[90px]"
+          />
+
           <div className="flex justify-end lg:block">
-            <ImageWrapper
+            <ImageContent
               imageData={imageData1}
               imageAlt={imageAlt1}
               rounded="lg:rounded-l-[20px]"
@@ -66,12 +69,12 @@ const AboutSection = () => {
         </div>
         <div className=" mt-5 md:inline-flex md:flex-row-reverse md:mt-10 lg:mt-20">
           <div className="lg:ml-28 ml-5 mr-5 md:mr-10 lg:mr-20 lg:block ">
-            <h3 className="mb-5 mt-5 md:mt-0 lg:mt-0 lg:mb-10 font-heads text-xl lg:text-bb3237 text-orange-400 font-medium">
+            <h2 className="mb-5 mt-5 md:mt-0 lg:mt-0 lg:mb-10 font-heads text-xl lg:text-bb3237 text-orange-400 font-medium">
               {about.caption}
-            </h3>
+            </h2>
             <List items={about.items} />
           </div>
-          <ImageWrapper
+          <ImageContent
             imageData={imageData2}
             imageAlt={imageAlt2}
             rounded="lg:rounded-r-[20px]"

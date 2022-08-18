@@ -15,6 +15,8 @@ import Hero from 'components/hero/Hero';
 import PriceSection from 'components/priceSection/PriceSection';
 
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
+import InLiveSection from 'components/inLiveSection/InLiveSection';
+import SignUpSection from 'components/signUpSection/SignUpSection';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 
 // get API_KEYS
@@ -23,8 +25,7 @@ import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 
 const IndexPage = ({ data }) => {
   // const clientLocation = useClientLocation();
-
-  const { charity, pricesTitle, roadMapTitle } = data.content.frontmatter;
+  const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
 
   return (
     <Layout>
@@ -34,6 +35,8 @@ const IndexPage = ({ data }) => {
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
       <ImportantResultsSection />
+      <InLiveSection />
+      <SignUpSection saleText={sale} />
       <BeBetterToday />
       {/* <section>
         <Container>
@@ -70,6 +73,7 @@ export const query = graphql`
         pricesTitle
         roadMapTitle
         charity
+        sale
       }
     }
   }

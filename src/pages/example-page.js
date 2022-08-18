@@ -62,6 +62,7 @@ const ExamplePage = ({ data, pageContext }) => {
                 <p>{item.frontmatter.date}</p>
                 <p>{item.frontmatter.language}</p>
                 <p>{item.frontmatter.name}</p>
+                <p>{item.frontmatter.sale}</p>
                 <p>{item.frontmatter.charity}</p>
               </li>
             ))}
@@ -103,6 +104,7 @@ export const query = graphql`
           date
           language
           title
+          sale
           charity
         }
       }
