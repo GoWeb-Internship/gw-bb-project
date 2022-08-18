@@ -28,8 +28,8 @@ const Form = ({
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),
-    phone: yup.number().required(valid.required),
     email: yup.string().email(valid.email).required(valid.required),
+    phone: yup.number().required(valid.required),
     isAgree: yup.boolean().default(false).oneOf([true]),
   });
   const {
@@ -43,7 +43,6 @@ const Form = ({
   } = useForm({
     resolver: yupResolver(schema),
   });
-
   useFormPersist('form', {
     watch,
     setValue,
@@ -67,7 +66,7 @@ const Form = ({
           sitelang: i18n.language,
         });
         sendMessage(message);
-        reset({ name: '', phone: '', email: '', isAgree: false });
+        reset({ name: '', email: '', phone: '', isAgree: false });
         localStorage.removeItem('form');
       })
       .catch(error => alert(error));
@@ -76,7 +75,7 @@ const Form = ({
   return (
     <form
       name="contact"
-      className="p-4"
+      className="mx-auto w-[410px]"
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"
@@ -84,13 +83,21 @@ const Form = ({
     >
       <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" {...register('place')} value={place} />
-      <div className="my-1">
+      <div className="mb-8">
         <input
           placeholder={formData.inputName.name}
-          className="p-2 bg-slate-200 rounded-md text-xs w-72"
+          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50 invalid:border-red-500"
           {...register('name')}
         />
-        <p className="text-red-400 text-xs">{errors.name?.message}</p>
+        <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
+      </div>
+      <div className="mb-8">
+        <input
+          placeholder={formData.inputEmail.name}
+          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50 invalid:border-red-500"
+          {...register('email')}
+        />
+        <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
       </div>
       <InputPhone
         control={control}
@@ -98,15 +105,7 @@ const Form = ({
         language={i18n.language}
         country={country}
       />
-      <div className="my-1">
-        <input
-          placeholder={formData.inputEmail.name}
-          className="p-2 bg-slate-200 rounded-md text-xs w-72"
-          {...register('email')}
-        />
-        <p className="text-red-400 text-xs">{errors.email?.message}</p>
-      </div>
-      <div className="my-1 flex items-center text-gray-500">
+      <div className="mb-12 flex items-center">
         <input
           type="checkbox"
           id="isAgree"
@@ -118,7 +117,7 @@ const Form = ({
         </label>
       </div>
       <button
-        className={`p-2 text-white bg-sky-500 rounded-md ${buttonClassName}`}
+        className={`mx-auto py-4 rounded-xl text-xl lg:w-[410px] ${buttonClassName}`}
         type="submit"
       >
         {buttonText}

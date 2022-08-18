@@ -6,20 +6,33 @@ import ua from '../../assets/land/ua.json'; // файлик нужно испр�
 
 const loc = { ru, uk: ua };
 
-const InputPhone = ({ control, errors, label, language, country = 'ua' }) => {
+const InputPhone = ({ control, errors, language, country = 'ua' }) => {
   const location = loc[language];
 
   return (
-    <label htmlFor="phone">
-      {label}
+    <div className="mb-[32px]">
       <Controller
+        name="phone"
         control={control}
-        rules={{
-          maxLength: 15,
-        }}
         render={({ field: { onChange, value } }) => (
           <PhoneInput
-            inputClass="h-5"
+            inputStyle={{
+              padding: '16px 20px 16px 50px',
+              fontSize: '16px',
+              lineHeight: '1.18',
+              borderRadius: '10px',
+              width: '410px',
+              border: ' 1px solid #F8FAFC',
+              outline: 'none',
+              backgroundColor: 'inherit',
+              color: '#F8FAFC',
+            }}
+            buttonStyle={{
+              height: '53px',
+            }}
+            dropdownStyle={{
+              color: '#525252',
+            }}
             onChange={onChange}
             value={value}
             country={country}
@@ -27,10 +40,9 @@ const InputPhone = ({ control, errors, label, language, country = 'ua' }) => {
             localization={location}
           />
         )}
-        name="phone"
       />
-      <p className="text-red-400 text-xs">{errors.phone?.message}</p>
-    </label>
+      <p className="px-5 text-red-500 text-xs">{errors.phone?.message}</p>
+    </div>
   );
 };
 

@@ -22,6 +22,7 @@ module.exports = {
         bb1: '0px 4px 10px rgba(106, 161, 193, 0.25)',
       },
       fontSize: {
+        bbForm: ['16px', '19px'],
         bbBase: ['18px', '24px'],
         bb1625: ['16px', '25px'],
         bb2024: ['20px', '24px'],

@@ -32,19 +32,15 @@
   },
   "form": {
     "inputName": {
-      "name": "Name",
-      "placeholder": "Please enter your name"
+      "name": "Name"
     },
     "inputPhone": {
-      "name": "Phone",
-      "placeholder": "Please enter your phone"
+      "name": "Phone"
     },
     "inputEmail": {
-      "name": "Email",
-      "placeholder": "Please enter your email"
+      "name": "Email"
     },
-    "checkbox": "I agree to the processing of my personal data",
-    "button": "Submit"
+    "checkbox": "I agree to the processing of my personal data"
   },
   "validation": {
     "required": "This is a required field",
