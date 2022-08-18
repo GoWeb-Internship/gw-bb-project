@@ -71,6 +71,9 @@ body {
   .line-hidden:last-child > .peer {
     display: none;
   }
+  .hero-expirience-line:nth-child(-n + 3) {
+    padding-bottom: 28px;
+  }
 }
 
 /* Swiper style */
