@@ -39,7 +39,7 @@ const Hero = ({ data = [] }) => {
     <Section>
       <Background imageData={imageData} />
       <Container>
-        <div className="pt-[174px] pb-10">
+        <div className="pt-[174px] pb-10 font-main">
           <div className="flex justify-between items-start">
             <div className="">
               <HeroDataTitle heroTitle={heroTitle} />
