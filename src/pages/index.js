@@ -6,18 +6,22 @@ import Layout from 'components/Layout';
 // import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
 // import TestForm from 'components/testForm/TestForm';
-import useClientLocation from 'hooks/useClientLocation';
+// import useClientLocation from 'hooks/useClientLocation';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import Hero from 'components/hero/Hero';
+
 import PriceSection from 'components/priceSection/PriceSection';
+
+import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
+import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
 // KEYS must be started with GATSBY_
 
-const IndexPage = ({ data, pageContext }) => {
+const IndexPage = ({ data }) => {
   // const clientLocation = useClientLocation();
 
   const { charity, pricesTitle, roadMapTitle } = data.content.frontmatter;
@@ -29,6 +33,8 @@ const IndexPage = ({ data, pageContext }) => {
       <RoadMapSection title={roadMapTitle} />
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
+      <ImportantResultsSection />
+      <BeBetterToday />
       {/* <section>
         <Container>
           <TestForm place="Home page" country={clientLocation} />

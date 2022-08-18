@@ -131,5 +131,29 @@
       "Why 'reinvent the wheel', spend time, money and effort to go all the way on your own and not necessarily successfully? When you can ask for professional help and get a result faster and easier. That's what all successful people do!"
     ]
   },
+  "importantResultsSection": {
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.?",
+    "list": [
+      "posing on a couch and looking stoically at the camer",
+      "posing on a couch and looking stoically at the camerap",
+      "posing on a couch and looking stoically at the cameral",
+      "posing on a couch and looking stoically at the cameray",
+      "posing on a couch and looking stoically at the camerar",
+      "posing on a couch and looking stoically at the camerad"
+    ]
+  },
+  "beBetterToday": {
+    "title": "Lorem ipsum dolor sit amet consectetur!",
+    "subTitle": "Lorem ipsum dolor sit amet!",
+    "textSupItems": "Lorem ipsum dolo",
+    "items": [
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "Lorem ipsum dolor sit amet consectetur adipisicing eli",
+      "Lorem ipsum dolor sit amet consectetur",
+      "Lorem ipsum dolor sit amet consectetur adipisicing el",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elity"
+    ],
+    "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
+  },
   "saving": "Saving"
 }

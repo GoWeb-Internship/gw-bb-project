@@ -14,7 +14,7 @@ import HeroDataTitle from './HeroDataTitle';
 import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
 
-const Hero = ({ data = [] }) => {
+const Hero = () => {
   const { t, i18n } = useTranslation();
 
   const imageData = useStaticQuery(graphql`
