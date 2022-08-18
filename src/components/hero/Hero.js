@@ -19,7 +19,7 @@ const Hero = ({ data = [] }) => {
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
-      file(name: { eq: "hero" }) {
+      bg: file(name: { eq: "hero" }) {
         id
         publicURL
         childImageSharp {
@@ -37,7 +37,7 @@ const Hero = ({ data = [] }) => {
 
   return (
     <Section>
-      <Background imageData={imageData} />
+      <Background imageData={imageData.bg} />
       <Container>
         <div className="pt-[174px] pb-10 font-main">
           <div className="flex justify-between items-start">
