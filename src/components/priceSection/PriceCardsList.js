@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PriceCard from './PriceCard';
 
-const PriceCardsList = ({ cardsList = [], className = '' }) => {
+const PriceCardsList = ({ cardsList = [], className = '', onClick }) => {
   return (
     <ul className={`${className} lg:flex lg:justify-center items-center`}>
       {!!cardsList.length &&
         cardsList.map(({ frontmatter }, id) => (
           <li key={`price-${id}`} className="lg:mr-[38px] lg:last:mr-0">
-            <PriceCard cardData={frontmatter} />
+            <PriceCard cardData={frontmatter} onClick={onClick} />
           </li>
         ))}
     </ul>
