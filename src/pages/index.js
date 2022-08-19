@@ -41,6 +41,7 @@ const IndexPage = ({ data }) => {
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
       <ImportantResultsSection />
+      <StoriesSection />
       <InLiveSection />
       <SignUpSection saleText={sale} />
       <ContactSection saleText={sale}>
@@ -53,7 +54,7 @@ const IndexPage = ({ data }) => {
       </ContactSection>
       <BeBetterToday />
       <MyFormulaSection />
-      <StoriesSection />
+
       {/* <section>
         <Container>
         <p className={'mt-10'}>

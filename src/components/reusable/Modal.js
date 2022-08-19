@@ -11,8 +11,8 @@ const Modal = ({ isModalOpen, handleModalClose, children }) => {
       onRequestClose={handleModalClose}
       contentLabel="Modal in section Sign Up"
       shouldCloseOnOverlayClick={true}
-      className="absolute lg:w-[934px] rounded-3xl lg:h-[614px] top-1/4 left-1/4 overflow-hidden"
-      overlayClassName="fixed top-0 bottom-0 left-0 right-0 bg-neutral-700/70 backdrop-blur-md"
+      className="absolute lg:w-[934px] rounded-3xl lg:h-[614px] top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 overflow-hidden"
+      overlayClassName="fixed top-0 bottom-0 left-0 right-0 bg-neutral-700/70 backdrop-blur-md z-[2000]"
     >
       <button
         className="absolute top-[29px] right-[29px]"
