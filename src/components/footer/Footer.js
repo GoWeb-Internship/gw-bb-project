@@ -34,27 +34,30 @@ const Footer = ({ saleText = '', charity = '' }) => {
   `);
 
   return (
-    <footer className="lg:w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16">
+    <footer className="bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 md:w-[768px] lg:w-[1440px]">
       <Container>
-        <div className="flex items-center mb-4 ">
-          <Logo />
-          <FooterNavigation
-            navConfig={footer.nav}
-            className="ml-[134px] mr-20"
-          />
+        <div className="flex  lg:items-center lg:mb-4 ">
+          <div className="md: flex md:items-start">
+            <Logo />
+            <FooterNavigation
+              navConfig={footer.nav}
+              navPubl={footer.navPubl}
+              className="md:ml-[86px] lg:ml-[134px] lg:mr-20 lg:flex "
+            />
+          </div>
           <SocialIcon data={fullSocial} language={i18n.language} />
         </div>
-        <p className="font-bold leading-10 mx-auto mb-8 text-center">
+        <p className="font-bold leading-10 mx-auto mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {saleText}
         </p>
         <Button
           onClick={handleModalOpen}
-          className="bg-cyan-500 hover:bg-cyan-600 mx-auto py-4 rounded-xl lg:w-[410px] mb-[70px] font-bold leading-6 text-bb2040"
+          className="bg-cyan-500 hover:bg-cyan-600 mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 w-[410px] lg:mb-[70px]"
         >
           {button.textSmallButton}
         </Button>
         {charity && (
-          <p className="text-center font-bold leading-6 text-bb2040">
+          <p className="hidden text-center font-bold lg:block lg:leading-6 lg:text-bb2040">
             {charity}
           </p>
         )}
