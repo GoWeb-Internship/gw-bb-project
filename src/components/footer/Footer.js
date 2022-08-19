@@ -4,9 +4,9 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Container from 'components/reusable/Container';
 import Logo from 'components/header/Logo';
 import Button from 'components/reusable/Button';
-import SocialIcon from 'components/reusable/socialIcon';
 import { fullSocial } from 'data/social/social';
 import FooterNavigation from './FooterNavigation';
+import SocialIcon from 'components/reusable/SocialIcon';
 
 const Footer = ({ saleText = '', charity = '' }) => {
   const { t, i18n } = useTranslation();
