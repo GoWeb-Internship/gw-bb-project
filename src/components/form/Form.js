@@ -32,6 +32,8 @@ const Form = ({
     phone: yup.number().required(valid.required),
     isAgree: yup.boolean().default(false).oneOf([true]),
   });
+
+  console.log(place);
   const {
     control,
     register,
@@ -51,11 +53,11 @@ const Form = ({
   });
 
   const onSubmit = data => {
-    console.log(data);
+    const newData = { ...data, place: place };
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...data }),
+      body: encode({ 'form-name': 'contact', ...newData }),
     })
       .then(() => {
         const message = getTelegramMessage({
@@ -82,7 +84,6 @@ const Form = ({
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" {...register('place')} value={place} />
       <div className="mb-8">
         <input
           placeholder={formData.inputName.name}

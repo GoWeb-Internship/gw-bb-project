@@ -41,7 +41,7 @@ const IndexPage = ({ data }) => {
       <SignUpSection saleText={sale} />
       <ContactSection saleText={sale}>
         <Form
-          place="Home page"
+          place=" section Contact"
           country={clientLocation}
           buttonText={button.textBigButton}
           buttonClassName="bg-orange-400 hover:bg-orange-500"

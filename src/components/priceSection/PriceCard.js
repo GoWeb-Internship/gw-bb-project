@@ -4,12 +4,16 @@ import { useTranslation } from 'react-i18next';
 import { FiCalendar } from 'react-icons/fi';
 import { FiClock } from 'react-icons/fi';
 
-const PriceCard = ({ cardData }) => {
+const PriceCard = ({ cardData, onClick }) => {
   const { i18n, t } = useTranslation();
+  const button = t('button', { returnObjects: true });
 
   const height = cardData.recommended ? 'lg:min-h-[508px]' : 'lg:min-h-[468px]';
 
   const showDiscount = Boolean(cardData.discount) ? 'opacity-100' : 'opacity-0';
+  const handleClick = () => {
+    onClick(cardData[i18n.language]);
+  };
 
   return (
     <div
@@ -38,11 +42,11 @@ const PriceCard = ({ cardData }) => {
         </p>
       </div>
       <button
-        onClick={() => {}}
+        onClick={handleClick}
         type="button"
         className="h-[56px] px-3 w-full flex justify-center items-center bg-orange-400 rounded-xl text-bb2024 text-slate-50 font-bold transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
       >
-        Записаться
+        {button.textSmallButton}
       </button>
     </div>
   );
