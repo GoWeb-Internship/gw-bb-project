@@ -18,7 +18,7 @@ li {
 }
 
 h2 {
-  @apply text-bbTitle1 font-heads font-bold;
+  @apply text-bb2833 md:text-bbTitle1 lg:text-bbTitle1 font-heads font-bold;
 }
 
 p {
