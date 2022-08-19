@@ -1,21 +1,30 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-
 import Button from 'components/reusable/Button';
 import SocialGroup from 'components/reusable/SocialGroup';
 import { fullSocial } from 'data/social/social';
-
 import Section from '../reusable/Section';
 import Background from '../reusable/Background';
 import Container from '../reusable/Container';
-
 import HeroDataTitle from './HeroDataTitle';
 import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
+import Modal from 'components/reusable/Modal';
+import ModalLeft from 'components/modalValue/ModalLeft';
 
-const Hero = () => {
+const Hero = ({ saleText = '' }) => {
   const { t, i18n } = useTranslation();
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
+  };
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+  };
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
@@ -24,6 +33,11 @@ const Hero = () => {
         publicURL
         childImageSharp {
           id
+          gatsbyImageData
+        }
+      }
+      bgForm: file(name: { eq: "fon-form1" }) {
+        childImageSharp {
           gatsbyImageData
         }
       }
@@ -44,6 +58,7 @@ const Hero = () => {
             <div className="">
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
+                onClick={handleModalOpen}
                 type="button"
                 className="bg-orange-400 rounded-xl py-4 px-[100px] text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
               >
@@ -56,7 +71,18 @@ const Hero = () => {
           <HeroListExperiences experience={experience} />
         </div>
       </Container>
+      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
+        <ModalLeft
+          bg={imageData.bgForm}
+          place="section Hero"
+          saleText={saleText}
+        />
+      </Modal>
     </Section>
   );
+};
+
+Hero.propTypes = {
+  saleText: PropTypes.string,
 };
 export default Hero;
