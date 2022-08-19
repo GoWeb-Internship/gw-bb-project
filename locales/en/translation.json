@@ -176,5 +176,29 @@
     "textUnderstand": "Understand what you want",
     "textHowGet": "Understand how to get it",
     "textStartDoing": "Start doing!"
+  },
+  "footer": {
+    "nav": [
+      {
+        "name": "Privacy policy",
+        "id": "policy"
+      },
+      {
+        "name": "Public offer",
+        "id": "offer"
+      },
+      {
+        "name": "About me",
+        "id": "about"
+      },
+      {
+        "name": "Price",
+        "id": "price"
+      },
+      {
+        "name": "Reviews",
+        "id": "reviews"
+      }
+    ]
   }
 }
