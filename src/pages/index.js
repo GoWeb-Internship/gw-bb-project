@@ -18,6 +18,7 @@ import ImportantResultsSection from 'components/importantResultsSection/Importan
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
+import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -38,6 +39,7 @@ const IndexPage = ({ data }) => {
       <InLiveSection />
       <SignUpSection saleText={sale} />
       <BeBetterToday />
+      <MyFormulaSection />
       {/* <section>
         <Container>
           <TestForm place="Home page" country={clientLocation} />

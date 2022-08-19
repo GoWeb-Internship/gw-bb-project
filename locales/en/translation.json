@@ -94,7 +94,7 @@
     "list": [
       "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
       "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
+      "Lost concentration, trying to cover everything at once, but not getting the desired result",
       "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
       "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
       "You experience fear or anxiety and there is only negativity around (you do not see gaps)"
@@ -163,6 +163,12 @@
       "Lorem ipsum dolor sit amet consectetur adipisicing elity"
     ],
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
+  },
+  "myFormula": {
+    "title": "Lorem ipsum dolor sit amet consectetur",
+    "textUnderstand": "Understand what you want",
+    "textHowGet": "Understand how to get it",
+    "textStartDoing": "Start doing!"
   },
   "saving": "Saving"
 }
