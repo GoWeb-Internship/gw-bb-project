@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import PriceCard from './PriceCard';
 
 const PriceCardsList = ({ cardsList = [], className = '' }) => {
@@ -12,6 +13,11 @@ const PriceCardsList = ({ cardsList = [], className = '' }) => {
         ))}
     </ul>
   );
+};
+
+PriceCardsList.propTypes = {
+  cardsList: PropTypes.array.isRequired,
+  className: PropTypes.string,
 };
 
 export default PriceCardsList;

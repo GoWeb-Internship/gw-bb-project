@@ -6,12 +6,12 @@
         "id": "about"
       },
       {
-        "name": "Price",
-        "id": "price"
-      },
-      {
         "name": "Reviews",
         "id": "reviews"
+      },
+      {
+        "name": "Price",
+        "id": "price"
       },
       {
         "name": "Contacts",
@@ -170,5 +170,7 @@
     "textHowGet": "Understand how to get it",
     "textStartDoing": "Start doing!"
   },
-  "saving": "Saving"
+  "saving": "Saving",
+  "storiesTitle": "Incredible stories of my clients",
+  "feedbacksTitle": "Feedback from my clients"
 }

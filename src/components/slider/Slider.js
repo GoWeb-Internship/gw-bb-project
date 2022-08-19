@@ -35,7 +35,6 @@ const Slider = ({ images }) => {
   `);
 
   const mdxData = data.allMdx.nodes;
-  console.log('mdxData', mdxData);
 
   const swiperNavPrevRefs = useRef(null);
   const swiperNavNextRefs = useRef(null);

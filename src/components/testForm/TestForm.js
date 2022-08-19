@@ -46,7 +46,6 @@ const TestForm = ({ place, country = 'ua' }) => {
   });
 
   const onSubmit = data => {
-    console.log(data);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

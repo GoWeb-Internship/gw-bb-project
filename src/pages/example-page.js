@@ -25,8 +25,6 @@ const ExamplePage = ({ data, pageContext }) => {
   // const languageData = pageContext.language;
   // console.log('languageData', languageData);
 
-  console.log(clientLocation);
-
   return (
     <Layout>
       <section>

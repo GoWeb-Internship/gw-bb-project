@@ -15,12 +15,12 @@ const HeaderNavigation = ({ navConfig = [], className = '' }) => {
               >
                 <Link
                   to={`${id}`}
-                  activeClass="after:translate-x-0"
+                  activeClass="after:-translate-x-0"
                   className="relative font-main text-bbBase cursor-pointer py-3 after:content-[''] after:absolute after:bottom-1 after:left-0 after:h-1 after:w-full after:bg-slate-50 after:rounded-sm after:-translate-x-[102%] after:transition-transform after:duration-200 after:hover:translate-x-0 after:focus:translate-x-0"
                   smooth
                   spy
                   // hashSpy
-                  offset={-100}
+                  offset={-74}
                 >
                   {name}
                 </Link>
