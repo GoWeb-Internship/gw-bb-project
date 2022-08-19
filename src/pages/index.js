@@ -5,19 +5,19 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 // import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
-// import TestForm from 'components/testForm/TestForm';
-// import useClientLocation from 'hooks/useClientLocation';
+import Form from 'components/form/Form';
+import useClientLocation from 'hooks/useClientLocation';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import Hero from 'components/hero/Hero';
-
 import PriceSection from 'components/priceSection/PriceSection';
-
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
+import ContactSection from 'components/contactSection/ContactSection';
 import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 // get API_KEYS
@@ -25,12 +25,14 @@ import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 // KEYS must be started with GATSBY_
 
 const IndexPage = ({ data }) => {
-  // const clientLocation = useClientLocation();
+  const { t } = useTranslation();
+  const button = t('button', { returnObjects: true });
+  const clientLocation = useClientLocation();
   const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
 
   return (
     <Layout>
-      <Hero />
+      <Hero saleText={sale} />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
       <GuaranteeSection />
@@ -39,15 +41,22 @@ const IndexPage = ({ data }) => {
       <ImportantResultsSection />
       <InLiveSection />
       <SignUpSection saleText={sale} />
+      <ContactSection saleText={sale}>
+        <Form
+          place=" section Contact"
+          country={clientLocation}
+          buttonText={button.textBigButton}
+          buttonClassName="bg-orange-400 hover:bg-orange-500"
+        />
+      </ContactSection>
       <BeBetterToday />
       <MyFormulaSection />
       {/* <section>
         <Container>
-          <TestForm place="Home page" country={clientLocation} />
-          <p className={'mt-10'}>
-            <Link to={'example-page'}>Example Page</Link>
-            <Link to={'policy'}>Policy Page</Link>
-          </p>
+        <p className={'mt-10'}>
+        <Link to={'example-page'}>Example Page</Link>
+        <Link to={'policy'}>Policy Page</Link>
+        </p>
         </Container>
       </section> */}
     </Layout>

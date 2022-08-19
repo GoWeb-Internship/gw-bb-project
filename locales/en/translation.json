@@ -32,19 +32,15 @@
   },
   "form": {
     "inputName": {
-      "name": "Name",
-      "placeholder": "Please enter your name"
+      "name": "Name"
     },
     "inputPhone": {
-      "name": "Phone",
-      "placeholder": "Please enter your phone"
+      "name": "Phone"
     },
     "inputEmail": {
-      "name": "Email",
-      "placeholder": "Please enter your email"
+      "name": "Email"
     },
-    "checkbox": "I agree to the processing of my personal data",
-    "button": "Submit"
+    "checkbox": "I agree to the processing of my personal data"
   },
   "validation": {
     "required": "This is a required field",
@@ -164,6 +160,11 @@
     ],
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   },
+  "saving": "Saving",
+  "modalRight": {
+    "title": "Hi! I'll be in touch with you soon!",
+    "text": "By clicking submit you agree to the processing of personal data"
+  },
   "guarantee": {
     "title": "Guarantee",
     "text": "I guarantee that after you have dealt with your “want” and “should”, “can” and “do not have the strength and time”, you will start to act step by step according to the created plan. And as a result: your new life of pleasure is inevitable!"
@@ -173,6 +174,5 @@
     "textUnderstand": "Understand what you want",
     "textHowGet": "Understand how to get it",
     "textStartDoing": "Start doing!"
-  },
-  "saving": "Saving"
+  }
 }
