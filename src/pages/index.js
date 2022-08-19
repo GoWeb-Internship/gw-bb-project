@@ -18,7 +18,7 @@ import ImportantResultsSection from 'components/importantResultsSection/Importan
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
-
+import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
 // KEYS must be started with GATSBY_
@@ -32,6 +32,7 @@ const IndexPage = ({ data }) => {
       <Hero />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
+      <GuaranteeSection />
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
       <ImportantResultsSection />

@@ -164,5 +164,9 @@
     ],
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   },
-  "saving": "Saving"
+  "saving": "Saving",
+  "guarantee": {
+    "title": "Guarantee",
+    "text": "I guarantee that after you have dealt with your “want” and “should”, “can” and “do not have the strength and time”, you will start to act step by step according to the created plan. And as a result: your new life of pleasure is inevitable!"
+  }
 }
