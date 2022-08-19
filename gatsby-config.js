@@ -116,7 +116,12 @@ module.exports = {
         printRejected: false,
         develop: true,
         tailwind: true,
-        ignore: ['react-phone-input-2/lib/bootstrap.css', 'swiper'],
+        ignore: [
+          'react-phone-input-2/lib/bootstrap.css',
+          'swiper',
+          'swiper/css',
+          'swiper/css/navigation',
+        ],
       },
     },
     {

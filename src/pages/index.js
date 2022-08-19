@@ -1,25 +1,26 @@
 import * as React from 'react';
-// import { Link, graphql } from 'gatsby';
 import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import useClientLocation from 'hooks/useClientLocation';
 
 import Layout from 'components/Layout';
-// import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
-import Form from 'components/form/Form';
-import useClientLocation from 'hooks/useClientLocation';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import Hero from 'components/hero/Hero';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
+import FeedbackSection from 'components/feedbackSection/FeedbackSection';
+import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
-import Hero from 'components/hero/Hero';
 import PriceSection from 'components/priceSection/PriceSection';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
-import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import ContactSection from 'components/contactSection/ContactSection';
-import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
+import Form from 'components/form/Form';
+import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
+import StoriesSection from 'components/storiesSection/StoriesSection';
+
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
 // KEYS must be started with GATSBY_
@@ -35,6 +36,7 @@ const IndexPage = ({ data }) => {
       <Hero saleText={sale} />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
+      <FeedbackSection />
       <GuaranteeSection />
       <WithCoachSection />
       <PriceSection title={pricesTitle} charity={charity} />
@@ -51,6 +53,7 @@ const IndexPage = ({ data }) => {
       </ContactSection>
       <BeBetterToday />
       <MyFormulaSection />
+      <StoriesSection />
       {/* <section>
         <Container>
         <p className={'mt-10'}>

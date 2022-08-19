@@ -6,12 +6,12 @@
         "id": "about"
       },
       {
-        "name": "Price",
-        "id": "price"
-      },
-      {
         "name": "Reviews",
         "id": "reviews"
+      },
+      {
+        "name": "Price",
+        "id": "price"
       },
       {
         "name": "Contacts",
@@ -161,6 +161,8 @@
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   },
   "saving": "Saving",
+  "storiesTitle": "Incredible stories of my clients",
+  "feedbacksTitle": "Feedback from my clients",
   "modalRight": {
     "title": "Hi! I'll be in touch with you soon!",
     "text": "By clicking submit you agree to the processing of personal data"

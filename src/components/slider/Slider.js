@@ -8,8 +8,8 @@ import { useTranslation } from 'react-i18next';
 import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs';
 //
 
-import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
 //
 
 const Slider = ({ images }) => {
@@ -35,7 +35,6 @@ const Slider = ({ images }) => {
   `);
 
   const mdxData = data.allMdx.nodes;
-  console.log('mdxData', mdxData);
 
   const swiperNavPrevRefs = useRef(null);
   const swiperNavNextRefs = useRef(null);
