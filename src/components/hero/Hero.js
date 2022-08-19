@@ -19,7 +19,7 @@ const Hero = () => {
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
-      bg: file(name: { eq: "hero" }) {
+      bg: file(name: { eq: "hero-1" }) {
         id
         publicURL
         childImageSharp {

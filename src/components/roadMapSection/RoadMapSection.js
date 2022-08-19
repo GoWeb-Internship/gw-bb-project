@@ -10,7 +10,7 @@ import RoadMapList from './RoadMapList';
 const RoadMapSection = ({ title = '' }) => {
   const { background, roadMapList } = useStaticQuery(graphql`
     query RoadMapList {
-      background: file(name: { eq: "road-map-1" }) {
+      background: file(name: { eq: "road-map" }) {
         id
         publicURL
         childImageSharp {
