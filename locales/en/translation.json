@@ -160,5 +160,9 @@
     ],
     "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
   },
-  "saving": "Saving"
+  "saving": "Saving",
+  "modalRight": {
+    "title": "Hi! I'll be in touch with you soon!",
+    "text": "By clicking submit you agree to the processing of personal data"
+  }
 }

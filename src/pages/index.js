@@ -12,9 +12,7 @@ import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import Hero from 'components/hero/Hero';
-
 import PriceSection from 'components/priceSection/PriceSection';
-
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
@@ -33,7 +31,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Hero />
+      <Hero saleText={sale} />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
       <WithCoachSection />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Controller } from 'react-hook-form';
 import PhoneInput from 'react-phone-input-2';
 import ru from 'react-phone-input-2/lang/ru.json';
-import ua from '../../assets/land/ua.json'; // файлик нужно исправлять, сделала только пару стран чтобы посмотреть. Шаблон из либы в файлике example.json
+import ua from '../../assets/land/ua.json';
 
 const loc = { ru, uk: ua };
 
@@ -14,7 +14,7 @@ const InputPhone = ({ control, errors, language, country = 'ua' }) => {
       <Controller
         name="phone"
         control={control}
-        render={({ field: { onChange, value } }) => (
+        render={({ field: { onChange, value, name } }) => (
           <PhoneInput
             inputStyle={{
               padding: '16px 20px 16px 50px',
@@ -26,13 +26,18 @@ const InputPhone = ({ control, errors, language, country = 'ua' }) => {
               outline: 'none',
               backgroundColor: 'inherit',
               color: '#F8FAFC',
+              boxShadow: 'none',
             }}
             buttonStyle={{
-              height: '53px',
+              height: '54px',
+              borderRadius: '10px',
+              outline: 'none',
             }}
             dropdownStyle={{
               color: '#525252',
+              maxHeight: '180px',
             }}
+            name={name}
             onChange={onChange}
             value={value}
             country={country}

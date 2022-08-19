@@ -86,7 +86,7 @@ const Form = ({
       <div className="mb-8">
         <input
           placeholder={formData.inputName.name}
-          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50 invalid:border-red-500"
+          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
@@ -94,7 +94,7 @@ const Form = ({
       <div className="mb-8">
         <input
           placeholder={formData.inputEmail.name}
-          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50 invalid:border-red-500"
+          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
