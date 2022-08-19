@@ -33,7 +33,6 @@ const Form = ({
     isAgree: yup.boolean().default(false).oneOf([true]),
   });
 
-  console.log(place);
   const {
     control,
     register,
@@ -84,7 +83,7 @@ const Form = ({
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <div className="mb-8">
+      <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputName.name}
           className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
@@ -92,7 +91,7 @@ const Form = ({
         />
         <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
       </div>
-      <div className="mb-8">
+      <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputEmail.name}
           className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"

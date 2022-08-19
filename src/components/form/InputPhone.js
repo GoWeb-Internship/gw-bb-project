@@ -10,7 +10,7 @@ const InputPhone = ({ control, errors, language, country = 'ua' }) => {
   const location = loc[language];
 
   return (
-    <div className="mb-[32px]">
+    <div className="mb-4 h-[69px]">
       <Controller
         name="phone"
         control={control}
