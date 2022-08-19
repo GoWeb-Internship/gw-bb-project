@@ -11,13 +11,13 @@ import Header from './header/Header';
 import Main from './main/Main';
 import Footer from './footer/Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, saleText, charity }) => {
   return (
     <>
       <Header />
       <div>
         <Main>{children}</Main>
-        <Footer />
+        <Footer saleText={saleText} charity={charity} />
       </div>
     </>
   );

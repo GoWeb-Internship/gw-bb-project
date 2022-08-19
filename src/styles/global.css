@@ -75,6 +75,15 @@ body {
   .hero-expirience-line:nth-child(-n + 3) {
     padding-bottom: 28px;
   }
+  .socialIcon-item:last-child {
+    margin-right: 0px;
+  }
+  .footer-item:first-child {
+    margin-right: 56px;
+  }
+  .footer-item:nth-child(2) {
+    margin-right: 44px;
+  }
 }
 
 /* Swiper style */
