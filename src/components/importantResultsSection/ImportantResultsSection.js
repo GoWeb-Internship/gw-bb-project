@@ -30,8 +30,10 @@ const ImportantResultsSection = () => {
     <Section>
       <Background imageData={imageData.bg} />
       <Container>
-        <div className="pt-[104px] pb-[90px]">
-          <h2 className="text-center mx-auto mb-14">{importantResul.title}</h2>
+        <div className="lg:pt-[104px] lg:pb-[90px] md:py-20">
+          <h2 className="text-center mx-auto lg:mb-14 md:mb-12">
+            {importantResul.title}
+          </h2>
           <ImportantResultsList data={importantResul} />
         </div>
       </Container>
