@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
   const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
 
   return (
-    <Layout>
+    <Layout saleText={sale} charity={charity}>
       <Hero />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
