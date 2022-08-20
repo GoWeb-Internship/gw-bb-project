@@ -50,7 +50,7 @@ const Hero = ({ saleText = '' }) => {
   const heroTitle = t('heroTitle', { returnObjects: true });
 
   return (
-    <Section>
+    <Section id={'home'}>
       <Background imageData={imageData.bg} />
       <Container>
         <div className="pt-[174px] pb-10 font-main">
