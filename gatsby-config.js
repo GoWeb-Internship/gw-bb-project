@@ -84,7 +84,7 @@ module.exports = {
           formats: [`auto`, `webp`, 'avif'],
           placeholder: `dominantColor`,
           quality: 80,
-          breakpoints: [768, 1440],
+          // breakpoints: [320, 768, 1440],
           backgroundColor: `transparent`,
           tracedSVGOptions: {},
           blurredOptions: {},
@@ -168,7 +168,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`inter\:300,400,500,700`, `ubuntu\:500,700`],
+        fonts: [`inter\:300,400,500,600,700`, `ubuntu\:500,700`],
         display: 'swap',
       },
     },

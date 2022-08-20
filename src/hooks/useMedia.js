@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 
+const isBrowser = typeof window !== 'undefined';
+
 const useMedia = (queries, values, defaultValue) => {
-  const mediaQueryLists = queries.map(q => window.matchMedia(q));
+  const mediaQueryLists = queries.map(q =>
+    isBrowser ? window.matchMedia(q) : false,
+  );
   const getValue = () => {
     const index = mediaQueryLists.findIndex(mql => mql.matches);
     return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
