@@ -34,10 +34,10 @@ const Footer = ({ saleText = '', charity = '' }) => {
   `);
 
   return (
-    <footer className="bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 md:w-[768px] lg:w-[1440px]">
+    <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
-        <div className="flex  lg:items-center lg:mb-4 ">
-          <div className="md: flex md:items-start">
+        <div className="lg:flex  lg:items-center lg:mb-4 ">
+          <div className="flex items-start justify-between md:justify-start">
             <Logo />
             <FooterNavigation
               navConfig={footer.nav}
@@ -47,12 +47,12 @@ const Footer = ({ saleText = '', charity = '' }) => {
           </div>
           <SocialIcon data={fullSocial} language={i18n.language} />
         </div>
-        <p className="font-bold leading-10 mx-auto mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
+        <p className="text-bb1222 leading-[22px] font-bold leading-10 mx-auto mb-10 md:mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {saleText}
         </p>
         <Button
           onClick={handleModalOpen}
-          className="bg-cyan-500 hover:bg-cyan-600 mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 w-[410px] lg:mb-[70px]"
+          className="bg-cyan-500 w-[280px] hover:bg-cyan-600 mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 md:w-[410px] lg:mb-[70px]"
         >
           {button.textSmallButton}
         </Button>
