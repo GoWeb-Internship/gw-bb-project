@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const List = ({ items = [] }) => {
+const List = ({ items = [], className = '' }) => {
   return (
     <div>
       {!!items.length && (
-        <ul className="">
+        <ul className={className}>
           {items.map(item => {
             return (
               <li key={item} className="">
@@ -26,5 +26,6 @@ const List = ({ items = [] }) => {
 
 List.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
 };
 export default List;

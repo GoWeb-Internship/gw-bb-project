@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import useClientLocation from 'hooks/useClientLocation';
 
 import Layout from 'components/Layout';
 import Seo from 'components/Seo';
@@ -28,7 +27,6 @@ import StoriesSection from 'components/storiesSection/StoriesSection';
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
-  const clientLocation = useClientLocation();
   const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
 
   return (
@@ -47,7 +45,6 @@ const IndexPage = ({ data }) => {
       <ContactSection saleText={sale}>
         <Form
           place=" section Contact"
-          country={clientLocation}
           buttonText={button.textBigButton}
           buttonClassName="bg-orange-400 hover:bg-orange-500"
         />
