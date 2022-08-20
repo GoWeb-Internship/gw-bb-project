@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { SwiperSlide } from 'swiper/react';
 
 import Slider from 'components/reusable/Slider';
 import Story from './Story';
+import { PageFormatContext } from 'context/PageFormatContext';
 
 const StoriesList = ({ data = [], className = '' }) => {
+  const pageFormat = useContext(PageFormatContext);
+
+  const isDesktop = pageFormat === 'desktop';
+
   return (
-    <Slider slidesPerView={2} className={className}>
+    <Slider slidesPerView={isDesktop ? 2 : 1} className={className}>
       {!!data.length &&
         data.map(({ frontmatter, id }) => (
           <SwiperSlide
             key={id}
-            className="slide h-auto max-w-[510px] mx-[20px]"
+            className="slide h-auto mx-[20px] slider-item-width sm:max-w-[380px] md:max-w-[510px]"
           >
             <Story content={frontmatter} />
           </SwiperSlide>
