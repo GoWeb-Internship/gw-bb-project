@@ -6,6 +6,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
+import { LOCATION_STORAGE_KEY } from 'hooks/useClientLocation';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -16,15 +17,13 @@ const encode = data => {
     .join('&');
 };
 
-const Form = ({
-  place,
-  country = 'ua',
-  buttonClassName = '',
-  buttonText = '',
-}) => {
+const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
+  const country = isBrowser
+    ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
+    : null;
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),
@@ -76,7 +75,7 @@ const Form = ({
   return (
     <form
       name="contact"
-      className="mx-auto w-[410px]"
+      className="max-w-sm(384px) mx-auto md:w-[410px]"
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"
@@ -86,7 +85,7 @@ const Form = ({
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputName.name}
-          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 py-4 text-bbForm rounded-[10px]  w-full md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
@@ -94,7 +93,7 @@ const Form = ({
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputEmail.name}
-          className="px-5 py-4 text-bbForm rounded-[10px] w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 py-4 text-bbForm rounded-[10px]  w-full md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
@@ -117,7 +116,7 @@ const Form = ({
         </label>
       </div>
       <button
-        className={`mx-auto py-4 rounded-xl text-xl lg:w-[410px] ${buttonClassName}`}
+        className={`mx-auto py-4 rounded-xl text-xl w-full md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
         type="submit"
       >
         {buttonText}
@@ -128,7 +127,6 @@ const Form = ({
 
 Form.propTypes = {
   place: PropTypes.string.isRequired,
-  country: PropTypes.string,
   buttonClassName: PropTypes.string,
   buttonText: PropTypes.string,
 };

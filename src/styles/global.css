@@ -22,7 +22,7 @@ h2 {
 }
 
 p {
-  @apply font-main font-medium text-bb2030 tracking-[0.02em];
+  @apply text-bb1622 font-main font-medium lg:text-bb2030 tracking-[0.02em];
 }
 
 ul {
@@ -83,6 +83,23 @@ body {
   }
   .footer-item:nth-child(2) {
     margin-right: 44px;
+  }
+  .input-phone {
+    padding: 16px 20px 16px 50px !important;
+    font-size: 16px !important;
+    line-height: 1.18 !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    border: 1px solid #f8fafc !important;
+    outline: none !important;
+    background-color: inherit !important;
+    color: #f8fafc !important;
+    box-shadow: none !important;
+  }
+  @media screen and (min-width: 768px) {
+    .input-phone {
+      width: 410px !important;
+    }
   }
 }
 

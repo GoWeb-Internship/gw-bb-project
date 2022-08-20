@@ -15,7 +15,7 @@ const InLiveSection = () => {
       photo: mdx(frontmatter: { title: { eq: "onBeach" } }) {
         cloudinaryImg {
           childImageSharp {
-            gatsbyImageData(width: 700)
+            gatsbyImageData(width: 768)
           }
         }
         frontmatter {
@@ -36,19 +36,20 @@ const InLiveSection = () => {
   return (
     <Section>
       <Background imageData={data.background} />
-      <div className="relative w-screen mx-auto md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[126px]">
+      <div className="relative w-screen mx-auto pt-9 md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[126px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <TextContainer
             title={inLive.title}
             text={inLive.text}
-            className="mt-5 pl-5 md:pl-0 md:ml-10 md:pr-5 lg:ml-[41px] lg:pr-[85px] lg:mt-0 lg:w-2/4"
+            className=" max-w-sm(384px) px-[20px] mb-11 md:px-[35px] lg:mb-0 lg:ml-[41px] lg:pr-[85px] lg:mt-0 lg:w-2/4"
           />
           <ImageContent
             imageData={imageData}
             imageAlt={imageAlt}
-            rounded="lg:rounded-r-[20px]"
-            width="w-[700px]"
-            height="h-[755px]"
+            imgClassName="md:object-top lg:object-center"
+            width="lg:w-[700px]"
+            height="md:h-[500px] lg:h-[755px]"
+            className="hidden md:block lg:rounded-r-[20px]"
           />
         </div>
       </div>
