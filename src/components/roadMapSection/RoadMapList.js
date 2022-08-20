@@ -6,16 +6,19 @@ const RoadMapList = ({ listData }) => {
   const { i18n } = useTranslation();
 
   return (
-    <ul className="md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
+    <ul className="mx-auto max-w-[270px] md:max-w-full md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
       {listData.map(({ frontmatter }, id) => (
-        <li key={`road-${id}`} className="flex items-center lg:min-h-[124px]">
+        <li
+          key={`road-${id}`}
+          className="mb-3 last:mb-0 flex items-center md:mb-0 md:min-h-[124px]"
+        >
           <span
             aria-hidden="true"
-            className="mr-[38px] text-[80px] font-main leading-none font-bold text-slate-50 opacity-20 pointer-events-none select-none"
+            className="min-w-[48px] font-main font-bold leading-none text-[60px] mr-5 text-slate-50 opacity-20 pointer-events-none select-none md:min-w-[58px] md:text-[80px] md:mr-[34px] lg:mr-[38px]"
           >
             {id + 1}
           </span>
-          <span className="text-bb1625 font-bold font-main">
+          <span className="font-main font-semibold text-bb1422 lg:text-bb1625 lg:font-bold">
             {frontmatter[i18n.language]}
           </span>
         </li>
