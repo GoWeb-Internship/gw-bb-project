@@ -31,9 +31,11 @@ const StoriesSection = () => {
   const { t } = useTranslation();
 
   return (
-    <Section>
-      <Container className="gradient1 pt-[124px] pb-[130px]">
-        <h2 className="text-center lg:mb-[56px]">{t('storiesTitle')}</h2>
+    <Section className="gradient1">
+      <Container className="pt-11 pb-[72px] md:py-[80px] lg:pt-[124px] lg:pb-[130px]">
+        <h2 className="text-center mb-8 md:mb-[48px] lg:mb-[56px]">
+          {t('storiesTitle')}
+        </h2>
         <StoriesList data={content.nodes} />
       </Container>
     </Section>

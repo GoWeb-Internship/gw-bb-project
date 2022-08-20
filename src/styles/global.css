@@ -18,7 +18,7 @@ li {
 }
 
 h2 {
-  @apply text-bbTitle1 font-heads font-bold;
+  @apply text-bb2833 md:text-bbTitle1 lg:text-bbTitle1 font-heads font-bold;
 }
 
 p {
@@ -114,10 +114,10 @@ body {
   right: 0;
 }
 
-.swiper-button-disabled,
+/* .swiper-button-disabled,
 .swiper-button-disabled {
   opacity: 0.5;
-}
+} */
 
 .scrollbar::-webkit-scrollbar {
   width: 2px;
@@ -150,12 +150,20 @@ body {
 .gradient2 {
   background: linear-gradient(
     180deg,
-    #2bb9c7 4.4%,
+    #2bb9c7 4%,
     rgba(251, 146, 60, 0.5) 27.56%,
     rgba(243, 181, 133, 0.9) 63.58%,
-    rgba(239, 204, 180, 0.947826) 86.74%,
-    #e2dcde 101.15%
+    rgba(239, 204, 180, 0.95) 86.74%,
+    #e2dcde 101%
   );
+}
+
+.slider-width {
+  max-width: calc(100vw - 40px);
+}
+
+.slider-item-width {
+  max-width: calc(100vw - 80px);
 }
 
 .hyphens {
