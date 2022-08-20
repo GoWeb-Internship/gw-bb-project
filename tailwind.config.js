@@ -24,6 +24,8 @@ module.exports = {
       fontSize: {
         bbForm: ['16px', '19px'],
         bbBase: ['18px', '24px'],
+        bb1222: ['12px', '22px'],
+        bb1224: ['12px', '24px'],
         bb1225: ['12px', '25px'],
         bb1422: ['14px', '22px'],
         bb1424: ['14px', '24px'],

@@ -178,7 +178,7 @@
     "textStartDoing": "Start doing!"
   },
   "footer": {
-    "nav": [
+    "navPubl": [
       {
         "name": "Privacy policy",
         "id": "policy"
@@ -186,7 +186,9 @@
       {
         "name": "Public offer",
         "id": "offer"
-      },
+      }
+    ],
+    "nav": [
       {
         "name": "About me",
         "id": "about"
