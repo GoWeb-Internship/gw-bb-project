@@ -6,7 +6,7 @@ import ua from '../../assets/land/ua.json';
 
 const loc = { ru, uk: ua };
 
-const InputPhone = ({ control, errors, language, country = 'ua' }) => {
+const InputPhone = ({ control, errors, language, country }) => {
   const location = loc[language];
 
   return (
@@ -14,24 +14,17 @@ const InputPhone = ({ control, errors, language, country = 'ua' }) => {
       <Controller
         name="phone"
         control={control}
+        rules={{
+          pattern: '',
+        }}
         render={({ field: { onChange, value, name } }) => (
           <PhoneInput
-            inputStyle={{
-              padding: '16px 20px 16px 50px',
-              fontSize: '16px',
-              lineHeight: '1.18',
-              borderRadius: '10px',
-              width: '410px',
-              border: ' 1px solid #F8FAFC',
-              outline: 'none',
-              backgroundColor: 'inherit',
-              color: '#F8FAFC',
-              boxShadow: 'none',
-            }}
+            inputClass="input-phone"
             buttonStyle={{
               height: '54px',
               borderRadius: '10px',
               outline: 'none',
+              borderColor: 'transparent',
             }}
             dropdownStyle={{
               color: '#525252',
