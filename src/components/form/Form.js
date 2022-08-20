@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -7,6 +7,8 @@ import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
 import { LOCATION_STORAGE_KEY } from 'hooks/useClientLocation';
+import { FiCheckSquare } from 'react-icons/fi';
+import { FiSquare } from 'react-icons/fi';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -21,6 +23,10 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
+  const [checkbox, setCheckbox] = useState(false);
+  const handler = useCallback(() => {
+    setCheckbox(!checkbox);
+  }, [checkbox]);
   const country = isBrowser
     ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
     : null;
@@ -104,14 +110,20 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
         language={i18n.language}
         country={country}
       />
-      <div className="mb-12 flex items-center">
+      <div className="mb-12  flex items-center">
+        {checkbox ? (
+          <FiCheckSquare className="relative" />
+        ) : (
+          <FiSquare className="relative" />
+        )}
         <input
           type="checkbox"
           id="isAgree"
           {...register('isAgree')}
-          className="mr-2"
+          className="absolute checkbox"
+          onChange={handler}
         />
-        <label className="text-sm" htmlFor="isAgree">
+        <label className="text-sm ml-4" htmlFor="isAgree">
           {formData.checkbox}
         </label>
       </div>
