@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'components/reusable/Section';
-import Background from 'components/reusable/Background';
+import Background2 from 'components/reusable/Background2';
 import Button from 'components/reusable/Button';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -28,7 +28,7 @@ const SignUpSection = ({ saleText = '' }) => {
           gatsbyImageData
         }
       }
-      bgForm: file(name: { eq: "fon-form2" }) {
+      bgForm: file(name: { eq: "fon-modal-2" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -39,7 +39,7 @@ const SignUpSection = ({ saleText = '' }) => {
   return (
     <Section>
       <Container className="pt-[32px] pb-[72px] md:pb-[62px] md:pt-[32px]">
-        <Background imageData={data.background} />
+        <Background2 imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
         <p className="text-neutral-600 mb-[33px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">
           {saleText}

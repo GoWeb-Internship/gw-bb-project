@@ -15,7 +15,7 @@ const Modal = ({ isModalOpen, handleModalClose, children }) => {
       overlayClassName="fixed top-0 bottom-0 left-0 right-0 bg-neutral-700/70 backdrop-blur-md z-[2000]"
     >
       <button
-        className="absolute top-[10px] right-[10px] md:top-[29px] md:right-[29px]"
+        className="absolute top-[24px] right-[24px] md:top-[29px] md:right-[29px]"
         onClick={handleModalClose}
         aria-label="Close"
       >

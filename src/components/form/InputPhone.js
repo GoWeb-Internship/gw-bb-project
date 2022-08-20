@@ -24,6 +24,7 @@ const InputPhone = ({ control, errors, language, country }) => {
               height: '54px',
               borderRadius: '10px',
               outline: 'none',
+              borderColor: 'transparent',
             }}
             dropdownStyle={{
               color: '#525252',

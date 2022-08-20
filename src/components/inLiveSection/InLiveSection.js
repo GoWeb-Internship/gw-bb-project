@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
-import Background from 'components/reusable/Background';
+import Background2 from 'components/reusable/Background2';
 
 const InLiveSection = () => {
   const { t, i18n } = useTranslation();
@@ -24,7 +24,7 @@ const InLiveSection = () => {
           uk
         }
       }
-      background: file(name: { eq: "fon-in-live" }) {
+      background: file(name: { eq: "fon-in-live-1" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -35,13 +35,13 @@ const InLiveSection = () => {
   const imageAlt = data.photo.frontmatter[i18n.language];
   return (
     <Section>
-      <Background imageData={data.background} />
+      <Background2 imageData={data.background} />
       <div className="relative w-screen mx-auto pt-9 md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[126px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <TextContainer
             title={inLive.title}
             text={inLive.text}
-            className=" max-w-sm(384px) px-[20px] mb-11 md:px-[35px] lg:mb-0 lg:ml-[41px] lg:pr-[85px] lg:mt-0 lg:w-2/4"
+            className=" max-w-sm(384px) px-[20px] pb-11 md:px-[35px] md:pb-0 md:mb-11 lg:mb-0 lg:ml-[41px] lg:pr-[85px] lg:mt-0 lg:w-2/4"
           />
           <ImageContent
             imageData={imageData}

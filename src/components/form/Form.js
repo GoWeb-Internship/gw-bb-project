@@ -112,15 +112,15 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       />
       <div className="mb-12  flex items-center">
         {checkbox ? (
-          <FiCheckSquare className="relative" />
+          <FiCheckSquare className="relative w-6 h-6" />
         ) : (
-          <FiSquare className="relative" />
+          <FiSquare className="relative w-6 h-6" />
         )}
         <input
           type="checkbox"
           id="isAgree"
           {...register('isAgree')}
-          className="absolute checkbox"
+          className=" absolute checkbox"
           onChange={handler}
         />
         <label className="text-sm ml-4" htmlFor="isAgree">

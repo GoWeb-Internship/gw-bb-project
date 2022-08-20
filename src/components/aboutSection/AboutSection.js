@@ -5,7 +5,7 @@ import ImageContent from 'components/reusable/ImageContent';
 import List from 'components/reusable/List';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
-import Background from 'components/reusable/Background';
+import Background2 from 'components/reusable/Background2';
 
 const AboutSection = () => {
   const { t, i18n } = useTranslation();
@@ -50,8 +50,8 @@ const AboutSection = () => {
   const imageAlt2 = data.photo2.frontmatter[i18n.language];
   return (
     <Section id="about">
-      <Background imageData={data.background} />
-      <div className="relative w-screen mx-auto pt-14 md:pt-[68px] lg:py-32 md:w-[768px] lg:w-[1440px]">
+      <Background2 imageData={data.background} />
+      <div className="relative w-screen mx-auto pt-10 md:pt-[48px] lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <TextContainer
             title={about.title}
@@ -70,8 +70,8 @@ const AboutSection = () => {
           </div>
         </div>
         <div className=" mt-5 lg:inline-flex lg:flex-row-reverse md:mt-10 lg:mt-20">
-          <div className=" px-5 mb-[72px] md:mx-auto lg:mx-0 lg:ml-28 lg:pr-20 lg:px-0 lg:block">
-            <h2 className="mb-4 mt-9 text-center font-heads text-bb2225 md:mt-0 md:text-bb3237 md:mb-10 text-orange-400 font-medium">
+          <div className=" px-5 mb-[52px] md:mx-auto lg:mx-0 lg:ml-28 lg:pr-20 lg:px-0 lg:block">
+            <h2 className="mb-4 mt-9 text-center font-heads text-bb2225 md:mt-0 md:text-bb3237 md:mb-6 lg:mb-0 text-orange-400 font-medium">
               {about.caption}
             </h2>
             <List

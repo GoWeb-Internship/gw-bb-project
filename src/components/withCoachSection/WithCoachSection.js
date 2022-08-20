@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from 'components/reusable/Section';
-import Background from 'components/reusable/Background';
+import Background2 from 'components/reusable/Background2';
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 
@@ -11,7 +11,7 @@ const WithCoachSection = () => {
   const withCoach = t('withCoach', { returnObjects: true });
   const data = useStaticQuery(graphql`
     query {
-      background: file(name: { eq: "fon-with-coach-1" }) {
+      background: file(name: { eq: "fon-with-coach-2" }) {
         id
         publicURL
         childImageSharp {
@@ -39,7 +39,7 @@ const WithCoachSection = () => {
 
   return (
     <Section>
-      <Background imageData={data.background} />
+      <Background2 imageData={data.background} objectPosition="center" />
       <div className="relative w-screen mx-auto pt-10 md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px] lg:flex lg:flex-row lg:justify-between">
         <TextContainer
           title={withCoach.title}
