@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'components/reusable/Section';
-import Container from 'components/reusable/Container';
 import { graphql, useStaticQuery } from 'gatsby';
-import Background from 'components/reusable/Background';
 import PriceCardsList from './PriceCardsList';
 import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
+import Background2 from 'components/reusable/Background2';
 
 const PriceSection = ({ title, charity = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,18 +56,22 @@ const PriceSection = ({ title, charity = '' }) => {
   `);
   return (
     <Section id="price">
-      <Background imageData={background} />
-      <Container className="lg:pt-[124px] lg:pb-[79px]">
-        <h2 className="lg:mb-[62px] text-center">{title}</h2>
+      <Background2 imageData={background} />
+      <div className="relative w-screen mx-auto px-0 pt-9 pb-[70px] md:w-[768px] md:px-0 md:pt-10 md:pb-[74px] lg:w-[1440px] lg:px-20 lg:pt-[124px] lg:pb-[79px]">
+        <h2 className="mx-auto text-center text-bb2833 px-8 mb-10 md:px-0 md:max-w-[698px] md:mb-14 lg:mb-[62px]">
+          {title}
+        </h2>
         <PriceCardsList
           cardsList={cardsList.nodes}
-          className="lg:mb-[52px]"
+          className="mb-[30px] md:mb-16 lg:mb-[52px]"
           onClick={handleModalOpen}
         />
         {charity && (
-          <p className="text-center font-normal text-bb2040">{charity}</p>
+          <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-[540px] md:text-bb2040">
+            {charity}
+          </p>
         )}
-      </Container>
+      </div>
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
         <ModalRight place={place} bg={bgForm} />
       </Modal>
