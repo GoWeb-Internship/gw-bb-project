@@ -4,7 +4,7 @@ import Background2 from 'components/reusable/Background2';
 import Form from 'components/form/Form';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
-const ModalLeft = ({ bg, place, saleText }) => {
+const ModalLeft = ({ bg, place, saleText, cost }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
 
@@ -15,9 +15,12 @@ const ModalLeft = ({ bg, place, saleText }) => {
         objectPosition="top left"
         imageData={bg}
       />
-      <div className="max-w-sm(384px) md:w-[410px] md:mx-auto lg:mx-0">
-        <p className="font-main text-bb1422 font-bolt md:text-bb1625 mb-10">
+      <div className="max-w-sm(384px) md:w-[450px] md:mx-auto lg:mx-0">
+        <p className="font-main text-bb1422 font-bolt md:text-bb1625 mb-4">
           {saleText}
+        </p>
+        <p className="font-main text-bb1222 font-bolt md:text-bb1425 mb-6 ">
+          *{cost}
         </p>
         <Form
           place={place}
@@ -33,6 +36,7 @@ ModalLeft.propTypes = {
   bg: PropTypes.object,
   place: PropTypes.string,
   saleText: PropTypes.string,
+  cost: PropTypes.string,
 };
 
 export default ModalLeft;

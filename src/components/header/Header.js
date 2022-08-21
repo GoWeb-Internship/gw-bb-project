@@ -13,7 +13,7 @@ const Header = () => {
   const { nav } = t('header', { returnObjects: true });
 
   return (
-    <header className="fixed top-0 z-[9000] w-full py-3 bg-[#0891b2cc] shadow-bb1">
+    <header className="fixed top-0 z-[2000] w-full py-3 bg-[#0891b2cc] shadow-bb1">
       <Container className={'flex items-center'}>
         <Logo />
         <HeaderNavigation

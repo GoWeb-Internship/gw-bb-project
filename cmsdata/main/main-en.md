@@ -10,6 +10,7 @@ charity:
   10% of the funds send to improve the lives of those who suffered during the
   war in Ukraine
 sale:
-  Sign up with me today for your first coaching session with a 75% discount and
-  start living your life tomorrow!
+  Sign up today for your first coaching session with a 75% discount and start
+  living it up tomorrow!
+cost: The cost of a single session is $100
 ---
