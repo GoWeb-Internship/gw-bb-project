@@ -12,10 +12,12 @@ import MobileMenu from './MobileMenu';
 
 const Header = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const headerRef = useRef(null);
-  const { t } = useTranslation();
+  const [renderMenu, setRenderMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
+  const headerRef = useRef(null);
   const pageFormat = useContext(PageFormatContext);
+  const { t } = useTranslation();
 
   const isMobile = pageFormat === 'mobile';
 
@@ -23,10 +25,12 @@ const Header = () => {
     setHeaderHeight(headerRef?.current.offsetHeight);
   }, []);
 
-  const { nav } = t('header', { returnObjects: true });
-
-  const [renderMenu, setRenderMenu] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
+  useEffect(() => {
+    if (!isMobile && renderMenu) {
+      setRenderMenu(false);
+      setShowMenu(false);
+    }
+  }, [isMobile, renderMenu]);
 
   const onOpen = () => {
     setRenderMenu(true);
@@ -40,7 +44,7 @@ const Header = () => {
     document.body.style.overflow = '';
     setTimeout(() => {
       setRenderMenu(false);
-    }, 200 * 2);
+    }, 500 * 2);
   };
 
   const handleEscape = e => {
@@ -48,6 +52,8 @@ const Header = () => {
     onClose();
     window.removeEventListener('keydown', handleEscape);
   };
+
+  const { nav } = t('header', { returnObjects: true });
 
   return (
     <header
