@@ -25,7 +25,7 @@ const BeBetterToday = () => {
       }
     }
   `);
-
+  // test
   return (
     <Section>
       <Background2 imageData={imageData.bg} />
