@@ -15,7 +15,7 @@ const ImportantResultsSection = () => {
 
   const imageData = useStaticQuery(graphql`
     query {
-      bg: file(name: { eq: "fon-six-results" }) {
+      bg: file(name: { eq: "road-map-tablet" }) {
         id
         publicURL
         childImageSharp {
