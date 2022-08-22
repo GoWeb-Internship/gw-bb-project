@@ -198,7 +198,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* пробовала с классами библиотеки инпута */
-/* .input-phone .react-tel-input .selected-flag.open:before,
+.input-phone .react-tel-input .selected-flag.open:before,
 .react-tel-input .selected-flag:focus:before {
   border-color: transparent !important;
 }
@@ -213,4 +213,4 @@ body::-webkit-scrollbar-thumb {
 .input-phone .react-tel-input .selected-flag .arrow.up {
   border-top: none;
   border-bottom: 4px solid rgb(238, 230, 230) !important;
-} */
+}
