@@ -18,7 +18,7 @@ import { ClientLoactionContext } from 'context/ClientLoactionContext';
 
 const mediaQueries = getMediaQueries();
 
-const Layout = ({ children, saleText, charity }) => {
+const Layout = ({ children, saleText, charity, cost }) => {
   const pageFormat = useMedia(
     Object.values(mediaQueries),
     Object.keys(mediaQueries),
@@ -34,7 +34,7 @@ const Layout = ({ children, saleText, charity }) => {
           <Header />
           <div>
             <Main>{children}</Main>
-            <Footer saleText={saleText} charity={charity} />
+            <Footer saleText={saleText} charity={charity} cost={cost} />
           </div>
         </PageFormatContext.Provider>
       </ClientLoactionContext.Provider>
@@ -44,6 +44,9 @@ const Layout = ({ children, saleText, charity }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  cost: PropTypes.string,
+  saleText: PropTypes.string,
+  charity: PropTypes.string,
 };
 
 export default Layout;

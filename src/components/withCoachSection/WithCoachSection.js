@@ -44,7 +44,7 @@ const WithCoachSection = () => {
         <TextContainer
           title={withCoach.title}
           text={withCoach.text}
-          titlePosition="text-center"
+          titlePosition="text-center lg:text-start"
           className="max-w-sm(384px) px-[20px] md:px-[35px] mb-[64px] lg:mt-0 lg:w-3/5 lg:pl-20 lg:mr-[149px]"
         />
         <ImageContent

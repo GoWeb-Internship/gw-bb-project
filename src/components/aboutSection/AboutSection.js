@@ -56,8 +56,8 @@ const AboutSection = () => {
           <TextContainer
             title={about.title}
             text={about.text}
-            titlePosition="text-center"
-            className=" max-w-sm(384px) mb-11 px-[20px] md:px-[35px] lg:mb-0 lg:w-2/4 lg:pl-20 lg:pr-0 lg:mr-[90px] "
+            titlePosition="text-center lg:text-start"
+            className=" max-w-sm(384px) mb-11 px-[20px] md:px-[35px] lg:mb-0 lg:w-2/4 lg:pl-20 lg:pr-0 lg:mr-[90px]"
           />
 
           <div className="lg:block">
@@ -71,7 +71,7 @@ const AboutSection = () => {
         </div>
         <div className=" mt-5 lg:inline-flex lg:flex-row-reverse md:mt-10 lg:mt-20">
           <div className=" px-5 mb-[52px] md:mx-auto lg:mx-0 lg:ml-28 lg:pr-20 lg:px-0 lg:block">
-            <h2 className="mb-4 mt-9 text-center font-heads text-bb2225 md:mt-0 md:text-bb3237 md:mb-6 lg:mb-0 text-orange-400 font-medium">
+            <h2 className="mb-4 mt-9 text-center font-heads text-bb2225 md:mt-0 md:text-bb3237 md:mb-6 lg:mb-0 lg:text-start text-orange-400 font-medium">
               {about.caption}
             </h2>
             <List

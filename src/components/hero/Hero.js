@@ -14,7 +14,7 @@ import HeroDataList from './HeroDataList';
 import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
 
-const Hero = ({ saleText = '' }) => {
+const Hero = ({ saleText = '', cost = '' }) => {
   const { t, i18n } = useTranslation();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -76,6 +76,7 @@ const Hero = ({ saleText = '' }) => {
           bg={imageData.bgForm}
           place="section Hero"
           saleText={saleText}
+          cost={cost}
         />
       </Modal>
     </Section>
