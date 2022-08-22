@@ -177,16 +177,22 @@ body {
   );
 }
 
-.scrollbar::-webkit-scrollbar {
+.scrollbar::-webkit-scrollbar,
+body::-webkit-scrollbar {
   width: 2px;
-  background-color: #f8fafc33;
+  background-color: #00000001;
   opacity: 0.3;
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
-  background-color: #f8fafcaa;
+.scrollbar::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: #ffffffdd;
 }
 
 .non-active-link::after {
   transform: translateX(102%);
+}
+
+.non-active-link2::after {
+  transform: translateX(-102%);
 }

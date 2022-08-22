@@ -34,7 +34,7 @@ const PriceCard = ({ cardData, onClick, isActive }) => {
     <div
       className={`${opacity} ${height} ${scale} rounded-2xl w-[264px] min-h-[372px] px-[20px] py-9 text-neutral-700 text-center md:rounded-[20px] md:pt-[70px] md:pb-[60px] md:px-[46px] md:w-[328px] bg-slate-50 transition duration-200 lg:hover:scale-105 hover:bg-white`}
     >
-      <h3 className="font-main font-bold text-bb2440 md:text-bb2440 mb-2 md:mb-[2px]">
+      <h3 className="font-main font-bold text-bb2040 md:text-bb2440 mb-2 md:mb-[2px]">
         {cardData[i18n.language]}
       </h3>
       <p

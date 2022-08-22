@@ -43,11 +43,11 @@ const LangSwitcher = ({ className = '' }) => {
     >
       <button
         type="button"
-        className="flex items-center px-2 py-1 font-main text-bbBase font-medium"
+        className="flex items-center px-2 py-1 font-main text-bbBase font-medium transition-colors hover:text-slate-200 focus:text-slate-200"
       >
         {getNormalizeData(language).label}
         <FiChevronDown
-          className={`ml-1 ${rotate} ${fill} transition duration-200 relative z-10`}
+          className={`icon ml-1 ${rotate} ${fill} transition duration-200 relative z-10`}
         />
       </button>
       {/* language selector list */}

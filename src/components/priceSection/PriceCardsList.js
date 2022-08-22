@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import PriceCard from './PriceCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/css/effect-coverflow';
 import { PageFormatContext } from 'context/PageFormatContext';
 
 const fakeCard = {
