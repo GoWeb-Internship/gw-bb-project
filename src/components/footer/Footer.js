@@ -50,6 +50,7 @@ const Footer = ({ saleText = '', charity = '' }) => {
         <p className="text-bb1222 leading-[22px] font-bold leading-10 mx-auto mb-10 md:mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {saleText}
         </p>
+        <p>* Стоимость разовой сессии $100</p>
         <Button
           onClick={handleModalOpen}
           className="bg-cyan-500 w-[280px] hover:bg-cyan-600 mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 md:w-[410px] lg:mb-[70px]"
