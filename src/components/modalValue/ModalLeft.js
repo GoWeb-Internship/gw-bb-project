@@ -11,21 +11,21 @@ const ModalLeft = ({ bg, place, saleText, cost }) => {
   const pageFormat = useContext(PageFormatContext);
 
   return (
-    <div className="max-w-sm(384px) py-[42px] px-[20px] h-full lg:w-[934px] lg:h-[614px] lg:pt-[60px] lg:pl-[56px] lg:pb-[68px]">
+    <div className="py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0   lg:w-[934px] lg:h-[614px] lg:pt-[60px] lg:pl-[56px] lg:pb-[68px]">
       {pageFormat === 'desktop' ? (
         <Background2
-          className=" w-full h-full lg:w-[934px]"
+          className=" h-full lg:w-[934px]"
           imageData={bg}
           objectPosition="center top"
         />
       ) : (
         <Background2
-          className="w-full h-full lg:w-[934px]"
+          className="h-full lg:w-[934px]"
           imageData={bg}
           objectPosition="150px top"
         />
       )}
-      <div className="max-w-sm(384px) md:w-[450px] md:mx-auto lg:mx-0">
+      <div className="md:w-[450px] md:mx-auto lg:mx-0">
         <p className="font-main text-bb1422 font-bolt md:text-bb1625 mb-4">
           {saleText}
         </p>
