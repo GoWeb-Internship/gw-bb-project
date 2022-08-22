@@ -52,6 +52,7 @@ collections:
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
       - { label: 'Sale', name: 'sale', widget: 'string' }
+      - { label: 'Cost one session with sale', name: 'cost', widget: 'string' }
   # Policy list model
   - label: 'Policy'
     name: 'policy'

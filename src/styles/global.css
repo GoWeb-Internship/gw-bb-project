@@ -90,12 +90,12 @@ body {
     font-size: 16px !important;
     line-height: 1.18 !important;
     border-radius: 10px !important;
-    width: 100% !important;
     border: 1px solid #f8fafc !important;
     outline: none !important;
     background-color: inherit !important;
     color: #f8fafc !important;
     box-shadow: none !important;
+    width: 280px !important;
   }
   @media screen and (min-width: 768px) {
     .input-phone {
@@ -195,4 +195,22 @@ body::-webkit-scrollbar-thumb {
 
 .non-active-link2::after {
   transform: translateX(-102%);
+}
+
+/* пробовала с классами библиотеки инпута */
+.input-phone .react-tel-input .selected-flag.open:before,
+.react-tel-input .selected-flag:focus:before {
+  border-color: transparent !important;
+}
+.input-phone .react-tel-input .selected-flag {
+  border-radius: 10px !important;
+}
+.input-phone .react-tel-input .selected-flag .arrow {
+  border-left: 3px solid transparent !important;
+  border-right: 3px solid transparent !important;
+  border-top: 4px solid rgb(238, 230, 230) !important;
+}
+.input-phone .react-tel-input .selected-flag .arrow.up {
+  border-top: none;
+  border-bottom: 4px solid rgb(238, 230, 230) !important;
 }

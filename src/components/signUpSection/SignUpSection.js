@@ -9,7 +9,7 @@ import Container from 'components/reusable/Container';
 import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
 
-const SignUpSection = ({ saleText = '' }) => {
+const SignUpSection = ({ saleText = '', cost = '' }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,11 +38,14 @@ const SignUpSection = ({ saleText = '' }) => {
 
   return (
     <Section>
-      <Container className="pt-[32px] pb-[72px] md:pb-[62px] md:pt-[32px]">
+      <Container className="pt-[20px] pb-[62px] md:pb-[62px] md:pt-[20px]">
         <Background2 imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
-        <p className="text-neutral-600 mb-[33px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">
+        <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
           {saleText}
+        </p>
+        <p className="text-neutral-600 mb-[33px] text-bb1222 md:text-bb1625 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">
+          *{cost}
         </p>
         <Button
           onClick={handleModalOpen}
@@ -60,5 +63,6 @@ const SignUpSection = ({ saleText = '' }) => {
 
 SignUpSection.propTypes = {
   saleText: PropTypes.string,
+  cost: PropTypes.string,
 };
 export default SignUpSection;
