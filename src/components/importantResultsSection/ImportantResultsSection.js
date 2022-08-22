@@ -3,7 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Section from '../reusable/Section';
-import Background from '../reusable/Background';
+import Background2 from 'components/reusable/Background2';
 import Container from '../reusable/Container';
 import ImportantResultsList from './ImportantResultsList';
 
@@ -28,7 +28,7 @@ const ImportantResultsSection = () => {
 
   return (
     <Section>
-      <Background imageData={imageData.bg} />
+      <Background2 imageData={imageData.bg} />
       <Container>
         <div className="pt-9 pb-[72px] md:py-20 lg:pt-[104px] lg:pb-[90px]">
           <h2 className="text-center mx-auto mb-6 md:mb-12 lg:mb-14">

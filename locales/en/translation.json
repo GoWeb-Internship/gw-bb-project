@@ -55,51 +55,51 @@
     "items": [
       {
         "id": 1,
-        "title": "15 gaps",
-        "text": "You experience fear or anxiety"
+        "title": "15 years",
+        "text": "in international business"
       },
       {
         "id": 2,
         "title": "500",
-        "text": "You experience fear or anxiety"
+        "text": "hours of practice"
       },
       {
         "id": 3,
-        "title": "6 gaps",
-        "text": "You experience fear or anxiety"
+        "title": "6 years",
+        "text": "of work with business managers"
       },
       {
         "id": 4,
-        "title": "7 gaps",
-        "text": "You experience fear or anxiety"
+        "title": "7 years",
+        "text": "in sales and startup development"
       },
       {
         "id": 5,
         "title": "ICF",
-        "text": "You experience fear or anxiety"
+        "text": "life coach since 2021"
       },
       {
         "id": 6,
         "title": "30+",
-        "text": "You experience fear or anxiety"
+        "text": "satisfied customers"
       }
     ]
   },
   "heroListBlock": {
-    "title": "We are right on the path if you",
+    "title": "We’re definitely going the same way, if you",
     "list": [
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
-      "Lost concentration, trying to cover everything at once, but not getting the desired result",
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)",
-      "You experience fear or anxiety and there is only negativity around (you do not see gaps)"
+      "You experience fear or anxiety and there is only negativity around (you don’t see any light coming out of surrounding darkness)",
+      "You don’t want to work or do something, but you have to. Don't get the life you imagined",
+      "You lose concentration, you try to cover everything at once, but you don’t get the desired result",
+      "You don’t understand what you want and whether these are your desires, you don’t know what to do next",
+      "You want to do something that brings pleasure and incom",
+      "You understand that the new day is similar to the previous one, you feel stuck in “groundhog day”"
     ]
   },
   "heroTitle": {
-    "title": "I will teach you how to live and work in a high",
-    "subTitle": "I will teach you how to live and work in a high",
-    "supTitle": "If you are burnt out and live without pleasure"
+    "title": "I will teach you to live in high spirits",
+    "subTitle": "without emotional burnouts",
+    "supTitle": "If you are emotionally burnt out and don’t enjoy your life"
   },
   "about": {
     "title": "Let's get acquainted",
@@ -128,14 +128,14 @@
     ]
   },
   "importantResultsSection": {
-    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit.?",
+    "title": "What are your 6 most important results?",
     "list": [
-      "posing on a couch and looking stoically at the camer",
-      "posing on a couch and looking stoically at the camerap",
-      "posing on a couch and looking stoically at the cameral",
-      "posing on a couch and looking stoically at the cameray",
-      "posing on a couch and looking stoically at the camerar",
-      "posing on a couch and looking stoically at the camerad"
+      "You’ll understand what you really want in life and start moving purposefully towards your desires",
+      "You’ll begin to live a conscious and full life paying attention to important things that you previously put off or ignored",
+      "You’ll gain courage and self-confidence, you’ll begin to do what you couldn’tt decide on before.",
+      "You’ll change your attitude towards yourself and the environment, you’ll find a positive attitude that will help you to reach a new level of life",
+      "You’ll increase your personal efficiency and energy level to move towards your goals",
+      "You’ll fill your life with pleasure and incredible accomplishments"
     ]
   },
   "inLive": {
@@ -148,17 +148,17 @@
     ]
   },
   "beBetterToday": {
-    "title": "Lorem ipsum dolor sit amet consectetur!",
-    "subTitle": "Lorem ipsum dolor sit amet!",
-    "textSupItems": "Lorem ipsum dolo",
+    "title": "Be better today!",
+    "subTitle": "Your new life is waiting for you!",
+    "textSupItems": "The life in which you will",
     "items": [
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit",
-      "Lorem ipsum dolor sit amet consectetur adipisicing eli",
-      "Lorem ipsum dolor sit amet consectetur",
-      "Lorem ipsum dolor sit amet consectetur adipisicing el",
-      "Lorem ipsum dolor sit amet consectetur adipisicing elity"
+      "Live it up, do every day what brings pleasure",
+      "Fulfill your true dreams, desires and achieve what you have dreamed of for so long",
+      "Meet new and interesting people",
+      "Achieve cool personal results and transform your life beyond recognition",
+      "It will be easier to make decisions and get new impressions of yourself and your life"
     ],
-    "textSubItems": "Lorem ipsum dolor sit! Amet consectetur adipisicing elit!"
+    "textSubItems": "Don't waste your time!!! Take a step right now!"
   },
   "saving": "Saving",
   "storiesTitle": "Incredible stories of my clients",
@@ -169,10 +169,10 @@
   },
   "guarantee": {
     "title": "Guarantee",
-    "text": "I guarantee that after you have dealt with your “want” and “should”, “can” and “do not have the strength and time”, you will start to act step by step according to the created plan. And as a result: your new life of pleasure is inevitable!"
+    "text": "I guarantee that having figured out with your “I want” and “I need”, “I can” and “I have no energy and time” and acting step by step according to the plan, your new life with pleasure will simply be inevitable"
   },
   "myFormula": {
-    "title": "Lorem ipsum dolor sit amet consectetur",
+    "title": "My formula is very simple and effective",
     "textUnderstand": "Understand what you want",
     "textHowGet": "Understand how to get it",
     "textStartDoing": "Start doing!"

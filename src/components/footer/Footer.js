@@ -37,7 +37,7 @@ const Footer = ({ saleText = '', charity = '' }) => {
     <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
         <div className="lg:flex  lg:items-center lg:mb-4 ">
-          <div className="flex items-start justify-between md:justify-start">
+          <div className="flex items-start justify-between md:justify-start lg:mr-[68px]">
             <Logo />
             <FooterNavigation
               navConfig={footer.nav}
@@ -47,7 +47,7 @@ const Footer = ({ saleText = '', charity = '' }) => {
           </div>
           <SocialIcon data={fullSocial} language={i18n.language} />
         </div>
-        <p className="text-bb1222 leading-[22px] font-bold leading-10 mx-auto mb-10 md:mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
+        <p className="text-bb1222 leading-[22px] font-bold leading-10 mx-auto mb-10 md:text-bb2040 md:mb-8 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {saleText}
         </p>
         <Button
