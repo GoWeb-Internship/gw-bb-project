@@ -75,9 +75,10 @@ const Hero = ({ saleText = '', cost = '' }) => {
             {/* <SocialGroup data={fullSocial} language={i18n.language} /> */}
           </div>
           <HeroDataList heroDataList={heroList} />
-          <HeroListExperiences experience={experience} />
+          {/* <HeroListExperiences /> */}
         </div>
       </Container>
+      <HeroListExperiences />
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
         <ModalLeft
           bg={imageData.bgForm}
