@@ -81,7 +81,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   return (
     <form
       name="contact"
-      className="max-w-sm(384px) mx-auto md:w-[410px]"
+      className="mx-auto md:w-[410px]"
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"
@@ -91,7 +91,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputName.name}
-          className="px-5 py-4 text-bbForm rounded-[10px]  w-full md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
@@ -99,7 +99,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputEmail.name}
-          className="px-5 py-4 text-bbForm rounded-[10px]  w-full md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
@@ -128,7 +128,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
         </label>
       </div>
       <button
-        className={`mx-auto py-4 rounded-xl text-xl w-full md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
+        className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
         type="submit"
       >
         {buttonText}

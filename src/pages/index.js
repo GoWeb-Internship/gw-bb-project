@@ -27,11 +27,12 @@ import StoriesSection from 'components/storiesSection/StoriesSection';
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
-  const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
+  const { charity, pricesTitle, roadMapTitle, sale, cost } =
+    data.content.frontmatter;
 
   return (
-    <Layout saleText={sale} charity={charity}>
-      <Hero saleText={sale} />
+    <Layout saleText={sale} cost={cost} charity={charity}>
+      <Hero saleText={sale} cost={cost} />
       <AboutSection />
       <RoadMapSection title={roadMapTitle} />
       <FeedbackSection />
@@ -41,10 +42,10 @@ const IndexPage = ({ data }) => {
       <ImportantResultsSection />
       <StoriesSection />
       <InLiveSection />
-      <SignUpSection saleText={sale} />
-      <ContactSection saleText={sale}>
+      <SignUpSection saleText={sale} cost={cost} />
+      <ContactSection saleText={sale} cost={cost}>
         <Form
-          place=" section Contact"
+          place="section Contact"
           buttonText={button.textBigButton}
           buttonClassName="bg-orange-400 hover:bg-orange-500"
         />
@@ -87,6 +88,7 @@ export const query = graphql`
         roadMapTitle
         charity
         sale
+        cost
       }
     }
   }

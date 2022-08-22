@@ -52,7 +52,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="fixed top-0 z-[9000] w-full bg-[#0891b2cc] shadow-bb1"
+      className="fixed top-0 z-[2000] w-full bg-[#0891b2cc] shadow-bb1"
     >
       <Container className={'flex items-center py-3'}>
         <Logo />
