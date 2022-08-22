@@ -13,6 +13,7 @@ import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
 import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
+import SocialIcon from 'components/reusable/SocialIcon';
 
 const Hero = ({ saleText = '', cost = '' }) => {
   const { t, i18n } = useTranslation();
@@ -53,19 +54,25 @@ const Hero = ({ saleText = '', cost = '' }) => {
     <Section id={'home'}>
       <Background imageData={imageData.bg} />
       <Container>
-        <div className="pt-[174px] pb-10 font-main">
-          <div className="flex justify-between items-start">
-            <div className="">
+        <div className="pt-[128px] pb-[70px] md:pt-[156px] md:pb-2 lg:pt-[174px] lg:pb-10 font-main">
+          <div className="md:flex justify-between items-start mb-[50px] md:mb-[54px] lg:mb-[94px]">
+            <div className="mb-20 md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
                 onClick={handleModalOpen}
                 type="button"
-                className="bg-orange-400 rounded-xl py-4 px-[100px] text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
+                className="min-w-[280px] bg-orange-400 rounded-xl py-4 px-[34px] md:w-[410px] md:px-[100px] text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
               >
                 {button.textBigButton}
               </Button>
             </div>
-            <SocialGroup data={fullSocial} language={i18n.language} />
+            <div className="hidden md:block">
+              <SocialGroup data={fullSocial} language={i18n.language} />
+            </div>
+            <div className="block md:hidden">
+              <SocialIcon data={fullSocial} language={i18n.language} />
+            </div>
+            {/* <SocialGroup data={fullSocial} language={i18n.language} /> */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />
