@@ -26,9 +26,9 @@ export const fullSocial = [
   {
     id: 3,
     name: {
-      en: 'Link to facebook',
-      ru: 'Ссылка на facebook',
-      uk: 'Посилання на facebook',
+      en: 'Link to instagram',
+      ru: 'Ссылка на instagram',
+      uk: 'Посилання на instagram',
     },
     component: FiInstagram,
     href: 'https://instagram.com/yuliya_shayenko?igshid=YmMyMTA2M2Y=',

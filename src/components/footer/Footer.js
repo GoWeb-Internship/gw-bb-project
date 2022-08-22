@@ -37,7 +37,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
     <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
         <div className="lg:flex  lg:items-center lg:mb-4 ">
-          <div className="flex items-start justify-between md:justify-start">
+          <div className="flex items-start justify-between md:justify-start lg:mr-[68px]">
             <Logo />
             <FooterNavigation
               navConfig={footer.nav}
