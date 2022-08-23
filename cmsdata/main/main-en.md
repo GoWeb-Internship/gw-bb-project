@@ -9,8 +9,6 @@ pricesTitle: Lorem ipsum dolor sit amet consectetur adipisicing elit
 charity:
   10% of the funds send to improve the lives of those who suffered during the
   war in Ukraine
-sale:
-  Sign up today for your first coaching session with a 75% discount and start
-  living it up tomorrow!
+sale: 75%
 cost: The cost of a single session is $100
 ---

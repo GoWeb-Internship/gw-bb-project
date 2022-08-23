@@ -12,6 +12,7 @@ import ModalRight from 'components/modalValue/ModalRight';
 const SignUpSection = ({ saleText = '', cost = '' }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
+  const sale = t('modalLeft', { returnObjects: true });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -42,7 +43,9 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
         <Background2 imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
         <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
-          {saleText}
+          {sale.text}
+          <span className="inline-block text-cyan-500 mr-1">{saleText}</span>
+          {sale.text2}
         </p>
         <p className="text-neutral-600 mb-[33px] text-bb1222 md:text-bb1625 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">
           *{cost}
