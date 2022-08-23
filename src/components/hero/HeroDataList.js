@@ -3,7 +3,7 @@ import * as React from 'react';
 const HeroDataList = ({ heroDataList }) => {
   return (
     <>
-      <h2 className="text-bb2023 leading-[-0.02em] mb-[34px] md:font-heads md:mb-[38px] md:text-[28px] md:leading-8 font-bold tracking-tight">
+      <h2 className="text-bb2023 leading-[-0.02em] mb-[34px] font-bold tracking-tight md:font-heads md:mb-[38px] md:text-[28px] md:leading-8">
         {heroDataList.title}:
       </h2>
       <ul className="grid gap-x-10 md:gap-y-[32px] mb-[60px] lg:gap-y-10 relative md:grid-cols-2 md:mb-[50px] md:gap-y-[30px] lg:mb-9 lg:grid-cols-3">
