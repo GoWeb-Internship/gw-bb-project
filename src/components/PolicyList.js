@@ -8,10 +8,7 @@ const PolicyList = ({ policyItems = [] }) => {
   return (
     <ul>
       {policyItems.map(({ frontmatter }) => (
-        <li key={frontmatter.title}>
-          <span>{frontmatter.title}. </span>
-          {frontmatter[i18n.language]}
-        </li>
+        <li key={frontmatter.title}>{frontmatter[i18n.language]}</li>
       ))}
     </ul>
   );

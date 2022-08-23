@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
-import Layout from 'components/Layout';
 import Container from 'components/reusable/Container';
 import PolicyList from 'components/PolicyList';
 import Seo from 'components/Seo';
@@ -10,15 +9,11 @@ const PolicyPage = ({ data }) => {
   const policyItems = data.allMdx.nodes;
 
   return (
-    <Layout>
-      <section>
-        <Container>
-          <h1>Policy</h1>
-          <Link to="/">Go back to the homepage</Link>
-          {!!policyItems.length && <PolicyList policyItems={policyItems} />}
-        </Container>
-      </section>
-    </Layout>
+    <Container>
+      <h1>Policy</h1>
+      <Link to="/">Go back to the homepage</Link>
+      {!!policyItems.length && <PolicyList policyItems={policyItems} />}
+    </Container>
   );
 };
 
