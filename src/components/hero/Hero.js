@@ -40,7 +40,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
-      bgDesk: file(name: { eq: "hero" }) {
+      bgDesk: file(name: { eq: "about-1" }) {
         id
         publicURL
         childImageSharp {
