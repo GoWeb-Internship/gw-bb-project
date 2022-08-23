@@ -17,7 +17,7 @@ const InputPhone = ({ control, errors, language, country }) => {
         rules={{
           pattern: '',
         }}
-        render={({ field: { onChange, value, name } }) => (
+        render={({ field: { onChange, value } }) => (
           <PhoneInput
             containerClass={'input-container'}
             inputClass="input-phone"
@@ -26,7 +26,6 @@ const InputPhone = ({ control, errors, language, country }) => {
               color: '#525252',
               maxHeight: '180px',
             }}
-            name={name}
             onChange={onChange}
             value={value}
             country={country}

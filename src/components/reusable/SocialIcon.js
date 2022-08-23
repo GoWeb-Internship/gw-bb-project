@@ -10,7 +10,7 @@ const SocialIcon = ({ data = [], language }) => {
             'w-6 h-6 duration-200 transition-transform hover:scale-110',
         }}
       >
-        <ul className="text-slate-50 w-9 flex mb-9 mx-auto justify-center md:justify-start md:mb-0 md:absolute md:right-[5%] md:top-0 md:flex-col lg:mx-0 lg:flex-row lg:relative lg:right-0">
+        <ul className="text-slate-50 w-full flex mb-9 mx-auto justify-center md:w-auto md:justify-start md:mb-0 md:absolute md:right-[5%] md:top-0 md:flex-col lg:mx-0 lg:flex-row lg:relative lg:right-0">
           {data.map(item => {
             return (
               <li

@@ -15,6 +15,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const { t, i18n } = useTranslation();
   const button = t('button', { returnObjects: true });
   const footer = t('footer', { returnObjects: true });
+  const sale = t('modalLeft', { returnObjects: true });
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
@@ -36,19 +37,19 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   return (
     <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
-        <div className="lg:flex  lg:items-center lg:mb-4 ">
-          <div className="flex items-start justify-between md:justify-start lg:mr-[68px]">
-            <Logo />
-            <FooterNavigation
-              navConfig={footer.nav}
-              navPubl={footer.navPubl}
-              className="md:ml-[86px] lg:ml-[134px] lg:mr-20 lg:flex "
-            />
-          </div>
+        <div className="flex flex-wrap items-start md:justify-around lg:items-center lg:justify-between md:mb-6 ">
+          <Logo />
+          <FooterNavigation
+            navConfig={footer.nav}
+            navPubl={footer.navPubl}
+            className="md:w-[544px] md:mr-[60px] lg:w-[900px] lg:flex lg:justify-evenly lg:items-baseline"
+          />
           <SocialIcon data={fullSocial} language={i18n.language} />
         </div>
         <p className="text-bb1222 font-bold md:text-bb2040 mx-auto mb-6 md:mb-2 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
-          {saleText}
+          {sale.text}
+          <span className="inline-block text-cyan-500 mr-1">{saleText}</span>
+          {sale.text2}
         </p>
         <p className="text-bb1222 font-bold  mx-auto mb-6 md:mb-8 text-center md:text-bb1625 md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           *{cost}
