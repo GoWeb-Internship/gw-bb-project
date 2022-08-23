@@ -6,7 +6,6 @@ import Button from 'components/reusable/Button';
 import SocialGroup from 'components/reusable/SocialGroup';
 import { fullSocial } from 'data/social/social';
 import Section from '../reusable/Section';
-// import Background from '../reusable/Background';
 import Background2 from 'components/reusable/Background2';
 import Container from '../reusable/Container';
 import HeroDataTitle from './HeroDataTitle';
@@ -33,7 +32,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
-      bg: file(name: { eq: "test" }) {
+      bg: file(name: { eq: "hero-3" }) {
         id
         publicURL
         childImageSharp {
@@ -41,6 +40,15 @@ const Hero = ({ saleText = '', cost = '' }) => {
           gatsbyImageData
         }
       }
+      bgDesk: file(name: { eq: "hero-1" }) {
+        id
+        publicURL
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
+      }
+
       bgForm: file(name: { eq: "fon-form1" }) {
         childImageSharp {
           gatsbyImageData
@@ -56,12 +64,15 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   return (
     <Section id={'home'}>
-      {/* <Background imageData={imageData.bg} /> */}
-      <Background2 imageData={imageData.bg} />
+      {pageFormat === 'desktop' ? (
+        <Background2 imageData={imageData.bgDesk} />
+      ) : (
+        <Background2 imageData={imageData.bg} />
+      )}
       <Container>
-        <div className="pt-[128px] pb-[70px] md:pt-[156px] md:pb-2 lg:pt-[174px] lg:pb-10 font-main">
-          <div className="md:flex justify-between items-start mb-[50px] md:mb-[54px] lg:mb-[94px]">
-            <div className="mb-20 md:mb-0">
+        <div className="pt-[128px] pb-[72px] md:pt-[156px] md:pb-2 lg:pt-[174px] lg:pb-10 font-main">
+          <div className="md:flex justify-between items-start mb-[116px] md:mb-[54px] lg:mb-[94px]">
+            <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
                 onClick={handleModalOpen}
@@ -76,14 +87,11 @@ const Hero = ({ saleText = '', cost = '' }) => {
             ) : (
               <SocialGroup data={fullSocial} language={i18n.language} />
             )}
-            {/* <SocialGroup data={fullSocial} language={i18n.language} /> */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />
         </div>
       </Container>
-      {/* <HeroDataList />
-      <HeroListExperiences /> */}
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
         <ModalLeft
           bg={imageData.bgForm}

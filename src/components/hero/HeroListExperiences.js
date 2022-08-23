@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const HeroListExperiences = ({ experience }) => {
   return (
-    <div className="relative pb-[70px] pt-[32px] md:pb-2 md:pt-4 lg:pt-[18px] lg:pb-10">
+    <>
       <ul className="grid gap-y-6 md:border md:border-slate-50 md:rounded-2xl lg:py-7 relative md:py-5 md:pl-[46px] md:gap-y-8 md:grid-cols-2 lg:pl-0 lg:gap-y-0 lg:grid-cols-3 lg:divide-x">
         {experience.items.map(({ id, title, text }) => {
           return (
@@ -18,7 +18,7 @@ const HeroListExperiences = ({ experience }) => {
           );
         })}
       </ul>
-    </div>
+    </>
   );
 };
 export default HeroListExperiences;
