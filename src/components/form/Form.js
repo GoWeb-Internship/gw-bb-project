@@ -81,7 +81,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   return (
     <form
       name="contact"
-      className="mx-auto md:w-[410px]"
+      className="mx-auto w-[280px] md:w-[410px]"
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"
@@ -91,7 +91,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputName.name}
-          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
@@ -99,7 +99,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       <div className="mb-4 h-[69px]">
         <input
           placeholder={formData.inputEmail.name}
-          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border outline-none bg-inherit placeholder:text-slate-50"
+          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
         <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
@@ -110,23 +110,23 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
         language={i18n.language}
         country={country}
       />
-      <div className="mb-12  flex items-center">
+
+      <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center">
         {checkbox ? (
-          <FiCheckSquare className="relative w-6 h-6" />
+          <FiCheckSquare className="relative w-6 h-6 mr-[25px]" />
         ) : (
-          <FiSquare className="relative w-6 h-6" />
+          <FiSquare className="relative w-6 h-6 mr-[25px]" />
         )}
         <input
           type="checkbox"
-          id="isAgree"
           {...register('isAgree')}
-          className=" absolute checkbox"
+          className=" absolute visually-hidden"
           onChange={handler}
         />
-        <label className="text-sm ml-4" htmlFor="isAgree">
-          {formData.checkbox}
-        </label>
-      </div>
+
+        {formData.checkbox}
+      </label>
+
       <button
         className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
         type="submit"

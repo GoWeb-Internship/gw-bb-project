@@ -28,7 +28,7 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
           gatsbyImageData
         }
       }
-      bgForm: file(name: { eq: "fon-modal-2" }) {
+      bgForm: file(name: { eq: "fon-form2" }) {
         childImageSharp {
           gatsbyImageData
         }
