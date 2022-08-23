@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 import LogoIcon from 'images/logo.inline.svg';
 
-const Logo = () => {
+const Logo = ({ onClick }) => {
   return (
     <Link
       to={'home'}
@@ -13,7 +13,7 @@ const Logo = () => {
       smooth
       spy
       // hashSpy
-      offset={-73}
+      onClick={onClick}
     >
       <LogoIcon className="fill-slate-50" />
     </Link>

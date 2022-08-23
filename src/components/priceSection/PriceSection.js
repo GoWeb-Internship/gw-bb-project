@@ -57,7 +57,7 @@ const PriceSection = ({ title, charity = '' }) => {
   return (
     <Section id="price">
       <Background2 imageData={background} />
-      <div className="relative w-screen mx-auto px-0 pt-9 pb-[70px] md:w-[768px] md:px-0 md:pt-10 md:pb-[74px] lg:w-[1440px] lg:px-20 lg:pt-[124px] lg:pb-[79px]">
+      <div className="relative w-screen mx-auto px-0 pt-9 pb-[70px] md:px-0 md:pt-10 md:pb-[74px] lg:w-[1440px] lg:px-20 lg:pt-[124px] lg:pb-[79px] overflow-hidden">
         <h2 className="mx-auto text-center text-bb2833 px-8 mb-10 md:px-0 md:max-w-[698px] md:mb-14 lg:mb-[62px]">
           {title}
         </h2>
@@ -67,7 +67,7 @@ const PriceSection = ({ title, charity = '' }) => {
           onClick={handleModalOpen}
         />
         {charity && (
-          <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-[540px] md:text-bb2040">
+          <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-full md:text-bb2040">
             {charity}
           </p>
         )}
