@@ -19,6 +19,7 @@ const InputPhone = ({ control, errors, language, country }) => {
         }}
         render={({ field: { onChange, value, name } }) => (
           <PhoneInput
+            containerClass={'input-container'}
             inputClass="input-phone"
             buttonClass="input-drop"
             dropdownStyle={{

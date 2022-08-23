@@ -52,15 +52,6 @@ const IndexPage = ({ data }) => {
       </ContactSection>
       <BeBetterToday />
       <MyFormulaSection />
-
-      {/* <section>
-        <Container>
-        <p className={'mt-10'}>
-        <Link to={'example-page'}>Example Page</Link>
-        <Link to={'policy'}>Policy Page</Link>
-        </p>
-        </Container>
-      </section> */}
     </Layout>
   );
 };
