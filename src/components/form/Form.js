@@ -35,7 +35,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
     name: yup.string().min(1, valid.name).required(valid.required),
     email: yup.string().email(valid.email).required(valid.required),
     phone: yup.number().required(valid.required),
-    isAgree: yup.boolean().default(false).oneOf([true]),
+    isAgree: yup.boolean().default(false).oneOf([true], valid.required),
   });
 
   const {

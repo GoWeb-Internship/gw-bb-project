@@ -44,7 +44,7 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
         <h2 className="visually-hidden">Sale</h2>
         <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
           {sale.text}
-          <span className="inline-block text-cyan-500 mr-1">{saleText}</span>
+          <span className="inline-block text-cyan-500 mx-1">{saleText}</span>
           {sale.text2}
         </p>
         <p className="text-neutral-600 mb-[33px] text-bb1222 md:text-bb1625 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">

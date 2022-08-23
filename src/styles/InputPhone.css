@@ -10,7 +10,7 @@
   width: 280px !important;
 }
 @media screen and (min-width: 768px) {
-  .input-phone {
+  .input-container .input-phone {
     width: 410px !important;
   }
 }
