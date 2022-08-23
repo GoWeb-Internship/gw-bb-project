@@ -23,7 +23,6 @@ const InputPhone = ({ control, errors, language, country }) => {
             buttonStyle={{
               height: '54px',
               borderRadius: '10px',
-              outline: 'none',
               borderColor: 'transparent',
             }}
             dropdownStyle={{
