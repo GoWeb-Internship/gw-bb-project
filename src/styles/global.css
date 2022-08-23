@@ -85,22 +85,6 @@ body {
   .footer-item:nth-child(2) {
     margin-right: 44px;
   }
-  .input-phone {
-    padding: 16px 20px 16px 92px !important;
-    font-size: 16px !important;
-    line-height: 1.18 !important;
-    border-radius: 10px !important;
-    border: 1px solid #f8fafc !important;
-    background-color: inherit !important;
-    color: #f8fafc !important;
-    box-shadow: none !important;
-    width: 280px !important;
-  }
-  @media screen and (min-width: 768px) {
-    .input-phone {
-      width: 410px !important;
-    }
-  }
 }
 
 /* Swiper style */
@@ -189,65 +173,4 @@ body::-webkit-scrollbar-thumb {
 
 .non-active-link2::after {
   transform: translateX(-102%);
-}
-
-/* пробовала с классами библиотеки инпута */
-/* .input-phone .react-tel-input .selected-flag.open:before,
-.react-tel-input .selected-flag:focus:before {
-  border-color: transparent !important;
-}
-.input-phone .react-tel-input .selected-flag {
-  border-radius: 10px !important;
-}
-.input-phone .react-tel-input .selected-flag .arrow {
-  border-left: 3px solid transparent !important;
-  border-right: 3px solid transparent !important;
-  border-top: 4px solid rgb(238, 230, 230) !important;
-}
-.input-phone .react-tel-input .selected-flag .arrow.up {
-  border-top: none;
-  border-bottom: 4px solid rgb(238, 230, 230) !important;
-} */
-
-.input-phone:focus {
-  outline: 1px solid black !important;
-  outline-offset: -3px;
-}
-
-.input-drop {
-  width: 0;
-}
-
-.input-drop .selected-flag {
-  width: 80px;
-  padding-left: 24px;
-}
-
-.input-drop .flag {
-  transform: scale(1.2);
-}
-
-.input-drop .arrow {
-  visibility: hidden;
-}
-
-.input-drop .arrow::before {
-  visibility: visible;
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 3px;
-  width: 8px;
-  height: 8px;
-  transition: transform 200ms ease-in-out;
-
-  border-left: 2px solid #f8fafc;
-  border-bottom: 2px solid #f8fafc;
-  border-bottom-left-radius: 3px;
-  transform: rotate(-45deg);
-}
-
-.input-drop .arrow.up::before {
-  transform: rotate(135deg);
-  top: -0px;
 }
