@@ -70,14 +70,14 @@ const Hero = ({ saleText = '', cost = '' }) => {
         <Background2 imageData={imageData.bg} />
       )}
       <Container>
-        <div className="pt-[128px] pb-[72px] md:pt-[156px] md:pb-2 lg:pt-[174px] lg:pb-10 font-main">
+        <div className="pt-[128px] pb-[72px] md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main">
           <div className="md:flex justify-between items-start mb-[116px] md:mb-[54px] lg:mb-[94px]">
             <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
                 onClick={handleModalOpen}
                 type="button"
-                className="min-w-[280px] bg-orange-400 rounded-xl py-4 md:w-[410px] text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
+                className="mx-auto min-w-[280px] bg-orange-400 rounded-xl py-4 text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500 md:mx-0 md:w-[410px]"
               >
                 {button.textBigButton}
               </Button>
