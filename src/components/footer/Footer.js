@@ -48,7 +48,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
         </div>
         <p className="text-bb1222 font-bold md:text-bb2040 mx-auto mb-6 md:mb-2 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {sale.text}
-          <span className="inline-block text-cyan-500 mr-1">{saleText}</span>
+          <span className="inline-block text-cyan-500 mx-1">{saleText}</span>
           {sale.text2}
         </p>
         <p className="text-bb1222 font-bold  mx-auto mb-6 md:mb-8 text-center md:text-bb1625 md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
