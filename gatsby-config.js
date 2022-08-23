@@ -110,20 +110,20 @@ module.exports = {
         postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
       },
     },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false,
-        develop: true,
-        tailwind: true,
-        ignore: [
-          'react-phone-input-2/lib/bootstrap.css',
-          'swiper',
-          'swiper/css',
-          'swiper/css/navigation',
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     printRejected: false,
+    //     develop: true,
+    //     tailwind: true,
+    //     ignore: [
+    //       'react-phone-input-2/lib/bootstrap.css',
+    //       'swiper',
+    //       'swiper/css',
+    //       'swiper/css/navigation',
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {

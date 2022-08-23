@@ -97,9 +97,11 @@
     ]
   },
   "heroTitle": {
-    "title": "I will teach you to live in high spirits",
+    "title": "I will teach you",
+    "titleSpan": "to live in high spirits",
     "subTitle": "without emotional burnouts",
-    "supTitle": "If you are emotionally burnt out and don’t enjoy your life"
+    "supTitle": "If you are emotionally burnt out",
+    "supTitleSpan": "and don’t enjoy your life"
   },
   "about": {
     "title": "Let's get acquainted",
