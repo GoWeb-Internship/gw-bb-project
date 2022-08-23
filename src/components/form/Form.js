@@ -130,6 +130,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       <button
         className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
         type="submit"
+        disabled={!checkbox && true}
       >
         {buttonText}
       </button>
