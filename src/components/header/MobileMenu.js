@@ -19,11 +19,11 @@ const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
   return (
     <div
       id="mobile-menu"
-      className={`${translateY} duration-500 transition-transform fixed top-0 w-full h-full z-30 bg-cyan-600`}
+      className={`${translateY} duration-500 transition-transform fixed top-0 w-full h-full z-30 bg-cyan-600/90`}
     >
       <Container>
         <div className="flex justify-between py-3 mb-[51px]">
-          <Logo />
+          <Logo onClick={onClose} />
           <MobileMenuButtons
             onClick={onClose}
             IconComponent={FiX}
@@ -45,6 +45,7 @@ const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
                     className="relative font-main text-bb1824 cursor-pointer px-5 py-3 transition-transform hover:scale-110 before:content-[''] before:absolute before:bottom-1/2 before:-translate-y-1/2 before:-left-11 before:w-11 before:h-[1px] before:bg-slate-50 before:opacity-0 before:transition-opacity before:duration-300 after:content-[''] after:absolute after:bottom-1/2 after:-translate-y-1/2 after:-right-11 after:w-11 after:h-[1px] after:bg-slate-50 after:opacity-0 after:transition-opacity after:duration-300 hover:before:opacity-100 hover:after:opacity-100 focus:before:opacity-100 focus:after:opacity-100"
                     smooth
                     spy
+                    href=""
                     offset={-headerHeight - 1}
                   >
                     {name}

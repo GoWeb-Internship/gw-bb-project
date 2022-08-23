@@ -11,6 +11,8 @@ const Slider = ({
   slidesPerView = 1,
   onSlideChange,
   onSwiper,
+  style,
+  spaceBetween = 0,
 }) => {
   const pageFormat = useContext(PageFormatContext);
 
@@ -19,11 +21,12 @@ const Slider = ({
   return (
     <div className={`relative  ${className}`}>
       <Swiper
-        className={`mx-auto slider-width sm:max-w-[420px] md:max-w-[550px] lg:max-w-[1100px]`}
+        className={`mx-auto sm:max-w-[420px] md:max-w-[550px] lg:max-w-[1100px]`}
         modules={[Navigation]}
         slidesPerView={slidesPerView}
         onSlideChange={onSlideChange}
         onSwiper={onSwiper}
+        style={style}
         navigation={{
           nextEl: '.next-slider',
           prevEl: '.prev-slider',

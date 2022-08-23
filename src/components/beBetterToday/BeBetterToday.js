@@ -15,7 +15,7 @@ const BeBetterToday = () => {
 
   const imageData = useStaticQuery(graphql`
     query {
-      bg: file(name: { eq: "fon-be-better-today-2" }) {
+      bg: file(name: { eq: "fon-be-today" }) {
         id
         publicURL
         childImageSharp {
