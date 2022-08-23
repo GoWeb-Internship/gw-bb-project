@@ -33,25 +33,25 @@ const IndexPage = ({ data }) => {
   return (
     <Layout saleText={sale} cost={cost} charity={charity}>
       <Hero saleText={sale} cost={cost} />
-      <AboutSection />
-      <RoadMapSection title={roadMapTitle} />
-      <FeedbackSection />
-      <GuaranteeSection />
-      <WithCoachSection />
+      {/* <AboutSection /> */}
+      {/* <RoadMapSection title={roadMapTitle} /> */}
+      {/* <FeedbackSection /> */}
+      {/* <GuaranteeSection /> */}
+      {/* <WithCoachSection /> */}
       <PriceSection title={pricesTitle} charity={charity} />
-      <ImportantResultsSection />
-      <StoriesSection />
-      <InLiveSection />
-      <SignUpSection saleText={sale} cost={cost} />
-      <ContactSection saleText={sale} cost={cost}>
+      {/* <ImportantResultsSection /> */}
+      {/* <StoriesSection /> */}
+      {/* <InLiveSection /> */}
+      {/* <SignUpSection saleText={sale} cost={cost} /> */}
+      {/* <ContactSection saleText={sale} cost={cost}>
         <Form
           place="section Contact"
           buttonText={button.textBigButton}
           buttonClassName="bg-orange-400 hover:bg-orange-500"
         />
-      </ContactSection>
-      <BeBetterToday />
-      <MyFormulaSection />
+      </ContactSection> */}
+      {/* <BeBetterToday /> */}
+      {/* <MyFormulaSection /> */}
 
       {/* <section>
         <Container>

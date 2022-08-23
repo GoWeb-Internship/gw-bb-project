@@ -71,6 +71,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "dev-m": "gatsby develop -H 192.168.0.100 -p 8000",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p",
     "prepare": "husky install"
