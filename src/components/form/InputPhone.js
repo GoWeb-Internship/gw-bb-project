@@ -20,11 +20,7 @@ const InputPhone = ({ control, errors, language, country }) => {
         render={({ field: { onChange, value, name } }) => (
           <PhoneInput
             inputClass="input-phone"
-            buttonStyle={{
-              height: '54px',
-              borderRadius: '10px',
-              borderColor: 'transparent',
-            }}
+            buttonClass="input-drop"
             dropdownStyle={{
               color: '#525252',
               maxHeight: '180px',
