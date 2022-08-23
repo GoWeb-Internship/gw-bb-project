@@ -28,9 +28,8 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
-
-  // запрос на фон для tab+mob
-  //   bg: file(name: { eq: "hero-3" }) {
+  // запрос на картинку
+  //   bg: file(name: { eq: "hero-2" }) {
   //   id
   //   publicURL
   //   childImageSharp {
@@ -67,8 +66,9 @@ const Hero = ({ saleText = '', cost = '' }) => {
     <Section id={'home'}>
       <Background2 imageData={imageData.bgDesk} />
       {/* {pageFormat === 'desktop' ? (
-      <Background2 imageData={imageData.bgDesk} />) : (
-      <Background2 imageData={imageData.bg} />
+        <Background2 imageData={imageData.bgDesk} />
+      ) : (
+        <Background2 imageData={imageData.bg} />
       )} */}
       <Container>
         <div className="pt-[128px] pb-[72px] md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main">
