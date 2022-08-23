@@ -17,19 +17,15 @@ const InputPhone = ({ control, errors, language, country }) => {
         rules={{
           pattern: '',
         }}
-        render={({ field: { onChange, value, name } }) => (
+        render={({ field: { onChange, value } }) => (
           <PhoneInput
+            containerClass={'input-container'}
             inputClass="input-phone"
-            buttonStyle={{
-              height: '54px',
-              borderRadius: '10px',
-              borderColor: 'transparent',
-            }}
+            buttonClass="input-drop"
             dropdownStyle={{
               color: '#525252',
               maxHeight: '180px',
             }}
-            name={name}
             onChange={onChange}
             value={value}
             country={country}

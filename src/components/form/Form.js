@@ -128,8 +128,9 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       </label>
 
       <button
-        className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 ${buttonClassName}`}
+        className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 disabled:bg-cyan-700 ${buttonClassName}`}
         type="submit"
+        disabled={!checkbox && true}
       >
         {buttonText}
       </button>

@@ -30,8 +30,8 @@ const PriceCardsList = ({ cardsList = [], className = '', onClick }) => {
           style={{ overflow: 'visible' }}
         >
           {!!cardsList.length &&
-            cardsList.map(({ frontmatter, id }) => (
-              <SwiperSlide key={id}>
+            cardsList.map(({ frontmatter }, id) => (
+              <SwiperSlide key={`price-${id}`}>
                 {({ isActive }) => (
                   <PriceCard
                     cardData={frontmatter}
