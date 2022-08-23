@@ -29,17 +29,18 @@ const Hero = ({ saleText = '', cost = '' }) => {
     setIsModalOpen(false);
   };
   // запрос на картинку
-  //   bg: file(name: { eq: "hero-2" }) {
-  //   id
-  //   publicURL
-  //   childImageSharp {
-  //     id
-  //     gatsbyImageData
-  //   }
-  // }
 
   const imageData = useStaticQuery(graphql`
     query MyQueryHero {
+      bg: file(name: { eq: "hero-2" }) {
+        id
+        publicURL
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
+      }
+
       bgDesk: file(name: { eq: "hero-1" }) {
         id
         publicURL
@@ -64,12 +65,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   return (
     <Section id={'home'}>
-      <Background2 imageData={imageData.bgDesk} />
-      {/* {pageFormat === 'desktop' ? (
+      {/* <Background2 imageData={imageData.bgDesk} /> */}
+      {pageFormat === 'desktop' ? (
         <Background2 imageData={imageData.bgDesk} />
       ) : (
         <Background2 imageData={imageData.bg} />
-      )} */}
+      )}
       <Container>
         <div className="pt-[128px] pb-[72px] md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main">
           <div className="md:flex justify-between items-start mb-[116px] md:mb-[54px] lg:mb-[94px]">
