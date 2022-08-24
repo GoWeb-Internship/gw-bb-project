@@ -11,13 +11,12 @@ const SocialIconsList = ({
   const sizes = vertical ? 'w-6 h-[112px]' : 'w-[152px] lg:w-[128px] h-6';
 
   return (
-    <ul
-      key={'sdkdfvdffkv'}
+    <div
       className={`${className} ${sizes} flex ${verticalClasses} justify-between text-slate-50`}
     >
       {data.map(({ id, href, name, Component }) => {
         return (
-          <li
+          <div
             key={`${id}-socicons-group`}
             className="mr-10 fill-slate-50 md:mb-5 lg:mr-[30px] lg:mb-0 socialIcon-item"
           >
@@ -29,10 +28,10 @@ const SocialIconsList = ({
             >
               <Component className="w-6 h-6 duration-200 transition-transform hover:scale-110" />
             </a>
-          </li>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 };
 
