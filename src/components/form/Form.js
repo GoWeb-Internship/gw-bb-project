@@ -24,10 +24,10 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
   const [checkbox, setCheckbox] = useState(false);
+  const clientLocation = useContext(ClientLocationContext);
   const handler = useCallback(() => {
     setCheckbox(!checkbox);
   }, [checkbox]);
-  const country = useContext(ClientLocationContext);
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),
@@ -106,7 +106,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
         control={control}
         errors={errors}
         language={i18n.language}
-        country={country}
+        country={clientLocation || 'ua'}
       />
 
       <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center">
