@@ -6,14 +6,16 @@ import { Link } from 'react-scroll';
 const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
   return navConfig.length ? (
     <nav className={className}>
-      <ul className="flex-col-reverse text-end w-[196px] flex md:ml-[10px] md:flex-row md:justify-around mb-5 md:mb-0 lg:ml-0 lg:justify-around md:w-full">
+      <ul className="flex flex-col-reverse text-end md:flex-row md:mb-6 md:w-full lg:mb-0 lg:items-center lg:mr-9">
         {navPubl.map(({ id, name }) => {
-          console.log(id);
           return (
-            <li key={id} className="overflow-hidden last:mr-0 lg:mr-9 ">
+            <li
+              key={id}
+              className="mb-2 first:mb-0 last:mr-0 md:mb-0 md:mr-9 md:last:mr-0"
+            >
               <GatsbyLink
                 to={id}
-                className="font-main font-light text-bb1224 md:text-bb1424 cursor-pointer pb-3"
+                className="whitespace-nowrap font-main font-light text-bb1224 md:text-bb1424 cursor-pointer"
                 href=" "
               >
                 {name}
@@ -22,12 +24,12 @@ const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
           );
         })}
       </ul>
-      <ul className="hidden md:flex md:flex-wrap md:justify-around lg:flex-nowrap lg:justify-evenly md:w-full">
+      <ul className="hidden md:flex lg:min-w-[300px] lg:items-center">
         {navConfig.map(({ id, name }) => (
-          <li key={id} className="overflow-hidden last:mr-0 lg:mr-9">
+          <li key={id} className="md:mb-0 md:mr-9 md:last:mr-0">
             <Link
               to={`${id}`}
-              className="font-main font-light text-bb1424 cursor-pointer py-3 "
+              className="font-main font-light text-bb1424 cursor-pointer"
               smooth
               spy
               // hashSpy

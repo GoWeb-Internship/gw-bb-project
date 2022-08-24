@@ -13,8 +13,9 @@ import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
 import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
-import SocialIcon from 'components/reusable/SocialIcon';
 import { PageFormatContext } from 'context/PageFormatContext';
+import SocialIconsList from 'components/reusable/SocialIconsList';
+import { useEffect } from 'react';
 
 const Hero = ({ saleText = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
@@ -60,15 +61,13 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const heroList = t('heroListBlock', { returnObjects: true });
   const heroTitle = t('heroTitle', { returnObjects: true });
 
+  const image = pageFormat === 'desktop' ? imageData.bgDesk : imageData.bg;
+
   return (
-    <Section id={'home'}>
-      {pageFormat === 'desktop' ? (
-        <Background2 imageData={imageData.bgDesk} />
-      ) : (
-        <Background2 imageData={imageData.bg} />
-      )}
+    <Section id={'home'} className={'bg-cyan-600 z-0'}>
+      {pageFormat && <Background2 imageData={image} />}
       <Container>
-        <div className="pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main">
+        <div className="pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main fade-in">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">
             <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
@@ -80,11 +79,22 @@ const Hero = ({ saleText = '', cost = '' }) => {
                 {button.textBigButton}
               </Button>
             </div>
-            {pageFormat === 'mobile' ? (
-              <SocialIcon data={fullSocial} language={i18n.language} />
-            ) : (
-              <SocialGroup data={fullSocial} language={i18n.language} />
-            )}
+            <SocialIconsList
+              data={fullSocial}
+              language={i18n.language}
+              className={'mx-auto md:hidden lg:hidden'}
+            />
+            <SocialGroup
+              data={fullSocial}
+              language={i18n.language}
+              className={'hidden md:block'}
+            />
+            {/* {pageFormat && (
+              <>
+                {pageFormat === 'mobile' && <></>}
+                {pageFormat !== 'mobile' && <></>}
+              </>
+            )} */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />

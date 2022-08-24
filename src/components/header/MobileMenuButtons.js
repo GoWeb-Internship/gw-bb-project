@@ -1,10 +1,16 @@
 import React from 'react';
 
-const MobileMenuButtons = ({ onClick, IconComponent, disabled, style }) => {
+const MobileMenuButtons = ({
+  onClick,
+  IconComponent,
+  disabled,
+  style,
+  className,
+}) => {
   return (
     <button
       type="button"
-      className="flex justify-center items-center p-2"
+      className={`${className} flex justify-center items-center p-2 `}
       onClick={onClick}
       disabled={disabled}
       style={style}
