@@ -13,15 +13,12 @@ import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
 import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
-import SocialIcon from 'components/reusable/SocialIcon';
 import { PageFormatContext } from 'context/PageFormatContext';
 import SocialIconsList from 'components/reusable/SocialIconsList';
 
 const Hero = ({ saleText = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
   const { t, i18n } = useTranslation();
-
-  console.log(pageFormat, 'pf');
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
