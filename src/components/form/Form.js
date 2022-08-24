@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -6,9 +6,9 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
-import { LOCATION_STORAGE_KEY } from 'hooks/useClientLocation';
 import { FiCheckSquare } from 'react-icons/fi';
 import { FiSquare } from 'react-icons/fi';
+import { ClientLocationContext } from 'context/ClientLocationContext';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -27,9 +27,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const handler = useCallback(() => {
     setCheckbox(!checkbox);
   }, [checkbox]);
-  const country = isBrowser
-    ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
-    : null;
+  const country = useContext(ClientLocationContext);
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),

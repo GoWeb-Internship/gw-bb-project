@@ -14,7 +14,7 @@ import useMedia from 'hooks/useMedia';
 import { getMediaQueries } from 'styles/vars';
 import { PageFormatContext } from 'context/PageFormatContext';
 import useClientLocation from 'hooks/useClientLocation';
-import { ClientLoactionContext } from 'context/ClientLoactionContext';
+import { ClientLocationContext } from 'context/ClientLocationContext';
 
 const mediaQueries = getMediaQueries();
 
@@ -29,7 +29,7 @@ const Layout = ({ children, saleText, charity, cost }) => {
 
   return (
     <>
-      <ClientLoactionContext.Provider value={clientLocation}>
+      <ClientLocationContext.Provider value={clientLocation}>
         <PageFormatContext.Provider value={pageFormat}>
           <Header />
           <div>
@@ -37,7 +37,7 @@ const Layout = ({ children, saleText, charity, cost }) => {
             <Footer saleText={saleText} charity={charity} cost={cost} />
           </div>
         </PageFormatContext.Provider>
-      </ClientLoactionContext.Provider>
+      </ClientLocationContext.Provider>
     </>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
+import { Link } from 'react-scroll';
 
 const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
   return navConfig.length ? (
@@ -10,17 +11,13 @@ const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
           console.log(id);
           return (
             <li key={id} className="overflow-hidden last:mr-0 lg:mr-9 ">
-              <Link
+              <GatsbyLink
                 to={id}
                 className="font-main font-light text-bb1224 md:text-bb1424 cursor-pointer pb-3"
-                smooth
-                spy
-                // hashSpy
-                offset={-100}
                 href=" "
               >
                 {name}
-              </Link>
+              </GatsbyLink>
             </li>
           );
         })}
