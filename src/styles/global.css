@@ -174,3 +174,18 @@ body::-webkit-scrollbar-thumb {
 .non-active-link2::after {
   transform: translateX(-102%);
 }
+
+.fade-in {
+  animation-name: fadein;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
