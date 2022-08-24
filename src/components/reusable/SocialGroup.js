@@ -4,11 +4,11 @@ import Line from 'images/line.inline.svg';
 
 const SocialGroup = ({ data = [], language }) => {
   return (
-    <ul className=" text-slate-50 w-9">
+    <ul key="dfvdfvkmdfkv" className=" text-slate-50 w-9">
       {data.map(({ id, href, name, Component }) => {
         return (
           <li
-            key={id}
+            key={`${id}-soc-group`}
             className="flex flex-col fill-slate-50 items-center line-hidden"
           >
             <a

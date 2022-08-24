@@ -12,12 +12,13 @@ const SocialIconsList = ({
 
   return (
     <ul
+      key={'sdkdfvdffkv'}
       className={`${className} ${sizes} flex ${verticalClasses} justify-between text-slate-50`}
     >
       {data.map(({ id, href, name, Component }) => {
         return (
           <li
-            key={id}
+            key={`${id}-socicons-group`}
             className="mr-10 fill-slate-50 md:mb-5 lg:mr-[30px] lg:mb-0 socialIcon-item"
           >
             <a
