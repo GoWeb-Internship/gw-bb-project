@@ -8,7 +8,6 @@ const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
     <nav className={className}>
       <ul className="flex flex-col-reverse text-end md:flex-row md:mb-6 md:w-full lg:mb-0 lg:items-center lg:mr-9">
         {navPubl.map(({ id, name }) => {
-          console.log(id);
           return (
             <li
               key={id}
