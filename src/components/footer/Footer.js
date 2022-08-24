@@ -6,7 +6,6 @@ import Logo from 'components/header/Logo';
 import Button from 'components/reusable/Button';
 import { fullSocial } from 'data/social/social';
 import FooterNavigation from './FooterNavigation';
-import SocialIcon from 'components/reusable/SocialIcon';
 import { graphql, useStaticQuery } from 'gatsby';
 import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
