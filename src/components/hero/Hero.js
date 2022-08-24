@@ -61,13 +61,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const heroList = t('heroListBlock', { returnObjects: true });
   const heroTitle = t('heroTitle', { returnObjects: true });
 
-  const image = pageFormat === 'desktop' ? imageData.bgDesk : imageData.bg;
-
   return (
     <Section id={'home'} className={'bg-cyan-600 z-0'}>
-      {pageFormat && <Background2 imageData={image} />}
+      <Background2 imageData={imageData.bgDesk} className={'hidden lg:block'} />
+      <Background2 imageData={imageData.bg} className={'lg:hidden'} />
       <Container>
-        <div className="pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main fade-in">
+        <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">
             <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
