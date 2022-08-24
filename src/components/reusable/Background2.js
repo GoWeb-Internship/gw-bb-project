@@ -10,17 +10,21 @@ const Background2 = ({
   const image = getImage(imageData.childImageSharp.gatsbyImageData);
 
   return (
-    <GatsbyImage
-      image={image}
-      alt="background photo"
-      layout="fullWidth"
-      quality={100}
-      formats={['auto', 'webp', 'avif']}
-      className={`-z-10 absolute top-0 left-1/2 -translate-x-1/2 max-h-full mx-auto w-[1440px] ${className}`}
-      style={{ position: 'absolute' }}
-      objectPosition={objectPosition}
-      // breakpoints={[768, 1440]}
-    />
+    <div className={`${className}`}>
+      <GatsbyImage
+        image={image}
+        alt=""
+        layout="fullWidth"
+        quality={100}
+        formats={['auto', 'webp', 'avif']}
+        className={
+          '-z-10 absolute top-0 left-1/2 -translate-x-1/2 max-h-full mx-auto w-[1440px]'
+        }
+        style={{ position: 'absolute' }}
+        objectPosition={objectPosition}
+        // breakpoints={[768, 1440]}
+      />
+    </div>
   );
 };
 

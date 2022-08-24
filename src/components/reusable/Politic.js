@@ -13,10 +13,7 @@ const Politic = ({ title, text }) => {
   const data = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "policy" }) {
-        id
-        publicURL
         childImageSharp {
-          id
           gatsbyImageData
         }
       }
