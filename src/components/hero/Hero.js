@@ -82,15 +82,19 @@ const Hero = ({ saleText = '', cost = '' }) => {
                 {button.textBigButton}
               </Button>
             </div>
-            {pageFormat === 'mobile' && (
-              <SocialIconsList
-                data={fullSocial}
-                language={i18n.language}
-                className={'mx-auto'}
-              />
-            )}
-            {pageFormat !== 'mobile' && (
-              <SocialGroup data={fullSocial} language={i18n.language} />
+            {pageFormat && (
+              <>
+                {pageFormat === 'mobile' && (
+                  <SocialIconsList
+                    data={fullSocial}
+                    language={i18n.language}
+                    className={'mx-auto'}
+                  />
+                )}
+                {pageFormat !== 'mobile' && (
+                  <SocialGroup data={fullSocial} language={i18n.language} />
+                )}
+              </>
             )}
           </div>
           <HeroDataList heroDataList={heroList} />

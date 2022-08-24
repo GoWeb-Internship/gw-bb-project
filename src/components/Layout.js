@@ -22,7 +22,7 @@ const Layout = ({ children, saleText, charity, cost }) => {
   const pageFormat = useMedia(
     Object.values(mediaQueries),
     Object.keys(mediaQueries),
-    'mobile',
+    null,
   );
 
   const clientLocation = useClientLocation();
