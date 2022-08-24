@@ -15,6 +15,7 @@ import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
 import SocialIcon from 'components/reusable/SocialIcon';
 import { PageFormatContext } from 'context/PageFormatContext';
+import SocialIconsList from 'components/reusable/SocialIconsList';
 
 const Hero = ({ saleText = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
@@ -82,11 +83,16 @@ const Hero = ({ saleText = '', cost = '' }) => {
                 {button.textBigButton}
               </Button>
             </div>
-            {pageFormat === 'mobile' ? (
+            <SocialIconsList
+              data={fullSocial}
+              language={i18n.language}
+              vertical
+            />
+            {/* {pageFormat === 'mobile' ? (
               <SocialIcon data={fullSocial} language={i18n.language} />
             ) : (
               <SocialGroup data={fullSocial} language={i18n.language} />
-            )}
+            )} */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />

@@ -10,6 +10,9 @@ import SocialIcon from 'components/reusable/SocialIcon';
 import { graphql, useStaticQuery } from 'gatsby';
 import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
+import SocialIconsList from 'components/reusable/SocialIconsList';
+import { useContext } from 'react';
+import { PageFormatContext } from 'context/PageFormatContext';
 
 const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const { t, i18n } = useTranslation();
@@ -17,6 +20,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const footer = t('footer', { returnObjects: true });
   const sale = t('modalLeft', { returnObjects: true });
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pageFormat = useContext(PageFormatContext);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
@@ -37,15 +41,32 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   return (
     <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
-        <div className="flex flex-wrap items-start md:justify-around lg:items-center lg:justify-between md:mb-6 ">
-          <Logo />
+        <div className="flex justify-between mx-auto mb-5 md:justify-start md:items-center md:mb-6 lg:mb-0 lg:mx-0 lg:justify-between">
+          <Logo onFooter />
+
           <FooterNavigation
             navConfig={footer.nav}
             navPubl={footer.navPubl}
-            className="md:w-[544px] md:mr-[60px] lg:w-[900px] lg:flex lg:justify-evenly lg:items-baseline"
+            className="pt-5 md:pt-0 md:ml-[86px] lg:ml-0 lg:flex"
           />
-          <SocialIcon data={fullSocial} language={i18n.language} />
+          {pageFormat === 'desktop' && (
+            <SocialIconsList
+              data={fullSocial}
+              language={i18n.language}
+              className="mx-auto mb-5 md:absolute md:top-0 md:right-9 lg:static lg:mb-0 lg:mx-0"
+              vertical={pageFormat === 'tablet'}
+            />
+          )}
         </div>
+        {pageFormat !== 'desktop' && (
+          <SocialIconsList
+            data={fullSocial}
+            language={i18n.language}
+            className="mx-auto mb-5 md:absolute md:top-0 md:right-9 lg:static lg:mb-0 lg:mx-0"
+            vertical={pageFormat === 'tablet'}
+          />
+        )}
+
         <p className="text-bb1222 font-bold md:text-bb2040 mx-auto mb-6 md:mb-2 text-center md:tracking-normal md:w-[548px] lg:tracking-[0.02em] lg:w-full">
           {sale.text}
           <span className="inline-block text-cyan-500 mx-1">{saleText}</span>
