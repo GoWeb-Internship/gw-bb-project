@@ -20,6 +20,8 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
   const { t, i18n } = useTranslation();
 
+  console.log(pageFormat, 'pageFormat');
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {

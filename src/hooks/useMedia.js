@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -6,10 +6,15 @@ const useMedia = (queries, values, defaultValue) => {
   const mediaQueryLists = queries.map(q =>
     isBrowser ? window.matchMedia(q) : false,
   );
-  const getValue = () => {
+  const getValue = useCallback(() => {
     const index = mediaQueryLists.findIndex(mql => mql.matches);
     return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
-  };
+  }, [defaultValue, mediaQueryLists, values]);
+
+  // const getValue = () => {
+  //   const index = mediaQueryLists.findIndex(mql => mql.matches);
+  //   return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
+  // };
   const [value, setValue] = useState(getValue);
   useEffect(
     () => {
@@ -17,7 +22,7 @@ const useMedia = (queries, values, defaultValue) => {
       mediaQueryLists.forEach(mql => mql.addListener(handler));
       return () => mediaQueryLists.forEach(mql => mql.removeListener(handler));
     },
-    [], // Empty array ensures effect is only run on mount and unmount
+    [getValue, mediaQueryLists], // Empty array ensures effect is only run on mount and unmount
   );
   return value;
 };
