@@ -48,7 +48,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
             navPubl={footer.navPubl}
             className="pt-5 md:pt-0 md:ml-[86px] lg:ml-0 lg:flex"
           />
-          {pageFormat === 'desktop' && (
+          {pageFormat && pageFormat === 'desktop' && (
             <SocialIconsList
               data={fullSocial}
               language={i18n.language}
@@ -57,7 +57,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
             />
           )}
         </div>
-        {pageFormat !== 'desktop' && (
+        {pageFormat && pageFormat !== 'desktop' && (
           <SocialIconsList
             data={fullSocial}
             language={i18n.language}

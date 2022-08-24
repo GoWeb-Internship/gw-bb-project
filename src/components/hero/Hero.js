@@ -60,15 +60,11 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const heroList = t('heroListBlock', { returnObjects: true });
   const heroTitle = t('heroTitle', { returnObjects: true });
 
-  console.log('ismobile >>>>', pageFormat === 'mobile', pageFormat);
+  const image = pageFormat === 'desktop' ? imageData.bgDesk : imageData.bg;
 
   return (
     <Section id={'home'}>
-      {pageFormat === 'desktop' ? (
-        <Background2 imageData={imageData.bgDesk} />
-      ) : (
-        <Background2 imageData={imageData.bg} />
-      )}
+      <Background2 imageData={image} />
       <Container>
         <div className="pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10 font-main">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">
@@ -82,20 +78,22 @@ const Hero = ({ saleText = '', cost = '' }) => {
                 {button.textBigButton}
               </Button>
             </div>
-            {pageFormat && (
+            <SocialIconsList
+              data={fullSocial}
+              language={i18n.language}
+              className={'mx-auto md:hidden lg:hidden'}
+            />
+            <SocialGroup
+              data={fullSocial}
+              language={i18n.language}
+              className={'hidden md:block'}
+            />
+            {/* {pageFormat && (
               <>
-                {pageFormat === 'mobile' && (
-                  <SocialIconsList
-                    data={fullSocial}
-                    language={i18n.language}
-                    className={'mx-auto'}
-                  />
-                )}
-                {pageFormat !== 'mobile' && (
-                  <SocialGroup data={fullSocial} language={i18n.language} />
-                )}
+                {pageFormat === 'mobile' && <></>}
+                {pageFormat !== 'mobile' && <></>}
               </>
-            )}
+            )} */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />

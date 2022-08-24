@@ -1,10 +1,9 @@
 import React from 'react';
-import { IconContext } from 'react-icons/lib';
 import Line from 'images/line.inline.svg';
 
-const SocialGroup = ({ data = [], language }) => {
+const SocialGroup = ({ data = [], language, className }) => {
   return (
-    <ul className=" text-slate-50 w-9">
+    <ul className={`${className} text-slate-50 w-9`}>
       {data.map(({ id, href, name, Component }) => {
         return (
           <li
