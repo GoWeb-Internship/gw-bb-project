@@ -6,10 +6,11 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
-import { LOCATION_STORAGE_KEY } from 'hooks/useClientLocation';
 import { FiCheckSquare } from 'react-icons/fi';
 import { FiSquare } from 'react-icons/fi';
 import * as yup from 'yup';
+import { useContext } from 'react';
+import { ClientLoactionContext } from 'context/ClientLoactionContext';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -24,12 +25,13 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
   const [checkbox, setCheckbox] = useState(false);
+  const clientLocation = useContext(ClientLoactionContext);
   const handler = useCallback(() => {
     setCheckbox(!checkbox);
   }, [checkbox]);
-  const country = isBrowser
-    ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
-    : null;
+  // const country = isBrowser
+  //   ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
+  //   : null;
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),
@@ -108,7 +110,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
         control={control}
         errors={errors}
         language={i18n.language}
-        country={country}
+        country={clientLocation || 'ua'}
       />
 
       <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center">
