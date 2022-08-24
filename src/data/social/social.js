@@ -10,7 +10,7 @@ export const fullSocial = [
       ru: 'Ссылка на linkedin',
       uk: 'Посилання на linkedin',
     },
-    component: FiLinkedin,
+    Component: FiLinkedin,
     href: 'https://www.linkedin.com/in/yshayenko/',
   },
   {
@@ -20,7 +20,7 @@ export const fullSocial = [
       ru: 'Ссылка на facebook',
       uk: 'Посилання на facebook',
     },
-    component: FiFacebook,
+    Component: FiFacebook,
     href: 'https://www.facebook.com/Yuliya.Shayenko',
   },
   {
@@ -30,7 +30,7 @@ export const fullSocial = [
       ru: 'Ссылка на instagram',
       uk: 'Посилання на instagram',
     },
-    component: FiInstagram,
+    Component: FiInstagram,
     href: 'https://instagram.com/yuliya_shayenko?igshid=YmMyMTA2M2Y=',
   },
 ];
