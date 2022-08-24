@@ -187,11 +187,11 @@
     "navPubl": [
       {
         "name": "Privacy policy",
-        "id": "/policy"
+        "id": "policy"
       },
       {
         "name": "Public offer",
-        "id": "/offer"
+        "id": "offer"
       }
     ],
     "nav": [
@@ -208,5 +208,6 @@
         "id": "reviews"
       }
     ]
-  }
+  },
+  "linkGoBack": "Go back"
 }

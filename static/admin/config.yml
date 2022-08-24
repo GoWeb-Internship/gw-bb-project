@@ -53,38 +53,6 @@ collections:
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
       - { label: 'Sale', name: 'sale', widget: 'string' }
       - { label: 'Cost one session with sale', name: 'cost', widget: 'string' }
-  # Policy list model
-  - label: 'Policy'
-    name: 'policy'
-    folder: 'cmsdata/policy'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: true # ограничение на создание документа
-    delete: true
-    fields:
-      - {
-          label: 'Policy identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'policy',
-        }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Item number',
-          name: 'title',
-          widget: 'number',
-          value_type: 'float',
-        }
-      - { label: 'Description [UK]', name: 'uk' }
-      - { label: 'Description [RU]', name: 'ru' }
-      - { label: 'Description [EN]', name: 'en' }
-      - {
-          label: 'Notes',
-          name: 'body',
-          widget: 'markdown',
-          required: false,
-          default: 'These markings are not displayed on the site',
-        }
   # Content Images
   - label: 'Content images'
     name: 'contentImages'
@@ -245,4 +213,29 @@ collections:
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+      #Policy Model
+  - label: 'Policy'
+    name: 'policy'
+    folder: 'cmsdata/policy'
+    slug: '{{fieldIdName}}-{{title}}'
+    identifier_field: title
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - {
+          label: 'Policy identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'policy',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Policy Page',
+        }
+      - { label: 'Policy title', name: 'policyTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }

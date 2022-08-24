@@ -45,6 +45,7 @@ module.exports = {
         bb3237: ['32px', '37px'],
         bb3224: ['32px', '24px'],
         bbTitle1: ['40px', '47px'],
+        bb4857: ['48px', '57px'],
       },
     },
   },

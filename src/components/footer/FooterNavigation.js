@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import { Link as GatsbyLink } from 'gatsby';
 import { Link } from 'react-scroll';
 
-const FooterNavigation = ({ navConfig = [], navPubl = [], className = '' }) => {
+const FooterNavigation = ({
+  navConfig = [],
+  navPubl = [],
+  className = '',
+  lang = 'ua',
+}) => {
   return navConfig.length ? (
     <nav className={className}>
       <ul className="flex-col-reverse text-end w-[196px] flex md:ml-[10px] md:flex-row md:justify-around mb-5 md:mb-0 lg:ml-0 lg:justify-around md:w-full">
         {navPubl.map(({ id, name }) => {
-          console.log(id);
           return (
             <li key={id} className="overflow-hidden last:mr-0 lg:mr-9 ">
               <GatsbyLink

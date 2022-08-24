@@ -42,6 +42,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
           <FooterNavigation
             navConfig={footer.nav}
             navPubl={footer.navPubl}
+            lang={i18n.language}
             className="md:w-[544px] md:mr-[60px] lg:w-[900px] lg:flex lg:justify-evenly lg:items-baseline"
           />
           <SocialIcon data={fullSocial} language={i18n.language} />

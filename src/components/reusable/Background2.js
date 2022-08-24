@@ -12,7 +12,7 @@ const Background2 = ({
   return (
     <GatsbyImage
       image={image}
-      alt=""
+      alt="background photo"
       layout="fullWidth"
       quality={100}
       formats={['auto', 'webp', 'avif']}
