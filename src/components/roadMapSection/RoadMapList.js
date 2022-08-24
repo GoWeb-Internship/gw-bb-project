@@ -6,7 +6,7 @@ const RoadMapList = ({ listData }) => {
   const { i18n } = useTranslation();
 
   return (
-    <ul className="mx-auto max-w-[270px] md:max-w-full md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
+    <ul className="mx-auto max-w-[340px] md:max-w-full md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
       {listData.map(({ frontmatter }, id) => (
         <li
           key={`road-${id}`}
