@@ -2,9 +2,9 @@
 fieldIdName: policy
 date: 2022-08-10T12:28:30.568Z
 title: 4
-uk: Опис пункту 4
-ru: Описание пункта 4
-en: Item 4 description
+uk: "4. Основні права та обов'язки суб'єктів персональних даних"
+ru: '4. Основные права и обязанности субъектов персональных данных'
+en: 'Item 4 description'
 ---
 
 These markings are not displayed on the site

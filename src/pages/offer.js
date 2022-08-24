@@ -2,18 +2,17 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 
 import Container from 'components/reusable/Container';
-import PolicyList from 'components/PolicyList';
 import Seo from 'components/Seo';
 
-const PolicyPage = ({ data }) => {
-  const policyItems = data.allMdx.nodes;
+const OfferPage = ({ data }) => {
+  // const title = data.frontmatter.offerTitle;
 
   return (
     <main>
       <Container>
-        <h1>Policy</h1>
+        {/* <h1>{title}</h1> */}
         <Link to="/">Go back to the homepage</Link>
-        {!!policyItems.length && <PolicyList policyItems={policyItems} />}
+        {/* <p>{data.body}</p> */}
       </Container>
     </main>
   );
@@ -21,7 +20,7 @@ const PolicyPage = ({ data }) => {
 
 export const Head = () => <Seo title="Policy" />;
 
-export default PolicyPage;
+export default OfferPage;
 
 export const query = graphql`
   query ($language: String!) {
@@ -34,19 +33,14 @@ export const query = graphql`
         }
       }
     }
-    allMdx(
-      filter: { frontmatter: { fieldIdName: { eq: "policy" } } }
-      sort: { fields: frontmatter___title, order: ASC }
-    ) {
-      nodes {
-        frontmatter {
-          title
-          uk
-          ru
-          en
-          date
-        }
-      }
-    }
   }
 `;
+
+// content: mdx(
+//   frontmatter: { fieldIdName: { eq: "offer" }, language: { eq: $language } }
+// ) {
+//   frontmatter {
+//     offerTitle
+//   }
+//   body
+// }

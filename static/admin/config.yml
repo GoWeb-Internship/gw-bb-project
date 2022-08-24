@@ -221,3 +221,28 @@ collections:
       - { label: 'Story [EN]', name: 'en', widget: string }
       - { label: 'Avatar', name: 'imageUrl', widget: image }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
+      # Offer Model
+  - label: 'Offer'
+    name: 'offer policy'
+    folder: 'cmsdata/offer'
+    slug: '{{fieldIdName}}-{{language}}'
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    identifier_field: title
+    fields:
+      - {
+          label: 'Offer identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'offer',
+        }
+      - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Offer Page',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
