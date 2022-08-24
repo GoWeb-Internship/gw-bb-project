@@ -60,6 +60,8 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const heroList = t('heroListBlock', { returnObjects: true });
   const heroTitle = t('heroTitle', { returnObjects: true });
 
+  console.log('ismobile >>>>', pageFormat === 'mobile', pageFormat);
+
   return (
     <Section id={'home'}>
       {pageFormat === 'desktop' ? (
@@ -80,13 +82,14 @@ const Hero = ({ saleText = '', cost = '' }) => {
                 {button.textBigButton}
               </Button>
             </div>
-            {pageFormat === 'mobile' ? (
+            {pageFormat === 'mobile' && (
               <SocialIconsList
                 data={fullSocial}
                 language={i18n.language}
                 className={'mx-auto'}
               />
-            ) : (
+            )}
+            {pageFormat !== 'mobile' && (
               <SocialGroup data={fullSocial} language={i18n.language} />
             )}
           </div>
