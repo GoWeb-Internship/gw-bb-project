@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,9 +8,8 @@ import useFormPersist from 'react-hook-form-persist'; // Библиотека д
 import InputPhone from './InputPhone';
 import { FiCheckSquare } from 'react-icons/fi';
 import { FiSquare } from 'react-icons/fi';
+import { ClientLocationContext } from 'context/ClientLocationContext';
 import * as yup from 'yup';
-import { useContext } from 'react';
-import { ClientLoactionContext } from 'context/ClientLoactionContext';
 
 const isBrowser = typeof window !== 'undefined';
 
@@ -25,13 +24,10 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
   const [checkbox, setCheckbox] = useState(false);
-  const clientLocation = useContext(ClientLoactionContext);
+  const clientLocation = useContext(ClientLocationContext);
   const handler = useCallback(() => {
     setCheckbox(!checkbox);
   }, [checkbox]);
-  // const country = isBrowser
-  //   ? sessionStorage.getItem(LOCATION_STORAGE_KEY) || 'ua'
-  //   : null;
 
   const schema = yup.object({
     name: yup.string().min(1, valid.name).required(valid.required),
