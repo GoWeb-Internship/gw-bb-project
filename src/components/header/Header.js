@@ -62,23 +62,25 @@ const Header = () => {
     >
       <Container className={'flex items-center py-3'}>
         <Logo />
-
-        {!isMobile && (
-          <HeaderNavigation
-            navConfig={nav}
-            className="ml-auto md:mr-6 lg:mr-12 "
-            headerHeight={headerHeight}
-          />
-        )}
-
+        <HeaderNavigation
+          navConfig={nav}
+          className="hidden md:block ml-auto md:mr-6 lg:mr-12"
+          headerHeight={headerHeight}
+        />
         <LangSwitcher className="ml-auto md:ml-0" />
-        {isMobile && (
-          <MobileMenuButtons
-            onClick={onOpen}
-            IconComponent={FiMenu}
-            disabled={renderMenu}
-          />
-        )}
+        <MobileMenuButtons
+          onClick={onOpen}
+          IconComponent={FiMenu}
+          disabled={renderMenu}
+          className={'md:hidden'}
+        />
+        {/* {pageFormat && (
+          <>
+            {!isMobile && <></>}
+
+            {isMobile && <></>}
+          </>
+        )} */}
       </Container>
       {isMobile && renderMenu && (
         <MobileMenu

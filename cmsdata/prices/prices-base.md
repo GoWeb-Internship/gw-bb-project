@@ -5,10 +5,10 @@ id: '1'
 date: 2022-08-06T15:27:46.785Z
 recommended: false
 price: 320
-uk: Базовий
+uk: Base
 ukMonth: 1 місяць роботи
 ukSessions: 4 часових сесії
-ru: Базовый
+ru: Base
 ruMonth: 1 месяц работы
 ruSessions: 4 часовых сессий
 en: Base

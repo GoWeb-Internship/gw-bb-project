@@ -12,7 +12,7 @@ const Politic = ({ title, text }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      background: file(name: { eq: "bg-feedback" }) {
+      background: file(name: { eq: "policy" }) {
         id
         publicURL
         childImageSharp {
@@ -53,6 +53,11 @@ const Politic = ({ title, text }) => {
       </section>
     </main>
   );
+};
+
+Politic.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default Politic;
