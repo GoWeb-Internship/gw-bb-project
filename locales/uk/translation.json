@@ -187,11 +187,11 @@
     "navPubl": [
       {
         "name": "Політика конфіденційності",
-        "id": "/policy"
+        "id": "policy"
       },
       {
         "name": "Публічна оферта",
-        "id": "/offer"
+        "id": "offer"
       }
     ],
     "nav": [
@@ -208,5 +208,6 @@
         "id": "reviews"
       }
     ]
-  }
+  },
+  "linkGoBack": "На головну"
 }

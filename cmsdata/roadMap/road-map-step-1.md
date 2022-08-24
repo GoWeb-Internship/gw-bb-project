@@ -7,5 +7,5 @@ uk:
 ru:
   'Разберемся с твоими страхами и ограничивающими убеждениями, которые тебя
   тормозят'
-en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+en: 'We’ll find out your fears and limiting beliefs that’re holding you back'
 ---

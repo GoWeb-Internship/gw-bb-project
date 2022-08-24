@@ -8,5 +8,7 @@ uk:
 ru:
   'Составим твой личный план действий на год, квартал, месяц, неделю, день и
   начнем его выполнять'
-en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+en:
+  'We’ll write your personal action plan for a year, quarter, month, week, day
+  and start implementing it '
 ---
