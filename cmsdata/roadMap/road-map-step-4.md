@@ -8,5 +8,7 @@ uk:
 ru:
   'Поймем куда девается энергия, почему не хватает 24 часов в сутки и как это
   изменить'
-en: 'Lorem ipsum dolor sit amet consectetur adipisicing elit'
+en:
+  'We’ll understand where energy goes, why 24 hours a day is not enough and how
+  to change it '
 ---

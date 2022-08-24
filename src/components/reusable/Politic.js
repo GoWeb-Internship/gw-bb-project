@@ -35,7 +35,7 @@ const Politic = ({ title, text }) => {
         objectPosition="center bottom"
       />
       <section className=" px-6 py-6 md:px-12 md:py-12 lg:px-[148px] lg:py-[48px] ">
-        <h1 className="absolute top-[90px] text-center md:top-[100px] lg:top-[197px] left-1/2 -translate-x-1/2 text-bb3237 font-bold md:text-bb4857 font-heads">
+        <h1 className="absolute top-[115px] text-center md:top-[100px] lg:top-[140px] left-1/2 -translate-x-1/2 text-bb2440 font-bold md:text-bb4857 font-heads">
           {title}
         </h1>
         <Link
