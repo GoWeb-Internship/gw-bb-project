@@ -12,19 +12,22 @@ const getNormalizeData = lang => ({
 const LangSwitcher = ({ className = '' }) => {
   const { languages, language, originalPath } = useI18next();
   const [opacity, setOpacity] = useState('opacity-0');
+  const [isHidden, setIsHidden] = useState('hidden');
   const [pointerEvents, setPointerEvents] = useState('pointer-events-none');
   const [rotate, setRotate] = useState('rotate-0');
   const [fill, setFill] = useState('stroke-slate-50');
 
   // this handler show language selector list
   const handleLabelClick = () => {
-    if (opacity === 'opacity-0') {
+    if (isHidden === 'hidden') {
+      setIsHidden('block');
       setOpacity('opacity-100');
       setPointerEvents('pointer-events-auto');
       setRotate('rotate-180');
       setFill('stroke-cyan-600');
     } else {
       setOpacity('opacity-0');
+      setIsHidden('hidden');
       setPointerEvents('pointer-events-none');
       setRotate('rotate-0');
       setFill('stroke-slate-50');
@@ -52,7 +55,7 @@ const LangSwitcher = ({ className = '' }) => {
       </button>
       {/* language selector list */}
       <ul
-        className={`absolute top-0 left-0 w-full transition duration-200 ${opacity} ${pointerEvents} rounded-md bg-slate-50`}
+        className={`absolute top-0 left-0 w-full transition duration-200 ${isHidden} ${opacity} ${pointerEvents} rounded-md bg-slate-50`}
       >
         {langData.map(({ label, value }) => (
           <li

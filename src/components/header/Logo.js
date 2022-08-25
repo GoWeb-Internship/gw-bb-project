@@ -13,6 +13,7 @@ const Logo = ({ onClick, onFooter = false }) => {
       spy
       // hashSpy
       onClick={onClick}
+      href=""
     >
       <LogoIcon className="fill-slate-50 w-full h-full" />
     </Link>
