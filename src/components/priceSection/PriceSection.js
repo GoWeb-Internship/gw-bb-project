@@ -18,11 +18,14 @@ const PriceSection = ({ charity = '' }) => {
 
   const handleModalOpen = value => {
     setPlace(value);
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
+
   const { background, cardsList, bgForm } = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "price-bg" }) {

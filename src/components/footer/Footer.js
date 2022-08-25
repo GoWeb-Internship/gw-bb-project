@@ -21,11 +21,14 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
 
   const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
+
   const data = useStaticQuery(graphql`
     query {
       bgForm: file(name: { eq: "fon-form2" }) {

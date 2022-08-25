@@ -16,9 +16,11 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
 

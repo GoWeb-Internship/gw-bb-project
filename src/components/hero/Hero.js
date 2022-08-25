@@ -21,9 +21,11 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
 
@@ -60,8 +62,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   return (
     <Section id={'home'} className={'bg-cyan-600 z-0'}>
-      <Background2 imageData={imageData.bgDesk} className={'hidden lg:block'} />
-      <Background2 imageData={imageData.bg} className={'lg:hidden'} />
+      <div className={'hidden lg:block'}>
+        <Background2 imageData={imageData.bgDesk} />
+      </div>
+      <div className={'lg:hidden'}>
+        <Background2 imageData={imageData.bg} />
+      </div>
       <Container>
         <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">

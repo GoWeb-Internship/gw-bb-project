@@ -12,16 +12,16 @@ const ModalLeft = ({ bg, place, saleText, cost }) => {
   const pageFormat = useContext(PageFormatContext);
 
   return (
-    <div className="py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0   lg:w-[934px] lg:h-[614px] lg:pt-[60px] lg:pl-[56px] lg:pb-[68px]">
+    <div className="overflow-y-scroll max-h-full py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:pt-[60px] lg:pl-[56px] lg:pb-[68px]">
       {pageFormat === 'desktop' ? (
         <Background2
-          className=" h-full lg:w-[934px]"
+          className="lg:w-[934px]"
           imageData={bg}
           objectPosition="center top"
         />
       ) : (
         <Background2
-          className="h-full lg:w-[934px]"
+          className="lg:w-[934px]"
           imageData={bg}
           objectPosition="150px top"
         />
