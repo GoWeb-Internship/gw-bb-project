@@ -110,6 +110,19 @@ module.exports = {
         postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '5209032532528271',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: 'GTM-W4T6PP6',
+      },
+    },
+
     // {
     //   resolve: `gatsby-plugin-purgecss`,
     //   options: {
