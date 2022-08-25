@@ -6,10 +6,15 @@ import PriceCardsList from './PriceCardsList';
 import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
 import Background2 from 'components/reusable/Background2';
+import { useTranslation } from 'react-i18next';
 
-const PriceSection = ({ title, charity = '' }) => {
+const PriceSection = ({ charity = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [place, setPlace] = useState('');
+
+  const { t } = useTranslation();
+
+  const title = t('priceSectionTitle');
 
   const handleModalOpen = value => {
     setPlace(value);
@@ -32,13 +37,11 @@ const PriceSection = ({ title, charity = '' }) => {
       ) {
         nodes {
           frontmatter {
-            uk
+            title
             ukMonth
             ukSessions
-            ru
             ruMonth
             ruSessions
-            en
             enMonth
             enSessions
             discount
