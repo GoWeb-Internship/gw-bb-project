@@ -44,10 +44,14 @@ const AboutSection = () => {
       }
     }
   `);
-  const imageData1 = data.photo1.cloudinaryImg.childImageSharp.gatsbyImageData;
-  const imageAlt1 = data.photo1.frontmatter[i18n.language];
-  const imageData2 = data.photo2.cloudinaryImg.childImageSharp.gatsbyImageData;
-  const imageAlt2 = data.photo2.frontmatter[i18n.language];
+
+  const imageData1 =
+    data.photo1?.cloudinaryImg.childImageSharp.gatsbyImageData ?? {};
+  const imageAlt1 = data.photo1?.frontmatter[i18n.language];
+  const imageData2 =
+    data.photo2?.cloudinaryImg.childImageSharp.gatsbyImageData ?? {};
+  const imageAlt2 = data.photo2?.frontmatter[i18n.language];
+
   return (
     <Section id="about">
       <Background2 imageData={data.background} />
