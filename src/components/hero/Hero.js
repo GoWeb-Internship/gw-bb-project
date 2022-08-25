@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Button from 'components/reusable/Button';
 import SocialGroup from 'components/reusable/SocialGroup';
-import { fullSocial } from 'data/social/social';
+import { getSocialData } from 'data/social/social';
 import Section from '../reusable/Section';
 import Background2 from 'components/reusable/Background2';
 import Container from '../reusable/Container';
@@ -21,13 +21,15 @@ const Hero = ({ saleText = '', cost = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
 
-  const imageData = useStaticQuery(graphql`
+  const { bgDesk, bg, bgForm, contacts } = useStaticQuery(graphql`
     query MyQueryHero {
       bgDesk: file(name: { eq: "hero-1" }) {
         id
@@ -50,8 +52,17 @@ const Hero = ({ saleText = '', cost = '' }) => {
           gatsbyImageData
         }
       }
+      contacts: mdx(frontmatter: { fieldIdName: { eq: "contacts" } }) {
+        frontmatter {
+          _1
+          _2
+          _3
+        }
+      }
     }
   `);
+
+  const socials = getSocialData(contacts.frontmatter);
 
   const button = t('button', { returnObjects: true });
   const experience = t('heroExpirience', { returnObjects: true });
@@ -60,8 +71,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
 
   return (
     <Section id={'home'} className={'bg-cyan-600 z-0'}>
-      <Background2 imageData={imageData.bgDesk} className={'hidden lg:block'} />
-      <Background2 imageData={imageData.bg} className={'lg:hidden'} />
+      <div className={'hidden lg:block'}>
+        <Background2 imageData={bgDesk} />
+      </div>
+      <div className={'lg:hidden'}>
+        <Background2 imageData={bg} />
+      </div>
       <Container>
         <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">
@@ -76,12 +91,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
               </Button>
             </div>
             <SocialIconsList
-              data={fullSocial}
+              data={socials}
               language={i18n.language}
               className={'mx-auto md:hidden lg:hidden'}
             />
             <SocialGroup
-              data={fullSocial}
+              data={socials}
               language={i18n.language}
               className={'hidden md:block'}
             />
@@ -92,7 +107,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
       </Container>
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
         <ModalLeft
-          bg={imageData.bgForm}
+          bg={bgForm}
           place="section Hero"
           saleText={saleText}
           cost={cost}

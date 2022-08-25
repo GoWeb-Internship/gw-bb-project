@@ -12,7 +12,7 @@ const ModalRight = ({ bg, place }) => {
   const pageFormat = useContext(PageFormatContext);
 
   return (
-    <div className=" py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:flex lg:justify-end lg:pt-[60px] lg:pr-[96px] lg:pb-[48px]">
+    <div className="scrollbar overflow-y-auto py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:flex lg:justify-end lg:pt-[60px] lg:pr-[96px] lg:pb-[48px]">
       {pageFormat === 'desktop' ? (
         <Background2
           className="h-full w-full lg:w-[934px]"

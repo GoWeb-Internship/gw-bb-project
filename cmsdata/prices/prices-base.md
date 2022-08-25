@@ -9,7 +9,7 @@ discount: 0
 ukMonth: 1 місяць роботи
 ukSessions: 4 часових сесії
 ruMonth: 1 месяц работы
-ruSessions: 4 часовых сессий
+ruSessions: 4 часовых сессии
 enMonth: 1 month of work
 enSessions: 4 hour sessions
 ---

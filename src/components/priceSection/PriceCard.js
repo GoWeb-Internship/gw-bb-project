@@ -1,6 +1,5 @@
 import { PageFormatContext } from 'context/PageFormatContext';
 import React, { useContext } from 'react';
-// import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import { FiCalendar } from 'react-icons/fi';
 import { FiClock } from 'react-icons/fi';
@@ -15,12 +14,15 @@ const PriceCard = ({ cardData, onClick, isActive }) => {
   };
 
   const isDesktop = pageFormat === 'desktop';
+
   const height =
     cardData.recommended && isDesktop ? 'md:min-h-[508px]' : 'md:min-h-[468px]';
   const pt =
     cardData.recommended && isDesktop ? 'md:pt-[85px]' : 'md:pt-[70px]';
   const recommendedColor =
-    cardData.recommended && isDesktop ? 'lg:bg-[#FBDEBB]' : 'lg:bg-slate-50';
+    cardData.recommended && pageFormat !== 'tablet'
+      ? 'lg:bg-[#FBDEBB]'
+      : 'lg:bg-slate-50';
   const opacity = isActive || isDesktop ? 'opacity-100' : 'opacity-50';
   const scale = isActive && !isDesktop ? 'scale-105 ' : 'scale-100';
 

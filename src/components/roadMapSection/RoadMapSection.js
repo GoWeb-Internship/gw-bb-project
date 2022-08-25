@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Section from '../reusable/Section';
@@ -36,10 +35,6 @@ const RoadMapSection = () => {
       </Container>
     </Section>
   );
-};
-
-RoadMapSection.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 export default RoadMapSection;

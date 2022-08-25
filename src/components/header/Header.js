@@ -74,13 +74,6 @@ const Header = () => {
           disabled={renderMenu}
           className={'md:hidden'}
         />
-        {/* {pageFormat && (
-          <>
-            {!isMobile && <></>}
-
-            {isMobile && <></>}
-          </>
-        )} */}
       </Container>
       {isMobile && renderMenu && (
         <MobileMenu

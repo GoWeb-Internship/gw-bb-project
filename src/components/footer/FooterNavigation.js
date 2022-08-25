@@ -11,7 +11,7 @@ const FooterNavigation = ({
 }) => {
   return navConfig.length ? (
     <nav className={className}>
-      <ul className="flex flex-col-reverse text-end md:flex-row md:mb-6 md:w-full lg:mb-0 lg:items-center lg:mr-9">
+      <ul className="flex flex-col-reverse text-end md:flex-row md:justify-center md:mb-6 md:w-full lg:mb-0 lg:items-center lg:mr-9">
         {navPubl.map(({ id, name }) => {
           return (
             <li
@@ -29,7 +29,7 @@ const FooterNavigation = ({
           );
         })}
       </ul>
-      <ul className="hidden md:flex lg:min-w-[300px] lg:items-center">
+      <ul className="hidden md:flex md:justify-center lg:min-w-[300px] lg:items-center">
         {navConfig.map(({ id, name }) => (
           <li key={id} className="md:mb-0 md:mr-9 md:last:mr-0">
             <Link

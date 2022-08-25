@@ -1,23 +1,15 @@
 import React from 'react';
 
-const SocialIconsList = ({
-  data = [],
-  language,
-  vertical = false,
-  className = '',
-}) => {
-  const verticalClasses = vertical ? 'flex-col' : 'flex-row';
-  const sizes = vertical ? 'w-6 h-[112px]' : 'w-[152px] lg:w-[128px] h-6';
-
+const SocialIconsList = ({ data = [], language, className = '' }) => {
   return (
     <ul
-      className={`${className} ${sizes} flex ${verticalClasses} justify-between text-slate-50`}
+      className={`${className} w-[152px] h-6 flex  justify-between text-slate-50 md:w-[128px]`}
     >
       {data.map(({ id, href, name, Component }) => {
         return (
           <li
             key={`${id}-socicons-group`}
-            className="mr-10 fill-slate-50 md:mb-5 lg:mr-[30px] lg:mb-0 socialIcon-item"
+            className="fill-slate-50 md:mb-5 lg:mr-[30px] lg:mb-0 socialIcon-item"
           >
             <a
               href={href}

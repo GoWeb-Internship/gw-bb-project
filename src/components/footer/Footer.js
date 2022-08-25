@@ -3,7 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Container from 'components/reusable/Container';
 import Logo from 'components/header/Logo';
 import Button from 'components/reusable/Button';
-import { fullSocial } from 'data/social/social';
+import { getSocialData } from 'data/social/social';
 import FooterNavigation from './FooterNavigation';
 import { graphql, useStaticQuery } from 'gatsby';
 import Modal from 'components/reusable/Modal';
@@ -21,48 +21,58 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const pageFormat = useContext(PageFormatContext);
 
   const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
     setIsModalOpen(true);
   };
   const handleModalClose = () => {
+    document.body.style.overflow = '';
     setIsModalOpen(false);
   };
-  const data = useStaticQuery(graphql`
+
+  const { bgForm, contacts } = useStaticQuery(graphql`
     query {
       bgForm: file(name: { eq: "fon-form2" }) {
         childImageSharp {
           gatsbyImageData
         }
       }
+      contacts: mdx(frontmatter: { fieldIdName: { eq: "contacts" } }) {
+        frontmatter {
+          _1
+          _2
+          _3
+        }
+      }
     }
   `);
+
+  const socials = getSocialData(contacts.frontmatter);
 
   return (
     <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
-        <div className="flex justify-between mx-auto mb-5 md:justify-start md:items-center md:mb-6 lg:mb-0 lg:mx-0 lg:justify-between">
+        <div className="flex justify-between mx-auto mb-5 md:items-center md:mb-6 lg:mb-0 lg:mx-0 lg:justify-between">
           <Logo onFooter />
 
           <FooterNavigation
             navConfig={footer.nav}
             navPubl={footer.navPubl}
             lang={i18n.language}
-            className="pt-5 md:pt-0 md:ml-[86px] lg:ml-0 lg:flex"
+            className="pt-5 xs:pt-0 lg:ml-0 lg:flex"
           />
-          {pageFormat && pageFormat === 'desktop' && (
+          {pageFormat && pageFormat !== 'mobile' && (
             <SocialIconsList
-              data={fullSocial}
+              data={socials}
               language={i18n.language}
-              className="mx-auto mb-5 md:absolute md:top-0 md:right-9 lg:static lg:mb-0 lg:mx-0"
-              vertical={pageFormat === 'tablet'}
+              className=""
             />
           )}
         </div>
-        {pageFormat && pageFormat !== 'desktop' && (
+        {pageFormat && pageFormat === 'mobile' && (
           <SocialIconsList
-            data={fullSocial}
+            data={socials}
             language={i18n.language}
-            className="mx-auto mb-5 md:absolute md:top-0 md:right-9 lg:static lg:mb-0 lg:mx-0"
-            vertical={pageFormat === 'tablet'}
+            className="mx-auto mb-5"
           />
         )}
 
@@ -87,7 +97,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
         )}
       </Container>
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
-        <ModalRight place="section footer" bg={data.bgForm} />
+        <ModalRight place="section footer" bg={bgForm} />
       </Modal>
     </footer>
   );

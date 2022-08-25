@@ -42,11 +42,6 @@ collections:
           default: 'Main Page',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Road Map Section Title',
-          name: 'roadMapTitle',
-          widget: 'string',
-        }
       - { label: 'Prices Section Title', name: 'pricesTitle', widget: 'string' }
       - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
@@ -119,27 +114,6 @@ collections:
       - { label: 'Amount of month [EN]', name: 'enMonth', widget: string }
       - { label: 'Amount of sessions [EN]', name: 'enSessions', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
-  # Road map Steps
-  - label: 'Road Map Steps'
-    name: 'roadMapSteps'
-    folder: 'cmsdata/roadMap'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: true
-    delete: true
-    fields:
-      - {
-          label: 'Road map section identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'road-map-step',
-        }
-      - { label: 'Title', name: 'title', widget: 'number' }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Section Title [UK]', name: 'uk', widget: string }
-      - { label: 'Section Title [RU]', name: 'ru', widget: string }
-      - { label: 'Section Title [EN]', name: 'en', widget: string }
-      - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Stories Model
   - label: 'Client stories'
     name: 'stories'
@@ -189,7 +163,7 @@ collections:
       - { label: 'Story [EN]', name: 'en', widget: string }
       - { label: 'Avatar', name: 'imageUrl', widget: image }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
-      # Offer Model
+  # Offer Model
   - label: 'Offer'
     name: 'offer policy'
     folder: 'cmsdata/offer'
@@ -214,7 +188,7 @@ collections:
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
-      #Policy Model
+  #Policy Model
   - label: 'Policy'
     name: 'policy'
     folder: 'cmsdata/policy'
@@ -239,3 +213,23 @@ collections:
         }
       - { label: 'Policy title', name: 'policyTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
+  #Contacts
+  - label: 'Contacts'
+    name: 'contacts'
+    folder: 'cmsdata/contacts'
+    slug: '{{fieldIdName}}'
+    identifier_field: title
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - { label: 'Contacts', name: 'title', widget: 'hidden' }
+      - {
+          label: 'contacts identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Linkedin', name: '1', widget: 'string' }
+      - { label: 'Facebook', name: '2', widget: 'string' }
+      - { label: 'Instagram', name: '3', widget: 'string' }

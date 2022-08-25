@@ -17,7 +17,7 @@ const HeaderNavigation = ({
                 <Link
                   to={`${id}`}
                   activeClass="after:translate-x-0"
-                  className="overflow-hidden relative font-main text-bbBase cursor-pointer py-3 after:content-[''] after:absolute after:bottom-1 after:left-0 after:h-1 after:w-full after:bg-slate-50 after:transition-transform after:duration-200 after:rounded-sm after:translate-x-[102%] hover:after:translate-x-0 focus:after:translate-x-0"
+                  className="non-active-link overflow-hidden relative font-main text-bbBase cursor-pointer py-3 after:content-[''] after:absolute after:bottom-1 after:left-0 after:h-1 after:w-full after:bg-slate-50 after:transition-transform after:duration-200 after:rounded-sm hover:after:translate-x-0 focus:after:translate-x-0"
                   smooth
                   spy
                   offset={-headerHeight - 1}
