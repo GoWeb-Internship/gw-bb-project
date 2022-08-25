@@ -105,18 +105,20 @@ of the Customer, up to the termination of this Agreement.
 4.1.10. The Contractor shall comply with the requirements of the legislation applicable to him on protection of personal data. Processing of personal data of the Customer, including transfer of personal data in the cases stipulated by this Agreement, necessary and sufficient for the provision of services under this Agreement, is carried out with the Customer's consent to the processing of his personal data. 
 
 4.2. RIGHTS AND OBLIGATIONS OF THE CLIENT:
-4.2.1 The Customer has the right to receive professional service from the Contractor, in accordance with the requirements stipulated in the ICF Code of Ethics and the ICF Key ICF Core Competencies. By signing this contract, the Client acknowledges that is notified of and accepts the Contractor's level of coaching qualifications, certifications obtained ICF certificates and certifications obtained by the Contractor. 4.2.2 The Customer is entitled to request information from the Contractor on the issues related to organization
-and ensuring the proper execution of the services under clause. 2.1. this Agreement, other information affecting the rights and legitimate interests of the Customer. 
+
+4.2.1 The Customer has the right to receive professional service from the Contractor, in accordance with the requirements stipulated in the ICF Code of Ethics and the ICF Key ICF Core Competencies. By signing this contract, the Client acknowledges that is notified of and accepts the Contractor's level of coaching qualifications, certifications obtained ICF certificates and certifications obtained by the Contractor. 
+4.2.2 The Customer is entitled to request information from the Contractor on the issues related to organization and ensuring the proper execution of the services under clause. 2.1. this Agreement, other information affecting the rights and legitimate interests of the Customer. 
 
 4.2.3. Customer is obliged to perform timely payment for the services of the Executor on terms and conditions provided by Clause 5 of this Agreement. 
 
-4.2.4. Customer is obliged to reschedule a session in writing not later than 24 hours prior to a session without any penalty. In case such notification was received by the Executor later than the indicated time, the
-session is considered to be held and paid for in full, unless otherwise agreed by the Parties. 
+4.2.4. Customer is obliged to reschedule a session in writing not later than 24 hours prior to a session without any penalty. In case such notification was received by the Executor later than the indicated time, the session is considered to be held and paid for in full, unless otherwise agreed by the Parties. 
 
 4.2.5 In case of a complaint about the conducted session, the Customer shall be obliged no later than 24 hours after the end of the session, to submit to the Contractor a motivated objection in the form of a written notice. In the absence of a written motivated objection to the session, the service shall be considered as rendered and shall be subject to payment. The parties confirm that the additional signing of the Act of the rendered services is not required. 
 
 4.2.6 The Customer has the right to unilaterally and prematurely withdraw from the Contract, which entails the
-termination of the provision of services by the Contractor. Such termination is possible by the written notification of the Executor by the Customer not later than 4 (four) days before the date of the next session. 4.2.7. The Customer confirms that by signing the terms and conditions of this Agreement in within the framework of cooperation under this Agreement agrees with all cases of receipt, processing, storage, transfer of his personal data, including all cases of receipt, processing, storage, transfer of his personal data to a third party. If the Client finds that the Coach has violated the ICF Code of Ethics, the Client has the right to apply to the International Coaching Federation or one of its chapters.
+termination of the provision of services by the Contractor. Such termination is possible by the written notification of the Executor by the Customer not later than 4 (four) days before the date of the next session. 
+
+4.2.7. The Customer confirms that by signing the terms and conditions of this Agreement in within the framework of cooperation under this Agreement agrees with all cases of receipt, processing, storage, transfer of his personal data, including all cases of receipt, processing, storage, transfer of his personal data to a third party. If the Client finds that the Coach has violated the ICF Code of Ethics, the Client has the right to apply to the International Coaching Federation or one of its chapters.
 
 **FINANCIAL CONDITIONS** 
 
