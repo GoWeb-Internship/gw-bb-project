@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
@@ -13,12 +13,9 @@ import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
 import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
-import { PageFormatContext } from 'context/PageFormatContext';
 import SocialIconsList from 'components/reusable/SocialIconsList';
-import { useEffect } from 'react';
 
 const Hero = ({ saleText = '', cost = '' }) => {
-  const pageFormat = useContext(PageFormatContext);
   const { t, i18n } = useTranslation();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -88,12 +85,6 @@ const Hero = ({ saleText = '', cost = '' }) => {
               language={i18n.language}
               className={'hidden md:block'}
             />
-            {/* {pageFormat && (
-              <>
-                {pageFormat === 'mobile' && <></>}
-                {pageFormat !== 'mobile' && <></>}
-              </>
-            )} */}
           </div>
           <HeroDataList heroDataList={heroList} />
           <HeroListExperiences experience={experience} />

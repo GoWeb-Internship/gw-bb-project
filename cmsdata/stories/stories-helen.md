@@ -17,7 +17,7 @@ ru:
   кайф побороть свой страх! А еще изменила своё отношение к зарабатыванию денег.
   Раньше считала, что нужно впахивать в офисе, а после коучинга решила ещё и
   развивать своё хобби. Пошли первые заказы. Я безумно рада! Спасибо!
-enName: Helen - businessman
+enName: Olena - businessman
 en:
   Thank you for the coaching. I had no idea that everything is hidden in us and
   I have such potential! I dared to perform on stage (I didn't dare to do it
