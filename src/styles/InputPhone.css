@@ -15,7 +15,8 @@
   }
 }
 
-.input-container .input-phone:focus {
+.input-container .input-phone:focus,
+input:focus {
   outline: 1px solid black !important;
   outline-offset: -3px;
 }
