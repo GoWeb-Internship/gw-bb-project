@@ -86,7 +86,6 @@ const PriceSection = ({ charity = '' }) => {
 };
 
 PriceSection.propTypes = {
-  title: PropTypes.string.isRequired,
   charity: PropTypes.string.isRequired,
 };
 

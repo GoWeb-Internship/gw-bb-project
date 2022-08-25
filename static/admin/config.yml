@@ -213,3 +213,23 @@ collections:
         }
       - { label: 'Policy title', name: 'policyTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
+  #Contacts
+  - label: 'Contacts'
+    name: 'contacts'
+    folder: 'cmsdata/contacts'
+    slug: '{{fieldIdName}}'
+    identifier_field: title
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - { label: 'Contacts', name: 'title', widget: 'hidden' }
+      - {
+          label: 'contacts identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Linkedin', name: '1', widget: 'string' }
+      - { label: 'Facebook', name: '2', widget: 'string' }
+      - { label: 'Instagram', name: '3', widget: 'string' }

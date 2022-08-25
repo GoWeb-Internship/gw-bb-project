@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Button from 'components/reusable/Button';
 import SocialGroup from 'components/reusable/SocialGroup';
-import { fullSocial } from 'data/social/social';
+import { getSocialData } from 'data/social/social';
 import Section from '../reusable/Section';
 import Background2 from 'components/reusable/Background2';
 import Container from '../reusable/Container';
@@ -29,7 +29,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
     setIsModalOpen(false);
   };
 
-  const imageData = useStaticQuery(graphql`
+  const { bgDesk, bg, bgForm, contacts } = useStaticQuery(graphql`
     query MyQueryHero {
       bgDesk: file(name: { eq: "hero-1" }) {
         id
@@ -52,8 +52,17 @@ const Hero = ({ saleText = '', cost = '' }) => {
           gatsbyImageData
         }
       }
+      contacts: mdx(frontmatter: { fieldIdName: { eq: "contacts" } }) {
+        frontmatter {
+          _1
+          _2
+          _3
+        }
+      }
     }
   `);
+
+  const socials = getSocialData(contacts.frontmatter);
 
   const button = t('button', { returnObjects: true });
   const experience = t('heroExpirience', { returnObjects: true });
@@ -63,10 +72,10 @@ const Hero = ({ saleText = '', cost = '' }) => {
   return (
     <Section id={'home'} className={'bg-cyan-600 z-0'}>
       <div className={'hidden lg:block'}>
-        <Background2 imageData={imageData.bgDesk} />
+        <Background2 imageData={bgDesk} />
       </div>
       <div className={'lg:hidden'}>
-        <Background2 imageData={imageData.bg} />
+        <Background2 imageData={bg} />
       </div>
       <Container>
         <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
@@ -82,12 +91,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
               </Button>
             </div>
             <SocialIconsList
-              data={fullSocial}
+              data={socials}
               language={i18n.language}
               className={'mx-auto md:hidden lg:hidden'}
             />
             <SocialGroup
-              data={fullSocial}
+              data={socials}
               language={i18n.language}
               className={'hidden md:block'}
             />
@@ -98,7 +107,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
       </Container>
       <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
         <ModalLeft
-          bg={imageData.bgForm}
+          bg={bgForm}
           place="section Hero"
           saleText={saleText}
           cost={cost}
