@@ -81,10 +81,10 @@ module.exports = {
       resolve: `gatsby-plugin-sharp`,
       options: {
         defaults: {
-          formats: [`auto`, `webp`, 'avif'],
+          formats: [`auto`, `webp`],
           placeholder: `dominantColor`,
           quality: 80,
-          breakpoints: [768, 1440],
+          // breakpoints: [320, 768, 1440],
           backgroundColor: `transparent`,
           tracedSVGOptions: {},
           blurredOptions: {},
@@ -110,15 +110,20 @@ module.exports = {
         postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
       },
     },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: false,
-        develop: true,
-        tailwind: true,
-        ignore: ['react-phone-input-2/lib/bootstrap.css', 'swiper'],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     printRejected: false,
+    //     develop: true,
+    //     tailwind: true,
+    //     ignore: [
+    //       'react-phone-input-2/lib/bootstrap.css',
+    //       'swiper',
+    //       'swiper/css',
+    //       'swiper/css/navigation',
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
@@ -163,7 +168,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`inter\:300,400,500,700`, `ubuntu\:500,700`],
+        fonts: [`inter\:300,400,500,600,700`, `ubuntu\:500,700`],
         display: 'swap',
       },
     },

@@ -4,12 +4,13 @@ language: en
 title: Главная страница [ENG]
 date: 2022-08-06T15:27:46.785Z
 
-roadMapTitle: Lorem ipsum dolor sit amet consectetur adipisicing elit
-pricesTitle: Lorem ipsum dolor sit amet consectetur adipisicing elit
+roadMapTitle: 6 easy steps to do it
+pricesTitle: The cost of the key to a better life
+
 charity:
-  10% of the funds send to improve the lives of those who suffered during the
+  I send 10% of the funds to improve the lives of those who suffered during the
   war in Ukraine
-sale:
-  Sign up with me today for your first coaching session with a 75% discount and
-  start living your life tomorrow!
+
+sale: 75%
+cost: The cost of a single session is $100
 ---

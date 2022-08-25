@@ -42,47 +42,12 @@ collections:
           default: 'Main Page',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Road Map Section Title',
-          name: 'roadMapTitle',
-          widget: 'string',
-        }
       - { label: 'Prices Section Title', name: 'pricesTitle', widget: 'string' }
       - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
       - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
       - { label: 'Sale', name: 'sale', widget: 'string' }
-  # Policy list model
-  - label: 'Policy'
-    name: 'policy'
-    folder: 'cmsdata/policy'
-    slug: '{{fieldIdName}}-{{title}}'
-    identifier_field: title
-    create: true # ограничение на создание документа
-    fields:
-      - {
-          label: 'Policy identifier',
-          name: 'fieldIdName',
-          widget: 'hidden',
-          default: 'policy',
-        }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'Item number',
-          name: 'title',
-          widget: 'number',
-          value_type: 'float',
-        }
-      - { label: 'Description [UK]', name: 'uk' }
-      - { label: 'Description [RU]', name: 'ru' }
-      - { label: 'Description [EN]', name: 'en' }
-      - {
-          label: 'Notes',
-          name: 'body',
-          widget: 'markdown',
-          required: false,
-          default: 'These markings are not displayed on the site',
-        }
+      - { label: 'Cost one session with sale', name: 'cost', widget: 'string' }
   # Content Images
   - label: 'Content images'
     name: 'contentImages'
@@ -149,24 +114,122 @@ collections:
       - { label: 'Amount of month [EN]', name: 'enMonth', widget: string }
       - { label: 'Amount of sessions [EN]', name: 'enSessions', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
-  # Road map Steps
-  - label: 'Road Map Steps'
-    name: 'roadMapSteps'
-    folder: 'cmsdata/roadMap'
+  # Stories Model
+  - label: 'Client stories'
+    name: 'stories'
+    folder: 'cmsdata/stories'
     slug: '{{fieldIdName}}-{{title}}'
     identifier_field: title
     create: true
     delete: true
     fields:
       - {
-          label: 'Road map section identifier',
+          label: 'stories identifier',
           name: 'fieldIdName',
           widget: 'hidden',
-          default: 'road-map-step',
+          default: 'stories',
         }
-      - { label: 'Title', name: 'title', widget: 'number' }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Section Title [UK]', name: 'uk', widget: string }
-      - { label: 'Section Title [RU]', name: 'ru', widget: string }
-      - { label: 'Section Title [EN]', name: 'en', widget: string }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Name / Position [UK]', name: 'ukName', widget: 'string' }
+      - { label: 'Story [UK]', name: 'uk', widget: string }
+      - { label: 'Name / Position [RU]', name: 'ruName', widget: 'string' }
+      - { label: 'Story [RU]', name: 'ru', widget: string }
+      - { label: 'Name / Position [EN]', name: 'enName', widget: 'string' }
+      - { label: 'Story [EN]', name: 'en', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
+  # Feedback Model
+  - label: 'Client feedbacks'
+    name: 'feedbacks'
+    folder: 'cmsdata/feedbacks'
+    slug: '{{fieldIdName}}-{{title}}'
+    identifier_field: title
+    create: true
+    delete: true
+    fields:
+      - {
+          label: 'feedbacks identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'feedbacks',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Name / Position [UK]', name: 'ukName', widget: 'string' }
+      - { label: 'Story [UK]', name: 'uk', widget: string }
+      - { label: 'Name / Position [RU]', name: 'ruName', widget: 'string' }
+      - { label: 'Story [RU]', name: 'ru', widget: string }
+      - { label: 'Name / Position [EN]', name: 'enName', widget: 'string' }
+      - { label: 'Story [EN]', name: 'en', widget: string }
+      - { label: 'Avatar', name: 'imageUrl', widget: image }
+      - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
+  # Offer Model
+  - label: 'Offer'
+    name: 'offer policy'
+    folder: 'cmsdata/offer'
+    slug: '{{fieldIdName}}-{{language}}'
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    identifier_field: title
+    fields:
+      - {
+          label: 'Offer identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'offer',
+        }
+      - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Offer Page',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+  #Policy Model
+  - label: 'Policy'
+    name: 'policy'
+    folder: 'cmsdata/policy'
+    slug: '{{fieldIdName}}-{{title}}'
+    identifier_field: title
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - {
+          label: 'Policy identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'policy',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Language', name: 'language', widget: 'hidden', default: 'uk' } # hidden прячет поле в СMS
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Policy Page',
+        }
+      - { label: 'Policy title', name: 'policyTitle', widget: 'string' }
+      - { label: 'Content', name: 'body', widget: 'markdown' }
+  #Contacts
+  - label: 'Contacts'
+    name: 'contacts'
+    folder: 'cmsdata/contacts'
+    slug: '{{fieldIdName}}'
+    identifier_field: title
+    create: false # ограничение на создание документа
+    delete: false # ограничение на удаление документа
+    fields:
+      - { label: 'Contacts', name: 'title', widget: 'hidden' }
+      - {
+          label: 'contacts identifier',
+          name: 'fieldIdName',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - { label: 'Linkedin', name: '1', widget: 'string' }
+      - { label: 'Facebook', name: '2', widget: 'string' }
+      - { label: 'Instagram', name: '3', widget: 'string' }

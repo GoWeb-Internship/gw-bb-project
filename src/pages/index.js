@@ -1,52 +1,57 @@
-import * as React from 'react';
-// import { Link, graphql } from 'gatsby';
+import React from 'react';
 import { graphql } from 'gatsby';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 import Layout from 'components/Layout';
-// import Container from 'components/reusable/Container';
 import Seo from 'components/Seo';
-// import TestForm from 'components/testForm/TestForm';
-// import useClientLocation from 'hooks/useClientLocation';
+import Hero from 'components/hero/Hero';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
+import FeedbackSection from 'components/feedbackSection/FeedbackSection';
+import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
-import Hero from 'components/hero/Hero';
-
 import PriceSection from 'components/priceSection/PriceSection';
-
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
+import ContactSection from 'components/contactSection/ContactSection';
+import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
+import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
+import StoriesSection from 'components/storiesSection/StoriesSection';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
 // KEYS must be started with GATSBY_
 
 const IndexPage = ({ data }) => {
-  // const clientLocation = useClientLocation();
-  const { charity, pricesTitle, roadMapTitle, sale } = data.content.frontmatter;
+  const { t } = useTranslation();
+  const button = t('button', { returnObjects: true });
+
+  const { charity, sale, cost } = data.content.frontmatter;
 
   return (
-    <Layout>
-      <Hero />
+    <Layout saleText={sale} cost={cost} charity={charity}>
+      <Hero saleText={sale} cost={cost} />
       <AboutSection />
-      <RoadMapSection title={roadMapTitle} />
+      <RoadMapSection />
+      <FeedbackSection />
+      <GuaranteeSection />
       <WithCoachSection />
-      <PriceSection title={pricesTitle} charity={charity} />
+      <PriceSection charity={charity} />
       <ImportantResultsSection />
+      <StoriesSection />
       <InLiveSection />
-      <SignUpSection saleText={sale} />
+      <SignUpSection saleText={sale} cost={cost} />
+      <ContactSection saleText={sale} cost={cost}>
+        <Form
+          place="section Contact"
+          buttonText={button.textBigButton}
+          buttonClassName="bg-orange-400 hover:bg-orange-500"
+        />
+      </ContactSection>
       <BeBetterToday />
-      {/* <section>
-        <Container>
-          <TestForm place="Home page" country={clientLocation} />
-          <p className={'mt-10'}>
-            <Link to={'example-page'}>Example Page</Link>
-            <Link to={'policy'}>Policy Page</Link>
-          </p>
-        </Container>
-      </section> */}
+      <MyFormulaSection />
     </Layout>
   );
 };
@@ -70,10 +75,9 @@ export const query = graphql`
       frontmatter: { fieldIdName: { eq: "main" }, language: { eq: $language } }
     ) {
       frontmatter {
-        pricesTitle
-        roadMapTitle
         charity
         sale
+        cost
       }
     }
   }

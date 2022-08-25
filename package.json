@@ -36,6 +36,7 @@
     "react-hook-form-persist": "^3.0.0",
     "react-i18next": "^11.18.3",
     "react-icons": "^4.4.0",
+    "react-modal": "^3.15.1",
     "react-phone-input-2": "^2.15.1",
     "react-scroll": "^1.8.7",
     "react-use": "^17.4.0",
@@ -70,6 +71,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "dev-m": "gatsby develop -H 192.168.0.100 -p 8000",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p",
     "prepare": "husky install"

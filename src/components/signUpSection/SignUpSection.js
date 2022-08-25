@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'components/reusable/Section';
-import Background from 'components/reusable/Background';
+import Background2 from 'components/reusable/Background2';
 import Button from 'components/reusable/Button';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/reusable/Container';
+import Modal from 'components/reusable/Modal';
+import ModalRight from 'components/modalValue/ModalRight';
 
-const SignUpSection = ({ saleText = '' }) => {
+const SignUpSection = ({ saleText = '', cost = '' }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
+  const sale = t('modalLeft', { returnObjects: true });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    document.body.style.overflow = 'hidden';
+    setIsModalOpen(true);
+  };
+  const handleModalClose = () => {
+    document.body.style.overflow = '';
+    setIsModalOpen(false);
+  };
+
   const data = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "sand" }) {
@@ -17,25 +31,43 @@ const SignUpSection = ({ saleText = '' }) => {
           gatsbyImageData
         }
       }
+      bgForm: file(name: { eq: "fon-form2" }) {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
     }
   `);
+
   return (
     <Section>
-      <Container className="lg:pb-[62px] lg:pt-[32px]">
-        <Background imageData={data.background} />
+      <Container className="pt-[20px] pb-[62px] md:pb-[62px] md:pt-[20px]">
+        <Background2 imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
-        <p className="text-neutral-600 font-bold leading-10 mx-auto lg:max-w-[570px] lg:mb-6 text-center">
-          {saleText}
+        <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
+          {sale.text}
+          <span className="inline-block text-cyan-500 mx-1">{saleText}</span>
+          {sale.text2}
         </p>
-        <Button className="bg-cyan-500 hover:bg-cyan-600 mx-auto py-4 rounded-xl text-xl lg:w-[410px] ">
+        <p className="text-neutral-600 mb-[33px] text-bb1222 md:text-bb1625 font-bold mx-auto md:max-w-[570px] md:mb-6 text-center">
+          *{cost}
+        </p>
+        <Button
+          onClick={handleModalOpen}
+          className="bg-cyan-500 transition-colors duration-200 hover:bg-cyan-600 mx-auto py-4 rounded-xl text-xl w-[280px] md:w-[410px] "
+        >
           {button.textSmallButton}
         </Button>
       </Container>
+      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
+        <ModalRight place="section Sing Up" bg={data.bgForm} />
+      </Modal>
     </Section>
   );
 };
 
 SignUpSection.propTypes = {
   saleText: PropTypes.string,
+  cost: PropTypes.string,
 };
 export default SignUpSection;
