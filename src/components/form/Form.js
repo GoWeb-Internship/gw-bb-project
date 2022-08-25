@@ -64,7 +64,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       .then(() => {
         const message = getTelegramMessage({
           title: 'Заявка на зворотній дзвінок',
-          hashTag: 'customtag',
+          hashTag: 'callbackorder',
           data,
           analysisData: place,
           sitelang: i18n.language,
@@ -92,7 +92,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
-        <p className="px-5 text-red-500 text-xs">{errors.name?.message}</p>
+        <p className="px-5 text-[#ffa2a2] text-xs">{errors.name?.message}</p>
       </div>
       <div className="mb-4 h-[69px]">
         <input
@@ -100,7 +100,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
-        <p className="px-5 text-red-500 text-xs">{errors.email?.message}</p>
+        <p className="px-5 text-[#ffa2a2] text-xs">{errors.email?.message}</p>
       </div>
       <InputPhone
         control={control}
@@ -110,17 +110,17 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       />
 
       <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center">
+        <input
+          type="checkbox"
+          {...register('isAgree')}
+          className="custom-checkbox absolute visually-hidden"
+          onChange={handler}
+        />
         {checkbox ? (
           <FiCheckSquare className="relative w-6 h-6 mr-[25px]" />
         ) : (
           <FiSquare className="relative w-6 h-6 mr-[25px]" />
         )}
-        <input
-          type="checkbox"
-          {...register('isAgree')}
-          className=" absolute visually-hidden"
-          onChange={handler}
-        />
 
         {formData.checkbox}
       </label>
