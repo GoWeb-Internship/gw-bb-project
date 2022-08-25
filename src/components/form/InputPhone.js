@@ -8,7 +8,6 @@ const loc = { ru, uk: ua };
 
 const InputPhone = ({ control, errors, language, country }) => {
   const location = loc[language];
-
   return (
     <div className="mb-4 h-[69px]">
       <Controller

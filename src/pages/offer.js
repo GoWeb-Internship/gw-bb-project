@@ -1,21 +1,12 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
-
-import Container from 'components/reusable/Container';
+import { graphql } from 'gatsby';
 import Seo from 'components/Seo';
+import Politic from 'components/reusable/Politic';
 
 const OfferPage = ({ data }) => {
-  // const title = data.frontmatter.offerTitle;
-
-  return (
-    <main>
-      <Container>
-        {/* <h1>{title}</h1> */}
-        <Link to="/">Go back to the homepage</Link>
-        {/* <p>{data.body}</p> */}
-      </Container>
-    </main>
-  );
+  const title = data.mdx.frontmatter.offerTitle;
+  const text = data.mdx.body;
+  return <Politic text={text} title={title} />;
 };
 
 export const Head = () => <Seo title="Policy" />;
@@ -33,14 +24,13 @@ export const query = graphql`
         }
       }
     }
+    mdx(
+      frontmatter: { fieldIdName: { eq: "offer" }, language: { eq: $language } }
+    ) {
+      frontmatter {
+        offerTitle
+      }
+      body
+    }
   }
 `;
-
-// content: mdx(
-//   frontmatter: { fieldIdName: { eq: "offer" }, language: { eq: $language } }
-// ) {
-//   frontmatter {
-//     offerTitle
-//   }
-//   body
-// }

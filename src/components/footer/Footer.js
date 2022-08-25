@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-
 import Container from 'components/reusable/Container';
 import Logo from 'components/header/Logo';
 import Button from 'components/reusable/Button';
@@ -46,6 +45,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
           <FooterNavigation
             navConfig={footer.nav}
             navPubl={footer.navPubl}
+            lang={i18n.language}
             className="pt-5 md:pt-0 md:ml-[86px] lg:ml-0 lg:flex"
           />
           {pageFormat && pageFormat === 'desktop' && (

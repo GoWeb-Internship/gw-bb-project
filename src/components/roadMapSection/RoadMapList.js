@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 
 const RoadMapList = ({ listData }) => {
-  const { i18n } = useTranslation();
-
   return (
-    <ul className="mx-auto max-w-[270px] md:max-w-full md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
-      {listData.map(({ frontmatter }, id) => (
+    <ul className="mx-auto max-w-[340px] md:max-w-full md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-x-[55px] lg:gap-y-[92px]">
+      {listData.map((item, id) => (
         <li
           key={`road-${id}`}
           className="mb-3 last:mb-0 flex items-center md:mb-0 md:min-h-[124px]"
@@ -19,7 +16,7 @@ const RoadMapList = ({ listData }) => {
             {id + 1}
           </span>
           <span className="font-main font-semibold text-bb1422 lg:text-bb1625 lg:font-bold">
-            {frontmatter[i18n.language]}
+            {item}
           </span>
         </li>
       ))}

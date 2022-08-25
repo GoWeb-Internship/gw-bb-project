@@ -27,18 +27,18 @@ import StoriesSection from 'components/storiesSection/StoriesSection';
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
-  const { charity, pricesTitle, roadMapTitle, sale, cost } =
-    data.content.frontmatter;
+
+  const { charity, sale, cost } = data.content.frontmatter;
 
   return (
     <Layout saleText={sale} cost={cost} charity={charity}>
       <Hero saleText={sale} cost={cost} />
       <AboutSection />
-      <RoadMapSection title={roadMapTitle} />
+      <RoadMapSection />
       <FeedbackSection />
       <GuaranteeSection />
       <WithCoachSection />
-      <PriceSection title={pricesTitle} charity={charity} />
+      <PriceSection charity={charity} />
       <ImportantResultsSection />
       <StoriesSection />
       <InLiveSection />
@@ -75,8 +75,6 @@ export const query = graphql`
       frontmatter: { fieldIdName: { eq: "main" }, language: { eq: $language } }
     ) {
       frontmatter {
-        pricesTitle
-        roadMapTitle
         charity
         sale
         cost
