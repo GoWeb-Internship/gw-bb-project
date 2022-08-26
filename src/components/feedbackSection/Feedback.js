@@ -16,7 +16,7 @@ const Feedback = ({
             <GatsbyImage
               image={image}
               alt={content[`${i18n.language}Name`]}
-              className="max-w-full max-h-full"
+              className="max-w-full max-h-full overflow-hidden rounded-full"
             />
           )}
         </div>

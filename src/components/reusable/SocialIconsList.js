@@ -14,7 +14,7 @@ const SocialIconsList = ({ data = [], language, className = '' }) => {
             <a
               href={href}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label={name[language]}
             >
               <Component className="w-6 h-6 duration-200 transition-transform hover:scale-110" />
