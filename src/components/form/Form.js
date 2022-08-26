@@ -20,7 +20,12 @@ const encode = data => {
     .join('&');
 };
 
-const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
+const Form = ({
+  place,
+  buttonClassName = '',
+  buttonText = '',
+  className = '',
+}) => {
   const { t, i18n } = useTranslation();
   const formData = t('form', { returnObjects: true });
   const valid = t('validation', { returnObjects: true });
@@ -99,7 +104,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
   return (
     <form
       name="contact"
-      className="mx-auto w-[280px] md:w-[410px]"
+      className={`${className} mx-auto w-[280px] md:w-[410px]`}
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"
@@ -146,6 +151,7 @@ const Form = ({ place, buttonClassName = '', buttonText = '' }) => {
       </label>
 
       <button
+        id={'form-button'}
         className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 disabled:bg-cyan-700 ${buttonClassName}`}
         type="submit"
         disabled={!checkbox && true}
@@ -160,6 +166,7 @@ Form.propTypes = {
   place: PropTypes.string.isRequired,
   buttonClassName: PropTypes.string,
   buttonText: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Form;

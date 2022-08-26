@@ -83,6 +83,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
             <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
+                id={'button-hero'}
                 onClick={handleModalOpen}
                 type="button"
                 className="mx-auto min-w-[280px] bg-orange-400 rounded-xl py-4 text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500 md:mx-0 md:w-[410px]"

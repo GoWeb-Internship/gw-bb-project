@@ -53,6 +53,7 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
           *{cost}
         </p>
         <Button
+          id={'signup-button'}
           onClick={handleModalOpen}
           className="bg-cyan-500 transition-colors duration-200 hover:bg-cyan-600 mx-auto py-4 rounded-xl text-xl w-[280px] md:w-[410px] "
         >

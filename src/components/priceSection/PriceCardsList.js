@@ -14,7 +14,7 @@ const PriceCardsList = ({ cardsList = [], className = '', onClick }) => {
         {!!cardsList.length &&
           cardsList.map(({ frontmatter }, id) => (
             <li key={`price-${id}`} className="lg:mr-[40px] lg:last:mr-0">
-              <PriceCard cardData={frontmatter} onClick={onClick} />
+              <PriceCard cardData={frontmatter} onClick={onClick} id={id} />
             </li>
           ))}
       </ul>

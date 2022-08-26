@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FiCalendar } from 'react-icons/fi';
 import { FiClock } from 'react-icons/fi';
 
-const PriceCard = ({ cardData, onClick, isActive }) => {
+const PriceCard = ({ cardData, onClick, isActive, id }) => {
   const { i18n, t } = useTranslation();
   const button = t('button', { returnObjects: true });
   const pageFormat = useContext(PageFormatContext);
@@ -55,6 +55,7 @@ const PriceCard = ({ cardData, onClick, isActive }) => {
         </p>
       </div>
       <button
+        id={`price-card-button-${id}`}
         onClick={handleClick}
         type="button"
         className="h-[56px] px-3 w-full flex justify-center items-center bg-orange-400 rounded-xl text-bb2024 text-slate-50 font-bold transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"

@@ -214,5 +214,10 @@
     ]
   },
   "linkGoBack": "Go back",
-  "phoneError": "Enter phone number"
+  "phoneError": "Enter phone number",
+  "seo": {
+    "title": "Be better today!",
+    "description": "I will teach you to live in high spirits without emotional burnouts",
+    "lang": "en"
+  }
 }
