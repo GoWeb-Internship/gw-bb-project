@@ -16,9 +16,9 @@ const gatsbyRequiredRules = path.join(
 module.exports = {
   siteMetadata: {
     title: `Be Better`,
-    description: `Some Description`,
+    description: `I will teach you to live in high spirits without emotional burnouts`,
     author: `GoWeb`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://dev--gw-bb-project.netlify.app/`,
   },
   plugins: [
     `gatsby-plugin-root-import`,
@@ -71,7 +71,7 @@ module.exports = {
         theme_color: `#ffffff`,
         background_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

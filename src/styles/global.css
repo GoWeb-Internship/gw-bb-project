@@ -40,7 +40,6 @@ body {
   color: #f8fafc;
   width: 100vw;
   overflow-x: hidden;
-  background-color: grey;
   cursor: default;
 }
 
@@ -160,15 +159,14 @@ body {
   );
 }
 
-.scrollbar::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 2px;
-  background-color: #00000001;
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 0.3;
 }
 
-.scrollbar::-webkit-scrollbar-thumb {
-  background-color: #ffffffdd;
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .non-active-link::after {
