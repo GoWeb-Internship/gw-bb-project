@@ -44,7 +44,7 @@ const Header = () => {
     document.body.style.overflow = '';
     setTimeout(() => {
       setRenderMenu(false);
-    }, 500 * 2);
+    }, 500 + 100);
   };
 
   const handleEscape = e => {
