@@ -167,8 +167,7 @@ body::-webkit-scrollbar {
   opacity: 0.3;
 }
 
-.scrollbar::-webkit-scrollbar-thumb,
-body::-webkit-scrollbar-thumb {
+.scrollbar::-webkit-scrollbar-thumb {
   background-color: #ffffffdd;
 }
 

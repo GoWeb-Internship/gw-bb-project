@@ -85,6 +85,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
           *{cost}
         </p>
         <Button
+          id={'footer-button'}
           onClick={handleModalOpen}
           className="bg-cyan-500 w-[280px] hover:bg-cyan-600 transition-colors mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 md:w-[410px] lg:mb-[70px]"
         >
