@@ -96,7 +96,6 @@ const Form = ({
         localStorage.removeItem('form');
       })
       .catch(error => {
-        console.log(error);
         toast.error(valid.toastError);
       });
   };

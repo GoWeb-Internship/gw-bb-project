@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
+import Seo from 'components/Seo';
 import Layout from 'components/Layout';
-import Seo2 from 'components/Seo2';
 import Hero from 'components/hero/Hero';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
@@ -21,54 +21,53 @@ import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 import StoriesSection from 'components/storiesSection/StoriesSection';
 import { ToastContainer } from 'react-toastify';
 
-// get API_KEYS
-// const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
-// KEYS must be started with GATSBY_
-
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
+
   const button = t('button', { returnObjects: true });
+  const seo = t('seo', { returnObjects: true });
 
   const { charity, sale, cost } = data.content.frontmatter;
 
   return (
-    <Layout saleText={sale} cost={cost} charity={charity}>
-      <Hero saleText={sale} cost={cost} />
-      <AboutSection />
-      <RoadMapSection />
-      <FeedbackSection />
-      <GuaranteeSection />
-      <WithCoachSection />
-      <PriceSection charity={charity} />
-      <ImportantResultsSection />
-      <StoriesSection />
-      <InLiveSection />
-      <SignUpSection saleText={sale} cost={cost} />
-      <ContactSection saleText={sale} cost={cost}>
-        <Form
-          place="section Contact"
-          buttonText={button.textBigButton}
-          buttonClassName="bg-orange-400 hover:bg-orange-500"
+    <>
+      <Seo title={seo.title} description={seo.description} lang={seo.lang} />
+      <Layout saleText={sale} cost={cost} charity={charity}>
+        <Hero saleText={sale} cost={cost} />
+        <AboutSection />
+        <RoadMapSection />
+        <FeedbackSection />
+        <GuaranteeSection />
+        <WithCoachSection />
+        <PriceSection charity={charity} />
+        <ImportantResultsSection />
+        <StoriesSection />
+        <InLiveSection />
+        <SignUpSection saleText={sale} cost={cost} />
+        <ContactSection saleText={sale} cost={cost}>
+          <Form
+            place="section Contact"
+            buttonText={button.textBigButton}
+            buttonClassName="bg-orange-400 hover:bg-orange-500"
+          />
+        </ContactSection>
+        <BeBetterToday />
+        <MyFormulaSection />
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
         />
-      </ContactSection>
-      <BeBetterToday />
-      <MyFormulaSection />
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-    </Layout>
+      </Layout>
+    </>
   );
 };
-
-export const Head = () => <Seo2 title="Home" />;
 
 export default IndexPage;
 

@@ -7,10 +7,17 @@ const PolicyPage = ({ data }) => {
   const title = data.mdx.frontmatter.policyTitle;
   const text = data.mdx.body;
 
-  return <Politic text={text} title={title} />;
+  return (
+    <>
+      <Seo
+        title={title}
+        description={title}
+        lang={data.locales.edges[0].node.language}
+      />
+      <Politic text={text} title={title} />
+    </>
+  );
 };
-
-export const Head = () => <Seo title="Policy" />;
 
 export default PolicyPage;
 

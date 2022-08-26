@@ -26,7 +26,7 @@ const ModalLeft = ({ bg, place, saleText, cost }) => {
           objectPosition="150px top"
         />
       )}
-      <div className=" md:mx-auto lg:mx-0">
+      <div className=" md:mx-auto lg:mx-0 lg:w-[450px]">
         <p className="md:w-[450px] font-main text-bb1422 font-bolt md:text-bb1625 mb-4">
           {sale.text}
           <span className="inline-block text-orange-400 mx-1">{saleText}</span>
