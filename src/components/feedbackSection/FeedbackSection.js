@@ -9,15 +9,19 @@ import Background2 from 'components/reusable/Background2';
 
 // import PropTypes from 'prop-types'
 
-const normalizeContentData = (content, images) => {
-  return content.map((item, id) => ({
-    ...item,
-    ...images[id].cloudinaryImg.childrenImageSharp[0],
-  }));
+const normalizeContentData = content => {
+  return content.map(({ frontmatter, cloudinaryImg, id }) => {
+    const data = {
+      content: frontmatter,
+      imageData: cloudinaryImg.childrenImageSharp[0].gatsbyImageData,
+      id,
+    };
+    return data;
+  });
 };
 
 const FeedbackSection = () => {
-  const { content, images, background } = useStaticQuery(graphql`
+  const { content, background } = useStaticQuery(graphql`
     query {
       content: allMdx(
         filter: { frontmatter: { fieldIdName: { eq: "feedbacks" } } }
@@ -33,13 +37,6 @@ const FeedbackSection = () => {
             enName
             imageUrl
           }
-          id
-        }
-      }
-      images: allMdx(
-        filter: { frontmatter: { fieldIdName: { eq: "feedbacks" } } }
-      ) {
-        nodes {
           id
           cloudinaryImg {
             childrenImageSharp {
@@ -57,7 +54,7 @@ const FeedbackSection = () => {
     }
   `);
 
-  const normalizedData = normalizeContentData(content.nodes, images.nodes);
+  const normalizedData = normalizeContentData(content.nodes);
 
   const { t } = useTranslation();
   return (

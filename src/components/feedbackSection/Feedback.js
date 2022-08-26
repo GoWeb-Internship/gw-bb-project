@@ -9,9 +9,9 @@ const Feedback = ({
 }) => {
   const { i18n } = useTranslation();
   return (
-    <div className="h-full lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
+    <div className="h-full overflow-y-auto scrollbar lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
       <div className="flex items-center mb-7">
-        <div className="shrink-0 w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden">
+        <div className="inline-flex w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden">
           {image && (
             <GatsbyImage
               image={image}
