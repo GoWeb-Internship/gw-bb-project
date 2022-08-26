@@ -19,6 +19,7 @@ import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 import StoriesSection from 'components/storiesSection/StoriesSection';
+import { ToastContainer } from 'react-toastify';
 
 // get API_KEYS
 // const KEY_FROM_ENV_EXAMPLE = process.env.GATSBY_TELEGRAM_BOT_ID
@@ -52,6 +53,17 @@ const IndexPage = ({ data }) => {
       </ContactSection>
       <BeBetterToday />
       <MyFormulaSection />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </Layout>
   );
 };

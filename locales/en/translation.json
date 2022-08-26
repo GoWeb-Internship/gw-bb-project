@@ -46,7 +46,10 @@
   "validation": {
     "required": "This is a required field",
     "email": "Enter your email in the format your@email.com",
-    "name": "Name must be at least 1 characters"
+    "emailValid": "Can only contain Latin characters",
+    "name": "Name must be at least 1 characters",
+    "toastSuccessful": "Data has been successfully submitted",
+    "toastError": "Something went wrong. Try again later."
   },
   "button": {
     "textBigButton": "Take the first step",
