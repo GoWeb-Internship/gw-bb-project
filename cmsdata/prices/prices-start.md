@@ -1,6 +1,6 @@
 ---
 fieldIdName: prices
-title: 'Start'
+title: 'Standart'
 id: '2'
 date: 2022-08-06T15:27:46.785Z
 recommended: true

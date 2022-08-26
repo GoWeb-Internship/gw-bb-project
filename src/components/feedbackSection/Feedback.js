@@ -11,12 +11,13 @@ const Feedback = ({
   return (
     <div className="h-full overflow-y-auto scrollbar lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
       <div className="flex items-center mb-7">
-        <div className="inline-flex w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden">
+        <div className="inline-flex w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden shrink-0">
           {image && (
             <GatsbyImage
               image={image}
               alt={content[`${i18n.language}Name`]}
-              className="max-w-full max-h-full z-0"
+              className="max-w-full max-h-full rounded-full overflow-hidden relative z-10"
+              imgClassName="rounded-full overflow-hidden flex"
             />
           )}
         </div>

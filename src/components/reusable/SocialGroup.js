@@ -14,7 +14,7 @@ const SocialGroup = ({ data = [], language, className }) => {
               className="py-3"
               href={href}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label={name[language]}
             >
               <Component className="w-6 h-6 duration-200 transition-transform hover:scale-110" />
