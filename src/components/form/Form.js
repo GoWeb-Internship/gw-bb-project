@@ -9,6 +9,7 @@ import InputPhone from './InputPhone';
 import { FiCheckSquare } from 'react-icons/fi';
 import { FiSquare } from 'react-icons/fi';
 import { ClientLocationContext } from 'context/ClientLocationContext';
+import { toast } from 'react-toastify';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -35,8 +36,22 @@ const Form = ({
   }, [checkbox]);
 
   const schema = yup.object({
-    name: yup.string().min(1, valid.name).required(valid.required),
-    email: yup.string().email(valid.email).required(valid.required),
+    name: yup
+      .string()
+      .min(1, valid.name)
+      .matches(
+        /[a-zA-ZА-Яа-яґҐЁёІіЇїЄє0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż_.]/,
+        valid.required,
+      )
+      .required(valid.required),
+    email: yup
+      .string()
+      .email(valid.email)
+      .matches(
+        /^[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż+_.]+[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż+_.-]+@[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż_.-]+$/,
+        valid.emailValid,
+      )
+      .required(valid.required),
     phone: yup.number().required(valid.required),
     isAgree: yup.boolean().default(false).oneOf([true], valid.required),
   });
@@ -75,10 +90,14 @@ const Form = ({
           sitelang: i18n.language,
         });
         sendMessage(message);
+        toast.success(valid.toastSuccessful);
         reset({ name: '', email: '', phone: '', isAgree: false });
+        setCheckbox(!checkbox);
         localStorage.removeItem('form');
       })
-      .catch(error => alert(error));
+      .catch(error => {
+        toast.error(valid.toastError);
+      });
   };
 
   return (
