@@ -63,6 +63,7 @@ const LangSwitcher = ({ className = '' }) => {
         onClick={handleClick}
       >
         <button
+          id={'lang-switcher-button'}
           type="button"
           className="flex items-center px-2 py-1 font-main text-bbBase font-medium transition-colors hover:text-slate-200 focus:text-slate-200"
         >

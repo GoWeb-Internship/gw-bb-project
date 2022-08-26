@@ -7,8 +7,8 @@ const Story = ({
 }) => {
   const { i18n } = useTranslation();
   return (
-    <div className="w-full h-full px-[38px] pt-8 pb-[42px] border-2 border-slate-50 rounded-[20px]">
-      <p className="mb-[23px] font-bold text-bb1625 md:text-bb2040 md:mb-[14px] lg:text-[24px] md:leading-none">
+    <div className="w-full h-full px-[24px] pt-8 pb-[42px] border-2 border-slate-50 rounded-[20px]">
+      <p className="mb-[23px] font-bold text-bb1440 md:text-bb2040 md:mb-[14px] lg:text-[24px] md:leading-none">
         {content[`${i18n.language}Name`]}
       </p>
       <p className="font-medium text-bb1424 md:text-bb2024">
