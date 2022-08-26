@@ -56,34 +56,36 @@ const Header = () => {
   const { nav } = t('header', { returnObjects: true });
 
   return (
-    <header
-      ref={headerRef}
-      className="fixed top-0 z-[2000] w-full bg-[#0891b2cc] shadow-bb1"
-    >
-      <Container className={'flex items-center py-3'}>
-        <Logo />
-        <HeaderNavigation
-          navConfig={nav}
-          className="hidden md:block ml-auto md:mr-6 lg:mr-12"
-          headerHeight={headerHeight}
-        />
-        <LangSwitcher className="ml-auto md:ml-0" />
-        <MobileMenuButtons
-          onClick={onOpen}
-          IconComponent={FiMenu}
-          disabled={renderMenu}
-          className={'md:hidden'}
-        />
-      </Container>
-      {isMobile && renderMenu && (
-        <MobileMenu
-          onClose={onClose}
-          showMenu={showMenu}
-          navConfig={nav}
-          headerHeight={headerHeight}
-        />
-      )}
-    </header>
+    <>
+      <header
+        ref={headerRef}
+        className="fixed top-0 z-[2000] w-full bg-cyan-600/90 shadow-bb1"
+      >
+        <Container className={'flex items-center py-3'}>
+          <Logo />
+          <HeaderNavigation
+            navConfig={nav}
+            className="hidden md:block ml-auto md:mr-6 lg:mr-12"
+            headerHeight={headerHeight}
+          />
+          <LangSwitcher className="ml-auto md:ml-0" />
+          <MobileMenuButtons
+            onClick={onOpen}
+            IconComponent={FiMenu}
+            disabled={renderMenu}
+            className={'md:hidden'}
+          />
+        </Container>
+        {isMobile && renderMenu && (
+          <MobileMenu
+            onClose={onClose}
+            showMenu={showMenu}
+            navConfig={nav}
+            headerHeight={headerHeight}
+          />
+        )}
+      </header>
+    </>
   );
 };
 
