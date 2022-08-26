@@ -17,7 +17,7 @@ const Feedback = ({
               image={image}
               alt={content[`${i18n.language}Name`]}
               className="max-w-full max-h-full"
-              imgClassName="overflow-hidden rounded-full"
+              imgClassName="rounded-full"
             />
           )}
         </div>
