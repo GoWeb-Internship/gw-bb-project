@@ -29,14 +29,6 @@ const Layout = ({ children, saleText, charity, cost }) => {
 
   return (
     <>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4T6PP6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-        }}
-      ></script>
       <ClientLocationContext.Provider value={clientLocation}>
         <PageFormatContext.Provider value={pageFormat}>
           <Header />
