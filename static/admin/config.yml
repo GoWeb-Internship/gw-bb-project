@@ -20,7 +20,7 @@ media_library:
           crop: scale
 collections:
   # Main page model
-  - label: 'Page'
+  - label: 'Главная страница'
     name: 'page'
     folder: 'cmsdata/main'
     slug: '{{fieldIdName}}-{{language}}'
@@ -42,14 +42,12 @@ collections:
           default: 'Main Page',
         }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
-      - { label: 'Prices Section Title', name: 'pricesTitle', widget: 'string' }
       - { label: 'Charity', name: 'charity', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown', required: false }
-      - { label: 'Image', name: 'imageUrl', widget: 'image', required: false }
       - { label: 'Sale', name: 'sale', widget: 'string' }
       - { label: 'Cost one session with sale', name: 'cost', widget: 'string' }
   # Content Images
-  - label: 'Content images'
+  - label: 'Контентные изображения'
     name: 'contentImages'
     folder: 'cmsdata/images'
     slug: '{{fieldIdName}}-{{title}}'
@@ -63,20 +61,27 @@ collections:
           widget: 'hidden',
           default: 'content-image',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          hint:
+            'Для удобства данное поле лучше называть по месту расположения
+            фотографии в секции',
+        }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - { label: 'Image', name: 'imageUrl', widget: 'image' }
-      - { label: 'Description [UK]', name: 'uk' }
-      - { label: 'Description [RU]', name: 'ru' }
-      - { label: 'Description [EN]', name: 'en' }
+      - { label: 'Описание фотографии [UK]', name: 'uk' }
+      - { label: 'Описание фотографии [RU]', name: 'ru' }
+      - { label: 'Описание фотографии [EN]', name: 'en' }
       - {
           label: 'Notes',
           name: 'body',
           widget: 'markdown',
           required: false,
           default:
-            'These markings are not displayed on the site. Description must
-            answer question: What is shown in the picture?',
+            'Описание фотографии должно отвечать на вопрос "Что изображено на
+            фотографии?"',
         }
   # Price cards model
   - label: 'Prices Cards'
@@ -97,22 +102,20 @@ collections:
       - { label: 'ID', name: 'id', widget: 'hidden' }
       - { label: 'Update Date', name: 'date', widget: 'datetime' }
       - {
-          label: 'Most recommended',
+          label: 'Рекоммендованный прайс',
           name: 'recommended',
           widget: boolean,
           default: false,
+          hint: 'Центральный пакет услуг, который рекоммендуется к выбору',
         }
-      - { label: 'Price, $', name: 'price', widget: 'number' }
-      - { label: 'Discount, $', name: 'discount', widget: 'number' }
-      - { label: 'Name [UK]', name: 'uk', widget: string }
-      - { label: 'Amount of month [UK]', name: 'ukMonth', widget: string }
-      - { label: 'Amount of sessions [UK]', name: 'ukSessions', widget: string }
-      - { label: 'Name [RU]', name: 'ru', widget: string }
-      - { label: 'Amount of month [RU]', name: 'ruMonth', widget: string }
-      - { label: 'Amount of sessions [RU]', name: 'ruSessions', widget: string }
-      - { label: 'Name [EN]', name: 'en', widget: string }
-      - { label: 'Amount of month [EN]', name: 'enMonth', widget: string }
-      - { label: 'Amount of sessions [EN]', name: 'enSessions', widget: string }
+      - { label: 'Цена, $', name: 'price', widget: 'number' }
+      - { label: 'Скидка, $', name: 'discount', widget: 'number' }
+      - { label: 'Длительность [UK]', name: 'ukMonth', widget: string }
+      - { label: 'Количество сессий [UK]', name: 'ukSessions', widget: string }
+      - { label: 'Длительность [RU]', name: 'ruMonth', widget: string }
+      - { label: 'Количество сессий [RU]', name: 'ruSessions', widget: string }
+      - { label: 'Длительность [EN]', name: 'enMonth', widget: string }
+      - { label: 'Количество сессий [EN]', name: 'enSessions', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Stories Model
   - label: 'Client stories'
@@ -129,14 +132,22 @@ collections:
           widget: 'hidden',
           default: 'stories',
         }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Update Date',
+          name: 'date',
+          widget: 'datetime',
+          hint:
+            'Истории отображаются на странице в порядке от более нового отзыва
+            до более старого, поэтому можно менять дату, чтобы установить
+            порядок располжения историй',
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Name / Position [UK]', name: 'ukName', widget: 'string' }
-      - { label: 'Story [UK]', name: 'uk', widget: string }
-      - { label: 'Name / Position [RU]', name: 'ruName', widget: 'string' }
-      - { label: 'Story [RU]', name: 'ru', widget: string }
-      - { label: 'Name / Position [EN]', name: 'enName', widget: 'string' }
-      - { label: 'Story [EN]', name: 'en', widget: string }
+      - { label: 'Имя [UK]', name: 'ukName', widget: 'string' }
+      - { label: 'История [UK]', name: 'uk', widget: string }
+      - { label: 'Имя [RU]', name: 'ruName', widget: 'string' }
+      - { label: 'История [RU]', name: 'ru', widget: string }
+      - { label: 'Имя [EN]', name: 'enName', widget: 'string' }
+      - { label: 'История [EN]', name: 'en', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Feedback Model
   - label: 'Client feedbacks'
@@ -153,18 +164,31 @@ collections:
           widget: 'hidden',
           default: 'feedbacks',
         }
-      - { label: 'Update Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Update Date',
+          name: 'date',
+          widget: 'datetime',
+          hint:
+            'Отзывы отображаются на странице в порядке от более нового отзыва до
+            более старого, поэтому можно менять дату, чтобы установить порядок
+            располжения отзывов',
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Name / Position [UK]', name: 'ukName', widget: 'string' }
-      - { label: 'Story [UK]', name: 'uk', widget: string }
-      - { label: 'Name / Position [RU]', name: 'ruName', widget: 'string' }
-      - { label: 'Story [RU]', name: 'ru', widget: string }
-      - { label: 'Name / Position [EN]', name: 'enName', widget: 'string' }
-      - { label: 'Story [EN]', name: 'en', widget: string }
-      - { label: 'Avatar', name: 'imageUrl', widget: image }
+      - { label: 'Имя [UK]', name: 'ukName', widget: 'string' }
+      - { label: 'Отзыв [UK]', name: 'uk', widget: 'string' }
+      - { label: 'Имя [RU]', name: 'ruName', widget: 'string' }
+      - { label: 'Отзыв [RU]', name: 'ru', widget: string }
+      - { label: 'Имя [EN]', name: 'enName', widget: 'string' }
+      - { label: 'Отзыв [EN]', name: 'en', widget: 'string' }
+      - {
+          label: 'Фотография',
+          name: 'imageUrl',
+          widget: image,
+          hint: 'Лучше сразу откадрировать в пропорцию 1 к 1 (квадрат)',
+        }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Offer Model
-  - label: 'Offer'
+  - label: 'Offer Page'
     name: 'offer policy'
     folder: 'cmsdata/offer'
     slug: '{{fieldIdName}}-{{language}}'
@@ -189,7 +213,7 @@ collections:
       - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
   #Policy Model
-  - label: 'Policy'
+  - label: 'Policy Page'
     name: 'policy'
     folder: 'cmsdata/policy'
     slug: '{{fieldIdName}}-{{title}}'
