@@ -51,7 +51,11 @@ const IndexPage = ({ data }) => {
           style={{ display: 'none', visibility: 'hidden' }}
         />
       </noscript>
-      <Seo title={seo.title} description={seo.description} lang={seo.lang} />
+      <Seo
+        title={seo.title}
+        description={seo.description}
+        lang={data.locales.edges[0].node.language}
+      />
       <Layout saleText={sale} cost={cost} charity={charity}>
         <Hero saleText={sale} cost={cost} />
         <AboutSection />

@@ -152,7 +152,7 @@ module.exports = {
         defaultLanguage: `uk`,
         generateDefaultLanguagePage: '/uk',
         redirect: true,
-        siteUrl: '',
+        siteUrl: 'https://dev--gw-bb-project.netlify.app',
 
         i18nextOptions: {
           interpolation: {
