@@ -151,7 +151,7 @@ const Form = ({
 
       <button
         id={'form-button'}
-        className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 disabled:bg-cyan-700 ${buttonClassName}`}
+        className={`mx-auto py-4 min-w-[280px] rounded-xl text-xl md:w-[410px] transition-colors duration-200 disabled:cursor-not-allowed disabled:bg-cyan-700 ${buttonClassName}`}
         type="submit"
         disabled={!checkbox && true}
       >
