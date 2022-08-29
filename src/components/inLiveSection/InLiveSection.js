@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 
 const InLiveSection = () => {
   const { t, i18n } = useTranslation();
@@ -35,7 +35,7 @@ const InLiveSection = () => {
   const imageAlt = data.photo.frontmatter[i18n.language];
   return (
     <Section>
-      <Background2 imageData={data.background} />
+      <Background imageData={data.background} />
       <div className="relative w-screen mx-auto pt-9 md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[126px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <TextContainer

@@ -73,6 +73,14 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://dev--gw-bb-project.netlify.app',
+        sitemap: 'https://dev--gw-bb-project.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
@@ -143,12 +151,10 @@ module.exports = {
         languages: [`uk`, `ru`, `en`],
         defaultLanguage: `uk`,
         generateDefaultLanguagePage: '/uk',
-        redirect: false,
+        redirect: true,
         siteUrl: '',
 
         i18nextOptions: {
-          lng: 'uk',
-          load: 'currentOnly',
           interpolation: {
             escapeValue: false,
           },

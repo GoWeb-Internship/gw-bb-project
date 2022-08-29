@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Section from 'components/reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import Button from 'components/reusable/Button';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -42,7 +42,7 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
   return (
     <Section>
       <Container className="pt-[20px] pb-[62px] md:pb-[62px] md:pt-[20px]">
-        <Background2 imageData={data.background} />
+        <Background imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
         <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2040 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
           {sale.text}

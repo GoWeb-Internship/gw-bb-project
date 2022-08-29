@@ -5,7 +5,7 @@ import ImageContent from 'components/reusable/ImageContent';
 import List from 'components/reusable/List';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 
 const AboutSection = () => {
   const { t, i18n } = useTranslation();
@@ -54,7 +54,7 @@ const AboutSection = () => {
 
   return (
     <Section id="about">
-      <Background2 imageData={data.background} />
+      <Background imageData={data.background} />
       <div className="relative w-screen mx-auto pt-10 md:pt-[48px] md:pb-[34px] lg:py-32 md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <TextContainer

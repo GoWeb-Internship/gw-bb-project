@@ -4,7 +4,7 @@ import { PageFormatContext } from 'context/PageFormatContext';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import Section from '../reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import Container from '../reusable/Container';
 import video from '../../video/sea.mp4';
 
@@ -47,7 +47,7 @@ const GuaranteeSection = () => {
             </div>
           ) : (
             <>
-              <Background2 imageData={imageData.bg} />
+              <Background imageData={imageData.bg} />
               <Container>
                 <div className="pt-9 pb-28 md:pt-20 md:pb-[90px] md:text-center">
                   <h2 className="mb-6 text-center md:mb-12">

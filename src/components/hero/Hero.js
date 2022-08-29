@@ -6,7 +6,7 @@ import Button from 'components/reusable/Button';
 import SocialGroup from 'components/reusable/SocialGroup';
 import { getSocialData } from 'data/social/social';
 import Section from '../reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import Container from '../reusable/Container';
 import HeroDataTitle from './HeroDataTitle';
 import HeroListExperiences from './HeroListExperiences';
@@ -72,10 +72,10 @@ const Hero = ({ saleText = '', cost = '' }) => {
   return (
     <Section id={'home'} className={'bg-cyan-600 z-0'}>
       <div className={'hidden lg:block'}>
-        <Background2 imageData={bgDesk} />
+        <Background imageData={bgDesk} />
       </div>
       <div className={'lg:hidden'}>
-        <Background2 imageData={bg} />
+        <Background imageData={bg} />
       </div>
       <Container>
         <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
