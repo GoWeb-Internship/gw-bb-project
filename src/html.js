@@ -17,7 +17,7 @@ export default function HTML(props) {
             __html: `!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '5209032532528271'); fbq('track', 'PageView')`,
           }}
         />
-        <noscript>
+        {/* <noscript>
           <img
             height="1"
             width="1"
@@ -27,7 +27,7 @@ export default function HTML(props) {
             src="https://www.facebook.com/tr?id=5209032532528271&ev=PageView&noscript=1"
             alt=""
           />
-        </noscript>
+        </noscript> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function (w, d, s, l, i) {w[l] = w[l] || [];
@@ -44,7 +44,7 @@ fbq('track', 'PageView');`,
         />
       </head>
       <body {...props.bodyAttributes}>
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W4T6PP6"
             height="0"
@@ -52,7 +52,7 @@ fbq('track', 'PageView');`,
             title="googletagmanager"
             style={{ display: 'none', visibility: 'hidden' }}
           />
-        </noscript>
+        </noscript> */}
         {props.preBodyComponents}
         <div
           key={`body`}
