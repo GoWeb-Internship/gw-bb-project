@@ -49,7 +49,7 @@ const PriceCard = ({ cardData, onClick, isActive, id }) => {
           <span>{cardData[`${i18n.language}Month`]}</span>
         </p>
         <p className="flex mb-10 md:mb-[50px] font-bold text-bb1625 ">
-          <FiClock size={20} className="mr-[22px]" />
+          <FiClock size={20} className="mr-[14px] md:mr-[22px]" />
 
           <span>{cardData[`${i18n.language}Sessions`]}</span>
         </p>
