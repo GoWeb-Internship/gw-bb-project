@@ -3,7 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from 'components/reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import Form from 'components/form/Form';
 import Container from 'components/reusable/Container';
 
@@ -21,7 +21,7 @@ const ContactSection = ({ saleText = '', cost = '', children }) => {
   `);
   return (
     <Section id="contacts">
-      <Background2 objectPosition="right bottom" imageData={data.background} />
+      <Background objectPosition="right bottom" imageData={data.background} />
       <Container className="pt-9 pb-[72px] md:flex md:justify-center lg:justify-end md:pt-[96px] md:pb-[104px]">
         <h2 className="visually-hidden">Contacts</h2>
         <div className="bg-none md:bg-slate-50/[.3] md:rounded-[20px] md:w-[602px] md:h-[707px] md:px-[74px] md:py-[109px]">

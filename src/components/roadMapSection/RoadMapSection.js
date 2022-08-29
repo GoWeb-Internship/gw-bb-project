@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Section from '../reusable/Section';
 import Container from '../reusable/Container';
 import RoadMapList from './RoadMapList';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
 
 const RoadMapSection = () => {
@@ -25,7 +25,7 @@ const RoadMapSection = () => {
 
   return (
     <Section>
-      <Background2 imageData={background} />
+      <Background imageData={background} />
       <Container className="pt-9 pb-[72px] md:pt-20 md:pb-20 lg:pt-[124px] lg:pb-[133px]">
         <h2 className="text-center mx-auto text-bb2830 mb-6 md:max-w-[700px] md:mb-[48px] lg:max-w-[920px]">
           {title}

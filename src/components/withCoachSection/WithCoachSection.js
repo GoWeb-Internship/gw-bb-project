@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Section from 'components/reusable/Section';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 
@@ -38,7 +38,7 @@ const WithCoachSection = () => {
 
   return (
     <Section>
-      <Background2 imageData={data.background} objectPosition="center" />
+      <Background imageData={data.background} objectPosition="center" />
       <div className="relative w-screen mx-auto pt-10 md:w-[768px] md:py-[80px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px] lg:flex lg:flex-row lg:justify-between">
         <TextContainer
           title={withCoach.title}

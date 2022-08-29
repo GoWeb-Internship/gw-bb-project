@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Background2 from 'components/reusable/Background2';
+import Background from 'components/reusable/Background';
 import Form from 'components/form/Form';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageFormatContext } from 'context/PageFormatContext';
@@ -14,13 +14,13 @@ const ModalRight = ({ bg, place }) => {
   return (
     <div className="overflow-y-auto py-[42px] px-[20px] w-[320px] h-full md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:flex lg:justify-end lg:pt-[60px] lg:pr-[96px] lg:pb-[48px]">
       {pageFormat === 'desktop' ? (
-        <Background2
+        <Background
           className="h-full w-full lg:w-[934px]"
           imageData={bg}
           objectPosition="center top"
         />
       ) : (
-        <Background2
+        <Background
           className="h-full w-full lg:w-[934px]"
           imageData={bg}
           objectPosition="-250px top"

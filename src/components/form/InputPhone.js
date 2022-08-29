@@ -35,7 +35,7 @@ const InputPhone = ({ control, errors, language, country }) => {
           />
         )}
       />
-      <p className="px-5 text-[#ffa2a2] text-xs">
+      <p className="px-5 text-slate-100 text-xs">
         {errors.phone?.message && <span>{t('phoneError')}</span>}
       </p>
     </div>
