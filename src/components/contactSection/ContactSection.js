@@ -14,7 +14,7 @@ const ContactSection = ({ saleText = '', cost = '', children }) => {
     query {
       background: file(name: { eq: "fon-contacts" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }
