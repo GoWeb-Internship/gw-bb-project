@@ -26,7 +26,7 @@ const InLiveSection = () => {
       }
       background: file(name: { eq: "fon-in-live-1" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

@@ -36,7 +36,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
         publicURL
         childImageSharp {
           id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       bg: file(name: { eq: "hero" }) {
@@ -44,12 +44,12 @@ const Hero = ({ saleText = '', cost = '' }) => {
         publicURL
         childImageSharp {
           id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       bgForm: file(name: { eq: "fon-form1" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       contacts: mdx(frontmatter: { fieldIdName: { eq: "contacts" } }) {

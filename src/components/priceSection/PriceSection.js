@@ -31,7 +31,7 @@ const PriceSection = ({ charity = '' }) => {
       background: file(name: { eq: "price-bg" }) {
         childImageSharp {
           id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       cardsList: allMdx(

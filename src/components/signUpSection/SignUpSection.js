@@ -28,12 +28,12 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
     query {
       background: file(name: { eq: "sand" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       bgForm: file(name: { eq: "fon-form2" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

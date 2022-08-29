@@ -191,3 +191,10 @@ body::-webkit-scrollbar-thumb {
     opacity: 1;
   }
 }
+
+.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
