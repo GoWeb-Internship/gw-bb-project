@@ -15,8 +15,7 @@ const RoadMapSection = () => {
         id
         publicURL
         childImageSharp {
-          id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

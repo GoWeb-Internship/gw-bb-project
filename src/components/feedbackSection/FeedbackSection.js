@@ -47,8 +47,7 @@ const FeedbackSection = () => {
       }
       background: file(name: { eq: "bg-feedback" }) {
         childImageSharp {
-          id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

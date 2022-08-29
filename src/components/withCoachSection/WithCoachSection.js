@@ -15,8 +15,7 @@ const WithCoachSection = () => {
         id
         publicURL
         childImageSharp {
-          id
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
       photo: mdx(frontmatter: { title: { eq: "coach" } }) {

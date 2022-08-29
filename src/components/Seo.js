@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import image from 'images/seo.png';
 
-const Seo = ({ description = '', lang = 'en', meta = [], title }) => {
+const Seo = ({ description = '', lang = '', meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {

@@ -5,9 +5,9 @@ import { FiCalendar } from 'react-icons/fi';
 import { FiClock } from 'react-icons/fi';
 
 const PriceCard = ({ cardData, onClick, isActive, id }) => {
+  const pageFormat = useContext(PageFormatContext);
   const { i18n, t } = useTranslation();
   const button = t('button', { returnObjects: true });
-  const pageFormat = useContext(PageFormatContext);
 
   const handleClick = () => {
     onClick(cardData[i18n.language]);

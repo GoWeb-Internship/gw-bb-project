@@ -39,7 +39,7 @@ const AboutSection = () => {
       }
       background: file(name: { eq: "about-1" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }

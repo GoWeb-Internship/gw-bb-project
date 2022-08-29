@@ -14,7 +14,7 @@ const Politic = ({ title, text }) => {
     query {
       background: file(name: { eq: "policy" }) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
     }
