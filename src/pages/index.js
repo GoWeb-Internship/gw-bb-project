@@ -31,6 +31,26 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{
+            display: 'none',
+          }}
+          src="https://www.facebook.com/tr?id=5209032532528271&ev=PageView&noscript=1"
+          alt=""
+        />
+      </noscript>
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-W4T6PP6"
+          height="0"
+          width="0"
+          title="googletagmanager"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
       <Seo title={seo.title} description={seo.description} lang={seo.lang} />
       <Layout saleText={sale} cost={cost} charity={charity}>
         <Hero saleText={sale} cost={cost} />

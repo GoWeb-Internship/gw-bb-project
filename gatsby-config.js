@@ -66,7 +66,7 @@ module.exports = {
       options: {
         name: `Be Better`,
         short_name: `Be Better`,
-        lang: 'en',
+        lang: 'uk',
         start_url: `/`,
         theme_color: `#ffffff`,
         background_color: `#ffffff`,
