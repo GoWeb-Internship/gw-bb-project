@@ -9,8 +9,6 @@ const Background2 = ({
 }) => {
   const image = getImage(imageData.childImageSharp.gatsbyImageData);
 
-  console.log(image);
-
   return (
     <GatsbyImage
       image={image}
@@ -18,9 +16,6 @@ const Background2 = ({
       className={`${className} -z-10 top-0 left-1/2 -translate-x-1/2 max-h-full mx-auto w-[1440px]`}
       style={{ position: 'absolute' }}
       objectPosition={objectPosition}
-      src={image.images.fallback.src}
-      srcSet={image.images.fallback.srcset}
-      // breakpoints={[768, 1440]}
     />
   );
 };
