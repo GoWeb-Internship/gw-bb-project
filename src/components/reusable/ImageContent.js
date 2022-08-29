@@ -17,6 +17,8 @@ const ImageContext = ({
         alt={imageAlt}
         className={`${width} ${height}`}
         imgClassName={imgClassName}
+        src=""
+        srcSet=""
       />
     </div>
   );

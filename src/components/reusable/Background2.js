@@ -17,6 +17,7 @@ const Background2 = ({
       style={{ position: 'absolute' }}
       objectPosition={objectPosition}
       // breakpoints={[768, 1440]}
+      srcSet=""
     />
   );
 };
