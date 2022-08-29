@@ -605,4 +605,6 @@ media_library:
           crop: scale
 ```
 
----
+**Подключение Google Analytics, Pixel, Google Tag Manager**
+
+## [Инструкция по подключению](https://docs.google.com/document/d/1ELzBDKMTB0jVmjzQlmCsGSzoLYb09oFo0YP_k14_M0Y/)
