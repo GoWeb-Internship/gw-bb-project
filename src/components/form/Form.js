@@ -1,5 +1,6 @@
 import React, { useState, useCallback, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
@@ -150,7 +151,9 @@ const Form = ({
           <FiSquare className="relative w-6 h-6 mr-[25px]" />
         )}
 
-        {formData.checkbox}
+        <Link to="policy" href="" className="hover:underline focus:underline">
+          {formData.checkbox}
+        </Link>
       </label>
 
       <button
