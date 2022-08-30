@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import image from 'images/seo.png';
 
-const Seo = ({ description = '', lang = '', meta = [], title }) => {
+const Seo = ({ description = '', lang = 'uk', meta = [], title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,9 +24,9 @@ const Seo = ({ description = '', lang = '', meta = [], title }) => {
   const defaultTitle = site.siteMetadata?.title;
   return (
     <Helmet
-      // htmlAttributes={{
-      //   lang,
-      // }}
+      htmlAttributes={{
+        lang,
+      }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
