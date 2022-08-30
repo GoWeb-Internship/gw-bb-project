@@ -117,7 +117,9 @@ const Form = ({
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
-        <p className="px-5 text-slate-100 text-xs">{errors.name?.message}</p>
+        <p className="px-5 text-slate-100 font-normal text-xs">
+          {errors.name?.message}
+        </p>
       </div>
       <div className="mb-4 h-[69px]">
         <input
@@ -125,7 +127,9 @@ const Form = ({
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
-        <p className="px-5 text-slate-100 text-xs">{errors.email?.message}</p>
+        <p className="px-5 text-slate-100 font-normal text-xs">
+          {errors.email?.message}
+        </p>
       </div>
       <InputPhone
         control={control}
@@ -134,7 +138,7 @@ const Form = ({
         country={clientLocation || 'ua'}
       />
 
-      <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center">
+      <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center lg:whitespace-nowrap">
         <input
           type="checkbox"
           {...register('isAgree')}

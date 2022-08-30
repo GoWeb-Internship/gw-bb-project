@@ -180,12 +180,5 @@ module.exports = {
         exclude: ['node_modules', 'bower_components', '.cache', 'public'],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`inter\:300,400,500,600,700`, `ubuntu\:500,700`],
-        display: 'swap',
-      },
-    },
   ],
 };
