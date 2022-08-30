@@ -195,6 +195,6 @@ body::-webkit-scrollbar-thumb {
 .clamp-lines {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 12;
+  -webkit-line-clamp: 10;
   overflow: hidden;
 }

@@ -2,14 +2,24 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import ReadMoreButton from 'components/reusable/ReadMoreButton';
+import { useReadMore } from 'hooks/useReadMore';
+
+const TEXT_LIMIT = 240;
 
 const Feedback = ({
   content = { uk: '', ukName: '', ru: '', ruName: '', en: '', enName: '' },
   image,
 }) => {
   const { i18n } = useTranslation();
+
+  const { text, toggleText, showAllText, showReadMore } = useReadMore(
+    content[i18n.language],
+    TEXT_LIMIT,
+  );
+
   return (
-    <div className="h-full overflow-y-auto lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
+    <div className="h-full lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
       <div className="flex items-center mb-7">
         <div className="inline-flex w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden shrink-0">
           {image && (
@@ -25,9 +35,14 @@ const Feedback = ({
           {content[`${i18n.language}Name`]}
         </p>
       </div>
-      <p className="font-medium text-bb1225 md:text-bb2024">
-        {content[i18n.language]}
-      </p>
+      <p className="font-medium text-bb1225 md:text-bb2024">{text}</p>
+      {showReadMore && (
+        <ReadMoreButton
+          onClick={toggleText}
+          showAllText={showAllText}
+          className={'mt-2'}
+        />
+      )}
     </div>
   );
 };
