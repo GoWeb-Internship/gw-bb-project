@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import MyFormulaList from './MyFormulaList';
 import Section from '../reusable/Section';
+import Background from 'components/reusable/Background';
+import { graphql, useStaticQuery } from 'gatsby';
 import { PageFormatContext } from 'context/PageFormatContext';
 
 const MyFormulaSection = () => {
@@ -11,9 +13,23 @@ const MyFormulaSection = () => {
   });
   const pageFormat = useContext(PageFormatContext);
 
+  const imageData = useStaticQuery(graphql`
+    query {
+      bg: file(name: { eq: "formula" }) {
+        id
+        publicURL
+        childImageSharp {
+          id
+          gatsbyImageData
+        }
+      }
+    }
+  `);
+
   return pageFormat === 'mobile' ? null : (
     <Section>
-      <div className="bg-orange-300 pt-9 pb-[72px] mx-auto my-0 h-full md:py-20 md:px-[34px] lg:pt-[124px] lg:pb-[64px] lg:px-[190px] text-slate-50 lg:w-[1440px]">
+      <Background imageData={imageData.bg} objectPosition="center" />
+      <div className="pt-9 pb-[72px] mx-auto my-0 h-full md:py-20 md:px-[34px] lg:pt-[124px] lg:pb-[64px] lg:px-[190px] text-slate-50 lg:w-[1440px]">
         <h2 className="mb-6 md:mb-8 lg:mb-14 text-center">{myFormula.title}</h2>
         <MyFormulaList data={myFormula} />
       </div>
