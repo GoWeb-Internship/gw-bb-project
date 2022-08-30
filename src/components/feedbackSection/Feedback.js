@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import ReadMoreButton from 'components/reusable/ReadMoreButton';
 import { useReadMore } from 'hooks/useReadMore';
 
-const TEXT_LIMIT = 240;
+const TEXT_LIMIT = 280;
 
 const Feedback = ({
   content = { uk: '', ukName: '', ru: '', ruName: '', en: '', enName: '' },

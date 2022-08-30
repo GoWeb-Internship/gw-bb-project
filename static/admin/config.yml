@@ -84,7 +84,7 @@ collections:
             фотографии?"',
         }
   # Price cards model
-  - label: 'Prices Cards'
+  - label: 'Цены'
     name: 'pricesCards'
     folder: 'cmsdata/prices'
     slug: '{{fieldIdName}}-{{title}}'
@@ -118,7 +118,7 @@ collections:
       - { label: 'Количество сессий [EN]', name: 'enSessions', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Stories Model
-  - label: 'Client stories'
+  - label: 'Истории клиентов'
     name: 'stories'
     folder: 'cmsdata/stories'
     slug: '{{fieldIdName}}-{{title}}'
@@ -150,7 +150,7 @@ collections:
       - { label: 'История [EN]', name: 'en', widget: string }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Feedback Model
-  - label: 'Client feedbacks'
+  - label: 'Отзывы клиентов'
     name: 'feedbacks'
     folder: 'cmsdata/feedbacks'
     slug: '{{fieldIdName}}-{{title}}'
@@ -188,7 +188,7 @@ collections:
         }
       - { label: 'Notes', name: 'body', widget: 'markdown', required: false }
   # Offer Model
-  - label: 'Offer Page'
+  - label: 'Публичная оферта'
     name: 'offer policy'
     folder: 'cmsdata/offer'
     slug: '{{fieldIdName}}-{{language}}'
@@ -213,7 +213,7 @@ collections:
       - { label: 'Offer policy title', name: 'offerTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
   #Policy Model
-  - label: 'Policy Page'
+  - label: 'Политика конфиденциальности'
     name: 'policy'
     folder: 'cmsdata/policy'
     slug: '{{fieldIdName}}-{{title}}'
@@ -238,7 +238,7 @@ collections:
       - { label: 'Policy title', name: 'policyTitle', widget: 'string' }
       - { label: 'Content', name: 'body', widget: 'markdown' }
   #Contacts
-  - label: 'Contacts'
+  - label: 'Контакты'
     name: 'contacts'
     folder: 'cmsdata/contacts'
     slug: '{{fieldIdName}}'

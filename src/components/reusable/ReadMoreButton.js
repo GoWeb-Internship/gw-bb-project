@@ -10,7 +10,7 @@ const ReadMoreButton = ({ onClick, showAllText, className }) => {
     <button
       type="button"
       onClick={onClick}
-      className={`${className} ml-auto font-bb1424 px-2 py-1 underline`}
+      className={`${className} ml-auto font-bb1424 py-1 underline`}
     >
       {showAllText ? less : more}
     </button>
