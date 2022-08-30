@@ -223,5 +223,13 @@
   "readMoreBtn": {
     "more": "Read more",
     "less": "Hide"
+  },
+  "notFoundPage": {
+    "title": "The page was not found (404)",
+    "button": "Back to the main page",
+    "par": "The requested page was not found",
+    "redirectMsg": "You will be automatically redirected to the home page via",
+    "timer": "seconds",
+    "redirectStatus": "redirecting"
   }
 }
