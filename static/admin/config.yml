@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: GoWeb-Internship/gw-bb-project
-  branch: dev
+  branch: test
 media_folder: static/assets
 public_folder: /assets
 slug:
