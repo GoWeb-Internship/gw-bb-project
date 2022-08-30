@@ -219,5 +219,9 @@
     "title": "Be better today!",
     "description": "I will teach you to live in high spirits without emotional burnouts",
     "lang": "en"
+  },
+  "readMoreBtn": {
+    "more": "Read more",
+    "less": "Hide"
   }
 }

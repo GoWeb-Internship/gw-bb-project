@@ -18,7 +18,7 @@ const FeedbackList = ({ data = [], className = '' }) => {
         data.map(({ content, imageData, id }) => (
           <SwiperSlide
             key={id}
-            className="slide h-auto max-h-[550px] mx-[20px] slider-item-width sm:max-w-[380px] md:max-w-[510px]"
+            className="slide h-auto mx-[20px] slider-item-width sm:max-w-[380px] md:max-w-[510px]"
           >
             <Feedback content={content} image={imageData} />
           </SwiperSlide>
