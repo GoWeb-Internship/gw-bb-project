@@ -6,6 +6,7 @@
 
 // You can delete this file if you're not using it
 
+import './src/assets/fonts/stylesheet.css';
 import 'modern-normalize/modern-normalize.css';
 import './src/styles/global.css';
 import 'react-phone-input-2/lib/bootstrap.css';

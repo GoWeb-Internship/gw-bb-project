@@ -112,12 +112,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
-      },
-    },
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
@@ -133,7 +128,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true,
+        printRejected: false,
         develop: true,
         tailwind: true,
         ignore: [
