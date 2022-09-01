@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Script } from 'gatsby';
 
 import image from 'images/seo.png';
 
@@ -70,6 +70,20 @@ const Seo = ({ description = '', lang = 'uk', meta = [], title }) => {
     >
       <title>{title}</title>
       {/* <link href={stylesheet} rel="stylesheet" /> */}
+      <Script
+        id="facebookpixel"
+        strategy="post-hydrate"
+        dangerouslySetInnerHTML={{
+          __html: `!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '5209032532528271'); fbq('track', 'PageView')`,
+        }}
+      />
+      <Script
+        id="googletagmanager"
+        strategy="post-hydrate"
+        dangerouslySetInnerHTML={{
+          __html: `(function (w, d, s, l, i) {w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0]; j = d.createElement(s); dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-W4T6PP6'); fbq('track', 'PageView');`,
+        }}
+      />
     </Helmet>
   );
 };
