@@ -44,7 +44,7 @@ const WithCoachSection = () => {
           title={withCoach.title}
           text={withCoach.text}
           titlePosition="text-center lg:text-start"
-          className="max-w-sm(384px) px-[20px] md:px-[35px] mb-[64px] lg:mt-0 lg:w-3/5 lg:pl-20 lg:mr-[149px]"
+          className="max-w-[480px] mx-auto px-[20px] md:px-[35px] mb-[64px] md:max-w-[720px] lg:max-w-full lg:mt-0 lg:w-3/5 lg:pl-20 lg:mr-[149px] lg:mb-0 lg:mx-0"
         />
         <ImageContent
           imageData={imageData}
