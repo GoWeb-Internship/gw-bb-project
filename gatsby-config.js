@@ -21,6 +21,7 @@ module.exports = {
     siteUrl: `https://dev--gw-bb-project.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-source-cloudinary`,

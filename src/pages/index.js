@@ -16,7 +16,7 @@ import PriceSection from 'components/priceSection/PriceSection';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
-import ContactSection from 'components/contactSection/ContactSection';
+// import ContactSection from 'components/contactSection/ContactSection';
 // import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
@@ -56,9 +56,9 @@ const Scripts = loadable(() => import('components/scripts/Scripts'));
 // const LazySignUpSection = loadable(() =>
 //   import('components/signUpSection/SignUpSection'),
 // );
-// const LazyContactSection = loadable(() =>
-//   import('components/contactSection/ContactSection'),
-// );
+const ContactSection = loadable(() =>
+  import('components/contactSection/ContactSection'),
+);
 const Form = loadable(() => import('components/form/Form'));
 // const LazyBeBetterToday = loadable(() =>
 //   import('components/beBetterToday/BeBetterToday'),
