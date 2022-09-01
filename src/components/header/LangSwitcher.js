@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { useI18next, Link } from 'gatsby-plugin-react-i18next';
+import { useI18next, Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { FiChevronDown } from 'react-icons/fi';
 
@@ -16,6 +16,10 @@ const LangSwitcher = ({ className = '' }) => {
   const [pointerEvents, setPointerEvents] = useState('pointer-events-none');
   const [rotate, setRotate] = useState('rotate-0');
   const [fill, setFill] = useState('stroke-slate-50');
+
+  const { t } = useTranslation();
+
+  const { langSwitcher } = t('aria', { returnObjects: true });
 
   // this handler show language selector list
 
@@ -55,6 +59,7 @@ const LangSwitcher = ({ className = '' }) => {
         onClick={handleClick}
       >
         <button
+          aria-label={langSwitcher}
           id={'lang-switcher-button'}
           type="button"
           className="flex items-center px-2 py-1 font-main text-bbBase font-medium transition-colors hover:text-slate-200 focus:text-slate-200"
