@@ -37,6 +37,18 @@ const AboutSection = () => {
           uk
         }
       }
+      photo3: mdx(frontmatter: { title: { eq: "about2Mob" } }) {
+        cloudinaryImg {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+        frontmatter {
+          en
+          ru
+          uk
+        }
+      }
       background: file(name: { eq: "about-1" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
@@ -51,6 +63,8 @@ const AboutSection = () => {
   const imageData2 =
     data.photo2?.cloudinaryImg.childImageSharp.gatsbyImageData ?? {};
   const imageAlt2 = data.photo2?.frontmatter[i18n.language];
+  const imageData3 =
+    data.photo3?.cloudinaryImg.childImageSharp.gatsbyImageData ?? {};
 
   return (
     <Section id="about">
@@ -81,11 +95,17 @@ const AboutSection = () => {
             <List items={about.items} />
           </div>
           <ImageContent
+            imageData={imageData3}
+            imageAlt={imageAlt2}
+            className="md:hidden lg:rounded-r-[20px]"
+            height="h-[320px]"
+          />
+          <ImageContent
             imageData={imageData2}
             imageAlt={imageAlt2}
-            className="lg:rounded-r-[20px]"
+            className="hidden md:block lg:rounded-r-[20px]"
             width="lg:w-[701px]"
-            height="h-[320px] lg:h-[309px]"
+            height="lg:h-[309px]"
           />
         </div>
       </div>
