@@ -9,7 +9,7 @@ const Logo = ({ onClick, onFooter = false }) => {
 
   const { topLink } = t('aria', { returnObjects: true });
 
-  const sizes = onFooter ? 'w-[96px] h-[56px]' : 'w-[84px] h-[48px]';
+  const sizes = onFooter ? 'w-[96px] h-[56px]' : 'w-[84px] h-[49px]';
   return (
     <Link
       to={'home'}
