@@ -7,10 +7,10 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { getTelegramMessage, sendMessage } from 'services/telegramApi';
 import useFormPersist from 'react-hook-form-persist'; // Библиотека для записи данных из формы в LocalStorage
 import InputPhone from './InputPhone';
-import { FiCheckSquare } from 'react-icons/fi';
 import { FiSquare } from 'react-icons/fi';
 import { ClientLocationContext } from 'context/ClientLocationContext';
-import { toast } from 'react-toastify';
+import { FiX, FiCheckSquare, FiAlertTriangle } from 'react-icons/fi';
+import toast from 'react-hot-toast';
 import * as yup from 'yup';
 
 const isBrowser = typeof window !== 'undefined';
@@ -20,6 +20,31 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
+
+const notify = (data, success) =>
+  toast.custom(t => (
+    <div
+      className={`${t.visible ? 'fade-in' : 'fade-out'} max-w-md w-full ${
+        success ? ' bg-cyan-500' : 'bg-orange-400'
+      } shadow-lg rounded-xl pointer-events-auto`}
+    >
+      <div className="flex p-4 text-slate-50 items-center">
+        {success ? (
+          <FiCheckSquare className="w-[24px] h-[24px] duration-200 transition-transform hover:scale-110 flex-shrink-0" />
+        ) : (
+          <FiAlertTriangle className="w-[24px] h-[24px] duration-200 transition-transform hover:scale-110 flex-shrink-0" />
+        )}
+        <p className="text-bb2030 ml-4">{data}</p>
+        <button
+          onClick={() => toast.remove(t.id)}
+          aria-label="Close"
+          className="absolute top-[20px] right-[20px] md:top-[20px] md:right-[20px]"
+        >
+          <FiX className="w-[24px] h-[24px] duration-200 transition-transform hover:scale-110" />
+        </button>
+      </div>
+    </div>
+  ));
 
 const Form = ({
   place,
@@ -49,7 +74,7 @@ const Form = ({
       .string()
       .email(valid.email)
       .matches(
-        /^[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż+_.]+[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż+_.-]+@[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż_.-]+$/,
+        /^[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż.]{1}[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż._-]{1,}[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż.]{1}@[a-zA-Z0-9zñáéíóúüŁłĄąĘęŃńÓóŹźŻż.-]+.[a-zA-Z]{2,4}$/,
         valid.emailValid,
       )
       .required(valid.required),
@@ -91,13 +116,13 @@ const Form = ({
           sitelang: i18n.language,
         });
         sendMessage(message);
-        toast.success(valid.toastSuccessful);
+        notify(valid.toastSuccessful, 'success');
         reset({ name: '', email: '', phone: '', isAgree: false });
         setCheckbox(!checkbox);
         localStorage.removeItem('form');
       })
       .catch(error => {
-        toast.error(valid.toastError);
+        notify(valid.toastError);
       });
   };
 
@@ -111,23 +136,23 @@ const Form = ({
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <div className="mb-4 h-[69px]">
+      <div className="mb-5 h-[74px]">
         <input
           placeholder={formData.inputName.name}
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('name')}
         />
-        <p className="px-5 text-slate-100 font-normal text-xs">
+        <p className="px-5 mt-1 text-slate-100 font-normal text-xs">
           {errors.name?.message}
         </p>
       </div>
-      <div className="mb-4 h-[69px]">
+      <div className="mb-5 h-[74px]">
         <input
           placeholder={formData.inputEmail.name}
           className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
           {...register('email')}
         />
-        <p className="px-5 text-slate-100 font-normal text-xs">
+        <p className="px-5 mt-1 text-slate-100 font-normal text-xs">
           {errors.email?.message}
         </p>
       </div>
@@ -138,7 +163,7 @@ const Form = ({
         country={clientLocation || 'ua'}
       />
 
-      <label className="mb-12 font-main text-bb1424 font-light flex justify-items-center lg:whitespace-nowrap">
+      <label className="mb-10 font-main text-bb1424 font-light flex justify-items-center lg:whitespace-nowrap cursor-pointer">
         <input
           type="checkbox"
           {...register('isAgree')}
@@ -150,10 +175,16 @@ const Form = ({
         ) : (
           <FiSquare className="relative w-6 h-6 mr-[25px]" />
         )}
-
-        <Link to="policy" href="" className="hover:underline focus:underline">
-          {formData.checkbox}
-        </Link>
+        <span className="md:flex">
+          {formData.checkbox.text}
+          <Link
+            to="policy"
+            href=""
+            className="hover:underline focus:underline ml-1"
+          >
+            {formData.checkbox.policy}
+          </Link>
+        </span>
       </label>
 
       <button

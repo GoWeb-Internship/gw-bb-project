@@ -12,4 +12,3 @@ import 'react-phone-input-2/lib/bootstrap.css';
 import './src/styles/InputPhone.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'react-toastify/dist/ReactToastify.css';
