@@ -19,9 +19,10 @@ const Slider = ({
   const isMobile = pageFormat === 'mobile';
 
   return (
-    <div className={`relative  ${className}`}>
+    <div className={`${className} relative -z-0`}>
       <Swiper
-        className={`mx-auto sm:max-w-[420px] md:max-w-[550px] lg:max-w-[1100px]`}
+        className="mx-auto lg:w-[1060px]"
+        spaceBetween={spaceBetween}
         modules={[Navigation]}
         slidesPerView={slidesPerView}
         onSlideChange={onSlideChange}

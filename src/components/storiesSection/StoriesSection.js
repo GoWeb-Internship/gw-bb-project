@@ -32,7 +32,7 @@ const StoriesSection = () => {
 
   return (
     <Section className="gradient1">
-      <Container className="pt-11 pb-[72px] md:py-[80px] lg:pt-[124px] lg:pb-[130px]">
+      <Container className="max-w-[460px] pt-11 pb-[72px] md:max-w-full md:py-[80px] lg:pt-[124px] lg:pb-[130px]">
         <h2 className="text-center mb-8 md:mb-[48px] lg:mb-[56px]">
           {t('storiesTitle')}
         </h2>

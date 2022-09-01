@@ -32,10 +32,8 @@ const Layout = ({ children, saleText, charity, cost }) => {
       <ClientLocationContext.Provider value={clientLocation}>
         <PageFormatContext.Provider value={pageFormat}>
           <Header />
-          <div>
-            <Main>{children}</Main>
-            <Footer saleText={saleText} charity={charity} cost={cost} />
-          </div>
+          <Main>{children}</Main>
+          <Footer saleText={saleText} charity={charity} cost={cost} />
         </PageFormatContext.Provider>
       </ClientLocationContext.Provider>
     </>

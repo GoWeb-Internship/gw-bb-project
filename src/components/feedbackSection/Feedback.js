@@ -19,7 +19,7 @@ const Feedback = ({
   );
 
   return (
-    <div className="flex flex-col h-full lg:w-full px-5 py-8 bg-[#f8fafc33] rounded-[20px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
+    <div className="flex flex-col h-full mx-auto slider-item-width px-5 py-8 bg-[#f8fafc33] rounded-[20px] sm:w-[380px] md:w-[510px] md:px-[35px] lg:px-[40px] lg:pb-[42px] ">
       <div className="flex items-center mb-7">
         <div className="inline-flex w-[50px] h-[50px] mr-[20px] rounded-full border border-slate-50 overflow-hidden shrink-0">
           {image && (
