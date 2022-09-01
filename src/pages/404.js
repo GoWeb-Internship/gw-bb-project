@@ -18,19 +18,24 @@ const NotFoundPage = () => {
   const data = t('notFoundPage', { returnObjects: true });
 
   return (
-    <section className="bg-cyan-500 w-[100vw] h-[100vh]">
-      <Container className="py-28 text-center max-w-[450px]">
-        <h1 className="mb-5 text-bb2833 font-heads font-bold">{data.title}</h1>
-        <p className="mb-5 text-bb1824">{data.par}</p>
-        <Link
-          to={`/${language}/`}
-          className="mb-5 inline-flex px-5 bg-orange-400 rounded-xl py-4 text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
-        >
-          {data.button}
-        </Link>
-        <RedirectTimer getRedirect={setRedirect} />
-      </Container>
-    </section>
+    <>
+      <Seo title="404" description={`${data.par} | ${404}`} />
+      <section className="bg-cyan-500 w-[100vw] h-[100vh]">
+        <Container className="py-28 text-center max-w-[450px]">
+          <h1 className="mb-5 text-bb2833 font-heads font-bold">
+            {data.title}
+          </h1>
+          <p className="mb-5 text-bb1824">{data.par}</p>
+          <Link
+            to={`/${language}/`}
+            className="mb-5 inline-flex px-5 bg-orange-400 rounded-xl py-4 text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500"
+          >
+            {data.button}
+          </Link>
+          <RedirectTimer getRedirect={setRedirect} />
+        </Container>
+      </section>
+    </>
   );
 };
 
