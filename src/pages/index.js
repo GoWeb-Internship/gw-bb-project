@@ -9,10 +9,10 @@ import Layout from 'components/Layout';
 import Hero from 'components/hero/Hero';
 import AboutSection from 'components/aboutSection/AboutSection';
 import RoadMapSection from 'components/roadMapSection/RoadMapSection';
-import FeedbackSection from 'components/feedbackSection/FeedbackSection';
+// import FeedbackSection from 'components/feedbackSection/FeedbackSection';
 import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
-import PriceSection from 'components/priceSection/PriceSection';
+// import PriceSection from 'components/priceSection/PriceSection';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
@@ -20,7 +20,7 @@ import SignUpSection from 'components/signUpSection/SignUpSection';
 // import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
-import StoriesSection from 'components/storiesSection/StoriesSection';
+// import StoriesSection from 'components/storiesSection/StoriesSection';
 // import Scripts from 'components/scripts/Scripts';
 
 const Scripts = loadable(() => import('components/scripts/Scripts'));
@@ -32,24 +32,24 @@ const Scripts = loadable(() => import('components/scripts/Scripts'));
 // const LazyRoadMapSection = loadable(() =>
 //   import('components/roadMapSection/RoadMapSection'),
 // );
-// const LazyFeedbackSection = loadable(() =>
-//   import('components/feedbackSection/FeedbackSection'),
-// );
+const FeedbackSection = loadable(() =>
+  import('components/feedbackSection/FeedbackSection'),
+);
 // const LazyGuaranteeSection = loadable(() =>
 //   import('components/guaranteeSection/GuaranteeSection'),
 // );
 // const LazyWithCoachSection = loadable(() =>
 //   import('components/withCoachSection/WithCoachSection'),
 // );
-// const LazyPriceSection = loadable(() =>
-//   import('components/priceSection/PriceSection'),
-// );
+const PriceSection = loadable(() =>
+  import('components/priceSection/PriceSection'),
+);
 // const LazyImportantResultsSection = loadable(() =>
 //   import('components/importantResultsSection/ImportantResultsSection'),
 // );
-// const LazyStoriesSection = loadable(() =>
-//   import('components/storiesSection/StoriesSection'),
-// );
+const StoriesSection = loadable(() =>
+  import('components/storiesSection/StoriesSection'),
+);
 // const LazyInLiveSection = loadable(() =>
 //   import('components/inLiveSection/InLiveSection'),
 // );
