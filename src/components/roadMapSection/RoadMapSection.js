@@ -26,7 +26,7 @@ const RoadMapSection = () => {
   return (
     <Section>
       <Background imageData={background} />
-      <Container className="pt-9 pb-[72px] md:pt-20 md:pb-20 lg:pt-[124px] lg:pb-[133px]">
+      <Container className="max-w-[460px] pt-9 pb-[72px] md:max-w-full md:pt-20 md:pb-20 lg:pt-[124px] lg:pb-[133px]">
         <h2 className="text-center mx-auto text-bb2830 mb-6 md:max-w-[700px] md:mb-[48px] lg:max-w-[920px]">
           {title}
         </h2>
