@@ -6,9 +6,11 @@ const MobileMenuButtons = ({
   disabled,
   style,
   className,
+  label = '',
 }) => {
   return (
     <button
+      aria-label={label}
       type="button"
       className={`${className} flex justify-center items-center p-2 `}
       onClick={onClick}

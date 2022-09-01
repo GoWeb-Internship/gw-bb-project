@@ -54,6 +54,7 @@ const Header = () => {
   };
 
   const { nav } = t('header', { returnObjects: true });
+  const { openMenu } = t('aria', { returnObjects: true });
 
   return (
     <>
@@ -74,6 +75,7 @@ const Header = () => {
             IconComponent={FiMenu}
             disabled={renderMenu}
             className={'md:hidden'}
+            label={openMenu}
           />
         </Container>
         {isMobile && renderMenu && (

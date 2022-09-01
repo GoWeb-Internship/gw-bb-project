@@ -234,5 +234,11 @@
     "redirectMsg": "You will be automatically redirected to the home page via",
     "timer": "seconds",
     "redirectStatus": "redirecting"
+  },
+  "aria": {
+    "toplink": "to page top",
+    "openMenu": "mobile menu open button",
+    "closeMenu": "mobile menu close button",
+    "langSwitcher": "language switcher button"
   }
 }
