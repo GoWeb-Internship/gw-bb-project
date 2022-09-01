@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-scroll';
 
 import LogoIcon from 'images/logo.inline.svg';
+import LogoIcon2 from 'images/logo2.inline.svg';
+import LogoIcon3 from 'images/logo3.inline.svg';
 
 const Logo = ({ onClick, onFooter = false }) => {
   const sizes = onFooter ? 'w-[96px] h-[56px]' : 'w-[84px] h-[48px]';
@@ -16,6 +18,8 @@ const Logo = ({ onClick, onFooter = false }) => {
       href=""
     >
       <LogoIcon className="fill-slate-50 w-full h-full" />
+      {/* <LogoIcon2 className="fill-slate-50 w-full h-full" /> */}
+      {/* <LogoIcon3 className="fill-slate-50 w-full h-full" /> */}
     </Link>
   );
 };
