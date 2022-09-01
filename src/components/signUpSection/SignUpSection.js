@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
 import Button from 'components/reusable/Button';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/reusable/Container';
-import Modal from 'components/reusable/Modal';
+// import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
+
+const Modal = loadable(() => import('components/reusable/Modal'));
 
 const SignUpSection = ({ saleText = '', cost = '' }) => {
   const { t } = useTranslation();

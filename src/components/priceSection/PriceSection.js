@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Section from 'components/reusable/Section';
 import { graphql, useStaticQuery } from 'gatsby';
-import PriceCardsList from './PriceCardsList';
-import Modal from 'components/reusable/Modal';
+import loadable from '@loadable/component';
+
+import Section from 'components/reusable/Section';
+// import PriceCardsList from './PriceCardsList';
+// import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
 import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
+
+const PriceCardsList = loadable(() => import('./PriceCardsList'));
+const Modal = loadable(() => import('components/reusable/Modal'));
 
 const PriceSection = ({ charity = '' }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);

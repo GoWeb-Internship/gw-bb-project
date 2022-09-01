@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import loadable from '@loadable/component';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Button from 'components/reusable/Button';
@@ -11,9 +12,11 @@ import Container from '../reusable/Container';
 import HeroDataTitle from './HeroDataTitle';
 import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
-import Modal from 'components/reusable/Modal';
+// import Modal from 'components/reusable/Modal';
 import ModalLeft from 'components/modalValue/ModalLeft';
 import SocialIconsList from 'components/reusable/SocialIconsList';
+
+const Modal = loadable(() => import('components/reusable/Modal'));
 
 const Hero = ({ saleText = '', cost = '' }) => {
   const { t, i18n } = useTranslation();

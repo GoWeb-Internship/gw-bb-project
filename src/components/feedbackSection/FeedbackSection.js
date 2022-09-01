@@ -1,11 +1,14 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'react-i18next';
+import loadable from '@loadable/component';
 
 import Section from 'components/reusable/Section';
 import Container from 'components/reusable/Container';
-import FeedbackList from './FeedbackList';
+
 import Background from 'components/reusable/Background';
+
+const FeedbackList = loadable(() => import('./FeedbackList'));
 
 // import PropTypes from 'prop-types'
 

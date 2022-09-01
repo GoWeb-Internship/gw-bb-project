@@ -17,7 +17,7 @@ import ImportantResultsSection from 'components/importantResultsSection/Importan
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import ContactSection from 'components/contactSection/ContactSection';
-import Form from 'components/form/Form';
+// import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 import StoriesSection from 'components/storiesSection/StoriesSection';
@@ -30,24 +30,24 @@ import StoriesSection from 'components/storiesSection/StoriesSection';
 // const LazyRoadMapSection = loadable(() =>
 //   import('components/roadMapSection/RoadMapSection'),
 // );
-const LazyFeedbackSection = loadable(() =>
-  import('components/feedbackSection/FeedbackSection'),
-);
+// const LazyFeedbackSection = loadable(() =>
+//   import('components/feedbackSection/FeedbackSection'),
+// );
 // const LazyGuaranteeSection = loadable(() =>
 //   import('components/guaranteeSection/GuaranteeSection'),
 // );
 // const LazyWithCoachSection = loadable(() =>
 //   import('components/withCoachSection/WithCoachSection'),
 // );
-const LazyPriceSection = loadable(() =>
-  import('components/priceSection/PriceSection'),
-);
+// const LazyPriceSection = loadable(() =>
+//   import('components/priceSection/PriceSection'),
+// );
 // const LazyImportantResultsSection = loadable(() =>
 //   import('components/importantResultsSection/ImportantResultsSection'),
 // );
-const LazyStoriesSection = loadable(() =>
-  import('components/storiesSection/StoriesSection'),
-);
+// const LazyStoriesSection = loadable(() =>
+//   import('components/storiesSection/StoriesSection'),
+// );
 // const LazyInLiveSection = loadable(() =>
 //   import('components/inLiveSection/InLiveSection'),
 // );
@@ -57,13 +57,13 @@ const LazyStoriesSection = loadable(() =>
 // const LazyContactSection = loadable(() =>
 //   import('components/contactSection/ContactSection'),
 // );
-const LazyForm = loadable(() => import('components/form/Form'));
+const Form = loadable(() => import('components/form/Form'));
 // const LazyBeBetterToday = loadable(() =>
 //   import('components/beBetterToday/BeBetterToday'),
 // );
-const LazyMyFormulaSection = loadable(() =>
-  import('components/myFormulaSection/MyFormulaSection'),
-);
+// const LazyMyFormulaSection = loadable(() =>
+//   import('components/myFormulaSection/MyFormulaSection'),
+// );
 
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
@@ -104,23 +104,23 @@ const IndexPage = ({ data }) => {
         <Hero saleText={sale} cost={cost} />
         <AboutSection />
         <RoadMapSection />
-        <LazyFeedbackSection />
+        <FeedbackSection />
         <GuaranteeSection />
         <WithCoachSection />
-        <LazyPriceSection charity={charity} />
+        <PriceSection charity={charity} />
         <ImportantResultsSection />
-        <LazyStoriesSection />
+        <StoriesSection />
         <InLiveSection />
         <SignUpSection saleText={sale} cost={cost} />
         <ContactSection saleText={sale} cost={cost}>
-          <LazyForm
+          <Form
             place="section Contact"
             buttonText={button.textBigButton}
             buttonClassName="bg-orange-400 hover:bg-orange-500"
           />
         </ContactSection>
         <BeBetterToday />
-        <LazyMyFormulaSection />
+        <MyFormulaSection />
         <Toaster position="top-right" reverseOrder={false} />
       </Layout>
     </>

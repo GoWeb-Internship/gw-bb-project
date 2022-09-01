@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import loadable from '@loadable/component';
 import HeaderNavigation from './HeaderNavigation';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageFormatContext } from 'context/PageFormatContext';
@@ -8,7 +9,9 @@ import LangSwitcher from './LangSwitcher';
 import Container from 'components/reusable/Container';
 import Logo from './Logo';
 import MobileMenuButtons from './MobileMenuButtons';
-import MobileMenu from './MobileMenu';
+// import MobileMenu from './MobileMenu';
+
+const MobileMenu = loadable(() => import('./MobileMenu'));
 
 const Header = () => {
   const [headerHeight, setHeaderHeight] = useState(0);

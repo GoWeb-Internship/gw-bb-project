@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import loadable from '@loadable/component';
 import Container from 'components/reusable/Container';
 import Logo from 'components/header/Logo';
 import Button from 'components/reusable/Button';
 import { getSocialData } from 'data/social/social';
 import FooterNavigation from './FooterNavigation';
 import { graphql, useStaticQuery } from 'gatsby';
-import Modal from 'components/reusable/Modal';
+// import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
 import SocialIconsList from 'components/reusable/SocialIconsList';
 import { useContext } from 'react';
 import { PageFormatContext } from 'context/PageFormatContext';
+
+const Modal = loadable(() => import('components/reusable/Modal'));
 
 const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const { t, i18n } = useTranslation();
