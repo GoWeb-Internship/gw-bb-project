@@ -34,6 +34,14 @@ input:focus {
   transform: scale(1.2);
 }
 
+.input-container .selected-flag:focus:before,
+.input-container .selected-flag.open:before {
+  outline: 1px solid black !important;
+  outline-offset: -3px;
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .input-container .input-drop .arrow {
   visibility: hidden;
 }

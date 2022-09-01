@@ -12,7 +12,7 @@ const ModalLeft = ({ bg, place, saleText, cost }) => {
   const pageFormat = useContext(PageFormatContext);
 
   return (
-    <div className="overflow-x-hidden overflow-y-auto max-h-full py-[42px] px-[20px] w-[320px] md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:pt-[60px] lg:pl-[56px] lg:pb-[50px]">
+    <div className="overflow-x-hidden overflow-y-auto max-h-full py-[42px] px-[20px] w-[320px] md:w-[458px] md:mx-auto lg:mx-0 lg:w-[934px] lg:h-[614px] lg:pt-[50px] lg:pl-[56px] lg:pb-[30px]">
       {pageFormat === 'desktop' ? (
         <Background
           className="lg:w-[934px]"
@@ -27,7 +27,7 @@ const ModalLeft = ({ bg, place, saleText, cost }) => {
         />
       )}
       <div className=" md:mx-auto lg:mx-0 lg:w-[450px]">
-        <p className="md:w-[450px] font-main text-bb1422 font-bolt md:text-bb1625 mb-4">
+        <p className="md:w-[450px] font-main text-bb1422 font-bolt md:text-bb1625 mb-2">
           {sale.text}
           <span className="inline-block text-orange-400 mx-1">{saleText}</span>
           {sale.text2}

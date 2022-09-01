@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-
+import { Toaster } from 'react-hot-toast';
 import Seo from 'components/Seo';
 import Layout from 'components/Layout';
 import Hero from 'components/hero/Hero';
@@ -19,7 +19,6 @@ import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
 import StoriesSection from 'components/storiesSection/StoriesSection';
-import { ToastContainer } from 'react-toastify';
 
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
@@ -77,17 +76,7 @@ const IndexPage = ({ data }) => {
         </ContactSection>
         <BeBetterToday />
         <MyFormulaSection />
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
+        <Toaster position="top-right" reverseOrder={false} />
       </Layout>
     </>
   );
