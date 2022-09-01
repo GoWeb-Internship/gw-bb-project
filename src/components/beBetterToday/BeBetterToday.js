@@ -35,11 +35,14 @@ const BeBetterToday = () => {
             {beBetterToday.title}
             <span className="block">{beBetterToday.subTitle}</span>
           </h2>
-          <p className="text-neutral-600 text-[14px] font-bold leading-10 mb-2 md:text-[20px]">
+          <p className="text-neutral-600 text-[14px] font-bold leading-10 md:text-[20px]">
             {beBetterToday.textSupItems}:
           </p>
-          <List items={beBetterToday.items} />
-          <p className="text-neutral-600 font-bold text-[14px] leading-[22px] md:text-[20px] md:leading-10 mt-3 md:mt-5 md:text-center lg:text-start lg:mt-3">
+          <List
+            items={beBetterToday.items}
+            className="mb-3 mt-2 md:mb-5 lg:mb-3"
+          />
+          <p className="text-neutral-600 font-bold text-[14px] leading-[22px] md:text-[20px] md:leading-10  md:text-center lg:text-start ">
             {beBetterToday.textSubItems}
           </p>
         </div>

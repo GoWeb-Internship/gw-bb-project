@@ -53,7 +53,7 @@ const GuaranteeSection = () => {
                   <h2 className="mb-6 text-center md:mb-12">
                     {guarantee.title}
                   </h2>
-                  <p className="sm:text-center md:text-bb2030 md:tracking-[0.02]">
+                  <p className="max-w-[480px] md:max-w-[720px] mx-auto text-center md:text-bb2030 md:tracking-[0.02]">
                     {guarantee.text}
                   </p>
                 </div>
