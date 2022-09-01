@@ -2,11 +2,14 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageFormatContext } from 'context/PageFormatContext';
 import { graphql, useStaticQuery } from 'gatsby';
+import loadable from '@loadable/component';
 
 import Section from '../reusable/Section';
-import Background from 'components/reusable/Background';
+// import Background from 'components/reusable/Background';
 import Container from '../reusable/Container';
 import video from '../../video/sea.mp4';
+
+const Background = loadable(() => import('components/reusable/Background'));
 
 const GuaranteeSection = () => {
   const pageFormat = useContext(PageFormatContext);

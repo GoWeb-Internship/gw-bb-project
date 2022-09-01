@@ -1,11 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
+import loadable from '@loadable/component';
 
 import Section from '../reusable/Section';
-import Background from 'components/reusable/Background';
+// import Background from 'components/reusable/Background';
 import Container from '../reusable/Container';
 import List from 'components/reusable/List';
+
+const Background = loadable(() => import('components/reusable/Background'));
 
 const BeBetterToday = () => {
   const { t } = useTranslation();

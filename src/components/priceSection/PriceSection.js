@@ -7,9 +7,10 @@ import Section from 'components/reusable/Section';
 // import PriceCardsList from './PriceCardsList';
 // import Modal from 'components/reusable/Modal';
 import ModalRight from 'components/modalValue/ModalRight';
-import Background from 'components/reusable/Background';
+// import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
 
+const Background = loadable(() => import('components/reusable/Background'));
 const PriceCardsList = loadable(() => import('./PriceCardsList'));
 const Modal = loadable(() => import('components/reusable/Modal'));
 

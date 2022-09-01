@@ -6,8 +6,9 @@ import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
 import Container from 'components/reusable/Container';
 
-import Background from 'components/reusable/Background';
+// import Background from 'components/reusable/Background';
 
+const Background = loadable(() => import('components/reusable/Background'));
 const FeedbackList = loadable(() => import('./FeedbackList'));
 
 // import PropTypes from 'prop-types'
