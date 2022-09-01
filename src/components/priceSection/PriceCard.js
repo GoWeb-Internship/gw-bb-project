@@ -43,12 +43,12 @@ const PriceCard = ({ cardData, onClick, isActive, id }) => {
       <p className="mb-8 font-main font-bold text-[24px] leading-none md:text-[32px] md:mb-[47px]">
         {cardData.price}$
       </p>
-      <div className="text-start inline-block">
+      <div className="mb-10 text-start inline-block md:mb-[50px]">
         <p className="flex items-center mb-5 font-bold text-bb1625">
           <FiCalendar size={20} className="mr-[14px] md:mr-[22px]" />
           <span>{cardData[`${i18n.language}Month`]}</span>
         </p>
-        <p className="flex mb-10 md:mb-[50px] font-bold text-bb1625 ">
+        <p className="flex font-bold text-bb1625 ">
           <FiClock size={20} className="mr-[14px] md:mr-[22px]" />
 
           <span>{cardData[`${i18n.language}Sessions`]}</span>
