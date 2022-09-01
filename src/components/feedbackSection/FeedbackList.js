@@ -13,17 +13,22 @@ const FeedbackList = ({ data = [], className = '' }) => {
   const isDesktop = pageFormat === 'desktop';
 
   return (
-    <Slider slidesPerView={isDesktop ? 2 : 1} className={className}>
-      {!!data.length &&
-        data.map(({ content, imageData, id }) => (
-          <SwiperSlide
-            key={id}
-            className="slide h-auto mx-[20px] slider-item-width sm:max-w-[380px] md:max-w-[510px]"
-          >
-            <Feedback content={content} image={imageData} />
-          </SwiperSlide>
-        ))}
-    </Slider>
+    <>
+      {pageFormat && (
+        <Slider
+          slidesPerView={isDesktop ? 2 : 1}
+          className={className}
+          spaceBetween={40}
+        >
+          {!!data.length &&
+            data.map(({ content, imageData, id }) => (
+              <SwiperSlide key={id} className="slide h-auto">
+                <Feedback content={content} image={imageData} />
+              </SwiperSlide>
+            ))}
+        </Slider>
+      )}
+    </>
   );
 };
 

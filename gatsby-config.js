@@ -130,21 +130,22 @@ module.exports = {
         id: 'GTM-W4T6PP6',
       },
     },
-
-    // {
-    //   resolve: `gatsby-plugin-purgecss`,
-    //   options: {
-    //     printRejected: false,
-    //     develop: true,
-    //     tailwind: true,
-    //     ignore: [
-    //       'react-phone-input-2/lib/bootstrap.css',
-    //       'swiper',
-    //       'swiper/css',
-    //       'swiper/css/navigation',
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        develop: true,
+        tailwind: true,
+        ignore: [
+          'react-phone-input-2/lib/bootstrap.css',
+          'swiper',
+          'swiper/css',
+          'swiper/css/navigation',
+          'react-toastify/dist/ReactToastify.css',
+          'styles/components/',
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
