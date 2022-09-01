@@ -57,6 +57,8 @@ const Form = ({
     isAgree: yup.boolean().default(false).oneOf([true], valid.required),
   });
 
+  const handleClick = () => (document.body.style.overflow = '');
+
   const {
     control,
     register,
@@ -151,7 +153,12 @@ const Form = ({
           <FiSquare className="relative w-6 h-6 mr-[25px]" />
         )}
 
-        <Link to="policy" href="" className="hover:underline focus:underline">
+        <Link
+          to="policy"
+          href=""
+          className="hover:underline focus:underline"
+          onClick={handleClick}
+        >
           {formData.checkbox}
         </Link>
       </label>
