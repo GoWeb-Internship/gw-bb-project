@@ -29,7 +29,7 @@ const BeBetterToday = () => {
   return (
     <Section>
       <Background imageData={imageData.bg} />
-      <Container>
+      <Container className="max-w-[480px] md:max-w-[720px] lg:max-w-full">
         <div className="pt-9 pb-[72px] md:py-20 lg:pt-[124px] lg:pb-[68px]">
           <h2 className="text-orange-400 mb-6 md:mb-[46px] md:text-center lg:text-start">
             {beBetterToday.title}
