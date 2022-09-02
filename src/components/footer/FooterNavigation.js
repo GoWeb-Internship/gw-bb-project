@@ -16,7 +16,7 @@ const FooterNavigation = ({
           return (
             <li
               key={id}
-              className="mb-2 first:mb-0 last:mr-0 md:mb-0 md:mr-9 md:last:mr-0"
+              className="mb-2 first:mb-0 last:mr-0 md:mb-0 md:mr-[46px] md:last:mr-0"
             >
               <GatsbyLink
                 to={id}
@@ -31,7 +31,7 @@ const FooterNavigation = ({
       </ul>
       <ul className="hidden md:flex md:justify-center lg:min-w-[300px] lg:items-center">
         {navConfig.map(({ id, name }) => (
-          <li key={id} className="md:mb-0 md:mr-9 md:last:mr-0">
+          <li key={id} className="md:mb-0 md:mr-[46px] md:last:mr-0">
             <Link
               to={`${id}`}
               className="font-main font-light text-bb1424 cursor-pointer"

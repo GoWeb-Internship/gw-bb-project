@@ -49,7 +49,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
   const socials = getSocialData(contacts.frontmatter);
 
   return (
-    <footer className="max-w-[1440px] bg-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
+    <footer className="max-w-[1440px] bg-orange-50 text-neutral-600 mx-auto my-0 pt-11 pb-16 md:pb-[50px] md:pt-20 ">
       <Container>
         <div className="flex justify-between mx-auto mb-5 md:items-center md:mb-6 lg:mb-0 lg:mx-0 lg:justify-between">
           <Logo onFooter />
@@ -65,6 +65,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
               data={socials}
               language={i18n.language}
               className=""
+              onFooter
             />
           )}
         </div>
@@ -73,6 +74,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
             data={socials}
             language={i18n.language}
             className="mx-auto mb-5"
+            onFooter
           />
         )}
 
@@ -87,7 +89,7 @@ const Footer = ({ saleText = '', charity = '', cost = '' }) => {
         <Button
           id={'footer-button'}
           onClick={handleModalOpen}
-          className="bg-cyan-500 w-[280px] hover:bg-cyan-600 transition-colors mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 md:w-[410px] lg:mb-[70px]"
+          className="text-slate-50 bg-cyan-500 w-[280px] hover:bg-cyan-600 transition-colors mx-auto py-4 rounded-xl font-bold leading-6 text-bb2040 md:w-[410px] lg:mb-[70px]"
         >
           {button.textSmallButton}
         </Button>
