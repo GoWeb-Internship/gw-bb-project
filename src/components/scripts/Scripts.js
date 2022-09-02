@@ -1,9 +1,10 @@
+import { Script } from 'gatsby';
 import React from 'react';
 
 const Scripts = () => {
   return (
     <>
-      <noscript>
+      {/* <noscript>
         <img
           height="1"
           width="1"
@@ -22,7 +23,18 @@ const Scripts = () => {
           title="googletagmanager"
           style={{ display: 'none', visibility: 'hidden' }}
         />
-      </noscript>
+      </noscript> */}
+      <Script strategy="post-hydrate">
+        {`
+          if (typeof window !== 'undefined') {
+            if (window.fbq != null) {
+              window.fbq('track', 'PageView');
+              console.log('connect fbq');
+            }
+            console.log('has window');
+          }
+        `}
+      </Script>
     </>
   );
 };
