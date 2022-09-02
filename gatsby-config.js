@@ -113,17 +113,18 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-postcss',
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '5209032532528271',
+        pixelId: process.env.FACEBOOK_PIXEL_ID,
       },
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: 'GTM-W4T6PP6',
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
       },
     },
     {
