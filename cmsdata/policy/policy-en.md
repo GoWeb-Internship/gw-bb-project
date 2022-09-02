@@ -312,57 +312,58 @@ policyTitle: 'Privacy Policy'
 10. **Procedure for collection, storage, transfer and other processing of
     personal data**
 
-Security of personal data processed by the Operator is ensured by implementing
-legal, organizational and technical measures necessary to comply fully with the
-requirements of applicable laws in the field of personal data protection.
+    Security of personal data processed by the Operator is ensured by
+    implementing legal, organizational and technical measures necessary to
+    comply fully with the requirements of applicable laws in the field of
+    personal data protection.
 
-10.1 The operator provides safety of personal data and takes all possible
-measures which exclude access to personal data by unauthorized persons.
+    10.1 The operator provides safety of personal data and takes all possible
+    measures which exclude access to personal data by unauthorized persons.
 
-10.2 The personal data of the User shall never, under no circumstances be
-transferred to third parties, except in cases related to the implementation of
-the current legislation or if the subject of personal data has given consent to
-the Operator to transfer the data to a third party to fulfill obligations under
-a civil law contract.
+    10.2 The personal data of the User shall never, under no circumstances be
+    transferred to third parties, except in cases related to the implementation
+    of the current legislation or if the subject of personal data has given
+    consent to the Operator to transfer the data to a third party to fulfill
+    obligations under a civil law contract.
 
-10.3 In case of identification of inaccuracies in personal data, the User may
-update them on their own, by sending a notice to the Operator's email address
-yshayenko@gmail.com with a note "Updating of personal data".
+    10.3 In case of identification of inaccuracies in personal data, the User
+    may update them on their own, by sending a notice to the Operator's email
+    address yshayenko@gmail.com with a note "Updating of personal data".
 
-10.4 The term of processing of personal data is determined by achieving the
-purposes for which the personal data was collected, unless a different term is
-stipulated by the contract or by applicable law. The User may withdraw their
-consent to the processing of personal data at any time by sending a notice via
-email to the Operator's email address yshayenko@gmail.com, marked "Withdrawal of
-consent to the processing of personal data".
+    10.4 The term of processing of personal data is determined by achieving the
+    purposes for which the personal data was collected, unless a different term
+    is stipulated by the contract or by applicable law. The User may withdraw
+    their consent to the processing of personal data at any time by sending a
+    notice via email to the Operator's email address yshayenko@gmail.com, marked
+    "Withdrawal of consent to the processing of personal data".
 
-10.5 All information that is collected by third-party services, including
-payment systems, means of communication and other service providers, is stored
-and processed by the specified persons (Operators) in accordance with their User
-Agreement and Privacy Policy. The subject of personal data and/or the User is
-obliged to get acquainted with the specified documents on his/her own in time.
-The Operator shall not be liable for the actions of third parties, including the
-service providers mentioned in this clause.
+    10.5 All information that is collected by third-party services, including
+    payment systems, means of communication and other service providers, is
+    stored and processed by the specified persons (Operators) in accordance with
+    their User Agreement and Privacy Policy. The subject of personal data and/or
+    the User is obliged to get acquainted with the specified documents on
+    his/her own in time. The Operator shall not be liable for the actions of
+    third parties, including the service providers mentioned in this clause.
 
-10.6 The prohibitions established by the personal data subject on the transfer
-(other than granting access), as well as on the processing or processing
-conditions (other than gaining access) of personal data permitted for
-distribution, shall not apply in cases of processing of personal data in state,
-public and other public interests as defined by UZ legislation.
+    10.6 The prohibitions established by the personal data subject on the
+    transfer (other than granting access), as well as on the processing or
+    processing conditions (other than gaining access) of personal data permitted
+    for distribution, shall not apply in cases of processing of personal data in
+    state, public and other public interests as defined by UZ legislation.
 
-10.7. The Operator ensures the confidentiality of personal data when processing
-personal data.
+    10.7. The Operator ensures the confidentiality of personal data when
+    processing personal data.
 
-10.8. The operator shall store personal data in a form that makes it possible to
-identify the subject of personal data no longer than the purposes of personal
-data processing require, unless the period of storage of personal data is
-established by federal law, a contract to which the subject of personal data is
-a party, a beneficiary or a guarantor.
+    10.8. The operator shall store personal data in a form that makes it
+    possible to identify the subject of personal data no longer than the
+    purposes of personal data processing require, unless the period of storage
+    of personal data is established by federal law, a contract to which the
+    subject of personal data is a party, a beneficiary or a guarantor.
 
-10.9 A condition for termination of personal data processing may be achievement
-of personal data processing objectives, expiration of the personal data
-subject's consent or withdrawal of consent by the personal data subject, as well
-as detection of unlawful personal data processing.
+    10.9 A condition for termination of personal data processing may be
+    achievement of personal data processing objectives, expiration of the
+    personal data subject's consent or withdrawal of consent by the personal
+    data subject, as well as detection of unlawful personal data processing.
 
 11. **The list of actions performed by the Operator with the received personal
     data**
