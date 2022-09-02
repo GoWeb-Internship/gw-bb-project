@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => {
         charity={charity}
         openModal={handleModalOpen}
       >
-        <Hero cost={cost} openModal={handleModalOpen} />
+        <Hero openModal={handleModalOpen} />
         <AboutSection />
         <RoadMapSection />
         <FeedbackSection />

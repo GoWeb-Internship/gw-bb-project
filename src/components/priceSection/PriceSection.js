@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 const PriceCardsList = loadable(() => import('./PriceCardsList'));
 
 const PriceSection = ({ charity = '', openModal }) => {
-  const handleClick = () => openModal('section Price', false);
+  const handleClick = price => openModal(`Price ${price}`, false);
 
   const { t } = useTranslation();
 
