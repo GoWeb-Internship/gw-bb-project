@@ -1,14 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 
 import Section from '../reusable/Section';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import Container from '../reusable/Container';
 import ImportantResultsList from './ImportantResultsList';
 
-const Background = loadable(() => import('components/reusable/Background'));
+// const Background = loadable(() => import('components/reusable/Background'));
 
 const ImportantResultsSection = () => {
   const { t } = useTranslation();

@@ -3,11 +3,11 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
 // import MyFormulaList from './MyFormulaList';
 import Section from '../reusable/Section';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import { graphql, useStaticQuery } from 'gatsby';
 import { PageFormatContext } from 'context/PageFormatContext';
 
-const Background = loadable(() => import('components/reusable/Background'));
+// const Background = loadable(() => import('components/reusable/Background'));
 const MyFormulaList = loadable(() => import('./MyFormulaList'));
 
 const MyFormulaSection = () => {

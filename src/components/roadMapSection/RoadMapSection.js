@@ -5,10 +5,10 @@ import loadable from '@loadable/component';
 import Section from '../reusable/Section';
 import Container from '../reusable/Container';
 import RoadMapList from './RoadMapList';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
 
-const Background = loadable(() => import('components/reusable/Background'));
+// const Background = loadable(() => import('components/reusable/Background'));
 
 const RoadMapSection = () => {
   const { t } = useTranslation();

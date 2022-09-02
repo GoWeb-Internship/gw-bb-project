@@ -3,11 +3,11 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 
-const Background = loadable(() => import('components/reusable/Background'));
+// const Background = loadable(() => import('components/reusable/Background'));
 
 const WithCoachSection = () => {
   const { t, i18n } = useTranslation();

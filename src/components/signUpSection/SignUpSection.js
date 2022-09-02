@@ -1,32 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import Button from 'components/reusable/Button';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'components/reusable/Container';
-// import Modal from 'components/reusable/Modal';
-import ModalRight from 'components/modalValue/ModalRight';
 
-const Background = loadable(() => import('components/reusable/Background'));
-const Modal = loadable(() => import('components/reusable/Modal'));
-
-const SignUpSection = ({ saleText = '', cost = '' }) => {
+const SignUpSection = ({ saleText = '', cost = '', openModal }) => {
   const { t } = useTranslation();
   const button = t('button', { returnObjects: true });
   const sale = t('modalLeft', { returnObjects: true });
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModalOpen = () => {
-    document.body.style.overflow = 'hidden';
-    setIsModalOpen(true);
-  };
-  const handleModalClose = () => {
-    document.body.style.overflow = '';
-    setIsModalOpen(false);
-  };
+  const handleClick = () => openModal('section Sing Up', false);
+
+  //'section Sing Up'
 
   const data = useStaticQuery(graphql`
     query {
@@ -58,15 +46,12 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
         </p>
         <Button
           id={'signup-button'}
-          onClick={handleModalOpen}
+          onClick={handleClick}
           className="bg-cyan-500 transition-colors duration-200 hover:bg-cyan-600 mx-auto py-4 rounded-xl text-xl w-[280px] md:w-[410px] "
         >
           {button.textSmallButton}
         </Button>
       </Container>
-      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
-        <ModalRight place="section Sing Up" bg={data.bgForm} />
-      </Modal>
     </Section>
   );
 };

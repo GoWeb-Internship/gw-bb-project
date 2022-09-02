@@ -1,38 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import loadable from '@loadable/component';
-
 import Section from 'components/reusable/Section';
-// import PriceCardsList from './PriceCardsList';
-// import Modal from 'components/reusable/Modal';
-import ModalRight from 'components/modalValue/ModalRight';
-// import Background from 'components/reusable/Background';
+import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
 
-const Background = loadable(() => import('components/reusable/Background'));
 const PriceCardsList = loadable(() => import('./PriceCardsList'));
-const Modal = loadable(() => import('components/reusable/Modal'));
 
-const PriceSection = ({ charity = '' }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [place, setPlace] = useState('');
+const PriceSection = ({ charity = '', openModal }) => {
+  const handleClick = () => openModal('section Price', false);
 
   const { t } = useTranslation();
 
   const title = t('priceSectionTitle');
 
-  const handleModalOpen = value => {
-    setPlace(value);
-    document.body.style.overflow = 'hidden';
-    setIsModalOpen(true);
-  };
-  const handleModalClose = () => {
-    document.body.style.overflow = '';
-    setIsModalOpen(false);
-  };
-
-  const { background, cardsList, bgForm } = useStaticQuery(graphql`
+  const { background, cardsList } = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "price-bg" }) {
         childImageSharp {
@@ -59,11 +42,6 @@ const PriceSection = ({ charity = '' }) => {
           }
         }
       }
-      bgForm: file(name: { eq: "fon-form2" }) {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
     }
   `);
   return (
@@ -76,7 +54,7 @@ const PriceSection = ({ charity = '' }) => {
         <PriceCardsList
           cardsList={cardsList.nodes}
           className="mb-[30px] md:mb-16 lg:mb-[52px]"
-          onClick={handleModalOpen}
+          onClick={handleClick}
         />
         {charity && (
           <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-full md:text-bb2040">
@@ -84,9 +62,6 @@ const PriceSection = ({ charity = '' }) => {
           </p>
         )}
       </div>
-      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
-        <ModalRight place={place} bg={bgForm} />
-      </Modal>
     </Section>
   );
 };
