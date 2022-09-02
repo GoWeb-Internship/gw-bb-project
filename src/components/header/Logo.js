@@ -9,7 +9,9 @@ const Logo = ({ onClick, onFooter = false }) => {
 
   const { topLink } = t('aria', { returnObjects: true });
 
-  const sizes = onFooter ? 'w-[96px] h-[56px]' : 'w-[84px] h-[49px]';
+  const sizes = onFooter ? 'w-[96px] h-[56px] ' : 'w-[84px] h-[49px]';
+  const fill = onFooter ? 'fill-neutral-600' : 'fill-slate-50';
+
   return (
     <Link
       to={'home'}
@@ -21,7 +23,7 @@ const Logo = ({ onClick, onFooter = false }) => {
       href=""
     >
       <span className="visually-hidden">{topLink}</span>
-      <LogoIcon className="fill-slate-50 w-full h-full" />
+      <LogoIcon className={`${fill} w-full h-full`} />
     </Link>
   );
 };

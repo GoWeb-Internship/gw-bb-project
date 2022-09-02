@@ -1,9 +1,16 @@
 import React from 'react';
 
-const SocialIconsList = ({ data = [], language, className = '' }) => {
+const SocialIconsList = ({
+  data = [],
+  language,
+  className = '',
+  onFooter = false,
+}) => {
+  const fill = onFooter ? 'fill-neutral-600' : 'fill-slate-50';
+
   return (
     <ul
-      className={`${className} w-[152px] h-6 flex  justify-between text-slate-50 md:w-[128px]`}
+      className={`${className} ${fill} w-[152px] h-6 flex  justify-between md:w-[128px]`}
     >
       {data.map(({ id, href, name, Component }) => {
         return (
