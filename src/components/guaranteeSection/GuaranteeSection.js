@@ -40,7 +40,7 @@ const GuaranteeSection = () => {
               >
                 <source src={video} type="video/mp4" />
               </video>
-              <div className="lg:absolute lg:left-[50%] lg:top-1/3 lg:origin-top-left lg:text-slate-50">
+              <div className="lg:absolute lg:left-[50%] lg:top-[30%] lg:origin-top-left lg:text-slate-50">
                 <h2 className="mb-12">{guarantee.title}</h2>
                 <p className="lg:w-[620px] md:w-[424px]">{guarantee.text}</p>
               </div>
@@ -49,7 +49,7 @@ const GuaranteeSection = () => {
             <>
               <Background imageData={imageData.bg} />
               <Container>
-                <div className="pt-9 pb-28 md:pt-20 md:pb-[90px] md:text-center">
+                <div className="pt-9 pb-[72px] md:py-20 md:text-center">
                   <h2 className="mb-6 text-center md:mb-12">
                     {guarantee.title}
                   </h2>

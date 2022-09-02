@@ -78,7 +78,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
         <Background imageData={bg} />
       </div>
       <Container className="max-w-[380px] mx-auto md:max-w-full ">
-        <div className="fade-in font-main pt-[128px] pb-12 md:pt-[156px] md:pb-14 lg:pt-[174px] lg:pb-10">
+        <div className="fade-in font-main pt-[128px] pb-[72px] md:pt-[156px] md:pb-20 lg:pt-[174px] lg:pb-10">
           <div className="md:flex justify-between items-start mb-[60px] md:mb-[54px] lg:mb-[94px]">
             <div className="mb-[60px] md:mb-0">
               <HeroDataTitle heroTitle={heroTitle} />
