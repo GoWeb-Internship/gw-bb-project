@@ -42,12 +42,12 @@ const WithCoachSection = () => {
   return (
     <Section>
       <Background imageData={data.background} objectPosition="center" />
-      <div className="relative w-screen mx-auto pt-10 md:w-[768px] md:py-[80px] lg:w-[1440px] lg:pt-[124px] lg:pb-[98px] lg:flex lg:flex-row lg:justify-between">
+      <div className="relative w-screen mx-auto pt-9 md:w-[768px] md:py-[80px] lg:w-[1440px] lg:py-[124px] lg:flex lg:flex-row lg:justify-between">
         <TextContainer
           title={withCoach.title}
           text={withCoach.text}
           titlePosition="text-center lg:text-start"
-          className="max-w-[480px] mx-auto px-[20px] md:px-[35px] mb-[64px] md:max-w-[720px] lg:max-w-full lg:mt-0 lg:w-3/5 lg:pl-20 lg:mr-[149px] lg:mb-0 lg:mx-0"
+          className="max-w-[480px] mx-auto px-[20px] mb-[72px] md:max-w-[740px] md:px-[36px] lg:max-w-full lg:mt-0 lg:w-3/5 lg:pl-20 lg:pr-0 lg:mr-[149px] lg:mb-0 lg:mx-0"
         />
         <ImageContent
           imageData={imageData}
