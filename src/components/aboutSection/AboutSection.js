@@ -52,7 +52,7 @@ const AboutSection = () => {
           uk
         }
       }
-      background: file(name: { eq: "about-1" }) {
+      background: file(name: { eq: "about" }) {
         childImageSharp {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
