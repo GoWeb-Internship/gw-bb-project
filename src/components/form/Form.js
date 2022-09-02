@@ -139,20 +139,26 @@ const Form = ({
       <div className="mb-5 h-[74px]">
         <input
           placeholder={formData.inputName.name}
-          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
+          className={`px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50 ${
+            errors.name &&
+            'text-orange-400 border-orange-400 placeholder:text-orange-400'
+          }`}
           {...register('name')}
         />
-        <p className="px-5 mt-1 text-slate-100 font-normal text-xs">
+        <p className="px-5 mt-1 text-orange-400 font-normal text-xs">
           {errors.name?.message}
         </p>
       </div>
       <div className="mb-5 h-[74px]">
         <input
           placeholder={formData.inputEmail.name}
-          className="px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50"
+          className={`px-5 min-w-[280px] py-4 text-bbForm rounded-[10px] md:w-[410px] border-slate-50 border bg-inherit placeholder:text-slate-50 ${
+            errors.email &&
+            'text-orange-400 border-orange-400 placeholder:text-orange-400'
+          }`}
           {...register('email')}
         />
-        <p className="px-5 mt-1 text-slate-100 font-normal text-xs">
+        <p className="px-5 mt-1 text-orange-400 font-normal text-xs">
           {errors.email?.message}
         </p>
       </div>

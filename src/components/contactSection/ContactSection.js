@@ -25,9 +25,9 @@ const ContactSection = ({ saleText = '', cost = '', children }) => {
   return (
     <Section id="contacts">
       <Background objectPosition="right bottom" imageData={data.background} />
-      <Container className="pt-9 pb-[72px] md:flex md:justify-center lg:justify-end md:pt-[96px] md:pb-[104px]">
+      <Container className="pt-9 pb-[72px] md:flex md:justify-center md:px-[83px] lg:px-0 lg:justify-end md:py-[80px] lg:py-[100px]">
         <h2 className="visually-hidden">Contacts</h2>
-        <div className="bg-none md:bg-slate-50/[.3] md:rounded-[20px] md:w-[602px] md:h-[707px] md:px-[74px] md:pt-[100px] md:pb-[50px]">
+        <div className="bg-none md:bg-slate-50/[.1] md:rounded-[20px] md:w-[602px] md:h-[707px] md:px-[74px] md:pt-[52px] md:pb-[50px]">
           <p className="text-bb1225 text-center text-bold mb-4 md:text-bb1625 md:mb-[20px]">
             {sale.text}
             <span className="inline-block text-orange-400 mx-1">

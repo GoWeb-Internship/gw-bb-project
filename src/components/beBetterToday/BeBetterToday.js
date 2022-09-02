@@ -33,8 +33,8 @@ const BeBetterToday = () => {
     <Section>
       <Background imageData={imageData.bg} />
       <Container className="max-w-[480px] md:max-w-[720px] lg:max-w-full">
-        <div className="pt-9 pb-[72px] md:py-20 lg:pt-[124px] lg:pb-[68px]">
-          <h2 className="text-orange-400 mb-6 md:mb-[46px] md:text-center lg:text-start">
+        <div className="pt-9 pb-[72px] md:py-20 lg:py-[124px]">
+          <h2 className="text-orange-400 mb-6 md:mb-[46px] md:text-center lg:text-start lg:mb-12">
             {beBetterToday.title}
             <span className="block">{beBetterToday.subTitle}</span>
           </h2>
@@ -45,7 +45,7 @@ const BeBetterToday = () => {
             items={beBetterToday.items}
             className="mb-3 mt-2 md:mb-5 lg:mb-3"
           />
-          <p className="text-neutral-600 font-bold text-[14px] leading-[22px] md:text-[20px] md:leading-10  md:text-center lg:text-start ">
+          <p className="text-neutral-600 font-bold text-[14px] leading-[22px] md:text-[20px] md:leading-10">
             {beBetterToday.textSubItems}
           </p>
         </div>
