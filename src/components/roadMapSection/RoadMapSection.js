@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import loadable from '@loadable/component';
+// import loadable from '@loadable/component';
 
 import Section from '../reusable/Section';
 import Container from '../reusable/Container';

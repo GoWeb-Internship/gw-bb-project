@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
-import Scripts from 'components/scripts/Scripts';
+// import Scripts from 'components/scripts/Scripts';
 import Seo from 'components/Seo';
 import Layout from 'components/Layout';
 import Hero from 'components/hero/Hero';
@@ -83,7 +83,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Scripts />
+      {/* <Scripts /> */}
       <Seo
         title={seo.title}
         description={seo.description}

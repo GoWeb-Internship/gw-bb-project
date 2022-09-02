@@ -82,8 +82,6 @@ const Form = ({
     isAgree: yup.boolean().default(false).oneOf([true], valid.required),
   });
 
-  const handleClick = () => (document.body.style.overflow = '');
-
   const {
     control,
     register,
