@@ -69,13 +69,13 @@ const AboutSection = () => {
   return (
     <Section id="about">
       <Background imageData={data.background} />
-      <div className="relative w-screen mx-auto pt-10 md:pt-[48px] md:pb-[34px] lg:py-32 md:w-[768px] lg:w-[1440px]">
+      <div className="relative w-screen mx-auto pt-10 md:py-[80px] lg:py-[124px] md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <TextContainer
             title={about.title}
             text={about.text}
             titlePosition="text-center lg:text-start"
-            className="max-w-[480px] mb-11 px-[20px] mx-auto md:px-[35px] md:max-w-[720px] lg:max-w-full lg:mx-0 lg:mb-0 lg:w-2/4 lg:pl-20 lg:pr-0 lg:mr-[90px]"
+            className="max-w-[480px] mb-11 px-[20px] mx-auto md:px-[35px] md:max-w-[720px] lg:max-w-full lg:mx-0 lg:mb-0 lg:w-2/4 lg:pl-20 lg:pr-0 lg:mr-[79px]"
           />
 
           <div className="lg:block">
