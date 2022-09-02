@@ -10,7 +10,7 @@ const PriceCard = ({ cardData, onClick, isActive, id }) => {
   const button = t('button', { returnObjects: true });
 
   const handleClick = () => {
-    onClick(cardData[i18n.language]);
+    onClick(cardData.title);
   };
 
   const isDesktop = pageFormat === 'desktop';

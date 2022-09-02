@@ -2,10 +2,13 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
+// import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
 import Form from 'components/form/Form';
 import Container from 'components/reusable/Container';
+
+// const Background = loadable(() => import('components/reusable/Background'));
 
 const ContactSection = ({ saleText = '', cost = '', children }) => {
   const { t } = useTranslation();
