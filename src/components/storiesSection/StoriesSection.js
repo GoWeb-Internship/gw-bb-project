@@ -1,10 +1,13 @@
 import Container from 'components/reusable/Container';
 import Section from 'components/reusable/Section';
+import loadable from '@loadable/component';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import StoriesList from './StoriesList';
+// import StoriesList from './StoriesList';
 // import PropTypes from 'prop-types';
+
+const StoriesList = loadable(() => import('./StoriesList'));
 
 const StoriesSection = () => {
   const { content } = useStaticQuery(graphql`

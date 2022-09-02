@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
@@ -11,25 +11,10 @@ import Container from '../reusable/Container';
 import HeroDataTitle from './HeroDataTitle';
 import HeroListExperiences from './HeroListExperiences';
 import HeroDataList from './HeroDataList';
-import Modal from 'components/reusable/Modal';
-import ModalLeft from 'components/modalValue/ModalLeft';
 import SocialIconsList from 'components/reusable/SocialIconsList';
 
-const Hero = ({ saleText = '', cost = '' }) => {
-  const { t, i18n } = useTranslation();
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    document.body.style.overflow = 'hidden';
-    setIsModalOpen(true);
-  };
-  const handleModalClose = () => {
-    document.body.style.overflow = '';
-    setIsModalOpen(false);
-  };
-
-  const { bgDesk, bg, bgForm, contacts } = useStaticQuery(graphql`
+const Hero = ({ openModal }) => {
+  const { bgDesk, bg, contacts } = useStaticQuery(graphql`
     query MyQueryHero {
       bgDesk: file(name: { eq: "hero-1" }) {
         id
@@ -47,11 +32,6 @@ const Hero = ({ saleText = '', cost = '' }) => {
           gatsbyImageData(layout: FULL_WIDTH, quality: 100)
         }
       }
-      bgForm: file(name: { eq: "fon-form1" }) {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, quality: 100)
-        }
-      }
       contacts: mdx(frontmatter: { fieldIdName: { eq: "contacts" } }) {
         frontmatter {
           _1
@@ -63,6 +43,10 @@ const Hero = ({ saleText = '', cost = '' }) => {
   `);
 
   const socials = getSocialData(contacts.frontmatter);
+
+  const handleClick = () => openModal('section Hero', true);
+
+  const { t, i18n } = useTranslation();
 
   const button = t('button', { returnObjects: true });
   const experience = t('heroExpirience', { returnObjects: true });
@@ -84,7 +68,7 @@ const Hero = ({ saleText = '', cost = '' }) => {
               <HeroDataTitle heroTitle={heroTitle} />
               <Button
                 id={'button-hero'}
-                onClick={handleModalOpen}
+                onClick={handleClick}
                 type="button"
                 className="mx-auto min-w-[280px] bg-orange-400 rounded-xl py-4 text-xl leading-6 transition-colors duration-200 hover:bg-orange-500 focus:bg-orange-500 md:mx-0 md:w-[410px]"
               >
@@ -106,14 +90,6 @@ const Hero = ({ saleText = '', cost = '' }) => {
           <HeroListExperiences experience={experience} />
         </div>
       </Container>
-      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
-        <ModalLeft
-          bg={bgForm}
-          place="section Hero"
-          saleText={saleText}
-          cost={cost}
-        />
-      </Modal>
     </Section>
   );
 };

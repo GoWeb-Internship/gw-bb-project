@@ -21,6 +21,11 @@ input:focus {
   outline-offset: -3px;
 }
 
+.input-container .input-phone-error {
+  border: 1px solid #fb923c !important;
+  color: #fb923c !important;
+}
+
 .input-container .input-drop {
   width: 0;
 }
