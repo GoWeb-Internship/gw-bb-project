@@ -42,7 +42,7 @@ const InLiveSection = () => {
             title={inLive.title}
             text={inLive.text}
             titlePosition="text-center lg:text-start"
-            className="max-w-[480px] mx-auto px-[20px] pb-11 md:px-[35px] md:pb-0 md:mb-11 md:max-w-[720px] lg:max-w-full lg:mx-0 lg:mb-0 lg:ml-[40px] lg:pl-0 lg:pr-[85px] lg:mt-0 lg:w-2/4"
+            className="max-w-[480px] mx-auto px-[20px] pb-[72px] md:px-[35px] md:pb-0 md:mb-11 md:max-w-[720px] lg:max-w-full lg:mx-0 lg:mb-0 lg:ml-[40px] lg:pl-0 lg:pr-[85px] lg:mt-0 lg:w-2/4"
           />
           <ImageContent
             imageData={imageData}

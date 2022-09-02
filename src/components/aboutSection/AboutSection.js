@@ -69,7 +69,7 @@ const AboutSection = () => {
   return (
     <Section id="about">
       <Background imageData={data.background} />
-      <div className="relative w-screen mx-auto pt-10 md:py-[80px] lg:py-[124px] md:w-[768px] lg:w-[1440px]">
+      <div className="relative w-screen mx-auto pt-9 md:py-[80px] lg:py-[124px] md:w-[768px] lg:w-[1440px]">
         <div className="lg:flex lg:flex-row lg:justify-between">
           <TextContainer
             title={about.title}
@@ -88,7 +88,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div className=" mt-5 lg:inline-flex lg:flex-row-reverse md:mt-8 lg:mt-20">
-          <div className="max-w-[460px] md:max-w-[700px] md:w-[534px] px-5 mb-[52px] md:mb-[22px] mx-auto lg:max-w-full lg:mx-0 lg:mb-0 lg:ml-28 lg:px-0 lg:block">
+          <div className="max-w-[460px] md:max-w-[700px] md:w-[534px] px-5 mb-[72px] md:mb-[22px] mx-auto lg:max-w-full lg:mx-0 lg:mb-0 lg:ml-28 lg:px-0 lg:block">
             <h3 className="mb-4 mt-9 text-center font-heads text-bb2225 md:mt-0 md:text-bb3237 md:mb-5 lg:text-start text-orange-400 font-medium">
               {about.caption}
             </h3>

@@ -8,22 +8,22 @@ policyTitle: 'Privacy Policy'
 
 1. **General Provisions**
 
-This Privacy policy has been drawn up in accordance with the requirements of the
-Law of Ukraine "On the Protection of Personal Data" of June 1. 2010 No. 2297-VI
-(hereinafter referred to as the Law), as well as the General Data Protection
-Regulation (EU) 2016/679 of April 27. 2016 (hereinafter referred to as the Law
-on Personal Data) and determines the procedure for processing personal data and
-measures to ensure the security of personal data taken by Shayenko Yuliya
-(hereinafter referred to as the Operator).
+   This Privacy policy has been drawn up in accordance with the requirements of
+   the Law of Ukraine "On the Protection of Personal Data" of June 1. 2010 No.
+   2297-VI (hereinafter referred to as the Law), as well as the General Data
+   Protection Regulation (EU) 2016/679 of April 27. 2016 (hereinafter referred
+   to as the Law on Personal Data) and determines the procedure for processing
+   personal data and measures to ensure the security of personal data taken by
+   Shayenko Yuliya (hereinafter referred to as the Operator).
 
-1.1. The operator sets as its most important goal and condition for the
-implementation of its activities the observance of the rights and freedoms of a
-person and a citizen in the processing of his personal data, including the
-protection of the rights to privacy, personal and family secrets.
+   1.1. The operator sets as its most important goal and condition for the
+   implementation of its activities the observance of the rights and freedoms of
+   a person and a citizen in the processing of his personal data, including the
+   protection of the rights to privacy, personal and family secrets.
 
-1.2. This Operator's policy regarding the processing of personal data
-(hereinafter referred to as the Policy) applies to all information that the
-Operator can receive about visitors to the https://be-better.today/ website.
+   1.2. This Operator's policy regarding the processing of personal data
+   (hereinafter referred to as the Policy) applies to all information that the
+   Operator can receive about visitors to the https://be-better.today/ website.
 
 2. **Basic concepts used in the Policy**
 
@@ -258,22 +258,23 @@ Operator can receive about visitors to the https://be-better.today/ website.
 
    8.1 The legal basis for processing of personal data by the Operator is:
 
-● The Law of Ukraine "On Protection of Personal Data" of 01.06.2010 No. 2297-VI
-(hereinafter - the Law), as well as the General Data Protection Regulation (EU)
-2016/679 of 27.04.2016;  
- ● Federal laws, other normative legal acts in the field of personal data protection;  
+   ● The Law of Ukraine "On Protection of Personal Data" of 01.06.2010 No.
+   2297-VI (hereinafter - the Law), as well as the General Data Protection
+   Regulation (EU) 2016/679 of 27.04.2016;  
+   ● Federal laws, other normative legal acts in the field of personal data
+   protection;
 
-● Users' consent to the processing of their personal data, to the processing of
-personal data allowed for dissemination. 8.2. The Operator processes the User's
-personal data only if the User fills in and/or sends them independently through
-the special forms located on the website https://be-better.today or sent to the
-Operator via email. By filling out the relevant forms and/or sending his
-personal data to the Operator the User expresses his consent to this Policy.
-8.3. The Operator processes impersonal data about the User if it is allowed in
-the settings of the User's browser (the saving of cookies and the use of
-JavaScript technology are enabled). 8.4 The subject of personal data
-independently decides to provide his personal data and gives his consent freely,
-willingly and in his own interest.
+   ● Users' consent to the processing of their personal data, to the processing
+   of personal data allowed for dissemination. 8.2. The Operator processes the
+   User's personal data only if the User fills in and/or sends them
+   independently through the special forms located on the website
+   https://be-better.today or sent to the Operator via email. By filling out the
+   relevant forms and/or sending his personal data to the Operator the User
+   expresses his consent to this Policy. 8.3. The Operator processes impersonal
+   data about the User if it is allowed in the settings of the User's browser
+   (the saving of cookies and the use of JavaScript technology are enabled). 8.4
+   The subject of personal data independently decides to provide his personal
+   data and gives his consent freely, willingly and in his own interest.
 
 9. **Terms of personal data processing**
 

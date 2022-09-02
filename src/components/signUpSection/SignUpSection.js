@@ -41,7 +41,7 @@ const SignUpSection = ({ saleText = '', cost = '' }) => {
 
   return (
     <Section>
-      <Container className="pt-[20px] pb-[62px] md:pt-[42px] md:pb-[62px] lg:pb-[70px] lg:pt-[24px]">
+      <Container className="pt-[26px] pb-[63px] md:pt-[42px] md:pb-[62px] lg:pb-[70px] lg:pt-[24px]">
         <Background imageData={data.background} />
         <h2 className="visually-hidden">Sale</h2>
         <p className="text-neutral-600 mb-[10px] text-bb1422 md:text-bb2030 font-bold mx-auto md:max-w-[570px] md:mb-2 text-center">
