@@ -8,7 +8,7 @@ import { FiMenu } from 'react-icons/fi';
 import LangSwitcher from './LangSwitcher';
 import Container from 'components/reusable/Container';
 import Logo from './Logo';
-import MobileMenuButtons from './MobileMenuButtons';
+import IconButton from './IconButton';
 // import MobileMenu from './MobileMenu';
 
 const MobileMenu = loadable(() => import('./MobileMenu'));
@@ -73,7 +73,7 @@ const Header = () => {
             headerHeight={headerHeight}
           />
           <LangSwitcher className="ml-auto md:ml-0" />
-          <MobileMenuButtons
+          <IconButton
             onClick={onOpen}
             IconComponent={FiMenu}
             disabled={renderMenu}

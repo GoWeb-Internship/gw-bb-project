@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useI18next, Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { FiChevronDown } from 'react-icons/fi';
+import LangBackdrop from './LangBackDrop';
 
 const getNormalizeData = lang => ({
   label: (lang === 'uk' ? 'ua' : lang).toUpperCase(),
@@ -66,7 +67,7 @@ const LangSwitcher = ({ className = '' }) => {
         >
           {getNormalizeData(language).label}
           <FiChevronDown
-            className={`icon ml-1 ${rotate} ${fill} transition duration-200 relative z-30`}
+            className={`icon ml-[7px] ${rotate} ${fill} scale-125 transition duration-200 relative z-30`}
           />
         </button>
         {/* language selector list */}
@@ -91,28 +92,6 @@ const LangSwitcher = ({ className = '' }) => {
       </div>
       {isHidden !== 'hidden' && <LangBackdrop onClose={onClose} />}
     </>
-  );
-};
-
-const LangBackdrop = ({ onClose }) => {
-  useEffect(() => {
-    const handleEscape = e => {
-      if (e.code !== 'Escape') return;
-      window.removeEventListener('keydown', handleEscape);
-      onClose();
-    };
-
-    window.addEventListener('keydown', handleEscape);
-    return () => {
-      window.removeEventListener('keydown', handleEscape);
-    };
-  }, [onClose]);
-
-  return (
-    <div
-      className="fixed top-0 left-0 w-full h-full z-10"
-      onClick={onClose}
-    ></div>
   );
 };
 

@@ -3,7 +3,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Link } from 'react-scroll';
 
 import Logo from './Logo';
-import MobileMenuButtons from './MobileMenuButtons';
+import IconButton from './IconButton';
 
 import { FiX } from 'react-icons/fi';
 
@@ -32,7 +32,7 @@ const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
       >
         <div className="flex justify-between py-3 mb-[50px]">
           <Logo onClick={onClose} />
-          <MobileMenuButtons
+          <IconButton
             onClick={onClose}
             IconComponent={FiX}
             disabled={!showMenu}

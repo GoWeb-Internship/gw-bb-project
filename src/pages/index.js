@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import loadable from '@loadable/component';
 
 import Events from 'components/scripts/Events';
 import Seo from 'components/Seo';
@@ -17,51 +18,18 @@ import StoriesSection from 'components/storiesSection/StoriesSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import ContactSection from 'components/contactSection/ContactSection';
-import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
-import Modal from 'components/reusable/Modal';
-import ModalLeft from 'components/modalValue/ModalLeft';
-import ModalRight from 'components/modalValue/ModalRight';
 import { Toaster } from 'react-hot-toast';
+
+const Modal = loadable(() => import('components/reusable/Modal'));
+const ModalLeft = loadable(() => import('components/modalValue/ModalLeft'));
+const ModalRight = loadable(() => import('components/modalValue/ModalRight'));
 
 const IndexPage = ({ data }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLeftModal, setIsLeftModal] = useState(true);
-  const [showForm, setShowForm] = useState(false);
   const [place, setPlace] = useState('');
-  const observer = useRef();
-  const container = useRef(null);
-
-  const onFormIntersection = entries => {
-    if (!entries || entries.length <= 0) {
-      return;
-    }
-
-    if (entries[0].isIntersecting) {
-      setShowForm(true);
-      observer.current.disconnect();
-    }
-  };
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver(onFormIntersection, {
-      rootMargin: '100px 0px',
-      threshold: 0.25,
-    });
-  }, []);
-
-  useEffect(() => {
-    if (window && 'IntersectionObserver' in window) {
-      if (container && container.current) {
-        observer.current.observe(container.current);
-      }
-    } else {
-      showForm(true);
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [container]);
 
   const handleModalOpen = (place, isLeft = true) => {
     document.body.style.overflow = 'hidden';
@@ -76,7 +44,7 @@ const IndexPage = ({ data }) => {
   };
 
   const { t } = useTranslation();
-  const button = t('button', { returnObjects: true });
+
   const seo = t('seo', { returnObjects: true });
 
   const { charity, sale, cost } = data.content.frontmatter;
@@ -110,17 +78,7 @@ const IndexPage = ({ data }) => {
           cost={cost}
           openModal={handleModalOpen}
         />
-        <ContactSection saleText={sale} cost={cost} sectionRef={container}>
-          <div ref={container}>
-            {showForm && (
-              <Form
-                place="section Contact"
-                buttonText={button.textBigButton}
-                buttonClassName="bg-orange-400 hover:bg-orange-500"
-              />
-            )}
-          </div>
-        </ContactSection>
+        <ContactSection saleText={sale} cost={cost} />
         <BeBetterToday />
         <MyFormulaSection />
       </Layout>

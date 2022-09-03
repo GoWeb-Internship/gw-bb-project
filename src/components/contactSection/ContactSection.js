@@ -2,17 +2,17 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import PropTypes from 'prop-types';
 import { graphql, useStaticQuery } from 'gatsby';
-// import loadable from '@loadable/component';
+import loadable from '@loadable/component';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
-import Form from 'components/form/Form';
 import Container from 'components/reusable/Container';
+import ObserverWrapper from 'components/reusable/ObserverWrapper';
+
+const Form = loadable(() => import('components/form/Form'));
 
 // const Background = loadable(() => import('components/reusable/Background'));
 
-const ContactSection = ({ saleText = '', cost = '', children }) => {
-  const { t } = useTranslation();
-  const sale = t('modalLeft', { returnObjects: true });
+const ContactSection = ({ saleText = '', cost = '' }) => {
   const data = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "fon-contacts" }) {
@@ -22,6 +22,11 @@ const ContactSection = ({ saleText = '', cost = '', children }) => {
       }
     }
   `);
+
+  const { t } = useTranslation();
+  const sale = t('modalLeft', { returnObjects: true });
+  const button = t('button', { returnObjects: true });
+
   return (
     <Section id="contacts">
       <Background objectPosition="right bottom" imageData={data.background} />
@@ -38,7 +43,16 @@ const ContactSection = ({ saleText = '', cost = '', children }) => {
           <p className="text-bb1222 text-center text-bold mb-6 md:text-bb1422 md:mb-[46px]">
             *{cost}
           </p>
-          {children}
+          <ObserverWrapper
+            component={
+              <Form
+                place="section Contact"
+                buttonText={button.textBigButton}
+                buttonClassName="bg-orange-400 hover:bg-orange-500"
+              />
+            }
+            fallback={null}
+          />
         </div>
       </Container>
     </Section>

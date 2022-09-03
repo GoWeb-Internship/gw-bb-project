@@ -4,8 +4,8 @@ import loadable from '@loadable/component';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-// import StoriesList from './StoriesList';
-// import PropTypes from 'prop-types';
+import ObserverWrapper from 'components/reusable/ObserverWrapper';
+import StoriesListSkeleton from './StoriesListSkeleton';
 
 const StoriesList = loadable(() => import('./StoriesList'));
 
@@ -39,7 +39,10 @@ const StoriesSection = () => {
         <h2 className="text-center mb-8 md:mb-[48px] lg:mb-[56px]">
           {t('storiesTitle')}
         </h2>
-        <StoriesList data={content.nodes} />
+        <ObserverWrapper
+          component={<StoriesList data={content.nodes} />}
+          fallback={<StoriesListSkeleton data={content.nodes} />}
+        />
       </Container>
     </Section>
   );

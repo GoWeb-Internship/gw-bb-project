@@ -11,9 +11,9 @@ const HeaderNavigation = ({
     <>
       {navConfig.length ? (
         <nav className={className}>
-          <ul className="flex">
+          <ul className="flex md:gap-x-[34px] lg:gap-x-[60px]">
             {navConfig.map(({ id, name }) => (
-              <li key={id} className="shrink-0 last:mr-0 md:mr-6 lg:mr-[56px]">
+              <li key={id} className="shrink-0 last:mr-0">
                 <Link
                   to={`${id}`}
                   activeClass="after:translate-x-0"
