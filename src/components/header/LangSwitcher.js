@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useI18next, Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 import { FiChevronDown } from 'react-icons/fi';
-import LangBackdrop from './LangBackDrop';
+import LangBackdrop from './LangBackdrop';
 
 const getNormalizeData = lang => ({
   label: (lang === 'uk' ? 'ua' : lang).toUpperCase(),
