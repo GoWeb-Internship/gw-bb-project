@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
+import { handleNavigationPreload } from 'services/preloader';
 
 const HeaderNavigation = ({
   navConfig = [],
@@ -22,6 +23,12 @@ const HeaderNavigation = ({
                   spy
                   offset={-headerHeight - 1}
                   href=""
+                  onMouseOver={() => {
+                    handleNavigationPreload(id);
+                  }}
+                  onTouchStart={() => {
+                    handleNavigationPreload(id);
+                  }}
                 >
                   {name}
                 </Link>

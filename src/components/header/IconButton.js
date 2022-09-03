@@ -8,6 +8,7 @@ const IconButton = ({
   style,
   className,
   label = 'button',
+  preload,
 }) => {
   return (
     <button
@@ -17,6 +18,8 @@ const IconButton = ({
       onClick={onClick}
       disabled={disabled}
       style={style}
+      onMouseOver={preload}
+      onTouchStart={preload}
     >
       {IconComponent ? (
         <IconComponent

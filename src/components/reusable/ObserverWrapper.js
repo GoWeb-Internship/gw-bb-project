@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ObserverWrapper = ({ component, fallback = null }) => {
+const ObserverWrapper = ({ component, fallback = null, className }) => {
   const [showElement, setShowElement] = useState(false);
 
   const observer = useRef();
@@ -19,7 +19,7 @@ const ObserverWrapper = ({ component, fallback = null }) => {
 
   useEffect(() => {
     observer.current = new IntersectionObserver(onElementIntersection, {
-      rootMargin: '100px 0px',
+      rootMargin: '300% 0px',
       threshold: 0.25,
     });
   }, []);
@@ -36,7 +36,14 @@ const ObserverWrapper = ({ component, fallback = null }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [container]);
 
-  return <div ref={container}>{showElement ? component : fallback}</div>;
+  console.log('component', component);
+  console.log('fallback', fallback);
+
+  return (
+    <div className={className} ref={container}>
+      {showElement ? component : fallback}
+    </div>
+  );
 };
 
 export default ObserverWrapper;

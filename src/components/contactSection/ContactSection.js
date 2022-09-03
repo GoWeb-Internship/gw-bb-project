@@ -44,6 +44,7 @@ const ContactSection = ({ saleText = '', cost = '' }) => {
             *{cost}
           </p>
           <ObserverWrapper
+            className="min-h-[430px] md:min-h-[406px]"
             component={
               <Form
                 place="section Contact"

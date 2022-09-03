@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Feedback from './Feedback';
 
 const FeedbackListSkeleton = ({ data = [], className = '' }) => (
-  <ul className={`${className} flex gap-x-10 overflow-y-auto`}>
+  <ul className={`${className} flex overflow-x-auto scrollbar`}>
     {!!data.length &&
-      data.map(({ content, imageData, id }) => (
-        <li key={id} className="h-auto">
+      data.map(({ content, imageData, id }, idx) => (
+        <li key={id} className="h-auto shrink-0 w-full">
           <Feedback content={content} image={imageData} />
         </li>
       ))}

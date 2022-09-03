@@ -149,7 +149,6 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`uk`, `ru`, `en`],
         defaultLanguage: `uk`,
-        generateDefaultLanguagePage: '/uk',
         redirect: true,
         siteUrl: 'https://dev--gw-bb-project.netlify.app',
 
