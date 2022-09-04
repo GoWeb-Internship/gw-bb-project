@@ -7,11 +7,11 @@ import Section from 'components/reusable/Section';
 import Container from 'components/reusable/Container';
 
 import Background from 'components/reusable/Background';
+import ObserverWrapper from 'components/reusable/ObserverWrapper';
+import FeedbackListSkeleton from './FeedbackListSkeleton';
 
 // const Background = loadable(() => import('components/reusable/Background'));
 const FeedbackList = loadable(() => import('./FeedbackList'));
-
-// import PropTypes from 'prop-types'
 
 const normalizeContentData = content => {
   return content.map(({ frontmatter, cloudinaryImg, id }) => {
@@ -65,7 +65,10 @@ const FeedbackSection = () => {
       <Background imageData={background} />
       <Container className="pt-11 pb-[72px] md:py-[80px] lg:pt-[124px] lg:pb-[130px]">
         <h2 className="text-center mb-8 md:mb-[48px]">{t('feedbacksTitle')}</h2>
-        <FeedbackList data={normalizedData} />
+        <ObserverWrapper
+          component={<FeedbackList data={normalizedData} />}
+          fallback={<FeedbackListSkeleton data={normalizedData} />}
+        />
       </Container>
     </Section>
   );

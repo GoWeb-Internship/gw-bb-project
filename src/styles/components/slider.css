@@ -40,3 +40,7 @@
 .slider-item-width {
   max-width: calc(100vw - 80px);
 }
+
+.priceswiper > div {
+  align-items: center;
+}

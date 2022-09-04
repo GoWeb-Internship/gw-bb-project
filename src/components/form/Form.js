@@ -129,7 +129,7 @@ const Form = ({
   return (
     <form
       name="contact"
-      className={`${className} mx-auto w-[280px] md:w-[410px]`}
+      className={`${className} mx-auto w-[280px] md:w-[410px] fade-in`}
       onSubmit={handleSubmit(onSubmit)}
       method="post"
       data-netlify="true"

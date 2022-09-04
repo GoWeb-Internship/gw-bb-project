@@ -7,7 +7,7 @@ import List from 'components/reusable/List';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
-
+// import loadable from '@loadable/component';
 // const Background = loadable(() => import('components/reusable/Background'));
 
 const AboutSection = () => {

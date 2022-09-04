@@ -4,11 +4,12 @@ import HeaderNavigation from './HeaderNavigation';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { PageFormatContext } from 'context/PageFormatContext';
 import { FiMenu } from 'react-icons/fi';
+import { handleMenuClickPreload } from 'services/preloader';
 
 import LangSwitcher from './LangSwitcher';
 import Container from 'components/reusable/Container';
 import Logo from './Logo';
-import MobileMenuButtons from './MobileMenuButtons';
+import IconButton from './IconButton';
 // import MobileMenu from './MobileMenu';
 
 const MobileMenu = loadable(() => import('./MobileMenu'));
@@ -17,6 +18,7 @@ const Header = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const [renderMenu, setRenderMenu] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const firstClickOnButton = useRef(true);
 
   const headerRef = useRef(null);
   const pageFormat = useContext(PageFormatContext);
@@ -40,6 +42,12 @@ const Header = () => {
     setShowMenu(true);
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleEscape);
+
+    if (firstClickOnButton) {
+      firstClickOnButton.current = false;
+      handleMenuClickPreload();
+      return;
+    }
   };
 
   const onClose = () => {
@@ -59,6 +67,10 @@ const Header = () => {
   const { nav } = t('header', { returnObjects: true });
   const { openMenu } = t('aria', { returnObjects: true });
 
+  const preload = () => {
+    MobileMenu.preload();
+  };
+
   return (
     <>
       <header
@@ -73,12 +85,13 @@ const Header = () => {
             headerHeight={headerHeight}
           />
           <LangSwitcher className="ml-auto md:ml-0" />
-          <MobileMenuButtons
+          <IconButton
             onClick={onOpen}
             IconComponent={FiMenu}
             disabled={renderMenu}
             className={'md:hidden'}
             label={openMenu}
+            preload={preload}
           />
         </Container>
         {isMobile && renderMenu && (
