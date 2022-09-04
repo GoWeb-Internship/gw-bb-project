@@ -36,9 +36,6 @@ const ObserverWrapper = ({ component, fallback = null, className }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [container]);
 
-  console.log('component', component);
-  console.log('fallback', fallback);
-
   return (
     <div className={className} ref={container}>
       {showElement ? component : fallback}
