@@ -5,7 +5,7 @@ import Story from './Story';
 const StoriesListSkeleton = ({ data = [], className = '' }) => (
   <ul className={`${className} flex gap-x-10 overflow-x-auto scrollbar`}>
     {!!data.length &&
-      data.map(({ frontmatter, id }, idx) => (
+      data.map(({ frontmatter, id }) => (
         <li key={id} className="h-auto shrink-0 w-full">
           <Story content={frontmatter} />
         </li>

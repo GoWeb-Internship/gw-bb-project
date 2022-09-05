@@ -15,8 +15,6 @@ const PriceCard = ({ cardData, onClick, isActive, id, inSlider = false }) => {
 
   const isDesktop = pageFormat === 'desktop';
 
-  // const height =
-  //   cardData.recommended && isDesktop ? 'md:min-h-[508px]' : 'md:min-h-[468px]';
   const ptb = cardData.recommended
     ? 'lg:pt-[70px] lg:pb-[80px]'
     : 'lg:pt-[50px] lg:pb-[60px]';
@@ -28,7 +26,6 @@ const PriceCard = ({ cardData, onClick, isActive, id, inSlider = false }) => {
     isActive || isDesktop
       ? 'opacity-100 scale-100'
       : 'opacity-50 scale-95 lg:scale-100';
-  // const scale = isActive && !isDesktop ? 'scale-105 ' : 'scale-100';
 
   const showDiscount = Boolean(cardData.discount) ? 'opacity-100' : 'opacity-0';
 

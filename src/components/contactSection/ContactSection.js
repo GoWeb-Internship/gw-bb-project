@@ -10,8 +10,6 @@ import ObserverWrapper from 'components/reusable/ObserverWrapper';
 
 const Form = loadable(() => import('components/form/Form'));
 
-// const Background = loadable(() => import('components/reusable/Background'));
-
 const ContactSection = ({ saleText = '', cost = '' }) => {
   const data = useStaticQuery(graphql`
     query {

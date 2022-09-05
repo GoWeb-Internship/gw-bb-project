@@ -37,7 +37,6 @@ const FooterNavigation = ({
               className="font-main font-light text-bb1424 cursor-pointer"
               smooth
               spy
-              // hashSpy
               offset={-100}
               href=""
             >
