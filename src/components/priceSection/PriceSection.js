@@ -1,32 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import Section from 'components/reusable/Section';
 import { graphql, useStaticQuery } from 'gatsby';
-import PriceCardsList from './PriceCardsList';
-import Modal from 'components/reusable/Modal';
-import ModalRight from 'components/modalValue/ModalRight';
-import Background from 'components/reusable/Background';
 import { useTranslation } from 'react-i18next';
+import loadable from '@loadable/component';
 
-const PriceSection = ({ charity = '' }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [place, setPlace] = useState('');
+import { PageFormatContext } from 'context/PageFormatContext';
 
-  const { t } = useTranslation();
+import Section from 'components/reusable/Section';
+import Background from 'components/reusable/Background';
+import ObserverWrapper from 'components/reusable/ObserverWrapper';
+import PriceCardsList from './PriceCardsList';
 
-  const title = t('priceSectionTitle');
+const SliderPriceCardsList = loadable(() => import('./SliderPriceCardsList'));
 
-  const handleModalOpen = value => {
-    setPlace(value);
-    document.body.style.overflow = 'hidden';
-    setIsModalOpen(true);
-  };
-  const handleModalClose = () => {
-    document.body.style.overflow = '';
-    setIsModalOpen(false);
-  };
-
-  const { background, cardsList, bgForm } = useStaticQuery(graphql`
+const PriceSection = ({ charity = '', openModal }) => {
+  const { background, cardsList } = useStaticQuery(graphql`
     query {
       background: file(name: { eq: "price-bg" }) {
         childImageSharp {
@@ -53,34 +41,52 @@ const PriceSection = ({ charity = '' }) => {
           }
         }
       }
-      bgForm: file(name: { eq: "fon-form2" }) {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
     }
   `);
+
+  const pageFormat = useContext(PageFormatContext);
+  const handleClick = price => openModal(`Price ${price}`, false);
+
+  const { t } = useTranslation();
+  const title = t('priceSectionTitle');
+
   return (
     <Section id="price">
       <Background imageData={background} />
-      <div className="relative w-screen mx-auto px-0 pt-9 pb-[70px] md:px-0 md:pt-10 md:pb-[74px] lg:w-[1440px] lg:px-20 lg:pt-[124px] lg:pb-[79px] overflow-hidden">
-        <h2 className="mx-auto text-center text-bb2833 px-8 mb-10 md:px-0 md:max-w-[698px] md:mb-14 lg:mb-[62px]">
+      <div className="relative w-screen mx-auto px-0 pt-9 pb-[72px] md:px-0 md:pt-[80px] md:pb-[80px] lg:w-[1440px] lg:px-20 lg:pt-[124px] lg:pb-[124px] overflow-hidden">
+        <h2 className="mx-auto text-center px-8 mb-10 md:px-0 md:max-w-[698px] md:mb-12 lg:mb-12">
           {title}
         </h2>
-        <PriceCardsList
-          cardsList={cardsList.nodes}
-          className="mb-[30px] md:mb-16 lg:mb-[52px]"
-          onClick={handleModalOpen}
-        />
+        {pageFormat && pageFormat === 'desktop' ? (
+          <PriceCardsList
+            cardsList={cardsList.nodes}
+            className="mb-[30px] md:mb-16 lg:mb-[66px]"
+            onClick={handleClick}
+          />
+        ) : (
+          <ObserverWrapper
+            component={
+              <SliderPriceCardsList
+                cardsList={cardsList.nodes}
+                className="mb-[30px] md:mb-16 lg:mb-[66px]"
+                onClick={handleClick}
+              />
+            }
+            fallback={
+              <PriceCardsList
+                cardsList={cardsList.nodes}
+                className="mb-[30px] md:mb-16 lg:mb-[66px]"
+                onClick={handleClick}
+              />
+            }
+          />
+        )}
         {charity && (
-          <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-full md:text-bb2040">
+          <p className="mx-auto text-center font-normal text-bb1225 px-8 max-w-[430px] md:px-0 md:max-w-[538px] md:text-bb2040 lg:max-w-full">
             {charity}
           </p>
         )}
       </div>
-      <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
-        <ModalRight place={place} bg={bgForm} />
-      </Modal>
     </Section>
   );
 };

@@ -15,7 +15,7 @@ const TextContainer = ({
       {!!text.length &&
         text.map(item => {
           return (
-            <p key={item} className="mt-6 text-neutral-700">
+            <p key={item} className="mt-6 first-of-type:mt-0 text-neutral-700">
               {item}
             </p>
           );

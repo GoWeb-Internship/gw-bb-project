@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import loadable from '@loadable/component';
 
+import Events from 'components/scripts/Events';
 import Seo from 'components/Seo';
 import Layout from 'components/Layout';
 import Hero from 'components/hero/Hero';
@@ -12,83 +14,89 @@ import GuaranteeSection from 'components/guaranteeSection/GuaranteeSection';
 import WithCoachSection from 'components/withCoachSection/WithCoachSection';
 import PriceSection from 'components/priceSection/PriceSection';
 import ImportantResultsSection from 'components/importantResultsSection/ImportantResultsSection';
+import StoriesSection from 'components/storiesSection/StoriesSection';
 import InLiveSection from 'components/inLiveSection/InLiveSection';
 import SignUpSection from 'components/signUpSection/SignUpSection';
 import ContactSection from 'components/contactSection/ContactSection';
-import Form from 'components/form/Form';
 import BeBetterToday from 'components/beBetterToday/BeBetterToday';
 import MyFormulaSection from 'components/myFormulaSection/MyFormulaSection';
-import StoriesSection from 'components/storiesSection/StoriesSection';
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
+
+const Modal = loadable(() => import('components/reusable/Modal'));
+const ModalLeft = loadable(() => import('components/modalValue/ModalLeft'));
+const ModalRight = loadable(() => import('components/modalValue/ModalRight'));
 
 const IndexPage = ({ data }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLeftModal, setIsLeftModal] = useState(true);
+  const [place, setPlace] = useState('');
+
+  const handleModalOpen = (place, isLeft = true) => {
+    document.body.style.overflow = 'hidden';
+    setIsModalOpen(true);
+    setPlace(place);
+    setIsLeftModal(isLeft);
+  };
+
+  const handleModalClose = () => {
+    document.body.style.overflow = '';
+    setIsModalOpen(false);
+  };
+
   const { t } = useTranslation();
 
-  const button = t('button', { returnObjects: true });
   const seo = t('seo', { returnObjects: true });
 
   const { charity, sale, cost } = data.content.frontmatter;
 
   return (
     <>
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{
-            display: 'none',
-          }}
-          src="https://www.facebook.com/tr?id=5209032532528271&ev=PageView&noscript=1"
-          alt=""
-        />
-      </noscript>
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-W4T6PP6"
-          height="0"
-          width="0"
-          title="googletagmanager"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
+      <Events />
       <Seo
         title={seo.title}
         description={seo.description}
         lang={data.locales.edges[0].node.language}
       />
-      <Layout saleText={sale} cost={cost} charity={charity}>
-        <Hero saleText={sale} cost={cost} />
+      <Layout
+        saleText={sale}
+        cost={cost}
+        charity={charity}
+        openModal={handleModalOpen}
+      >
+        <Hero openModal={handleModalOpen} />
         <AboutSection />
         <RoadMapSection />
         <FeedbackSection />
         <GuaranteeSection />
         <WithCoachSection />
-        <PriceSection charity={charity} />
+        <PriceSection charity={charity} openModal={handleModalOpen} />
         <ImportantResultsSection />
         <StoriesSection />
         <InLiveSection />
-        <SignUpSection saleText={sale} cost={cost} />
-        <ContactSection saleText={sale} cost={cost}>
-          <Form
-            place="section Contact"
-            buttonText={button.textBigButton}
-            buttonClassName="bg-orange-400 hover:bg-orange-500"
-          />
-        </ContactSection>
+        <SignUpSection
+          saleText={sale}
+          cost={cost}
+          openModal={handleModalOpen}
+        />
+        <ContactSection saleText={sale} cost={cost} />
         <BeBetterToday />
         <MyFormulaSection />
-        <ToastContainer
-          position="top-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
       </Layout>
+      {isModalOpen && (
+        <Modal isModalOpen={isModalOpen} handleModalClose={handleModalClose}>
+          {isLeftModal ? (
+            <ModalLeft
+              bg={data.bgFormL}
+              place={place}
+              saleText={sale}
+              cost={cost}
+            />
+          ) : (
+            <ModalRight place={place} bg={data.bgFormR} />
+          )}
+        </Modal>
+      )}
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   );
 };
@@ -113,6 +121,16 @@ export const query = graphql`
         charity
         sale
         cost
+      }
+    }
+    bgFormL: file(name: { eq: "fon-form1" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, quality: 100)
+      }
+    }
+    bgFormR: file(name: { eq: "fon-form2" }) {
+      childImageSharp {
+        gatsbyImageData
       }
     }
   }

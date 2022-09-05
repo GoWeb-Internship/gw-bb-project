@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Link } from 'react-scroll';
 
 import Logo from './Logo';
-import MobileMenuButtons from './MobileMenuButtons';
+import IconButton from './IconButton';
 
 import { FiX } from 'react-icons/fi';
 
 const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
   const [translateY, setTranslateY] = useState('translate-x-[102%]');
   const [backdropOpacity, setBackdropOpacity] = useState('opacity-0');
+  const { t } = useTranslation();
+
+  const { closeMenu } = t('aria', { returnObjects: true });
 
   useEffect(() => {
     if (showMenu) {
@@ -28,11 +32,12 @@ const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
       >
         <div className="flex justify-between py-3 mb-[50px]">
           <Logo onClick={onClose} />
-          <MobileMenuButtons
+          <IconButton
             onClick={onClose}
             IconComponent={FiX}
             disabled={!showMenu}
             className="close-btn"
+            label={closeMenu}
           />
         </div>
         {navConfig.length ? (
@@ -47,7 +52,6 @@ const MobileMenu = ({ navConfig, onClose, showMenu, headerHeight = 0 }) => {
                     to={`${id}`}
                     onClick={onClose}
                     className="relative font-main text-slate-50 text-bb1824 cursor-pointer px-5 py-3 w-full transition after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-slate-50 after:opacity-0 after:transition-opacity after:duration-300 hover:after:opacity-100"
-                    // className="relative font-main text-bb1824 cursor-pointer px-5 py-3 transition-transform hover:scale-110 before:content-[''] before:absolute before:bottom-1/2 before:-translate-y-1/2 before:-left-11 before:w-11 before:h-[1px] before:bg-slate-50 before:opacity-0 before:transition-opacity before:duration-300 after:content-[''] after:absolute after:bottom-1/2 after:-translate-y-1/2 after:-right-11 after:w-11 after:h-[1px] after:bg-slate-50 after:opacity-0 after:transition-opacity after:duration-300 hover:before:opacity-100 hover:after:opacity-100 focus:before:opacity-100 focus:after:opacity-100"
                     smooth
                     spy
                     href=""

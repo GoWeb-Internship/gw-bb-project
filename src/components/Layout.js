@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './header/Header';
@@ -18,7 +11,7 @@ import { ClientLocationContext } from 'context/ClientLocationContext';
 
 const mediaQueries = getMediaQueries();
 
-const Layout = ({ children, saleText, charity, cost }) => {
+const Layout = ({ children, saleText, charity, cost, openModal }) => {
   const pageFormat = useMedia(
     Object.values(mediaQueries),
     Object.keys(mediaQueries),
@@ -32,10 +25,13 @@ const Layout = ({ children, saleText, charity, cost }) => {
       <ClientLocationContext.Provider value={clientLocation}>
         <PageFormatContext.Provider value={pageFormat}>
           <Header />
-          <div>
-            <Main>{children}</Main>
-            <Footer saleText={saleText} charity={charity} cost={cost} />
-          </div>
+          <Main>{children}</Main>
+          <Footer
+            saleText={saleText}
+            charity={charity}
+            cost={cost}
+            openModal={openModal}
+          />
         </PageFormatContext.Provider>
       </ClientLocationContext.Provider>
     </>

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { BsArrowRightCircle, BsArrowLeftCircle } from 'react-icons/bs';
+import { FiArrowRightCircle, FiArrowLeftCircle } from 'react-icons/fi';
 import { Swiper } from 'swiper/react';
 import { Navigation } from 'swiper';
 import { PageFormatContext } from 'context/PageFormatContext';
@@ -19,9 +19,10 @@ const Slider = ({
   const isMobile = pageFormat === 'mobile';
 
   return (
-    <div className={`relative  ${className}`}>
+    <div className={`${className} relative -z-0`}>
       <Swiper
-        className={`mx-auto sm:max-w-[420px] md:max-w-[550px] lg:max-w-[1100px]`}
+        className="mx-auto lg:w-[1060px]"
+        spaceBetween={spaceBetween}
         modules={[Navigation]}
         slidesPerView={slidesPerView}
         onSlideChange={onSlideChange}
@@ -39,10 +40,10 @@ const Slider = ({
       {!isMobile && (
         <>
           <div className="prev-slider swiper-button-disabled" role={'button'}>
-            <BsArrowLeftCircle size={40} />
+            <FiArrowLeftCircle size={40} />
           </div>
           <div className="next-slider swiper-button-disabled" role={'button'}>
-            <BsArrowRightCircle size={40} />
+            <FiArrowRightCircle size={40} />
           </div>
         </>
       )}

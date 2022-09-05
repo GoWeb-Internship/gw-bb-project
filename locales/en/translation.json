@@ -41,12 +41,15 @@
     "inputEmail": {
       "name": "Email"
     },
-    "checkbox": "I agree to the processing of my personal data"
+    "checkbox": {
+      "text": "I agree to the processing of my ",
+      "policy": "personal data"
+    }
   },
   "validation": {
     "required": "This is a required field",
     "email": "Enter your email in the format your@email.com",
-    "emailValid": "Can only contain Latin characters",
+    "emailValid": "Can only contain Latin characters and at least 3 characters in front of @",
     "name": "Name must be at least 1 characters",
     "toastSuccessful": "Data has been successfully submitted",
     "toastError": "Something went wrong. Try again later."
@@ -231,5 +234,11 @@
     "redirectMsg": "You will be automatically redirected to the home page via",
     "timer": "seconds",
     "redirectStatus": "redirecting"
+  },
+  "aria": {
+    "toplink": "to page top",
+    "openMenu": "mobile menu open button",
+    "closeMenu": "mobile menu close button",
+    "langSwitcher": "language switcher button"
   }
 }

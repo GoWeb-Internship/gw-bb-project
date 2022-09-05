@@ -1,13 +1,15 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'react-i18next';
+import loadable from '@loadable/component';
 
 import Section from 'components/reusable/Section';
 import Container from 'components/reusable/Container';
-import FeedbackList from './FeedbackList';
 import Background from 'components/reusable/Background';
+import ObserverWrapper from 'components/reusable/ObserverWrapper';
+import FeedbackListSkeleton from './FeedbackListSkeleton';
 
-// import PropTypes from 'prop-types'
+const FeedbackList = loadable(() => import('./FeedbackList'));
 
 const normalizeContentData = content => {
   return content.map(({ frontmatter, cloudinaryImg, id }) => {
@@ -61,7 +63,10 @@ const FeedbackSection = () => {
       <Background imageData={background} />
       <Container className="pt-11 pb-[72px] md:py-[80px] lg:pt-[124px] lg:pb-[130px]">
         <h2 className="text-center mb-8 md:mb-[48px]">{t('feedbacksTitle')}</h2>
-        <FeedbackList data={normalizedData} />
+        <ObserverWrapper
+          component={<FeedbackList data={normalizedData} />}
+          fallback={<FeedbackListSkeleton data={normalizedData} />}
+        />
       </Container>
     </Section>
   );

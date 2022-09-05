@@ -11,10 +11,6 @@ const useMedia = (queries, values, defaultValue) => {
     return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
   }, [defaultValue, mediaQueryLists, values]);
 
-  // const getValue = () => {
-  //   const index = mediaQueryLists.findIndex(mql => mql.matches);
-  //   return typeof values[index] !== 'undefined' ? values[index] : defaultValue;
-  // };
   const [value, setValue] = useState(getValue);
   useEffect(
     () => {

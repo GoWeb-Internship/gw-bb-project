@@ -11,7 +11,7 @@ const InputPhone = ({ control, errors, language, country }) => {
   const location = loc[language];
   const { t } = useTranslation();
   return (
-    <div className="mb-4 h-[69px]">
+    <div className="mb-5 h-[74px]">
       <Controller
         name="phone"
         control={control}
@@ -21,7 +21,7 @@ const InputPhone = ({ control, errors, language, country }) => {
         render={({ field: { onChange, value } }) => (
           <PhoneInput
             containerClass={'input-container'}
-            inputClass="input-phone"
+            inputClass={`input-phone ${errors.phone && 'input-phone-error'}`}
             buttonClass="input-drop"
             dropdownStyle={{
               color: '#525252',
@@ -35,7 +35,7 @@ const InputPhone = ({ control, errors, language, country }) => {
           />
         )}
       />
-      <p className="px-5 text-slate-100 font-normal text-xs">
+      <p className="px-5 mt-1 text-orange-400 font-normal text-xs">
         {errors.phone?.message && <span>{t('phoneError')}</span>}
       </p>
     </div>

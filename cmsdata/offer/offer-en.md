@@ -154,92 +154,93 @@ the provision of paid coaching services specified in this public offer.
    that have become known to the Contractor in connection with the execution of
    this Agreement, including
 
-● provision of services to the Customer under this Agreement;
+   ● provision of services to the Customer under this Agreement;
 
-● contents of the coaching sessions;
+   ● contents of the coaching sessions;
 
-● contact information of the Customer, namely: telephone, cell phone, e-mail
-mobile phone, email, Skype, passport data.
+   ● contact information of the Customer, namely: telephone, cell phone, e-mail
+   mobile phone, email, Skype, passport data.
 
-4.1.5 The Contractor has the right not to comply with the terms of the
-confidentiality agreement and to apply to the relevant state authorities, in
-cases stipulated by current legislation of Ukraine, including, but not limited
-to: in cases of unlawful activity of the Customer, based on the court decision
-and/or subpoena in cases of risk of endangering their own personality or others.
-By signing the terms and conditions of this Agreement, the Customer confirms its
-consent to these limitations of the confidentiality terms and conditions
-provided for in this Agreement.
+   4.1.5 The Contractor has the right not to comply with the terms of the
+   confidentiality agreement and to apply to the relevant state authorities, in
+   cases stipulated by current legislation of Ukraine, including, but not
+   limited to: in cases of unlawful activity of the Customer, based on the court
+   decision and/or subpoena in cases of risk of endangering their own
+   personality or others. By signing the terms and conditions of this Agreement,
+   the Customer confirms its consent to these limitations of the confidentiality
+   terms and conditions provided for in this Agreement.
 
-4.1.6. The Executor has the right to recommend the Customer to apply to another
-coach or other profile specialists, whose services are not duplicating or
-replacing, if it considers that it will be more productive and/or necessary for
-the Customer in the relevant situation.
+   4.1.6. The Executor has the right to recommend the Customer to apply to
+   another coach or other profile specialists, whose services are not
+   duplicating or replacing, if it considers that it will be more productive
+   and/or necessary for the Customer in the relevant situation.
 
-4.1.7 The Executor undertakes to notify the Client of all anticipated
-remuneration that the Contractor may receive from third parties for recommending
-this Client or for the fact that the Client has been recommended to the
-Contractor.
+   4.1.7 The Executor undertakes to notify the Client of all anticipated
+   remuneration that the Contractor may receive from third parties for
+   recommending this Client or for the fact that the Client has been recommended
+   to the Contractor.
 
-4.1.8. The Executor is obliged to monitor the risks of conflicts of interests
-and potential conflicts of interests, openly discuss such situations with the
-Client, and make decisions for the benefit of the Customer, up to the
-termination of this Agreement.
+   4.1.8. The Executor is obliged to monitor the risks of conflicts of interests
+   and potential conflicts of interests, openly discuss such situations with the
+   Client, and make decisions for the benefit of the Customer, up to the
+   termination of this Agreement.
 
-4.1.9. The Executor has the right to use the Customer's information to fill in
-the application form for renewal of the coaching certificate at ICF where the
-Executor can specify the name, contact information, total number of coaching
-hours.
+   4.1.9. The Executor has the right to use the Customer's information to fill
+   in the application form for renewal of the coaching certificate at ICF where
+   the Executor can specify the name, contact information, total number of
+   coaching hours.
 
-4.1.10. The Contractor shall comply with the requirements of the legislation
-applicable to him on protection of personal data. Processing of personal data of
-the Customer, including transfer of personal data in the cases stipulated by
-this Agreement, necessary and sufficient for the provision of services under
-this Agreement, is carried out with the Customer's consent to the processing of
-his personal data.
+   4.1.10. The Contractor shall comply with the requirements of the legislation
+   applicable to him on protection of personal data. Processing of personal data
+   of the Customer, including transfer of personal data in the cases stipulated
+   by this Agreement, necessary and sufficient for the provision of services
+   under this Agreement, is carried out with the Customer's consent to the
+   processing of his personal data.
 
-4.2. RIGHTS AND OBLIGATIONS OF THE CLIENT:
+   4.2. RIGHTS AND OBLIGATIONS OF THE CLIENT:
 
-4.2.1 The Customer has the right to receive professional service from the
-Contractor, in accordance with the requirements stipulated in the ICF Code of
-Ethics and the ICF Key ICF Core Competencies. By signing this contract, the
-Client acknowledges that is notified of and accepts the Contractor's level of
-coaching qualifications, certifications obtained ICF certificates and
-certifications obtained by the Contractor.
+   4.2.1 The Customer has the right to receive professional service from the
+   Contractor, in accordance with the requirements stipulated in the ICF Code of
+   Ethics and the ICF Key ICF Core Competencies. By signing this contract, the
+   Client acknowledges that is notified of and accepts the Contractor's level of
+   coaching qualifications, certifications obtained ICF certificates and
+   certifications obtained by the Contractor.
 
-4.2.2 The Customer is entitled to request information from the Contractor on the
-issues related to organization and ensuring the proper execution of the services
-under clause. 2.1. this Agreement, other information affecting the rights and
-legitimate interests of the Customer.
+   4.2.2 The Customer is entitled to request information from the Contractor on
+   the issues related to organization and ensuring the proper execution of the
+   services under clause. 2.1. this Agreement, other information affecting the
+   rights and legitimate interests of the Customer.
 
-4.2.3. Customer is obliged to perform timely payment for the services of the
-Executor on terms and conditions provided by Clause 5 of this Agreement.
+   4.2.3. Customer is obliged to perform timely payment for the services of the
+   Executor on terms and conditions provided by Clause 5 of this Agreement.
 
-4.2.4. Customer is obliged to reschedule a session in writing not later than 24
-hours prior to a session without any penalty. In case such notification was
-received by the Executor later than the indicated time, the session is
-considered to be held and paid for in full, unless otherwise agreed by the
-Parties.
+   4.2.4. Customer is obliged to reschedule a session in writing not later than
+   24 hours prior to a session without any penalty. In case such notification
+   was received by the Executor later than the indicated time, the session is
+   considered to be held and paid for in full, unless otherwise agreed by the
+   Parties.
 
-4.2.5 In case of a complaint about the conducted session, the Customer shall be
-obliged no later than 24 hours after the end of the session, to submit to the
-Contractor a motivated objection in the form of a written notice. In the absence
-of a written motivated objection to the session, the service shall be considered
-as rendered and shall be subject to payment. The parties confirm that the
-additional signing of the Act of the rendered services is not required.
+   4.2.5 In case of a complaint about the conducted session, the Customer shall
+   be obliged no later than 24 hours after the end of the session, to submit to
+   the Contractor a motivated objection in the form of a written notice. In the
+   absence of a written motivated objection to the session, the service shall be
+   considered as rendered and shall be subject to payment. The parties confirm
+   that the additional signing of the Act of the rendered services is not
+   required.
 
-4.2.6 The Customer has the right to unilaterally and prematurely withdraw from
-the Contract, which entails the termination of the provision of services by the
-Contractor. Such termination is possible by the written notification of the
-Executor by the Customer not later than 4 (four) days before the date of the
-next session.
+   4.2.6 The Customer has the right to unilaterally and prematurely withdraw
+   from the Contract, which entails the termination of the provision of services
+   by the Contractor. Such termination is possible by the written notification
+   of the Executor by the Customer not later than 4 (four) days before the date
+   of the next session.
 
-4.2.7. The Customer confirms that by signing the terms and conditions of this
-Agreement in within the framework of cooperation under this Agreement agrees
-with all cases of receipt, processing, storage, transfer of his personal data,
-including all cases of receipt, processing, storage, transfer of his personal
-data to a third party. If the Client finds that the Coach has violated the ICF
-Code of Ethics, the Client has the right to apply to the International Coaching
-Federation or one of its chapters.
+   4.2.7. The Customer confirms that by signing the terms and conditions of this
+   Agreement in within the framework of cooperation under this Agreement agrees
+   with all cases of receipt, processing, storage, transfer of his personal
+   data, including all cases of receipt, processing, storage, transfer of his
+   personal data to a third party. If the Client finds that the Coach has
+   violated the ICF Code of Ethics, the Client has the right to apply to the
+   International Coaching Federation or one of its chapters.
 
 5. **FINANCIAL CONDITIONS**
 
@@ -363,23 +364,24 @@ Federation or one of its chapters.
    performance of this Agreement the Parties have agreed on the following
    procedure for exchange of legally significant messages by means of email:
 
-● legally significant messages sent/received by the Parties to e-mail addresses
-specified in Section 8 of the Agreement shall be deemed sent by the addressee
-Party to the Agreement (the sender electronic message) and received by the
-addressee Party to the Agreement (recipient of the electronic message);  
- ● acceptance of legally significant messages by way of execution shall be recognized
-Parties to the Agreement as an acknowledgement of receipt of the relevant electronic
-messages;  
- ● the documents (including notices) transmitted by email shall have full legal
-effect for the Parties. At that, the Parties shall, not later than 2 (two) days
-from the date of execution of the documents in electronic form and sent by email
-has the right, but not the obligation, to send to the addressee an original of
-the relevant electronic message, identical text and documents sent by electronic
-communication.
+   ● legally significant messages sent/received by the Parties to e-mail
+   addresses specified in Section 8 of the Agreement shall be deemed sent by the
+   addressee Party to the Agreement (the sender electronic message) and received
+   by the addressee Party to the Agreement (recipient of the electronic
+   message);  
+   ● acceptance of legally significant messages by way of execution shall be
+   recognized Parties to the Agreement as an acknowledgement of receipt of the
+   relevant electronic messages;  
+   ● the documents (including notices) transmitted by email shall have full
+   legal effect for the Parties. At that, the Parties shall, not later than 2
+   (two) days from the date of execution of the documents in electronic form and
+   sent by email has the right, but not the obligation, to send to the addressee
+   an original of the relevant electronic message, identical text and documents
+   sent by electronic communication.
 
-7.14 The Client is a natural person.
+   7.14 The Client is a natural person.
 
-7.15 The Contractor is a (taxpayer/individual).
+   7.15 The Contractor is a (taxpayer/individual).
 
 8. **FINAL PROVISIONS**
 

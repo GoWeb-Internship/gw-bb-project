@@ -21,6 +21,11 @@ input:focus {
   outline-offset: -3px;
 }
 
+.input-container .input-phone-error {
+  border: 1px solid #fb923c !important;
+  color: #fb923c !important;
+}
+
 .input-container .input-drop {
   width: 0;
 }
@@ -32,6 +37,14 @@ input:focus {
 
 .input-container .input-drop .flag {
   transform: scale(1.2);
+}
+
+.input-container .selected-flag:focus:before,
+.input-container .selected-flag.open:before {
+  outline: 1px solid black !important;
+  outline-offset: -3px;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .input-container .input-drop .arrow {

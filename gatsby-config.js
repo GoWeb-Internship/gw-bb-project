@@ -21,6 +21,7 @@ module.exports = {
     siteUrl: `https://dev--gw-bb-project.netlify.app/`,
   },
   plugins: [
+    `gatsby-plugin-webpack-bundle-analyser-v2`,
     `gatsby-plugin-root-import`,
     {
       resolve: `gatsby-source-cloudinary`,
@@ -112,46 +113,42 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require('tailwindcss'), require('autoprefixer')],
-      },
-    },
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
-        pixelId: '5209032532528271',
+        pixelId: process.env.FACEBOOK_PIXEL_ID,
       },
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: 'GTM-W4T6PP6',
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
       },
     },
-
-    // {
-    //   resolve: `gatsby-plugin-purgecss`,
-    //   options: {
-    //     printRejected: false,
-    //     develop: true,
-    //     tailwind: true,
-    //     ignore: [
-    //       'react-phone-input-2/lib/bootstrap.css',
-    //       'swiper',
-    //       'swiper/css',
-    //       'swiper/css/navigation',
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: false,
+        develop: true,
+        tailwind: true,
+        ignore: [
+          'react-phone-input-2/lib/bootstrap.css',
+          'swiper',
+          'swiper/css',
+          'swiper/css/navigation',
+          'react-toastify/dist/ReactToastify.css',
+          'styles/components/',
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
         languages: [`uk`, `ru`, `en`],
         defaultLanguage: `uk`,
-        generateDefaultLanguagePage: '/uk',
         redirect: true,
         siteUrl: 'https://dev--gw-bb-project.netlify.app',
 

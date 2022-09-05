@@ -8,22 +8,22 @@ policyTitle: 'Privacy Policy'
 
 1. **General Provisions**
 
-This Privacy policy has been drawn up in accordance with the requirements of the
-Law of Ukraine "On the Protection of Personal Data" of June 1. 2010 No. 2297-VI
-(hereinafter referred to as the Law), as well as the General Data Protection
-Regulation (EU) 2016/679 of April 27. 2016 (hereinafter referred to as the Law
-on Personal Data) and determines the procedure for processing personal data and
-measures to ensure the security of personal data taken by Shayenko Yuliya
-(hereinafter referred to as the Operator).
+   This Privacy policy has been drawn up in accordance with the requirements of
+   the Law of Ukraine "On the Protection of Personal Data" of June 1. 2010 No.
+   2297-VI (hereinafter referred to as the Law), as well as the General Data
+   Protection Regulation (EU) 2016/679 of April 27. 2016 (hereinafter referred
+   to as the Law on Personal Data) and determines the procedure for processing
+   personal data and measures to ensure the security of personal data taken by
+   Shayenko Yuliya (hereinafter referred to as the Operator).
 
-1.1. The operator sets as its most important goal and condition for the
-implementation of its activities the observance of the rights and freedoms of a
-person and a citizen in the processing of his personal data, including the
-protection of the rights to privacy, personal and family secrets.
+   1.1. The operator sets as its most important goal and condition for the
+   implementation of its activities the observance of the rights and freedoms of
+   a person and a citizen in the processing of his personal data, including the
+   protection of the rights to privacy, personal and family secrets.
 
-1.2. This Operator's policy regarding the processing of personal data
-(hereinafter referred to as the Policy) applies to all information that the
-Operator can receive about visitors to the https://be-better.today/ website.
+   1.2. This Operator's policy regarding the processing of personal data
+   (hereinafter referred to as the Policy) applies to all information that the
+   Operator can receive about visitors to the https://be-better.today/ website.
 
 2. **Basic concepts used in the Policy**
 
@@ -258,22 +258,23 @@ Operator can receive about visitors to the https://be-better.today/ website.
 
    8.1 The legal basis for processing of personal data by the Operator is:
 
-● The Law of Ukraine "On Protection of Personal Data" of 01.06.2010 No. 2297-VI
-(hereinafter - the Law), as well as the General Data Protection Regulation (EU)
-2016/679 of 27.04.2016;  
- ● Federal laws, other normative legal acts in the field of personal data protection;  
+   ● The Law of Ukraine "On Protection of Personal Data" of 01.06.2010 No.
+   2297-VI (hereinafter - the Law), as well as the General Data Protection
+   Regulation (EU) 2016/679 of 27.04.2016;  
+   ● Federal laws, other normative legal acts in the field of personal data
+   protection;
 
-● Users' consent to the processing of their personal data, to the processing of
-personal data allowed for dissemination. 8.2. The Operator processes the User's
-personal data only if the User fills in and/or sends them independently through
-the special forms located on the website https://be-better.today or sent to the
-Operator via email. By filling out the relevant forms and/or sending his
-personal data to the Operator the User expresses his consent to this Policy.
-8.3. The Operator processes impersonal data about the User if it is allowed in
-the settings of the User's browser (the saving of cookies and the use of
-JavaScript technology are enabled). 8.4 The subject of personal data
-independently decides to provide his personal data and gives his consent freely,
-willingly and in his own interest.
+   ● Users' consent to the processing of their personal data, to the processing
+   of personal data allowed for dissemination. 8.2. The Operator processes the
+   User's personal data only if the User fills in and/or sends them
+   independently through the special forms located on the website
+   https://be-better.today or sent to the Operator via email. By filling out the
+   relevant forms and/or sending his personal data to the Operator the User
+   expresses his consent to this Policy. 8.3. The Operator processes impersonal
+   data about the User if it is allowed in the settings of the User's browser
+   (the saving of cookies and the use of JavaScript technology are enabled). 8.4
+   The subject of personal data independently decides to provide his personal
+   data and gives his consent freely, willingly and in his own interest.
 
 9. **Terms of personal data processing**
 
@@ -311,57 +312,58 @@ willingly and in his own interest.
 10. **Procedure for collection, storage, transfer and other processing of
     personal data**
 
-Security of personal data processed by the Operator is ensured by implementing
-legal, organizational and technical measures necessary to comply fully with the
-requirements of applicable laws in the field of personal data protection.
+    Security of personal data processed by the Operator is ensured by
+    implementing legal, organizational and technical measures necessary to
+    comply fully with the requirements of applicable laws in the field of
+    personal data protection.
 
-10.1 The operator provides safety of personal data and takes all possible
-measures which exclude access to personal data by unauthorized persons.
+    10.1 The operator provides safety of personal data and takes all possible
+    measures which exclude access to personal data by unauthorized persons.
 
-10.2 The personal data of the User shall never, under no circumstances be
-transferred to third parties, except in cases related to the implementation of
-the current legislation or if the subject of personal data has given consent to
-the Operator to transfer the data to a third party to fulfill obligations under
-a civil law contract.
+    10.2 The personal data of the User shall never, under no circumstances be
+    transferred to third parties, except in cases related to the implementation
+    of the current legislation or if the subject of personal data has given
+    consent to the Operator to transfer the data to a third party to fulfill
+    obligations under a civil law contract.
 
-10.3 In case of identification of inaccuracies in personal data, the User may
-update them on their own, by sending a notice to the Operator's email address
-yshayenko@gmail.com with a note "Updating of personal data".
+    10.3 In case of identification of inaccuracies in personal data, the User
+    may update them on their own, by sending a notice to the Operator's email
+    address yshayenko@gmail.com with a note "Updating of personal data".
 
-10.4 The term of processing of personal data is determined by achieving the
-purposes for which the personal data was collected, unless a different term is
-stipulated by the contract or by applicable law. The User may withdraw their
-consent to the processing of personal data at any time by sending a notice via
-email to the Operator's email address yshayenko@gmail.com, marked "Withdrawal of
-consent to the processing of personal data".
+    10.4 The term of processing of personal data is determined by achieving the
+    purposes for which the personal data was collected, unless a different term
+    is stipulated by the contract or by applicable law. The User may withdraw
+    their consent to the processing of personal data at any time by sending a
+    notice via email to the Operator's email address yshayenko@gmail.com, marked
+    "Withdrawal of consent to the processing of personal data".
 
-10.5 All information that is collected by third-party services, including
-payment systems, means of communication and other service providers, is stored
-and processed by the specified persons (Operators) in accordance with their User
-Agreement and Privacy Policy. The subject of personal data and/or the User is
-obliged to get acquainted with the specified documents on his/her own in time.
-The Operator shall not be liable for the actions of third parties, including the
-service providers mentioned in this clause.
+    10.5 All information that is collected by third-party services, including
+    payment systems, means of communication and other service providers, is
+    stored and processed by the specified persons (Operators) in accordance with
+    their User Agreement and Privacy Policy. The subject of personal data and/or
+    the User is obliged to get acquainted with the specified documents on
+    his/her own in time. The Operator shall not be liable for the actions of
+    third parties, including the service providers mentioned in this clause.
 
-10.6 The prohibitions established by the personal data subject on the transfer
-(other than granting access), as well as on the processing or processing
-conditions (other than gaining access) of personal data permitted for
-distribution, shall not apply in cases of processing of personal data in state,
-public and other public interests as defined by UZ legislation.
+    10.6 The prohibitions established by the personal data subject on the
+    transfer (other than granting access), as well as on the processing or
+    processing conditions (other than gaining access) of personal data permitted
+    for distribution, shall not apply in cases of processing of personal data in
+    state, public and other public interests as defined by UZ legislation.
 
-10.7. The Operator ensures the confidentiality of personal data when processing
-personal data.
+    10.7. The Operator ensures the confidentiality of personal data when
+    processing personal data.
 
-10.8. The operator shall store personal data in a form that makes it possible to
-identify the subject of personal data no longer than the purposes of personal
-data processing require, unless the period of storage of personal data is
-established by federal law, a contract to which the subject of personal data is
-a party, a beneficiary or a guarantor.
+    10.8. The operator shall store personal data in a form that makes it
+    possible to identify the subject of personal data no longer than the
+    purposes of personal data processing require, unless the period of storage
+    of personal data is established by federal law, a contract to which the
+    subject of personal data is a party, a beneficiary or a guarantor.
 
-10.9 A condition for termination of personal data processing may be achievement
-of personal data processing objectives, expiration of the personal data
-subject's consent or withdrawal of consent by the personal data subject, as well
-as detection of unlawful personal data processing.
+    10.9 A condition for termination of personal data processing may be
+    achievement of personal data processing objectives, expiration of the
+    personal data subject's consent or withdrawal of consent by the personal
+    data subject, as well as detection of unlawful personal data processing.
 
 11. **The list of actions performed by the Operator with the received personal
     data**

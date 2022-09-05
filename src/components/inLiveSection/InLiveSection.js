@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
+
 import ImageContent from 'components/reusable/ImageContent';
 import TextContainer from 'components/reusable/TextContainer';
 import Section from 'components/reusable/Section';
@@ -36,12 +37,13 @@ const InLiveSection = () => {
   return (
     <Section>
       <Background imageData={data.background} />
-      <div className="relative w-screen mx-auto pt-9 md:w-[768px] lg:w-[1440px] lg:pt-[124px] lg:pb-[126px]">
+      <div className="relative w-screen mx-auto pt-9 md:w-[768px] md:py-[80px] lg:w-[1440px] lg:py-[124px]">
         <div className="lg:flex lg:flex-row-reverse lg:justify-between">
           <TextContainer
             title={inLive.title}
             text={inLive.text}
-            className=" max-w-sm(384px) px-[20px] pb-11 md:px-[35px] md:pb-0 md:mb-11 lg:mb-0 lg:ml-[41px] lg:pr-[85px] lg:mt-0 lg:w-2/4"
+            titlePosition="text-center lg:text-start"
+            className="max-w-[480px] mx-auto px-[20px] pb-[72px] md:px-[35px] md:pb-0 md:mb-11 md:max-w-[720px] lg:max-w-full lg:mx-0 lg:mb-0 lg:ml-[40px] lg:pl-0 lg:pr-[85px] lg:mt-0 lg:w-2/4"
           />
           <ImageContent
             imageData={imageData}
