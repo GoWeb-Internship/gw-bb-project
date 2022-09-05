@@ -1,19 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, useStaticQuery } from 'gatsby';
-// import loadable from '@loadable/component';
-import ImageContent from 'components/reusable/ImageContent';
-import List from 'components/reusable/List';
-import TextContainer from 'components/reusable/TextContainer';
+
 import Section from 'components/reusable/Section';
 import Background from 'components/reusable/Background';
-// import loadable from '@loadable/component';
-// const Background = loadable(() => import('components/reusable/Background'));
+import TextContainer from 'components/reusable/TextContainer';
+import ImageContent from 'components/reusable/ImageContent';
+import List from 'components/reusable/List';
 
 const AboutSection = () => {
-  const { t, i18n } = useTranslation();
-  const about = t('about', { returnObjects: true });
-
   const data = useStaticQuery(graphql`
     query {
       photo1: mdx(frontmatter: { title: { eq: "about1" } }) {
@@ -59,6 +54,9 @@ const AboutSection = () => {
       }
     }
   `);
+
+  const { t, i18n } = useTranslation();
+  const about = t('about', { returnObjects: true });
 
   const imageData1 =
     data.photo1?.cloudinaryImg.childImageSharp.gatsbyImageData ?? {};

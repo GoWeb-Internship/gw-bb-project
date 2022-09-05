@@ -10,7 +10,6 @@ import LangSwitcher from './LangSwitcher';
 import Container from 'components/reusable/Container';
 import Logo from './Logo';
 import IconButton from './IconButton';
-// import MobileMenu from './MobileMenu';
 
 const MobileMenu = loadable(() => import('./MobileMenu'));
 
