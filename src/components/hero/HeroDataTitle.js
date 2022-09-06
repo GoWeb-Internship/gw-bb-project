@@ -5,7 +5,9 @@ const HeroDataTitle = ({ heroTitle }) => {
     <>
       <p className="max-w-[280px] md:max-w-full text-bb1424 sm:mr-1.5 mb-3 md:mb-4 lg:text-lg leading-6 md:text-bb1824">
         {heroTitle.supTitle}
-        <span className="block sm:inline-block">{heroTitle.supTitleSpan}</span>
+        <span className="block sm:inline-block md:ml-1.5">
+          {heroTitle.supTitleSpan}
+        </span>
       </p>
       <h1 className="text-bb2830 mb-3 sm:mr-1.5 font-heads font-bold md:text-5xl leading-[58px] lg:mb-2 md:mb-4">
         {heroTitle.title}
