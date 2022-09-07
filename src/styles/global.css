@@ -101,16 +101,6 @@ body {
   );
 }
 
-body::-webkit-scrollbar {
-  width: 5px;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0.3;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
 .non-active-link::after {
   transform: translateX(102%);
 }

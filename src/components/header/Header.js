@@ -74,7 +74,7 @@ const Header = () => {
     <>
       <header
         ref={headerRef}
-        className="fixed top-0 z-[2000] w-full bg-cyan-600/90 shadow-bb1"
+        className="fixed top-0 z-[2000] w-full bg-cyan-600/90 shadow-bb1 lg:w-[1440px] lg:left-[50vw] lg:-translate-x-1/2"
       >
         <Container className={'flex items-center py-3'}>
           <Logo />
