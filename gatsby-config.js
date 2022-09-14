@@ -114,19 +114,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: process.env.FACEBOOK_PIXEL_ID,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: process.env.GOOGLE_TAGMANAGER_ID,
-        includeInDevelopment: false,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-facebook-pixel`,
+    //   options: {
+    //     pixelId: process.env.FACEBOOK_PIXEL_ID,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-google-tagmanager`,
+    //   options: {
+    //     id: process.env.GOOGLE_TAGMANAGER_ID,
+    //     includeInDevelopment: false,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
