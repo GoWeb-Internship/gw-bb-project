@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
 
-import Events from 'components/scripts/Events';
+// import Events from 'components/scripts/Events';
 import Seo from 'components/Seo';
 import Layout from 'components/Layout';
 import Hero from 'components/hero/Hero';
@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <Events />
+      {/* <Events /> */}
       <Seo
         title={seo.title}
         description={seo.description}
